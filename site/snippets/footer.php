@@ -1,7 +1,3 @@
-  <footer>
-    <?php echo kirbytext($site->copyright()) ?>
-  </footer>
-
-</body>
-
+		<?php echo js('assets/js/main.js'); ?>
+	</body>
 </html>
