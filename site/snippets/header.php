@@ -10,7 +10,7 @@
 
 		<meta name="viewport" content="width=device-width">
 
-		<!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:300|Merriweather:700" rel="stylesheet">-->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300|Merriweather:700|Droid+Sans+Mono">
 
 		<?php echo css('assets/css/main.css'); ?>
 	</head>

@@ -1,0 +1,75 @@
+
+// Copy-Text
+body {
+	@include x-rem(font-size, 1);
+
+	font-weight: 300;
+	font-family: Open Sans, sans-serif;
+}
+
+
+// Headlines
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 700;
+	font-family: Merriweather, sans-serif;
+}
+
+h1 {
+	@include x-rem(font-size, 3);
+}
+
+h2 {
+	@include x-rem(font-size, 2);
+}
+
+h3 {
+	@include x-rem(font-size, 1.5);
+}
+
+h4 {
+	@include x-rem(font-size, 1.2);
+}
+
+
+
+// Links
+a {
+	&:visited {}
+	&:focus {}
+	&:hover {}
+}
+
+
+// Quotes
+q,
+blockquote {
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+
+
+// Code
+code,
+tt {
+	font-family: Droid Sans Mono, monospace;
+	font-size: 0.9em;
+
+	white-space: nowrap;
+	-ms-word-break: keep-all;
+	    word-break: keep-all;
+}
+
+pre {
+	-moz-tab-size: 4;
+	  -o-tab-size: 4;
+	     tab-size: 4;
+
+	code {
+		white-space: inherit;
+		-ms-word-break: inherit;
+		    word-break: inherit;
+	}
+}
