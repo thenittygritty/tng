@@ -1,9 +1,11 @@
-Title: Kirby Demo
+Title: TNG - The Nitty Gritty
 ----
-Author: Bastian Allgeier
+Author: Kahlil Lechelt, Hans Christian Reinl
 ----
-Description: Kirby is awesome
+Description: The Nitty Gritty description
 ----
-Keywords: kirby, cms, kirbycms, php, filesystem
+Keywords: The Nitty Gritty, HTML, CSS, JavaScript, HTML5, CSS3, JS
 ----
-Copyright: © 2009-(date: Year) (link: http://bastianallgeier.com text: Bastian Allgeier)
+FooterNote: Made with [Kirby](getkirby.com) and &#x2665;.
+----
+Copyright: Copyright 2012, The Nitty Gritty
