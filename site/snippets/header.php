@@ -22,9 +22,9 @@
 			Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 
-		<header class="header" role="banner">
+		<header class="header">
 			<h1 class="header-logo">
-				<a href="<?php echo url() ?>" title="<?php echo html($site->title()) ?>">
+				<a href="<?php echo url() ?>" title="<?php echo html($site->title()) ?>" role="banner">
 					<strong>TNG</strong> The Nitty Gritty
 				</a>
 			</h1>

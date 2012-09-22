@@ -1,6 +1,6 @@
-<nav class="navigation" role="navigation">
-	<h3 class="visually-hidden">Navigation</h3>
-	<a href="#content" class="visually-hidden">Skip Navigation</a>
+<nav id="navigation" class="navigation" role="navigation">
+	<h3 class="visuallyhidden">Navigation</h3>
+	<a href="#content" class="visuallyhidden">Skip Navigation</a>
 
 	<ul>
 		<?php foreach ($pages->visible() AS $p) : ?>
@@ -12,4 +12,7 @@
 			</li>
 		<?php endforeach; ?>
 	</ul>
+
+	<a class="navigation-toggle navigation-toggle-show show-mobile" href="#navigation">&#x2630;</a>
+	<a class="navigation-toggle navigation-toggle-hide show-mobile" href="#">&#x2630;</a>
 </nav>
