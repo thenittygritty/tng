@@ -28,10 +28,10 @@
 					<strong>TNG</strong> The Nitty Gritty
 				</a>
 			</h1>
-		</header>
 
-		<?php snippet('menu') ?>
-		<?php snippet('submenu') ?>
 			<?php snippet('search') ?>
+			<?php snippet('menu') ?>
+			<?php snippet('submenu') ?>
+		</header>
 
 		<div id="content">
