@@ -32,5 +32,6 @@
 
 		<?php snippet('menu') ?>
 		<?php snippet('submenu') ?>
+			<?php snippet('search') ?>
 
 		<div id="content">
