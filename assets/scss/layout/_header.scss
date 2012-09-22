@@ -1,0 +1,25 @@
+// Styling for header
+
+
+// Logo
+.header-logo {
+	@include x-rem(font-size, 1.35);
+	@include x-rem(margin, 1);
+
+	line-height: 1;
+
+	a {
+		color: $secondary-highlight;
+		text-decoration: none;
+
+		&:visited {
+			color: $secondary-highlight;
+		}
+	}
+
+	strong {
+		@include x-rem(font-size, 5);
+
+		display: block;
+	}
+}
