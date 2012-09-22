@@ -6,6 +6,7 @@
 	@include x-rem(font-size, 1.35);
 	@include x-rem(margin, 1);
 
+	display: inline-block;
 	line-height: 1;
 
 	a {

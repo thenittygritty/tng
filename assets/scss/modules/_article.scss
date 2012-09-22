@@ -1,9 +1,5 @@
 // Module: Article
 // mostly used to represent articles
 .article {
-	@include x-rem(margin, .5);
-	@include x-rem(border-radius, .5);
-	@include x-rem(padding, .5);
-
-	background-color: rgba($background-article, .7);
+	@extend %box;
 }

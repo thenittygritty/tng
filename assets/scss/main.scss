@@ -21,7 +21,10 @@
 @import "layout/footer";
 
 // Modules
+@import "modules/box";
+
 @import "modules/navigation";
+@import "modules/search";
 @import "modules/article";
 
 // Print Stylesheets

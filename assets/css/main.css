@@ -625,6 +625,7 @@ html {
   font-size: 1.35rem;
   margin: 16px;
   margin: 1rem;
+  display: inline-block;
   line-height: 1;
 }
 .header-logo a {
@@ -640,6 +641,17 @@ html {
   display: block;
 }
 
+.navigation > ul, .search, .article {
+  margin: 8px;
+  margin: 0.5rem;
+  border-radius: 8px;
+  border-radius: 0.5rem;
+  padding: 8px;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 .navigation {
   position: absolute;
   top: 0;
@@ -652,10 +664,6 @@ html {
 .navigation > ul {
   right: 8px;
   right: 0.5rem;
-  padding: 8px;
-  padding: 0.5rem;
-  border-radius: 8px;
-  border-radius: 0.5rem;
   display: none;
   list-style: none;
   margin: 0;
@@ -663,8 +671,8 @@ html {
   padding-right: 0;
   position: absolute;
   top: 65px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1);
   min-width: 150px;
   max-width: 250px;
 }
@@ -695,9 +703,9 @@ html {
   font-size: 19.2px;
   font-size: 1.2rem;
   position: absolute;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   padding: 5px 10px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .navigation-toggle-show {
@@ -712,16 +720,6 @@ html {
 }
 .navigation:target .navigation-toggle-hide {
   display: block;
-}
-
-.article {
-  margin: 8px;
-  margin: 0.5rem;
-  border-radius: 8px;
-  border-radius: 0.5rem;
-  padding: 8px;
-  padding: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.7);
 }
 
 @media print {

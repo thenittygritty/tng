@@ -10,9 +10,9 @@
 	}
 
 	> ul {
+		@extend %box;
+
 		@include x-rem(right, .5);
-		@include x-rem(padding, .5);
-		@include x-rem(border-radius, .5);
 
 		display: none;
 
@@ -24,8 +24,9 @@
 		position: absolute;
 		top: 65px;
 
-		background: rgba($background-article, 0.9);
-		box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+		background-color: rgba($background-box, .9);
+		box-shadow: 0 1px 2px rgba(0,0,0,0.3),
+					0 0 20px rgba(0,0,0,0.1);
 
 		min-width: 150px;
 		max-width: 250px;
@@ -38,7 +39,7 @@
 
 			border-width: 0 10px 10px 10px;
 			border-style: solid;
-			border-color: rgba($background-article, 0.9) transparent;
+			border-color: rgba($background-box, 0.9) transparent;
 		}
 
 		a {
@@ -62,9 +63,9 @@
 	@include x-rem(font-size, 1.2);
 
 	position: absolute;
-	background: rgba($background-article, 0.8);
+	background: rgba($background-box, 0.9);
 	padding: 5px 10px;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .navigation-toggle-show {
