@@ -736,7 +736,7 @@ html {
 .header-logo p {
   font-size: 9.6px;
   font-size: 0.6rem;
-  font-weight: 700;
+  font-weight: 400;
   font-family: Merriweather, sans-serif;
   font-style: italic;
 }
