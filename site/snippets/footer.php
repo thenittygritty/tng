@@ -7,6 +7,7 @@
 			<a href="#" class="footer-scrolltop">Go back up</a>
 		</footer>
 
+		<?php echo js('assets/js/vendor/zepto.min.js'); ?>
 		<?php echo js('assets/js/main.js'); ?>
 	</body>
 </html>
