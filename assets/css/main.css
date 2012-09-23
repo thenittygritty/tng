@@ -440,7 +440,7 @@ table {
   clear: both;
 }
 
-.navigation > ul, .search, .article, .header-logo strong {
+.navigation > ul, .search, .article, .header-logo strong, .footer-scrolltop {
   margin: 8px;
   margin: 0.5rem;
   border-radius: 8px;
@@ -749,6 +749,21 @@ html {
   font-weight: 400;
   font-family: Merriweather, sans-serif;
   font-style: italic;
+}
+
+.footer {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.footer-copyright {
+  font-size: 12.8px;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.footer-scrolltop {
+  text-decoration: none;
 }
 
 @media print {

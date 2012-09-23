@@ -1,0 +1,17 @@
+// Footer
+
+.footer {
+	margin: 50px 0;
+	text-align: center;
+}
+
+.footer-copyright {
+	@include x-rem(font-size, .8);
+	margin-bottom: 20px;
+}
+
+.footer-scrolltop {
+	@extend %box;
+
+	text-decoration: none;
+}
