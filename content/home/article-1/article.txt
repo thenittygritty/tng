@@ -26,10 +26,11 @@ Skateboard deserunt sed retro seitan dolor nulla do kogi. Odio exercitation temp
 ### Vice adipisicing leggings
 Vice adipisicing leggings, vero fixie PBR qui put a bird on it dolor viral proident voluptate sed narwhal ullamco. Pop-up fingerstache squid pariatur. Ethnic irure aesthetic, brunch voluptate adipisicing yr consequat keytar pickled assumenda. Quis wolf voluptate portland, ethnic PBR twee. Aliqua messenger bag Austin placeat. Et chillwave delectus commodo, ut cardigan vegan selvage pinterest single-origin coffee. Et nostrud tofu messenger bag, pickled biodiesel single-origin coffee ethical adipisicing sustainable salvia portland.
 
+<span class="language-markup"></span>
+
 	<li>
-		<a<?php echo ($p->isOpen()) ? ' class="active"' : '' ?>
-				href="<?php echo $p->url(); ?>">
-			<?php echo html($p->title()); ?>
+		<a class="active" href="#">
+			$p->title()
 		</a>
 	</li>
 
