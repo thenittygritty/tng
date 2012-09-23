@@ -521,6 +521,10 @@ table {
   display: block;
 }
 
+.article-header h1 {
+  margin: 0 0 .5em;
+}
+
 body {
   font-size: 16px;
   font-size: 1rem;
@@ -535,20 +539,26 @@ h4 {
   font-weight: 700;
   font-family: Merriweather, sans-serif;
 }
-
-h1 {
-  font-size: 48px;
-  font-size: 3rem;
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+  text-decoration: none;
 }
 
-h2 {
+h1 {
   font-size: 32px;
   font-size: 2rem;
 }
 
+h2 {
+  font-size: 25.6px;
+  font-size: 1.6rem;
+}
+
 h3 {
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 20.8px;
+  font-size: 1.3rem;
 }
 
 h4 {
