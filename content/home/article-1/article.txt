@@ -8,6 +8,8 @@ AuthorUrl: http://drublic.de/blog
 ----
 AuthorTwitter: drublic
 ----
+AuthorMail: info@drublic.de
+----
 Categories: HTML5, JavaScript
 ----
 Description: Dolor fap tumblr sint. Whatever labore dreamcatcher

@@ -11,6 +11,8 @@
 		</time>
 
 		<div class="article-header-author">
+			<img src="http://www.gravatar.com/avatar/<?php echo md5($article->authormail()); ?>">
+
 			<a href="<?php echo html($article->authorurl()); ?>" rel="autor">
 				<?php echo html($article->author()); ?>
 			</a>
