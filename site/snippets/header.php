@@ -10,7 +10,7 @@
 
 		<meta name="viewport" content="width=device-width">
 
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300|Merriweather:700|Droid+Sans+Mono">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300|Merriweather:400,700|Droid+Sans+Mono">
 
 		<?php echo css('assets/css/main.css'); ?>
 	</head>
@@ -28,7 +28,7 @@
 					<strong><span>//</span>TNG</strong>
 					<span>The Nitty Gritty</span>
 				</a>
-				<p>The Low-Down On Web Technology</p>
+				<p>The low-down on web technology</p>
 			</h1>
 
 			<?php snippet('search') ?>
