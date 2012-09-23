@@ -2,7 +2,7 @@
 	<header class="article-header">
 		<h1>
 			<a href="<?php echo $page->url(); ?>">
-				<?php echo markdown($article->title()) ?>
+				<?php echo html($article->title()) ?>
 			</a>
 		</h1>
 
