@@ -430,24 +430,95 @@ table {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before,
-.clearfix:after {
+.header-logo a:before, .header-logo a:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
-
-.clearfix:after {
+.header-logo a:after {
   clear: both;
 }
 
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.clearfix {
-  *zoom: 1;
+.navigation > ul, .search, .article, .header-logo strong {
+  margin: 8px;
+  margin: 0.5rem;
+  border-radius: 8px;
+  border-radius: 0.5rem;
+  padding: 8px;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.navigation a {
+  text-decoration: none;
+}
+.navigation > ul {
+  right: 8px;
+  right: 0.5rem;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  top: 55px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  max-width: 250px;
+}
+.navigation > ul:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.9) transparent;
+}
+.navigation > ul a {
+  display: block;
+  padding: 3px 15px;
+}
+.navigation:target > ul {
+  display: block;
+}
+
+.navigation-toggle {
+  top: 8px;
+  top: 0.5rem;
+  right: 8px;
+  right: 0.5rem;
+  border-radius: 8px;
+  border-radius: 0.5rem;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navigation-toggle-show {
+  display: block;
+}
+.navigation:target .navigation-toggle-show {
+  display: none;
+}
+
+.navigation-toggle-hide {
+  display: none;
+}
+.navigation:target .navigation-toggle-hide {
+  display: block;
 }
 
 body {
@@ -620,106 +691,54 @@ html {
   background: url(../img/noise.png) #edeae3;
 }
 
+.header {
+  margin-top: 55px;
+}
+
 .header-logo {
-  font-size: 21.6px;
-  font-size: 1.35rem;
-  margin: 16px;
-  margin: 1rem;
-  display: inline-block;
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 8px;
+  margin: 0.5rem;
   line-height: 1;
 }
 .header-logo a {
+  display: block;
   color: #e02d0d;
   text-decoration: none;
 }
 .header-logo a:visited {
   color: #e02d0d;
 }
+.header-logo a > span {
+  font-size: 20.8px;
+  font-size: 1.3rem;
+  float: left;
+  padding: 5px 0;
+  width: 110px;
+  line-height: 1.4;
+}
 .header-logo strong {
-  font-size: 80px;
-  font-size: 5rem;
-  display: block;
+  font-size: 56px;
+  font-size: 3.5rem;
+  float: left;
+  margin: 0 10px 0 0;
+  padding-bottom: 0;
 }
-
-.navigation > ul, .search, .article {
-  margin: 8px;
-  margin: 0.5rem;
-  border-radius: 8px;
-  border-radius: 0.5rem;
-  padding: 8px;
-  padding: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+.header-logo strong span {
+  font-size: 44.8px;
+  font-size: 2.8rem;
+  position: relative;
+  top: -7px;
+  margin-right: 5px;
+  color: #b0b0b0;
 }
-
-.navigation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-.navigation a {
-  text-decoration: none;
-}
-.navigation > ul {
-  right: 8px;
-  right: 0.5rem;
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
-  position: absolute;
-  top: 65px;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1);
-  min-width: 150px;
-  max-width: 250px;
-}
-.navigation > ul:before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  right: 10px;
-  border-width: 0 10px 10px 10px;
-  border-style: solid;
-  border-color: rgba(255, 255, 255, 0.9) transparent;
-}
-.navigation > ul a {
-  display: block;
-  padding: 3px 15px;
-}
-.navigation:target > ul {
-  display: block;
-}
-
-.navigation-toggle {
-  top: 16px;
-  top: 1rem;
-  right: 8px;
-  right: 0.5rem;
-  border-radius: 8px;
-  border-radius: 0.5rem;
-  font-size: 19.2px;
-  font-size: 1.2rem;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 5px 10px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.navigation-toggle-show {
-  display: block;
-}
-.navigation:target .navigation-toggle-show {
-  display: none;
-}
-
-.navigation-toggle-hide {
-  display: none;
-}
-.navigation:target .navigation-toggle-hide {
-  display: block;
+.header-logo p {
+  font-size: 9.6px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  font-family: Merriweather, sans-serif;
+  font-style: italic;
 }
 
 @media print {

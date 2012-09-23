@@ -25,8 +25,10 @@
 		<header class="header">
 			<h1 class="header-logo">
 				<a href="<?php echo url() ?>" title="<?php echo html($site->title()) ?>" role="banner">
-					<strong>TNG</strong> The Nitty Gritty
+					<strong><span>//</span>TNG</strong>
+					<span>The Nitty Gritty</span>
 				</a>
+				<p>The Low-Down On Web Technology</p>
 			</h1>
 
 			<?php snippet('search') ?>

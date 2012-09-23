@@ -1,26 +1,66 @@
 // Styling for header
 
 
+.header {
+	margin-top: 55px;
+}
+
 // Logo
 .header-logo {
-	@include x-rem(font-size, 1.35);
-	@include x-rem(margin, 1);
+	@include x-rem(font-size, 1);
+	@include x-rem(margin, .5);
 
-	display: inline-block;
 	line-height: 1;
 
 	a {
+		@extend %clearfix;
+		display: block;
+
 		color: $secondary-highlight;
 		text-decoration: none;
 
 		&:visited {
 			color: $secondary-highlight;
 		}
+
+		// Punchline
+		> span {
+			@include x-rem(font-size, 1.3);
+
+			float: left;
+			padding: 5px 0;
+			width: 110px;
+			line-height: 1.4;
+		}
 	}
 
+	// Title-box
 	strong {
-		@include x-rem(font-size, 5);
+		@extend %box;
+		@include x-rem(font-size, 3.5);
 
-		display: block;
+		float: left;
+		margin: 0 10px 0 0;
+		padding-bottom: 0;
+
+		// Double slash
+		span {
+			@include x-rem(font-size, 2.8);
+
+			position: relative;
+			top: -7px;
+
+			margin-right: 5px;
+			color: $special-color;
+		}
+	}
+
+	// Subtitle
+	p {
+		@include x-rem(font-size, .6);
+
+		font-weight: 700;
+		font-family: Merriweather, sans-serif;
+		font-style: italic;
 	}
 }
