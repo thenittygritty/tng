@@ -45,6 +45,12 @@
 		a {
 			display: block;
 			padding: 3px 15px;
+
+			&:hover {
+				background: $highlight;
+				color: #fff;
+				text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+			}
 		}
 	}
 
