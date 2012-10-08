@@ -1,0 +1,31 @@
+input[type="text"],
+input[type="search"] {
+	@include x-rem(font-size, 1);
+	@include x-border-radius(3px);
+
+	border: 1px solid rgba($special-color, 0.7);
+	background: rgba($background-box, 0.7);
+	padding: 5px;
+
+	&:focus {
+		@include x-box-shadow(0 0 5px lighten($highlight, 20));
+
+		border-color: $special-color;
+		background: $background-box;
+
+		outline: none;
+	}
+}
+
+
+
+
+// Buttons
+input[type="submit"],
+input[type="reset"],
+input[type="button"], {
+	border: 0;
+	padding: 0;
+
+	background: $highlight;
+}

@@ -23,6 +23,8 @@
 		<![endif]-->
 
 		<header class="header">
+			<?php snippet('search') ?>
+
 			<h1 class="header-logo">
 				<a href="<?php echo url() ?>" title="<?php echo html($site->title()) ?>" role="banner">
 					<strong><span>//</span>TNG</strong>
@@ -31,7 +33,6 @@
 				<p>The low down on web technology</p>
 			</h1>
 
-			<?php snippet('search') ?>
 			<?php snippet('menu') ?>
 			<?php snippet('submenu') ?>
 		</header>
