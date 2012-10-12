@@ -1,7 +1,7 @@
 <article class="article">
 	<header class="article-header">
 		<h1>
-			<a href="<?php echo $page->url(); ?>">
+			<a href="<?php echo $article->url(); ?>">
 				<?php echo html($article->title()) ?>
 			</a>
 		</h1>
