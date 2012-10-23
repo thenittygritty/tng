@@ -1,0 +1,12 @@
+// Module: Box
+// used for nearly everything
+// only available to deal with, not as class
+
+%box {
+	@include x-rem(margin, 0.5);
+	@include x-rem(border-radius, 0.5);
+	@include x-rem(padding, 0.5);
+
+	background-color: rgba($background-box, 0.7);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,11 @@
+// Module: Article
+// mostly used to represent articles
+.article {
+	@extend %box;
+}
+
+.article-header {
+	h1 {
+		margin: 0 0 .5em;
+	}
+}

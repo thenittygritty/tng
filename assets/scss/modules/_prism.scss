@@ -1,0 +1,101 @@
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"] {
+	@include x-tab-size;
+
+	color: black;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"] {
+	@include x-tab-size;
+
+	color: black;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+/* Code blocks */
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+	background: $background;
+	border-radius: 5px;
+}
+
+/* Inline code */
+
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+.token {
+	&.comment, &.prolog, &.doctype, &.cdata {
+		color: slategray;
+	}
+	&.punctuation {
+		color: #999;
+	}
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token {
+	&.property, &.tag, &.boolean, &.number {
+		color: #905;
+	}
+	&.selector, &.attr-name, &.string {
+		color: #690;
+	}
+	&.operator, &.entity, &.url {
+		color: #a67f59;
+		background: hsla(0, 0%, 100%, 0.5);
+	}
+}
+
+.language-css .token.string, .style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, 0.5);
+}
+
+.token {
+	&.atrule, &.attr-value, &.keyword {
+		color: #07a;
+	}
+	&.regex {
+		color: #e90;
+	}
+	&.important {
+		color: #e90;
+		font-weight: bold;
+	}
+	&.entity {
+		cursor: help;
+	}
+}
