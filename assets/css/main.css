@@ -492,6 +492,11 @@ input[type="button"] {
   left: 0;
   right: 0;
 }
+@media screen and (min-width: 760px) {
+  .navigation {
+    position: static;
+  }
+}
 .navigation a {
   text-decoration: none;
 }
@@ -526,6 +531,23 @@ input[type="button"] {
     top: 65px;
   }
 }
+@media screen and (min-width: 760px) {
+  .navigation > ul {
+    border-radius: 0px;
+    border-radius: 0rem;
+    margin-bottom: 32px;
+    margin-bottom: 2rem;
+    position: static;
+    display: block;
+    max-width: initial;
+    padding: 0 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .navigation > ul li {
+    display: inline-block;
+  }
+}
 .navigation > ul a {
   display: block;
   padding: 3px 15px;
@@ -534,6 +556,11 @@ input[type="button"] {
   background: #426ea1;
   color: #fff;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 760px) {
+  .navigation > ul a {
+    padding: 1em 15px;
+  }
 }
 .navigation:target > ul {
   display: block;
@@ -561,6 +588,11 @@ input[type="button"] {
     right: 1rem;
   }
 }
+@media screen and (min-width: 760px) {
+  .navigation-toggle {
+    display: none !important;
+  }
+}
 
 .navigation-toggle-show {
   display: block;
@@ -582,6 +614,12 @@ input[type="button"] {
 @media screen and (min-width: 600px) {
   .search {
     margin: 20px 60px 20px 20px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .search {
+    float: right;
+    margin: 10px 1em;
   }
 }
 
@@ -623,6 +661,13 @@ input.search-submit {
   font-size: 24px;
   font-size: 1.5rem;
   padding-top: 3px;
+}
+
+.article-header-date {
+  text-align: right;
+}
+.article-header-date > time:before {
+  content: "Posted on ";
 }
 
 .article-header-categories:before {
@@ -919,8 +964,14 @@ html {
     margin: 1rem;
   }
 }
+@media screen and (min-width: 760px) {
+  .header-logo {
+    margin-bottom: 32px;
+    margin-bottom: 2rem;
+  }
+}
 .header-logo a {
-  display: block;
+  display: inline-block;
   color: #e02d0d;
   text-decoration: none;
 }
@@ -952,6 +1003,8 @@ html {
   .header-logo strong {
     font-size: 64px;
     font-size: 4rem;
+    padding-top: 11.2px;
+    padding-top: 0.7rem;
   }
 }
 .header-logo strong span {
@@ -995,6 +1048,12 @@ html {
 
 .footer-scrolltop {
   text-decoration: none;
+}
+@media screen and (min-width: 600px) {
+  .footer-scrolltop {
+    padding: 8px;
+    padding: 0.5rem;
+  }
 }
 
 @media print {

@@ -15,9 +15,13 @@
 		@include x-rem(margin, 1);
 	}
 
+	@media #{$mq-tablet} {
+		@include x-rem(margin-bottom, 2);
+	}
+
 	a {
 		@extend %clearfix;
-		display: block;
+		display: inline-block;
 
 		color: $secondary-highlight;
 		text-decoration: none;
@@ -52,6 +56,7 @@
 
 		@media #{$mq-smalltab} {
 			@include x-rem(font-size, 4);
+			@include x-rem(padding-top, 0.7);
 		}
 
 		// Double slash

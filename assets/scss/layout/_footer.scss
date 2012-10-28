@@ -14,4 +14,8 @@
 	@extend %box;
 
 	text-decoration: none;
+
+	@media #{$mq-smalltab} {
+		@include x-rem(padding, .5);
+	}
 }

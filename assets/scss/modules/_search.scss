@@ -4,6 +4,11 @@
 	@media #{$mq-smalltab} {
 		margin: 20px 60px 20px 20px;
 	}
+
+	@media #{$mq-tablet} {
+		float: right;
+		margin: 10px 1em;
+	}
 }
 
 .search-field {

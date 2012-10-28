@@ -36,6 +36,14 @@
 	}
 }
 
+.article-header-date {
+	text-align: right;
+
+	> time:before {
+		content: "Posted on ";
+	}
+}
+
 // Categories
 .article-header-categories {
 	&:before {

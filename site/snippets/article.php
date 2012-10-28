@@ -6,9 +6,11 @@
 			</a>
 		</h1>
 
-		<time datetime="<?php echo $article->date('c') ?>" class="article-header-date">
-			<?php echo html($article->date('d.m.Y')); ?>
-		</time>
+		<p class="article-header-date">
+			<time datetime="<?php echo $article->date('c') ?>">
+				<?php echo html($article->date('d.m.Y')); ?>
+			</time>
+		</p>
 
 		<div class="article-header-author">
 			<img src="http://www.gravatar.com/avatar/<?php echo md5($article->authormail()); ?>">

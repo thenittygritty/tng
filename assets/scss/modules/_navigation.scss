@@ -5,6 +5,10 @@
 	left: 0;
 	right: 0;
 
+	@media #{$mq-tablet} {
+		position: static;
+	}
+
 	a {
 		text-decoration: none;
 	}
@@ -48,6 +52,22 @@
 			top: 65px;
 		}
 
+		@media #{$mq-tablet} {
+			@include x-rem(border-radius, 0);
+			@include x-rem(margin-bottom, 2);
+
+			position: static;
+			display: block;
+			max-width: initial;
+			padding: 0 1em;
+			background-color: rgba($background-box, .9);
+			box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+
+			li {
+				display: inline-block;
+			}
+		}
+
 		a {
 			display: block;
 			padding: 3px 15px;
@@ -56,6 +76,10 @@
 				background: $highlight;
 				color: #fff;
 				text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+			}
+
+			@media #{$mq-tablet} {
+				padding: 1em 15px;
 			}
 		}
 	}
@@ -82,6 +106,10 @@
 	@media #{$mq-smalltab} {
 		@include x-rem(top, 1);
 		@include x-rem(right, 1);
+	}
+
+	@media #{$mq-tablet} {
+		display: none !important;
 	}
 }
 

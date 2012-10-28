@@ -23,7 +23,8 @@
 		<![endif]-->
 
 		<header class="header">
-			<?php snippet('search') ?>
+			<?php snippet('search'); ?>
+			<?php snippet('menu'); ?>
 
 			<h1 class="header-logo">
 				<a href="<?php echo url() ?>" title="<?php echo html($site->title()) ?>" role="banner">
@@ -33,7 +34,6 @@
 				<p>The low down on web technology</p>
 			</h1>
 
-			<?php snippet('menu'); ?>
 			<?php // snippet('submenu'); ?>
 		</header>
 
