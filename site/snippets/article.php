@@ -6,7 +6,7 @@
 			</a>
 		</h1>
 
-		<time datetime="<?php echo markdown($article->date('c')) ?>" class="article-header-date">
+		<time datetime="<?php echo $article->date('c') ?>" class="article-header-date">
 			<?php echo html($article->date('d.m.Y')); ?>
 		</time>
 

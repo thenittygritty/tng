@@ -25,11 +25,10 @@
 
 	> a {
 		display: block;
+		text-decoration: none;
 
 		&:first-of-type {
 			@include x-rem(font-size, 1.5);
-
-			text-decoration: none;
 			padding-top: 3px;
 		}
 	}
@@ -37,5 +36,19 @@
 
 // Categories
 .article-header-categories {
+	&:before {
+		content: "Categories: ";
+	}
 
+	> a {
+		text-decoration: none;
+
+		&:after {
+			content: ", ";
+		}
+
+		&:last-child:after {
+			content: "";
+		}
+	}
 }
