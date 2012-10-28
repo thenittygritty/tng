@@ -477,6 +477,14 @@ input[type="button"] {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
+@media screen and (min-width: 600px) {
+  .navigation > ul, .article, .header-logo strong, .footer-scrolltop {
+    margin: 16px;
+    margin: 1rem;
+    padding: 16px;
+    padding: 1rem;
+  }
+}
 
 .navigation {
   position: absolute;
@@ -511,6 +519,13 @@ input[type="button"] {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.9) transparent;
 }
+@media screen and (min-width: 600px) {
+  .navigation > ul {
+    right: 16px;
+    right: 1rem;
+    top: 65px;
+  }
+}
 .navigation > ul a {
   display: block;
   padding: 3px 15px;
@@ -538,6 +553,14 @@ input[type="button"] {
   padding: 5px 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
+@media screen and (min-width: 600px) {
+  .navigation-toggle {
+    top: 16px;
+    top: 1rem;
+    right: 16px;
+    right: 1rem;
+  }
+}
 
 .navigation-toggle-show {
   display: block;
@@ -555,6 +578,11 @@ input[type="button"] {
 
 .search {
   margin: 10px 60px 10px 10px;
+}
+@media screen and (min-width: 600px) {
+  .search {
+    margin: 20px 60px 20px 20px;
+  }
 }
 
 .search-field {
@@ -885,6 +913,12 @@ html {
   margin: 0.5rem;
   line-height: 1;
 }
+@media screen and (min-width: 600px) {
+  .header-logo {
+    margin: 16px;
+    margin: 1rem;
+  }
+}
 .header-logo a {
   display: block;
   color: #e02d0d;
@@ -901,12 +935,24 @@ html {
   width: 110px;
   line-height: 1.4;
 }
+@media screen and (min-width: 600px) {
+  .header-logo a > span {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
 .header-logo strong {
   font-size: 56px;
   font-size: 3.5rem;
   float: left;
   margin: 0 10px 0 0;
   padding-bottom: 0;
+}
+@media screen and (min-width: 600px) {
+  .header-logo strong {
+    font-size: 64px;
+    font-size: 4rem;
+  }
 }
 .header-logo strong span {
   font-size: 44.8px;
@@ -916,12 +962,24 @@ html {
   margin-right: 5px;
   color: #b0b0b0;
 }
+@media screen and (min-width: 600px) {
+  .header-logo strong span {
+    font-size: 49.6px;
+    font-size: 3.1rem;
+  }
+}
 .header-logo p {
   font-size: 9.6px;
   font-size: 0.6rem;
   font-weight: 400;
   font-family: Merriweather, sans-serif;
   font-style: italic;
+}
+@media screen and (min-width: 600px) {
+  .header-logo p {
+    font-size: 12.8px;
+    font-size: 0.8rem;
+  }
 }
 
 .footer {
