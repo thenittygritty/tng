@@ -9,3 +9,33 @@
 		margin: 0 0 .5em;
 	}
 }
+
+
+// Author
+.article-header-author {
+	margin: 1em 0;
+	overflow: hidden;
+
+	> img {
+		float: left;
+		margin-right: .5em;
+		width: 64px;
+		height: 64px;
+	}
+
+	> a {
+		display: block;
+
+		&:first-of-type {
+			@include x-rem(font-size, 1.5);
+
+			text-decoration: none;
+			padding-top: 3px;
+		}
+	}
+}
+
+// Categories
+.article-header-categories {
+
+}

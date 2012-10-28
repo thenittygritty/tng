@@ -576,6 +576,26 @@ input.search-submit {
   margin: 0 0 .5em;
 }
 
+.article-header-author {
+  margin: 1em 0;
+  overflow: hidden;
+}
+.article-header-author > img {
+  float: left;
+  margin-right: .5em;
+  width: 64px;
+  height: 64px;
+}
+.article-header-author > a {
+  display: block;
+}
+.article-header-author > a:first-of-type {
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding-top: 3px;
+}
+
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
