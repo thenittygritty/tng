@@ -573,6 +573,7 @@ input.search-submit {
 }
 
 .article-header h1 {
+  line-height: 1.1;
   margin: 0 0 .5em;
 }
 
