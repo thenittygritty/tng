@@ -33,8 +33,8 @@
 				<p>The low down on web technology</p>
 			</h1>
 
-			<?php snippet('menu') ?>
-			<?php snippet('submenu') ?>
+			<?php snippet('menu'); ?>
+			<?php // snippet('submenu'); ?>
 		</header>
 
 		<div id="content">
