@@ -990,6 +990,7 @@ html {
   .header-logo a > span {
     font-size: 24px;
     font-size: 1.5rem;
+    width: 120px;
   }
 }
 .header-logo strong {

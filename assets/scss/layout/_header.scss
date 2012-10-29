@@ -41,6 +41,7 @@
 
 			@media #{$mq-smalltab} {
 				@include x-rem(font-size, 1.5);
+				width: 120px;
 			}
 		}
 	}
