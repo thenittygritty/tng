@@ -486,6 +486,9 @@ input[type="button"] {
   }
 }
 
+/*
+ * The navigation
+ */
 .navigation {
   position: absolute;
   top: 0;
@@ -495,6 +498,8 @@ input[type="button"] {
 @media screen and (min-width: 760px) {
   .navigation {
     position: static;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 }
 .navigation a {
@@ -541,11 +546,18 @@ input[type="button"] {
     display: block;
     max-width: initial;
     padding: 0 1em;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    background-color: none;
+    box-shadow: none;
   }
   .navigation > ul li {
     display: inline-block;
+  }
+}
+@media screen and (min-width: 940px) {
+  .navigation > ul {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .navigation > ul a {
@@ -638,13 +650,20 @@ input.search-submit {
   overflow: hidden;
 }
 
+@media screen and (min-width: 940px) {
+  .article {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .article-header h1 {
   line-height: 1.1;
   margin: 0 0 .5em;
 }
 
 .article-header-author {
-  margin: 1em 0;
+  margin: 2em 0;
   overflow: hidden;
 }
 .article-header-author > img {
@@ -654,17 +673,19 @@ input.search-submit {
   height: 64px;
 }
 .article-header-author > a {
-  display: block;
   text-decoration: none;
 }
 .article-header-author > a:first-of-type {
   font-size: 24px;
   font-size: 1.5rem;
-  padding-top: 3px;
+}
+.article-header-author p {
+  margin: 0;
 }
 
 .article-header-date {
-  text-align: right;
+  float: right;
+  margin-top: 0;
 }
 .article-header-date > time:before {
   content: "Posted on ";
@@ -876,7 +897,7 @@ a {
 }
 
 a:visited {
-  color: #7fa2ca;
+  color: #5b88bb;
 }
 
 a:hover {
@@ -951,6 +972,16 @@ html {
   background: url(../img/noise.png) #edeae3;
 }
 
+@media screen and (min-width: 940px) {
+  .site-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+/*
+ * Styling for header
+ */
 .header-logo {
   font-size: 16px;
   font-size: 1rem;
@@ -968,6 +999,13 @@ html {
   .header-logo {
     margin-bottom: 32px;
     margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 940px) {
+  .header-logo {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .header-logo a {

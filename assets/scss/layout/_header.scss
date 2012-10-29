@@ -1,5 +1,6 @@
-// Styling for header
-
+/*
+ * Styling for header
+ */
 
 .header {
 }
@@ -17,6 +18,12 @@
 
 	@media #{$mq-tablet} {
 		@include x-rem(margin-bottom, 2);
+	}
+
+	@media #{$mq-smalldesktop} {
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	a {

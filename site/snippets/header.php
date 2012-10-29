@@ -37,4 +37,4 @@
 			<?php // snippet('submenu'); ?>
 		</header>
 
-		<div id="content">
+		<div id="content" class="site-content">

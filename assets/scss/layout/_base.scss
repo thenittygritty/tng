@@ -28,7 +28,7 @@ a {
 }
 
 a:visited {
-	color: lighten($highlight, 20);
+	color: lighten($highlight, 10);
 }
 
 a:hover {
@@ -108,4 +108,12 @@ textarea {
 
 html {
 	background: url(../img/noise.png) $background;
+}
+
+
+.site-content {
+	@media #{$mq-smalldesktop} {
+		max-width: 900px;
+		margin: 0 auto;
+	}
 }
