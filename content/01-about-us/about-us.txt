@@ -1,3 +1,9 @@
 Title: About
 ----
-Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+Text: Hans Christian Reinl and Kahlil Lechelt founded The Nitty Gritty as a place for themselves and their friends to publish technical articles about web technology.
+
+The motivation stems from the wish of having all those well researched articles archived in one place and to have standing invitation to post at any time to certain developers who don't have and/or want to maintain a personal blog.
+
+It is the goal to establish TNG as a trusted place for web developers to find well-researched quality content that improves their understanding of and their abilities in web technology.
+
+If you want to publish an article for TNG, please contact us (this will be linked to the Participate page). We are thankful for any serious contributions.
