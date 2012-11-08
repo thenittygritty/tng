@@ -5,8 +5,17 @@
 
 		<title><?php echo html($page->title()); ?> &ndash; <?php echo html($site->title()); ?></title>
 
-		<meta name="description" content="<?php echo html($site->description()); ?>">
-		<meta name="keywords" content="<?php echo html($site->keywords()); ?>">
+		<meta name="description" content="<?php echo $page->description() ?
+				html($page->description()) :
+				html($site->description());
+		?>">
+		<meta name="keywords" content="<?php
+			echo $page->keywords() ?
+				html($page->keywords()) :
+				$page->tags() ?
+					html($page->tags()) :
+					html($site->keywords());
+		?>">
 
 		<meta name="viewport" content="width=device-width">
 
