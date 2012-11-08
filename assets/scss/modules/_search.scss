@@ -9,6 +9,13 @@
 		float: right;
 		margin: 10px 1em;
 	}
+
+	@media #{$mq-smalldesktop} {
+		float: none;
+		max-width: 900px;
+		margin: 10px auto -44px;
+		text-align: right;
+	}
 }
 
 .search-field {

@@ -17,7 +17,8 @@
 	}
 
 	@media #{$mq-tablet} {
-		@include x-rem(margin-bottom, 2);
+		@include x-rem(margin-top, 3);
+		@include x-rem(margin-bottom, 3);
 	}
 
 	@media #{$mq-smalldesktop} {
@@ -50,6 +51,11 @@
 				@include x-rem(font-size, 1.5);
 				width: 120px;
 			}
+
+			@media #{$mq-tablet} {
+				@include x-rem(font-size, 1.8);
+				width: 160px;
+			}
 		}
 	}
 
@@ -67,6 +73,15 @@
 			@include x-rem(padding-top, 0.7);
 		}
 
+		@media #{$mq-tablet} {
+			@include x-rem(font-size, 4.7);
+			@include x-rem(padding, 1);
+			@include x-rem(padding-top, 0.9);
+			@include x-rem(margin-right, 1);
+
+			padding-bottom: 0;
+		}
+
 		// Double slash
 		span {
 			@include x-rem(font-size, 2.8);
@@ -78,7 +93,13 @@
 			color: $special-color;
 
 			@media #{$mq-smalltab} {
-				@include x-rem(font-size, 3.1);
+				@include x-rem(font-size, 3.2);
+			}
+
+			@media #{$mq-tablet} {
+				@include x-rem(font-size, 3.7);
+
+				top: -11px;
 			}
 		}
 	}
@@ -91,8 +112,12 @@
 		font-family: Merriweather, sans-serif;
 		font-style: italic;
 
-			@media #{$mq-smalltab} {
-				@include x-rem(font-size, .8);
-			}
+		@media #{$mq-smalltab} {
+			@include x-rem(font-size, .8);
+		}
+
+		@media #{$mq-tablet} {
+			@include x-rem(font-size, 0.94);
+		}
 	}
 }

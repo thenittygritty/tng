@@ -14,4 +14,12 @@
 		@include x-rem(margin, 1);
 		@include x-rem(padding, 1);
 	}
+
+	@media #{$mq-tablet} {
+		@include x-rem(padding, 1.5);
+	}
+
+	@media #{$mq-smalldesktop} {
+		@include x-rem(padding, 2);
+	}
 }

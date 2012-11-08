@@ -485,6 +485,18 @@ input[type="button"] {
     padding: 1rem;
   }
 }
+@media screen and (min-width: 760px) {
+  .navigation > ul, .article, .header-logo strong, .footer-scrolltop {
+    padding: 24px;
+    padding: 1.5rem;
+  }
+}
+@media screen and (min-width: 940px) {
+  .navigation > ul, .article, .header-logo strong, .footer-scrolltop {
+    padding: 32px;
+    padding: 2rem;
+  }
+}
 
 /*
  * The navigation
@@ -632,6 +644,14 @@ input[type="button"] {
   .search {
     float: right;
     margin: 10px 1em;
+  }
+}
+@media screen and (min-width: 940px) {
+  .search {
+    float: none;
+    max-width: 900px;
+    margin: 10px auto -44px;
+    text-align: right;
   }
 }
 
@@ -997,8 +1017,10 @@ html {
 }
 @media screen and (min-width: 760px) {
   .header-logo {
-    margin-bottom: 32px;
-    margin-bottom: 2rem;
+    margin-top: 48px;
+    margin-top: 3rem;
+    margin-bottom: 48px;
+    margin-bottom: 3rem;
   }
 }
 @media screen and (min-width: 940px) {
@@ -1031,6 +1053,13 @@ html {
     width: 120px;
   }
 }
+@media screen and (min-width: 760px) {
+  .header-logo a > span {
+    font-size: 28.8px;
+    font-size: 1.8rem;
+    width: 160px;
+  }
+}
 .header-logo strong {
   font-size: 56px;
   font-size: 3.5rem;
@@ -1046,6 +1075,19 @@ html {
     padding-top: 0.7rem;
   }
 }
+@media screen and (min-width: 760px) {
+  .header-logo strong {
+    font-size: 75.2px;
+    font-size: 4.7rem;
+    padding: 16px;
+    padding: 1rem;
+    padding-top: 14.4px;
+    padding-top: 0.9rem;
+    margin-right: 16px;
+    margin-right: 1rem;
+    padding-bottom: 0;
+  }
+}
 .header-logo strong span {
   font-size: 44.8px;
   font-size: 2.8rem;
@@ -1056,8 +1098,15 @@ html {
 }
 @media screen and (min-width: 600px) {
   .header-logo strong span {
-    font-size: 49.6px;
-    font-size: 3.1rem;
+    font-size: 51.2px;
+    font-size: 3.2rem;
+  }
+}
+@media screen and (min-width: 760px) {
+  .header-logo strong span {
+    font-size: 59.2px;
+    font-size: 3.7rem;
+    top: -11px;
   }
 }
 .header-logo p {
@@ -1073,10 +1122,22 @@ html {
     font-size: 0.8rem;
   }
 }
+@media screen and (min-width: 760px) {
+  .header-logo p {
+    font-size: 15.04px;
+    font-size: 0.94rem;
+  }
+}
 
 .footer {
   margin: 50px 0;
   text-align: center;
+}
+@media screen and (min-width: 760px) {
+  .footer {
+    margin: 50px auto;
+    max-width: 900px;
+  }
 }
 
 .footer-copyright {
@@ -1092,6 +1153,13 @@ html {
   .footer-scrolltop {
     padding: 8px;
     padding: 0.5rem;
+    float: right;
+    margin-top: -30px;
+  }
+}
+@media screen and (min-width: 940px) {
+  .footer-scrolltop {
+    margin-right: 0;
   }
 }
 
