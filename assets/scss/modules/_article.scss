@@ -70,3 +70,14 @@
 		}
 	}
 }
+
+
+// Comments
+.comments {
+	@extend %box;
+
+	@media #{$mq-smalldesktop} {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
