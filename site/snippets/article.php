@@ -15,7 +15,7 @@
 		<div class="article-header-categories">
 			<?php $categories = explode(',', $article->categories()); ?>
 			<?php foreach ($categories as $category): ?>
-				<a href="#"><?php echo html(trim($category)); ?></a>
+				<a href="<?php echo url('category:' . trim($category)); ?>"><?php echo html(trim($category)); ?></a>
 			<?php endforeach; ?>
 		</div>
 
