@@ -19,10 +19,10 @@
 	<?php foreach ($articles AS $article): ?>
 		<?php snippet('article', array('article' => $article)) ?>
 	<?php endforeach; ?>
+
 	<!-- Pagination -->
 	<?php if($articles->pagination()->hasPages()): ?>
 	<nav class="pagination">
-
 		<?php if($articles->pagination()->hasNextPage()): ?>
 		<a class="next" href="<?php echo $articles->pagination()->nextPageURL() ?>">&lsaquo; newer posts</a>
 		<?php endif ?>
@@ -30,8 +30,8 @@
 		<?php if($articles->pagination()->hasPrevPage()): ?>
 		<a class="prev" href="<?php echo $articles->pagination()->prevPageURL() ?>">older posts &rsaquo;</a>
 		<?php endif ?>
-
 	</nav>
+
 	<?php endif ?>
 <?php else: ?>
 	<article class="article">

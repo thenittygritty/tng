@@ -676,6 +676,9 @@ input.search-submit {
     margin-right: 0;
   }
 }
+.article img {
+  width: 100%;
+}
 
 .article-header h1 {
   line-height: 1.1;
