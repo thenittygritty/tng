@@ -6,6 +6,6 @@ Description: The Nitty Gritty description
 ----
 Keywords: The Nitty Gritty, HTML, CSS, JavaScript, HTML5, CSS3, JS
 ----
-FooterNote: Made with [Kirby](getkirby.com) and &#x2665;.
+FooterNote: Made with [Kirby](http://getkirby.com) and &#x2665;.
 ----
 Copyright: Copyright 2012, The Nitty Gritty
