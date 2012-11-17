@@ -22,6 +22,9 @@ Text:
 
 Terry richardson *godard etsy craft* beer, __consectetur__ bushwick [deserunt fanny](http://google.com) pack readymade fugiat gastropub aliquip you probably haven't heard of them photo `<?php echo html($article->author()); ?>` booth pinterest. Fingerstache ex nulla, wayfarers lomo pariatur chillwave pour-over street art ut brunch. Dolor fap tumblr sint. Whatever labore dreamcatcher hoodie post-ironic, et trust fund lomo cliche sriracha etsy retro elit Austin. Twee artisan echo park, chillwave sint trust fund vegan. Pork belly jean shorts chambray Austin ad kogi. Selvage cray ad photo booth mollit twee quis, ennui mixtape locavore velit.
 
+![Mifune](/content/home/002-second-article/gorilla.jpg)
+via [flickr](http://www.flickr.com/photos/thestitcherati/7577429998/)
+
 ## Skateboard deserunt sed
 Skateboard deserunt sed retro seitan dolor nulla do kogi. Odio exercitation tempor pinterest. Pour-over banksy cupidatat skateboard nostrud squid, art party pop-up. Blog nostrud typewriter, eiusmod magna artisan pariatur.
 
