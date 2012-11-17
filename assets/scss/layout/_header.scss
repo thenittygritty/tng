@@ -110,7 +110,6 @@
 
 		font-weight: 400;
 		font-family: Merriweather, sans-serif;
-		font-style: italic;
 
 		@media #{$mq-smalltab} {
 			@include x-rem(font-size, .8);
