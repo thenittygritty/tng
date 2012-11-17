@@ -1121,7 +1121,6 @@ html {
   font-size: 0.6rem;
   font-weight: 400;
   font-family: Merriweather, sans-serif;
-  font-style: italic;
 }
 @media screen and (min-width: 600px) {
   .header-logo p {
