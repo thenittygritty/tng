@@ -5,14 +5,14 @@
 	// Do categories if requested
 	if (param('category')) {
 
-		$articles = $page->children()->filterBy('categories', param('category'), ',');
+		$articles = $page->children()->visible()->flip()->filterBy('categories', param('category'), ',');
 		?>
 		<h1>Category: <?php echo param('category'); ?></h1>
 		<?php
 	} else {
 
 		// Do blog elsewise
-		$articles = $page->children();
+		$articles = $page->children()->visible()->flip();
 	}
 ?>
 <?php if ($articles && $articles->count()): ?>
