@@ -9,34 +9,26 @@
 		?>
 		<h1>Category: <?php echo param('category'); ?></h1>
 		<?php
+
 	} else {
 
 		// Do blog elsewise
 		$articles = $page->children()->visible()->flip()->paginate(5);
 	}
 ?>
-<?php if ($articles && $articles->count()): ?>
-	<?php foreach ($articles AS $article): ?>
-		<?php snippet('article', array('article' => $article)) ?>
-	<?php endforeach; ?>
 
-	<!-- Pagination -->
-	<?php if($articles->pagination()->hasPages()): ?>
-	<nav class="pagination">
-		<?php if($articles->pagination()->hasNextPage()): ?>
-		<a class="next" href="<?php echo $articles->pagination()->nextPageURL() ?>">&lsaquo; newer posts</a>
-		<?php endif ?>
+<?php if ($articles && $articles->count()) { ?>
 
-		<?php if($articles->pagination()->hasPrevPage()): ?>
-		<a class="prev" href="<?php echo $articles->pagination()->prevPageURL() ?>">older posts &rsaquo;</a>
-		<?php endif ?>
-	</nav>
+	<?php foreach ($articles as $article) { ?>
+		<?php snippet('article', array('article' => $article)); ?>
+	<?php } ?>
 
-	<?php endif ?>
-<?php else: ?>
+	<?php snippet('paginate', array('articles' => $articles)); ?>
+
+<?php } else { ?>
 	<article class="article">
 		<p>Wooops. We couldn't find any articles. *sadpanda*</h1>
 	</article>
-<?php endif; ?>
+<?php } ?>
 
 <?php snippet('footer') ?>
