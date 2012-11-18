@@ -18,8 +18,12 @@
 				<a href="<?php echo url('category:' . trim($category)); ?>"><?php echo html(trim($category)); ?></a>
 			<?php endforeach; ?>
 		</div>
+	</header>
 
-		<div class="article-header-author">
+	<?php echo markdown($article->text()); ?>
+
+	<footer class="article-footer">
+		<div class="article-footer-author">
 			<img src="http://www.gravatar.com/avatar/<?php echo md5($article->authormail()); ?>">
 
 			by
@@ -33,7 +37,5 @@
 
 			<?php echo markdown($article->authorinfo()); ?>
 		</div>
-	</header>
-
-	<?php echo markdown($article->text()); ?>
+	</footer>
 </article>

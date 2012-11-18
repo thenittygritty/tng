@@ -21,32 +21,6 @@
 	}
 }
 
-
-// Author
-.article-header-author {
-	margin: 2em 0;
-	overflow: hidden;
-
-	> img {
-		float: left;
-		margin-right: .5em;
-		width: 64px;
-		height: 64px;
-	}
-
-	> a {
-		text-decoration: none;
-
-		&:first-of-type {
-			@include x-rem(font-size, 1.5);
-		}
-	}
-
-	p {
-		margin: 0;
-	}
-}
-
 .article-header-date {
 	float: right;
 	margin-top: 0;
@@ -72,6 +46,30 @@
 		&:last-child:after {
 			content: "";
 		}
+	}
+}
+
+
+// Author
+.article-footer-author {
+	margin: 2em 0 0;
+	line-height: 2.1;
+	overflow: hidden;
+
+	> img {
+		float: left;
+		margin-right: .5em;
+		width: 64px;
+		height: 64px;
+	}
+
+	> a {
+		text-decoration: none;
+	}
+
+	p {
+		margin: 0;
+		line-height: 1.4;
 	}
 }
 

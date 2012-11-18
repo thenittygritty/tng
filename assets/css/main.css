@@ -685,27 +685,6 @@ input.search-submit {
   margin: 0 0 .5em;
 }
 
-.article-header-author {
-  margin: 2em 0;
-  overflow: hidden;
-}
-.article-header-author > img {
-  float: left;
-  margin-right: .5em;
-  width: 64px;
-  height: 64px;
-}
-.article-header-author > a {
-  text-decoration: none;
-}
-.article-header-author > a:first-of-type {
-  font-size: 24px;
-  font-size: 1.5rem;
-}
-.article-header-author p {
-  margin: 0;
-}
-
 .article-header-date {
   float: right;
   margin-top: 0;
@@ -725,6 +704,25 @@ input.search-submit {
 }
 .article-header-categories > a:last-child:after {
   content: "";
+}
+
+.article-footer-author {
+  margin: 2em 0 0;
+  line-height: 2.1;
+  overflow: hidden;
+}
+.article-footer-author > img {
+  float: left;
+  margin-right: .5em;
+  width: 64px;
+  height: 64px;
+}
+.article-footer-author > a {
+  text-decoration: none;
+}
+.article-footer-author p {
+  margin: 0;
+  line-height: 1.4;
 }
 
 @media screen and (min-width: 940px) {
