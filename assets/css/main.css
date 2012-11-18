@@ -732,6 +732,91 @@ input.search-submit {
   }
 }
 
+/*
+ * Images
+ */
+.image-full img, .image-leftish img, .image-rightish img {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid #edeae3;
+}
+.image-full > figcaption, .image-leftish > figcaption, .image-rightish > figcaption {
+  font-style: italic;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #edeae3;
+}
+
+.image-full, .image-leftish, .image-rightish {
+  margin-left: -12px;
+  margin-left: -0.75rem;
+  margin-right: -12px;
+  margin-right: -0.75rem;
+}
+@media screen and (min-width: 600px) {
+  .image-full, .image-leftish, .image-rightish {
+    margin-left: -24px;
+    margin-left: -1.5rem;
+    margin-right: -24px;
+    margin-right: -1.5rem;
+  }
+}
+@media screen and (min-width: 760px) {
+  .image-full, .image-leftish, .image-rightish {
+    margin-left: -32px;
+    margin-left: -2rem;
+    margin-right: -32px;
+    margin-right: -2rem;
+  }
+}
+@media screen and (min-width: 940px) {
+  .image-full, .image-leftish, .image-rightish {
+    margin-left: -48px;
+    margin-left: -3rem;
+    margin-right: -48px;
+    margin-right: -3rem;
+  }
+}
+.image-full > figcaption, .image-leftish > figcaption, .image-rightish > figcaption {
+  margin: 12px;
+  margin: 0.75rem;
+}
+@media screen and (min-width: 600px) {
+  .image-full > figcaption, .image-leftish > figcaption, .image-rightish > figcaption {
+    margin-left: 24px;
+    margin-left: 1.5rem;
+    margin-right: 24px;
+    margin-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 760px) {
+  .image-full > figcaption, .image-leftish > figcaption, .image-rightish > figcaption {
+    margin-left: 32px;
+    margin-left: 2rem;
+    margin-right: 32px;
+    margin-right: 2rem;
+  }
+}
+@media screen and (min-width: 940px) {
+  .image-full > figcaption, .image-leftish > figcaption, .image-rightish > figcaption {
+    margin-left: 48px;
+    margin-left: 3rem;
+    margin-right: 48px;
+    margin-right: 3rem;
+  }
+}
+
+.image-leftish {
+  float: left;
+  max-width: 60%;
+  margin-right: 20px;
+}
+
+.image-rightish {
+  float: right;
+  max-width: 60%;
+  margin-left: 20px;
+}
+
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)

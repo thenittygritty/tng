@@ -1,0 +1,77 @@
+/*
+ * Images
+ */
+
+%image {
+
+	img {
+		@include x-box-shadow(0 2px 5px rgba(0,0,0,.5));
+		border: 1px solid $background;
+	}
+
+	> figcaption {
+		font-style: italic;
+		padding-bottom: 10px;
+		border-bottom: 1px solid $background;
+	}
+}
+
+.image-full {
+	@extend %image;
+
+	@include x-rem(margin-left, -0.75);
+	@include x-rem(margin-right, -0.75);
+
+	@media #{$mq-smalltab} {
+		@include x-rem(margin-left, -1.5);
+		@include x-rem(margin-right, -1.5);
+	}
+
+	@media #{$mq-tablet} {
+		@include x-rem(margin-left, -2);
+		@include x-rem(margin-right, -2);
+	}
+
+	@media #{$mq-smalldesktop} {
+		@include x-rem(margin-left, -3);
+		@include x-rem(margin-right, -3);
+	}
+
+
+	> figcaption {
+		@include x-rem(margin, 0.75);
+
+		@media #{$mq-smalltab} {
+			@include x-rem(margin-left, 1.5);
+			@include x-rem(margin-right, 1.5);
+		}
+
+		@media #{$mq-tablet} {
+			@include x-rem(margin-left, 2);
+			@include x-rem(margin-right, 2);
+		}
+
+		@media #{$mq-smalldesktop} {
+			@include x-rem(margin-left, 3);
+			@include x-rem(margin-right, 3);
+		}
+	}
+}
+
+.image-leftish {
+	@extend .image-full;
+
+	float: left;
+	max-width: 60%;
+	margin-right: 20px;
+}
+
+
+.image-rightish {
+	@extend .image-full;
+
+	float: right;
+	max-width: 60%;
+	margin-left: 20px;
+}
+
