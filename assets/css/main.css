@@ -1006,12 +1006,6 @@ pre code {
   word-break: inherit;
 }
 
-.article-header + p,
-h1 + p,
-h2 + p {
-  text-indent: 20px;
-}
-
 /*
  * HTML5 Boilerplate
  *
