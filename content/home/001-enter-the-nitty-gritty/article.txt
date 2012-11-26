@@ -8,7 +8,7 @@ AuthorUrl: http://kahlil.co/
 ----
 AuthorTwitter: hellokahlil
 ----
-AuthorMail:
+AuthorMail: kahlil.lechelt@gmail.com
 ----
 AuthorInfo:
 ----
@@ -36,7 +36,7 @@ So, cutting a long story short, we decided to execute on the desire to create a 
 
 ## Constructing the Blog
 
-Hans and I built TNG together using [Kirby](http://getkirby.com/) and a lot of modern technology like Grunt.js and much more. Although neither of us are designers, I think we put together a decent looking blog. Hans set up Kirby initially and I put together a color palette on colorlovers.com. Hans then carefully crafted the overall look of the site sticking to the Mobile First approach using SASS and I built the logo with web fonts and CSS as well.
+Hans and I built TNG together using [Kirby](http://getkirby.com/) and modern front-end technologies like Grunt.js and SASS. Although neither of us are designers, I think we put together a decent looking blog. Hans set up Kirby initially and I put together a color palette on colorlovers.com ([a tip from @holman](http://zachholman.com/posts/slide-design-for-developers/)). Hans then carefully crafted the overall look of the site sticking to the Mobile First approach using SASS and I built the logo with web fonts and CSS as well.
 
 The fonts we use are Merriweather for headlines and Open Sans for copy text.
 
@@ -46,9 +46,9 @@ The fonts we use are Merriweather for headlines and Open Sans for copy text.
 First off, both Hans and I are not fans of names that are too literal for niche blogs, like "The Web Tech Blog," or something along those lines. But we still wanted the name to relate to what we are trying to accomplish here.
 
 The definition of "Nitty Gritty" is
-> The specific or practical details; the heart of a matter.
+> what is essential and basic : specific practical details <get down to the nitty–gritty of the problem>
 >
-> – [Backlink plz](---)
+> – [Merriam Webster Dictionary](http://www.merriam-webster.com/dictionary/nitty-gritty)
 
 And since this is a place for articles that explore web tech subjects in-depth, it is the perfect name for it.
 
