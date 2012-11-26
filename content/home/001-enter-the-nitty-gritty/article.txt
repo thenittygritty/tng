@@ -10,13 +10,13 @@ AuthorTwitter: hellokahlil
 ----
 AuthorMail: kahlil.lechelt@gmail.com
 ----
-AuthorInfo:
+AuthorInfo: Kahlil is a JavaScript Web Developer working at Etecture in Karlsruhe. He does [Distilled Hype](http://distilledhype.com/).
 ----
 Categories: TNG Internal
 ----
-Description:
+Description: Here is how we came up with the idea of The Nitty Gritty and how we processed to what it has become on day one.
 ----
-Tags:
+Tags: The Nitty Gritty, HTML5, CSS, Introduction, How To
 ----
 Text:
 
@@ -36,7 +36,7 @@ So, cutting a long story short, we decided to execute on the desire to create a 
 
 ## Constructing the Blog
 
-Hans and I built TNG together using [Kirby](http://getkirby.com/) modern front-end technologies and a build process powered by the current alpha version of Grunt.js. Although neither of us are designers, I think we put together a decent looking blog. Hans set up Kirby initially and I put together a color palette on colorlovers.com ([a tip from @holman](http://zachholman.com/posts/slide-design-for-developers/)). Hans then carefully crafted the overall look of the site sticking to the Mobile First approach using SASS and I built the logo with web fonts and CSS as well.
+Hans and I built TNG together using [Kirby](http://getkirby.com/) modern front-end technologies and a build process powered by the current alpha version of Grunt.js. Although neither of us are designers, I think we put together a decent looking blog. Hans set up Kirby initially and I put together a color palette on colorlovers.com ([a tip from @holman](http://zachholman.com/posts/slide-design-for-developers/)). Hans then carefully crafted the overall look of the site sticking to the Mobile First approach using Sass and I built the logo with web fonts and CSS as well.
 
 The fonts we use are Merriweather for headlines and Open Sans for copy text.
 
