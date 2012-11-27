@@ -17,9 +17,9 @@
 					html($site->keywords());
 		?>">
 
-		<link rel="shortcut icon" href="favicon_new.ico">
-
 		<meta name="viewport" content="width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300|Merriweather:400,700|Droid+Sans+Mono">
 
