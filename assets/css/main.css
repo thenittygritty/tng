@@ -559,7 +559,7 @@ input[type="button"] {
     display: block;
     max-width: initial;
     padding: 0 1em;
-    background-color: none;
+    background: none;
     box-shadow: none;
   }
   .navigation > ul li {
@@ -739,12 +739,12 @@ input.search-submit {
 .image-full img, .image-leftish img, .image-rightish img {
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  border: 1px solid #edeae3;
+  border: 1px solid #f7f6f3;
 }
 .image-full > figcaption, .image-leftish > figcaption, .image-rightish > figcaption {
   font-style: italic;
   padding-bottom: 10px;
-  border-bottom: 1px solid #edeae3;
+  border-bottom: 1px solid #f7f6f3;
 }
 
 .image-full, .image-leftish, .image-rightish {
@@ -838,7 +838,7 @@ input.search-submit {
   padding: 3px 5px 2px;
   min-width: 1em;
   background: white;
-  border: #edeae3;
+  border: #f7f6f3;
   text-decoration: none;
 }
 .paginate a:hover {
@@ -891,7 +891,7 @@ pre[class*="language-"] {
 
 /* Code blocks */
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
-  background: #edeae3;
+  background: #f7f6f3;
   border-radius: 5px;
 }
 
@@ -1109,7 +1109,7 @@ textarea {
    Custom styles
    ========================================================================== */
 html {
-  background: url(../img/noise.png) #edeae3;
+  background: url(../img/noise.png) #f7f6f3;
 }
 
 @media screen and (min-width: 940px) {
