@@ -44,7 +44,7 @@
 					<strong><span>//</span>TNG</strong>
 					<span>The Nitty Gritty</span>
 				</a>
-				<p>The low down on web technology</p>
+				<p>The low down on web technology.</p>
 			</h1>
 
 			<?php // snippet('submenu'); ?>
