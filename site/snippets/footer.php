@@ -2,8 +2,14 @@
 		</div>
 
 		<footer class="footer">
+
+			<div class="footer-follow">
+				<a href="https://twitter.com/_thenittygritty" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @_thenittygritty</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
 			<div class="footer-note"><?php echo markdown($site->footernote()); ?></div>
 			<div class="footer-copyright"><?php echo markdown($site->copyright()); ?></div>
+
 			<a href="#" class="footer-scrolltop">Go back up</a>
 		</footer>
 

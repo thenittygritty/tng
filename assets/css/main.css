@@ -1262,6 +1262,10 @@ html {
   margin-bottom: 20px;
 }
 
+.footer-follow {
+  margin: 2em 0;
+}
+
 .footer-scrolltop {
   text-decoration: none;
 }
