@@ -667,7 +667,7 @@ input.search-submit {
   height: 32px;
   background-image: url(../img/search.png);
   background-size: cover;
-  text-indent: -100px;
+  text-indent: -15em;
   overflow: hidden;
 }
 
