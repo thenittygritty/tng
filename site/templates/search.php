@@ -15,9 +15,9 @@
 		<?php endforeach ?>
 	</ul>
 <?php } else { ?>
-	<section class="article">
+	<article class="article">
 		<p>Sorry, we couldn't find anything for your search.</p>
-	</section>
+	</article>
 <?php } ?>
 
 <?php snippet('footer') ?>

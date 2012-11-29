@@ -1,11 +1,11 @@
 <?php snippet('header') ?>
 
-<section class="article">
+<article class="article">
 	<header class="article-header">
 		<h1><?php echo html($page->title()) ?></h1>
 	</header>
 
 	<?php echo markdown($page->text()); ?>
-</section>
+</article>
 
 <?php snippet('footer') ?>
