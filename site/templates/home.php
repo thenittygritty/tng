@@ -5,9 +5,9 @@
 	// Do categories if requested
 	if (param('category')) {
 
-		$articles = $page->children()->visible()->flip()->filterBy('categories', param('category'), ',')->paginate(5);
+		$articles = $page->children()->visible()->flip()->filterBy('categories', urldecode(param('category')), ',')->paginate(5);
 		?>
-		<h1>Category: <?php echo param('category'); ?></h1>
+		<h1>Category: <?php echo urldecode(param('category')); ?></h1>
 		<?php
 
 	} else {
