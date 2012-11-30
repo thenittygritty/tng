@@ -119,7 +119,7 @@
 		}
 
 		@media #{$mq-tablet} {
-			@include x-rem(font-size, 0.94);
+			@include x-rem(font-size, 1);
 			margin-top: 5px;
 		}
 	}
