@@ -55,7 +55,7 @@ And since this is a place for articles that explore web tech subjects in-depth, 
 
 ## Upcoming
 
-We currently have some great authors writing articles for TNG, including the performance pope [Schepp](http://twitter.com/derschepp), Yeoman core contributor [Sindre Sorhus](http://twitter.com/sindresorhus), and the maker of Kirby, [Bastian Allgeier](http://twitter.com/bastianallgeier). Of course we have a long wish list of authors we will be contacting over the next few days and months to get more high quality stuff on the blog.
+We currently have some great authors writing articles for TNG, including the performance pope [Schepp](http://twitter.com/derschepp), [Yeoman](http://yeoman.io) core contributor [Sindre Sorhus](http://twitter.com/sindresorhus), and the maker of [Kirby](http://getkirby.com), [Bastian Allgeier](http://twitter.com/bastianallgeier). Of course we have a long wish list of authors we will be contacting over the next few days and months to get more high quality stuff on the blog.
 
 But we also want to encourage anyone who would like to publish their work on TNG to send us a pitch at [pitch@thenittygritty.co](pitch@thenittygritty.co). All we want to do is publish well researched articles about web tech and related topics. Contact us!
 
