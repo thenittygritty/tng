@@ -1,4 +1,4 @@
-Title: Decouple Your CSS From HTML using Reusable Modules
+Title: Decouple Your CSS From HTML With Reusable Modules
 ----
 Date: 2012-12-03
 ----
@@ -10,13 +10,13 @@ AuthorTwitter: drublic
 ----
 AuthorMail: info@drublic.de
 ----
-AuthorInfo:
+AuthorInfo: Hans is a Front-end Developer living in Freiburg, Germany. He is part of the team around [HTML5 Boilerplate](http://html5boilerplate.com/) and a co-host of the [Working Draft podcast](http://workingdraft.de/).
 ----
 Categories: CSS, Sass
 ----
-Description:
+Description: Sass 3.2 has a wonderful method to define reusable modules called placeholders which enable us to decouple CSS from HTML while using unambiguous, semantic class names.
 ----
-Tags:
+Tags: CSS, Sass, Decoupeling, Module, Modules, OOCSS, SMACSS
 ----
 Text:
 
@@ -26,11 +26,21 @@ A few weeks ago Ian Storm Taylor had [a great article on how to find the best wa
 
 The OOCSS view of thing is that you define modules to work with and in order to change these modules - to build variants of them - you apply classes to an HTML element that change its styles accordingly.
 
+<figure class="image-rightish-small">![Bootstrap's Buttons](/content/home/decouple-css/bootstrap-buttons.png)<figcaption>Differently styled buttons based on the OOCSS-technique in Bootstrap.</figcaption></figure>
+
 For instance here is an easy example of a button that changes its appearance when applying classes on it.
 
+<span class="language-markup"></span>
+
 	<button class="btn" type="button">Button</button>
-	<button class="btn btn-large" type="button">Large Button</button>
-	<button class="btn btn-large btn-primary" type="button">Large Primary Button</button>
+
+	<button class="btn btn-large" type="button">
+		Large Button
+	</button>
+
+	<button class="btn btn-large btn-primary" type="button">
+		Large Primary Button
+	</button>
 
 Does this seem familiar to you? Well actualy [this example is from Bootstrap](http://twitter.github.com/bootstrap/base-css.html#buttons). Bootstrap uses the approach of OOCSS to define modules and extends styles to define variants of these modules.
 
@@ -50,11 +60,15 @@ To come back to Ian Sorm Taylor's article let us look at the way he provides to 
 
 First off we want to look at an example of how to define the above buttons using OOSass as Ian describes it. Your HTML would look something like this:
 
+<span class="language-markup"></span>
+
 	<button class="button" type="button">Button</button>
 	<button class="button-large" type="button">Large Button</button>
 	<button class="button-large-primary" type="button">Large Primary Button</button>
 
 The styles for these buttons can be defined as follows in Sass:
+
+<span class="language-css"></span>
 
 	.button {
 		// Styles for a button
@@ -92,7 +106,11 @@ In Sass 3.2 some interesting features landed. One of them are [placeholders](htt
 
 So with this knowledge in mind let us define a button module that we can use whenever appropriate by sticking to the idea that Ian described.
 
+<figure class="image-rightish-small">![The module's code](/content/home/decouple-css/the-module.png)<figcaption>This is how the code of our module looks in CSS including the call in `.download-whitepaper`.</figcaption></figure>
+
 We define some styles for a default button:
+
+<span class="language-css"></span>
 
 	%button {
 		background: #111;
@@ -103,6 +121,8 @@ We define some styles for a default button:
 
 A large button basically has the same styling as this button but it needs to be a bit bigger:
 
+<span class="language-css"></span>
+
 	%button-large {
 		@extend %button;
 		font-size: 1.3em;
@@ -112,6 +132,8 @@ Since we defined `padding` using `em` we do not need to do anything to increase 
 
 Now when we are dealing with a primary Call-to-Action button all that should change compared to a "normal" button is the background color:
 
+<span class="language-css"></span>
+
 	%button-primary {
 		@extend %button;
 		background: #27aae2;
@@ -119,12 +141,16 @@ Now when we are dealing with a primary Call-to-Action button all that should cha
 
 For a primaty large button we just need to merge both the large style button and the primary style.
 
+<span class="language-css"></span>
+
 	%button-primary-large {
 		@extend %button-primary;
 		@extend %button-large;
 	}
 
 Let us use the button-module for a Call-To-Action button on a home page that asks the user to download a white-paper. It could be named (semantic class name) `dowload-whitepaper`. In Sass you are now able to apply the styles from your button modules while using a simple `@extend` call:
+
+<span class="language-css"></span>
 
 	.download-whitepaper {
 		@extend %button-primary-large;
@@ -135,6 +161,8 @@ See the full example module in [this gist](https://gist.github.com/36fd59a9a0916
 ## The CSS
 
 Here is the output of the compiled CSS:
+
+<span class="language-css"></span>
 
 	.download-whitepaper {
 	  background: #111;
@@ -152,6 +180,8 @@ Here is the output of the compiled CSS:
 	}
 
 The output can be found in the [aforementioned gist](https://gist.github.com/36fd59a9a0916f2f5c2d), too.
+
+<figure class="image-full">![The compiled buttons](/content/home/decouple-css/buttons.png)<figcaption>This is how the different buttons look, labeld with the according module-parts.</figcaption></figure>
 
 This is not the best you can get out of CSS, since you could easily combine all rules into one without the repeated selecor. But there is more to it.
 
