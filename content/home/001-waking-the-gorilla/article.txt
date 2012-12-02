@@ -1,6 +1,6 @@
 Title: Waking The Gorilla
 ----
-Date: 2012-11-27
+Date: 2012-12-03
 ----
 Author: Kahlil Lechelt
 ----
@@ -36,7 +36,7 @@ So, cutting a long story short, we decided to execute on the desire to create a 
 
 ## Constructing the Blog
 
-Hans and I built TNG together using [Kirby](http://getkirby.com/) modern front-end technologies and a build process powered by the current alpha version of [Grunt.js](http://gruntjs.com). Although neither of us are designers, I think we put together a decent looking blog. Hans set up Kirby initially and I put together a color palette on colorlovers.com ([a great tip from @holman](http://zachholman.com/posts/slide-design-for-developers/)). Hans then carefully crafted the overall look of the site sticking to the Mobile First approach using Sass and I built the logo with web fonts and CSS as well.
+Hans and I built TNG together using [Kirby](http://getkirby.com/), modern front-end technologies and a build process powered by the current alpha version of [Grunt.js](http://gruntjs.com). Although neither of us are designers, I think we put together a decent looking blog. Hans set up Kirby initially and I put together a color palette on colorlovers.com ([a great tip from @holman](http://zachholman.com/posts/slide-design-for-developers/)). Hans then carefully crafted the overall look of the site sticking to the Mobile First approach using Sass and I built the logo with web fonts and CSS as well.
 
 The fonts we use are Merriweather for headlines and Open Sans for copy text.
 
