@@ -482,7 +482,7 @@ input[type="button"] {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.7);
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .navigation > ul, .article, .comments, .header-logo strong, .footer-scrolltop {
     margin: 16px;
     margin: 1rem;
@@ -490,13 +490,13 @@ input[type="button"] {
     padding: 1rem;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .navigation > ul, .article, .comments, .header-logo strong, .footer-scrolltop {
     padding: 24px;
     padding: 1.5rem;
   }
 }
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 59em) {
   .navigation > ul, .article, .comments, .header-logo strong, .footer-scrolltop {
     padding: 32px;
     padding: 2rem;
@@ -512,7 +512,7 @@ input[type="button"] {
   left: 0;
   right: 0;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .navigation {
     position: static;
     background-color: rgba(255, 255, 255, 0.9);
@@ -546,14 +546,14 @@ input[type="button"] {
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.9) transparent;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .navigation > ul {
     right: 16px;
     right: 1rem;
     top: 65px;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .navigation > ul {
     border-radius: 0px;
     border-radius: 0rem;
@@ -570,7 +570,7 @@ input[type="button"] {
     display: inline-block;
   }
 }
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 59em) {
   .navigation > ul {
     max-width: 900px;
     margin-left: auto;
@@ -586,7 +586,7 @@ input[type="button"] {
   color: #fff;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .navigation > ul a {
     padding: 1em 15px;
   }
@@ -610,7 +610,7 @@ input[type="button"] {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   font-family: serif;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .navigation-toggle {
     top: 16px;
     top: 1rem;
@@ -618,7 +618,7 @@ input[type="button"] {
     right: 1rem;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .navigation-toggle {
     display: none !important;
   }
@@ -641,18 +641,18 @@ input[type="button"] {
 .search {
   margin: 10px 60px 10px 10px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .search {
     margin: 20px 60px 20px 20px;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .search {
     float: right;
     margin: 10px 1em;
   }
 }
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 59em) {
   .search {
     float: none;
     max-width: 900px;
@@ -676,7 +676,7 @@ input.search-submit {
   overflow: hidden;
 }
 
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 59em) {
   .article {
     margin-left: 0;
     margin-right: 0;
@@ -731,7 +731,7 @@ input.search-submit {
   line-height: 1.4;
 }
 
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 59em) {
   .comments {
     margin-left: 0;
     margin-right: 0;
@@ -758,7 +758,7 @@ input.search-submit {
   margin-right: -12px;
   margin-right: -0.75rem;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .image-full, .image-leftish, .image-rightish {
     margin-left: -24px;
     margin-left: -1.5rem;
@@ -766,7 +766,7 @@ input.search-submit {
     margin-right: -1.5rem;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .image-full, .image-leftish, .image-rightish {
     margin-left: -32px;
     margin-left: -2rem;
@@ -774,7 +774,7 @@ input.search-submit {
     margin-right: -2rem;
   }
 }
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 59em) {
   .image-full, .image-leftish, .image-rightish {
     margin-left: -48px;
     margin-left: -3rem;
@@ -786,7 +786,7 @@ input.search-submit {
   margin: 12px;
   margin: 0.75rem;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .image-full > figcaption, .image-leftish > figcaption, .image-rightish > figcaption {
     margin-left: 24px;
     margin-left: 1.5rem;
@@ -794,7 +794,7 @@ input.search-submit {
     margin-right: 1.5rem;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .image-full > figcaption, .image-leftish > figcaption, .image-rightish > figcaption {
     margin-left: 32px;
     margin-left: 2rem;
@@ -802,7 +802,7 @@ input.search-submit {
     margin-right: 2rem;
   }
 }
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 59em) {
   .image-full > figcaption, .image-leftish > figcaption, .image-rightish > figcaption {
     margin-left: 48px;
     margin-left: 3rem;
@@ -1117,7 +1117,7 @@ html {
   background: url(../img/noise.png) #f7f6f3;
 }
 
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 59em) {
   .site-content {
     max-width: 900px;
     margin: 0 auto;
@@ -1134,13 +1134,13 @@ html {
   margin: 0.5rem;
   line-height: 1;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .header-logo {
     margin: 16px;
     margin: 1rem;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .header-logo {
     margin-top: 48px;
     margin-top: 3rem;
@@ -1148,7 +1148,7 @@ html {
     margin-bottom: 3rem;
   }
 }
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 59em) {
   .header-logo {
     max-width: 900px;
     margin-left: auto;
@@ -1171,14 +1171,14 @@ html {
   width: 110px;
   line-height: 1.4;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .header-logo a > span {
     font-size: 24px;
     font-size: 1.5rem;
     width: 120px;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .header-logo a > span {
     font-size: 43.2px;
     font-size: 2.7rem;
@@ -1192,7 +1192,7 @@ html {
   margin: 0 10px 0 0;
   padding-bottom: 0;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .header-logo strong {
     font-size: 64px;
     font-size: 4rem;
@@ -1200,7 +1200,7 @@ html {
     padding-top: 0.7rem;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .header-logo strong {
     font-size: 107.2px;
     font-size: 6.7rem;
@@ -1220,7 +1220,7 @@ html {
   top: -7px;
   margin-right: 7px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .header-logo strong span {
     font-size: 49.6px;
     font-size: 3.1rem;
@@ -1228,7 +1228,7 @@ html {
     margin-right: 10px;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .header-logo strong span {
     font-size: 84.8px;
     font-size: 5.3rem;
@@ -1243,13 +1243,13 @@ html {
   font-weight: 400;
   font-family: Merriweather, sans-serif;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .header-logo p {
     font-size: 12.8px;
     font-size: 0.8rem;
   }
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .header-logo p {
     font-size: 16px;
     font-size: 1rem;
@@ -1261,7 +1261,7 @@ html {
   margin: 50px 0;
   text-align: center;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 48em) {
   .footer {
     margin: 50px auto;
     max-width: 900px;
@@ -1281,7 +1281,7 @@ html {
 .footer-scrolltop {
   text-decoration: none;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 38em) {
   .footer-scrolltop {
     padding: 8px;
     padding: 0.5rem;
@@ -1289,7 +1289,7 @@ html {
     margin-top: -30px;
   }
 }
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 59em) {
   .footer-scrolltop {
     margin-right: 0;
   }
