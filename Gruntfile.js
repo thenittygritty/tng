@@ -1,15 +1,21 @@
 module.exports = function (grunt) {
+	'use strict';
 
 	// Project configuration.
 	grunt.initConfig({
-		pkg: '<json:package.json>',
+		pkg: require('./package'),
 		meta: {
 			banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
 			'<%= grunt.template.today("yyyy-mm-dd") %> */'
 		},
-
-		lint: {
-			all: ['Gruntfile.js', 'assets/js/main.js']
+		jshint: {
+			all: [
+				'Gruntfile.js',
+				'assets/js/main.js'
+			],
+			options: {
+				jshintrc: '.jshintrc'
+			}
 		},
 
 		concat: {
@@ -19,7 +25,7 @@ module.exports = function (grunt) {
 			}
 		},
 
-		rubysass: {
+		sass: {
 			dev: {
 				options: {
 					unixNewlines: true,
@@ -40,9 +46,9 @@ module.exports = function (grunt) {
 			}
 		},
 
-		min: {
+		uglify: {
 			deploy: {
-				src: ['<config_process:meta.banner>', '<config:concat.deploy.dest>'],
+				src: 'assets/dist/js/main-<%= pkg.version %>.min.js',
 				dest: 'assets/dist/js/main-<%= pkg.version %>.min.js'
 			}
 		},
@@ -50,27 +56,34 @@ module.exports = function (grunt) {
 		watch: {
 			scss: {
 				files: ['assets/scss/**/*.scss'],
-				tasks: 'rubysass:dev'
+				tasks: 'sass:dev'
 			},
 
 			js: {
-				files: '<config:lint.all>',
-				tasks: 'lint'
+				files: [
+					'Gruntfile.js',
+					'assets/js/main.js'
+				],
+				tasks: 'jshint'
 			}
 		}
 	});
 
 	// Load some stuff
-	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 
 	// A task for development
-	grunt.registerTask('dev', 'lint rubysass:dev');
+	grunt.registerTask('dev', 'jshint sass:dev');
 
 	// A task for deployment
-	grunt.registerTask('deploy', 'lint concat rubysass:deploy min');
+	grunt.registerTask('deploy', ['jshint', 'concat', 'sass:deploy', 'uglify']);
 
 	// Default task
-	grunt.registerTask('default', 'lint concat rubysass:dev min');
+	grunt.registerTask('default', ['jshint', 'concat', 'sass:dev', 'uglify']);
 
 };
