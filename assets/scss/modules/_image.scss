@@ -7,6 +7,8 @@
 	img {
 		@include x-box-shadow(0 2px 5px rgba(0,0,0,.5));
 		border: 1px solid $background;
+
+		max-width: 100%;
 	}
 
 	> figcaption {
@@ -66,6 +68,11 @@
 	margin-right: 20px;
 }
 
+.image-leftish-small {
+	@extend .image-leftish;
+
+	max-width: 40%;
+}
 
 .image-rightish {
 	@extend .image-full;
@@ -73,5 +80,11 @@
 	float: right;
 	max-width: 60%;
 	margin-left: 20px;
+}
+
+.image-rightish-small {
+	@extend .image-rightish;
+
+	max-width: 40%;
 }
 
