@@ -9,10 +9,12 @@
 
 (function () {
 
+	'use strict';
+
 	/**
 	 * Determine whether a node's text content is entirely whitespace.
 	 */
-	var is_all_ws = function (nod) {
+	var isAllWs = function (nod) {
 		// Use ECMA-262 Edition 3 String and RegExp features
 		return !(/[^\t\n\r ]/.test(nod.data));
 	};
@@ -22,29 +24,32 @@
 	 * Determine if a node should be ignored by the iterator functions.
 	 */
 
-	var is_ignorable = function (nod) {
-		return ( nod.nodeType == 8) || // A comment node
-		       ( (nod.nodeType == 3) && is_all_ws(nod) ); // a text node, all ws
+	var isIgnorable = function (nod) {
+		return (nod.nodeType === 8) || // A comment node
+		       ( (nod.nodeType === 3) && isAllWs(nod) ); // a text node, all ws
 	};
 
 	/**
 	 * Version of |previousSibling| that skips nodes that are entirely
 	 * whitespace or comments.
 	 */
-	var node_before = function (sib) {
+	var nodeBefore = function (sib) {
 		while ((sib = sib.previousSibling)) {
-			if (!is_ignorable(sib)) return sib;
+			if (!isIgnorable(sib)) {
+				return sib;
+			}
 		}
 		return null;
 	};
 
 	// Mark all code as language
-	var pre = document.querySelectorAll('pre'),
-		preLength, i, language;
+	var preLength, i, language, node,
+	    pre = document.querySelectorAll('pre');
 
 	for (preLength = pre.length, i = 0; i < preLength; i++) {
-		if (node_before(pre[i]).firstChild.getAttribute) {
-			language = node_before(pre[i]).firstChild.getAttribute('class');
+		node = nodeBefore(pre[i]).firstChild;
+		if (node.getAttribute) {
+			language = node.getAttribute('class');
 			pre[i].className += ' ' + language;
 		}
 	}
