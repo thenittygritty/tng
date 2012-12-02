@@ -43,8 +43,10 @@
 		preLength, i, language;
 
 	for (preLength = pre.length, i = 0; i < preLength; i++) {
-		language = node_before(pre[i]).firstChild.getAttribute('class');
-		pre[i].className += ' ' + language;
+		if (node_before(pre[i]).firstChild.getAttribute) {
+			language = node_before(pre[i]).firstChild.getAttribute('class');
+			pre[i].className += ' ' + language;
+		}
 	}
 
 }());
