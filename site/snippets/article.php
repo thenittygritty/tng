@@ -6,6 +6,10 @@
 			</a>
 		</h1>
 
+		<div>
+			by <a href="#author"><?php echo html($article->author()); ?></a>
+		</div>
+
 		<p class="article-header-date">
 			<time datetime="<?php echo $article->date('c') ?>">
 				<?php echo html($article->date('d.m.Y')); ?>
@@ -23,7 +27,7 @@
 	<?php echo markdown($article->text()); ?>
 
 	<footer class="article-footer">
-		<div class="article-footer-author">
+		<div class="article-footer-author" id="author">
 			<img src="http://www.gravatar.com/avatar/<?php echo md5($article->authormail()); ?>">
 
 			by

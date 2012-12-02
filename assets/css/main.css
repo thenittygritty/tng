@@ -702,9 +702,6 @@ input.search-submit {
 .article-header-categories:before {
   content: "Categories: ";
 }
-.article-header-categories > a {
-  text-decoration: none;
-}
 .article-header-categories > a:after {
   content: ", ";
 }
