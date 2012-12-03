@@ -20,8 +20,11 @@ module.exports = function (grunt) {
 
 		concat: {
 			deploy: {
-				src: ['assets/js/main.js'],
-				dest: 'assets/dist/js/main-<%= pkg.version %>.min.js'
+				src: [
+					'assets/js/vendor/prism.js',
+					'assets/js/main.js'
+				],
+				dest: 'assets/dist/main-<%= pkg.version %>.min.js'
 			}
 		},
 
@@ -40,7 +43,7 @@ module.exports = function (grunt) {
 					style: 'compressed'
 				},
 				files: {
-					'assets/dist/css/main-<%= pkg.version %>.min.css': 'assets/scss/main.scss'
+					'assets/dist/main-<%= pkg.version %>.min.css': 'assets/scss/main.scss'
 				}
 
 			}
@@ -48,8 +51,8 @@ module.exports = function (grunt) {
 
 		uglify: {
 			deploy: {
-				src: 'assets/dist/js/main-<%= pkg.version %>.min.js',
-				dest: 'assets/dist/js/main-<%= pkg.version %>.min.js'
+				src: 'assets/dist/main-<%= pkg.version %>.min.js',
+				dest: 'assets/dist/main-<%= pkg.version %>.min.js'
 			}
 		},
 
