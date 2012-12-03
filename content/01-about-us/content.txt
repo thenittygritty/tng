@@ -1,6 +1,6 @@
 Title: About
 ----
-Text: Hans Christian Reinl and Kahlil Lechelt founded The Nitty Gritty as a place for themselves and their friends to publish technical articles about web technology.
+Text: Hans Christian Reinl and Kahlil Lechelt founded The Nitty Gritty as a place for themselves, their friends and frankly anybody else to publish technical articles about or related to web technology.
 
 The motivation stems from the wish of having all those well researched articles archived in one place and to have standing invitation to post at any time to certain developers who don't have and/or want to maintain a personal blog.
 
