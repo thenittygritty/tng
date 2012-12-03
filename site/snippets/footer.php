@@ -13,8 +13,14 @@
 			<a href="#" class="footer-scrolltop">Go back up</a>
 		</footer>
 
-		<?php echo js('assets/js/vendor/prism.js'); ?>
-		<?php echo js('assets/js/main.js'); ?>
+		<?php
+			if (c::get('debug')) {
+				echo js('assets/js/vendor/prism.js');
+				echo js('assets/js/main.js');
+			} else {
+				echo js('assets/dist/main-' . c::get('package')->version . '.min.js');
+			}
+		?>
 
 		<script>
 			var _gaq=[['_setAccount','UA-36398660-1'],['_trackPageview']];

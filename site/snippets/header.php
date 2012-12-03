@@ -25,7 +25,14 @@
 
 		<link rel="alternate" type="application/rss+xml" title="The Nitty Gritty" href="http://tng.local/feed">
 
-		<?php echo css('assets/css/main.css'); ?>
+		<?php
+			if (c::get('debug')) {
+				echo css('assets/css/main.css');
+			} else {
+				echo css('assets/dist/main-' . c::get('package')->version . '.min.css');
+			}
+		?>
+
 
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
