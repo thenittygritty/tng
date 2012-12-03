@@ -2,4 +2,6 @@ Title: Contact us
 ----
 Text:
 
-Write us at <a href="mailto:hello@thenittygritty.co">hello@thenittygritty.co</a> or hit us up on Twitter at @[_thenittygritty](http://twitter.com/_thenittygritty).
+Write us at <a href="mailto:hello@thenittygritty.co">hello@thenittygritty.co</a> or hit us up on Twitter at @[_thenittygritty](http://twitter.com/_thenittygritty) for any feedback you have.
+
+Please check out the [contribute](/contribute) page if you would like to contribute an article!
