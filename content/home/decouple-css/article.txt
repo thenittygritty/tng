@@ -22,6 +22,8 @@ Text:
 
 __Sass 3.2 has a wonderful method to define reusable modules called placeholders which enable us to decouple CSS from HTML while using unambiguous, semantic class names.__
 
+__Oh and by the way… We've got a raffle to give a way a book. [See more below](#raffle).__
+
 A few weeks ago Ian Storm Taylor had [a great article on how to find the best way to CSS](http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/) using [Object Oriented CSS](http://oocss.org/) and the CSS preprocessor [Sass](http://sass-lang.com/).
 
 The OOCSS view of thing is that you define modules to work with and in order to change these modules - to build variants of them - you apply classes to an HTML element that change its styles accordingly.
@@ -198,3 +200,15 @@ With Sass 3.2's placeholders it is straightforward to define modules that you ca
 This can be especially handy for hugh websites that reuse a lot of code in different variations and in teams where you build upon existing code.
 
 __Site note:__ This technique not new. There have been others noticing how easy you can decoulpe CSS using Sass. [Harry Roberts](http://csswizardry.com/) for example uses this style of writing modules in his CSS framework inuit.css in the [`arrow`-module](https://github.com/csswizardry/inuit.css/blob/master/inuit.css/objects/_arrows.scss). Also Joshua Johnson wrote about placeholders in Sass and [their value when dealing with grids](http://designshack.net/articles/css/semantic-grid-class-naming-with-placeholder-selectors-in-sass-3-2/). And as pointed out Ian Storm Taylor wrote a great article on how to use placeholders in Sass.
+
+<figure class="image-rightish-small">![SMACSS by Jonathan Snook](/content/home/decouple-css/smacss-book.jpg)</figure>
+
+<h2 id="raffle">Raffle</h2>
+
+Since we want to encourage you to learn more about modularization and decoupling CSS we give away one of [Jonathan Snook's SMACSS](http://smacss.com/) book. It is __signed by Jonathan Snook__ himself.
+
+All you need to do to take part in the raffle is to share this post via Twitter, Google+ or Facebook (mention and follow us to be save *wink*). If you want to you can also comment on this post and outline your opinion on the topic of decoupling CSS.
+
+Please send an email to [info@thenittygritty.co](mailto:info@thenittygritty.co) with the link to your share or [mention us on Twitter](https://twitter.com/_thenittygritty).
+
+<small>Just to be sure: Any recourse to courts of law is excluded!</small>
