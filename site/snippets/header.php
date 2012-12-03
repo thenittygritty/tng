@@ -23,7 +23,7 @@
 
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300|Merriweather:400,700|Droid+Sans+Mono">
 
-		<link rel="alternate" type="application/rss+xml" title="The Nitty Gritty" href="http://tng.local/feed">
+		<link rel="alternate" type="application/rss+xml" title="The Nitty Gritty" href="<?php echo url('feed'); ?>">
 
 		<?php
 			if (c::get('debug')) {
