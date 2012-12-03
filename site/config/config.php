@@ -382,3 +382,21 @@ else than txt. For example md or mdown.
 */
 
 c::set('content.file.extension', 'txt');
+
+
+
+/*
+
+---
+Read Project File
+---
+
+*/
+
+function read_package() {
+	$package = file_get_contents('package.json');
+	return json_decode($package);
+}
+
+c::set('package', read_package());
+
