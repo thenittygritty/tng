@@ -28,7 +28,7 @@ A few weeks ago Ian Storm Taylor had [a great article on how to find the best wa
 
 The OOCSS view of thing is that you define modules to work with and in order to change these modules - to build variants of them - you apply classes to an HTML element that change its styles accordingly.
 
-<figure class="image-rightish-small">![Bootstrap's Buttons](/content/home/decouple-css/bootstrap-buttons.png)<figcaption>Differently styled buttons based on the OOCSS-technique in Bootstrap.</figcaption></figure>
+<figure class="image-rightish-small">![Bootstrap's Buttons](/content/home/002-decouple-css/bootstrap-buttons.png)<figcaption>Differently styled buttons based on the OOCSS-technique in Bootstrap.</figcaption></figure>
 
 For instance here is an easy example of a button that changes its appearance when applying classes on it.
 
@@ -108,7 +108,7 @@ In Sass 3.2 some interesting features landed. One of them are [placeholders](htt
 
 So with this knowledge in mind let us define a button module that we can use whenever appropriate by sticking to the idea that Ian described.
 
-<figure class="image-rightish-small">![The module's code](/content/home/decouple-css/the-module.png)<figcaption>This is how the code of our module looks in CSS including the call in `.download-whitepaper`.</figcaption></figure>
+<figure class="image-rightish-small">![The module's code](/content/home/002-decouple-css/the-module.png)<figcaption>This is how the code of our module looks in CSS including the call in `.download-whitepaper`.</figcaption></figure>
 
 We define some styles for a default button:
 
@@ -183,7 +183,7 @@ Here is the output of the compiled CSS:
 
 The output can be found in the [aforementioned gist](https://gist.github.com/36fd59a9a0916f2f5c2d), too.
 
-<figure class="image-full">![The compiled buttons](/content/home/decouple-css/buttons.png)<figcaption>This is how the different buttons look, labeld with the according module-parts.</figcaption></figure>
+<figure class="image-full">![The compiled buttons](/content/home/002-decouple-css/buttons.png)<figcaption>This is how the different buttons look, labeld with the according module-parts.</figcaption></figure>
 
 This is not the best you can get out of CSS, since you could easily combine all rules into one without the repeated selecor. But there is more to it.
 
@@ -201,7 +201,7 @@ This can be especially handy for hugh websites that reuse a lot of code in diffe
 
 __Site note:__ This technique not new. There have been others noticing how easy you can decoulpe CSS using Sass. [Harry Roberts](http://csswizardry.com/) for example uses this style of writing modules in his CSS framework inuit.css in the [`arrow`-module](https://github.com/csswizardry/inuit.css/blob/master/inuit.css/objects/_arrows.scss). Also Joshua Johnson wrote about placeholders in Sass and [their value when dealing with grids](http://designshack.net/articles/css/semantic-grid-class-naming-with-placeholder-selectors-in-sass-3-2/). And as pointed out Ian Storm Taylor wrote a great article on how to use placeholders in Sass.
 
-<figure class="image-rightish-small">![SMACSS by Jonathan Snook](/content/home/decouple-css/smacss-book.jpg)</figure>
+<figure class="image-rightish-small">![SMACSS by Jonathan Snook](/content/home/002-decouple-css/smacss-book.jpg)</figure>
 
 <h2 id="raffle">Raffle</h2>
 
