@@ -209,6 +209,7 @@ Since we want to encourage you to learn more about modularization and decoupling
 
 All you need to do to take part in the raffle is to share this post via Twitter, Google+ or Facebook (mention and follow us to be save *wink*). If you want to you can also comment on this post and outline your opinion on the topic of decoupling CSS.
 
-Please send an email to [info@thenittygritty.co](mailto:info@thenittygritty.co) with the link to your share or [mention us on Twitter](https://twitter.com/_thenittygritty).
+Please send an email to [info@thenittygritty.co](mailto:info@thenittygritty.co) with the link to your share or [mention us on Twitter](https://twitter.com/_thenittygritty). The raffle ends on Sunday 23:59h (all timezones, so you can still take part on monday afternoon if you are in New Zealand or something).
 
 <small>Just to be sure: Any recourse to courts of law is excluded!</small>
+<small>Image of SMACSS Book by courtesy of Jonathan Snook.</small>
