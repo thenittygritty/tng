@@ -46,7 +46,7 @@ For instance here is an easy example of a button that changes its appearance whe
 
 Does this seem familiar to you? Well actualy [this example is from Bootstrap](http://twitter.github.com/bootstrap/base-css.html#buttons). Bootstrap uses the approach of OOCSS to define modules and extends styles to define variants of these modules.
 
-Since I am not a hugh fan of abbreviations because of the confusion it may cost when working in a team let us assume `btn` is named `button` for further examples.
+Since I am not a huge fan of abbreviations because of the confusion it may cost when working in a team let us assume `btn` is named `button` for further examples.
 
 To me it seams like Bootstrap made the approach of modular CSS well known throughout developers that were not sure on how to design naming patterns for their HTML elements' classes.
 
@@ -197,7 +197,7 @@ Decoupling components of your website or app are essential to be able to work in
 
 With Sass 3.2's placeholders it is straightforward to define modules that you can reuse on every element by simply extending the module's variant to the element's class.
 
-This can be especially handy for hugh websites that reuse a lot of code in different variations and in teams where you build upon existing code.
+This can be especially handy for huge websites that reuse a lot of code in different variations and in teams where you build upon existing code.
 
 __Site note:__ This technique not new. There have been others noticing how easy you can decoulpe CSS using Sass. [Harry Roberts](http://csswizardry.com/) for example uses this style of writing modules in his CSS framework inuit.css in the [`arrow`-module](https://github.com/csswizardry/inuit.css/blob/master/inuit.css/objects/_arrows.scss). Also Joshua Johnson wrote about placeholders in Sass and [their value when dealing with grids](http://designshack.net/articles/css/semantic-grid-class-naming-with-placeholder-selectors-in-sass-3-2/). And as pointed out Ian Storm Taylor wrote a great article on how to use placeholders in Sass.
 
