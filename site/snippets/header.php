@@ -21,7 +21,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300|Merriweather:400,700|Droid+Sans+Mono">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,700|Merriweather:400,700|Droid+Sans+Mono">
 
 		<link rel="alternate" type="application/rss+xml" title="The Nitty Gritty" href="<?php echo url('feed'); ?>">
 
