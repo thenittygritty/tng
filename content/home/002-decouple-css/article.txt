@@ -77,12 +77,12 @@ The styles for these buttons can be defined as follows in Sass:
 	}
 
 	.button-large {
-		@extend .btn;
+		@extend .button;
 		// More styles for large buttons
 	}
 
 	.button-large-primary {
-		@extend .btn-large;
+		@extend .button-large;
 		// More styles for a large primary button
 	}
 
