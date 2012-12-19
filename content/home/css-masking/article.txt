@@ -430,7 +430,7 @@ So if `<foreignObject>` is supported we wrap our element into SVG, if not we wra
 
 [Mouse shaped mask](http://www.der-schepp.de/css-masking/mouse.html)
 
-Note that this works best when you use masks that use hard clipping along their shape edges. Should you be interested in masks with softer edges then you will lose IE support, as the chroma filter is not capable of punching shapes with soft edges. Which is okay, too.
+Note that this works best when you use masks that use hard clipping along their shape edges. Should you be interested in masks with softer edges then you will lose IE support, as the chroma filter is not capable of punching out shapes with soft edges. Which is okay, too.
 
 In any case, don't forget to check if the outcome without mask applied degrades nicely. Because there is IE10. And because JavaScript might be disabled, too.
 
