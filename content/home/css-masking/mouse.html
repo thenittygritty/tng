@@ -32,9 +32,7 @@ function head(){
 	}
 	else{
 		document.write('\
-			<!--[if lte IE 9]>\
-			<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Chroma(color=\'#00FFFF\');zoom:1;">\
-			<![endif]-->\
+			<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Chroma(color=\'#00FFFF\'); zoom:1; -webkit-mask-image: url(mouse.png);">\
 		');
 	}
 }
@@ -48,10 +46,10 @@ function foot(){
 	}
 	else{
 		document.write('\
-			<!--[if lte IE 9]>\
+				<!--[if lte IE 9]>\
 				<img src="mouse-ie.png" style="display: block; margin-top: -300px;">\
+				<![endif]-->\
 			</div>\
-			<![endif]-->\
 		');
 	}
 }
