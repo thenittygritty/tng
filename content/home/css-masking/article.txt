@@ -22,27 +22,25 @@ Text:
 
 Almost one year ago I wrote an article that dealt with an emerging WebKit CSS technique, the CSS filter effects, and the question if we could not have/emulate them in other browsers, too. Turned out we could.
 
-Today I want to talk about another WebKit-only technique and show you how you might be able to use it across all of the browsers: This is about...
+Today I want to talk about another WebKit-only feature and show you how you might be able to use it across all of the browsers: This is about...
 
-# CSS masks
+# CSS Masks
 
 CSS masks were added to the WebKit engine by Apple quite a while ago, namely back in [April 2008](https://www.webkit.org/blog/181/css-masks/). Masks offer the ability to control the opacity/transparency of elements on a per-pixel basis, similar to how the alpha/transparency-channel of "24-bit"-PNGs or 32-bit-TIFFs work.
 
 <figure class="image-leftish-small">[![RGBA](/content/home/css-masking/rgba.jpg)](/content/home/css-masking/rgba.jpg)</figure>
 
-These images consist of the usual R(ed) G(reen) and B(lue) channels that define the colors of each pixel. But on top there is a fourth channel, the alpha channel, that defines every pixel's opacity through luminance: White meaning opaque, black meaning transparent, and countless grey-values defining the semi-transparent inbetweens. As you can see in the picture above.
+These images consist of the usual R(ed) G(reen) and B(lue) channels that define the colors of each pixel. But on top there is a fourth channel, the alpha channel, that defines every pixel's opacity through luminance: White meaning opaque, black meaning transparent, and countless grey values defining the semi-transparent inbetweens. As you can see in the picture to the left.
 
 
 <figure class="image-rightish-small">[![Mask](/content/home/css-masking/mask.jpg)](/content/home/css-masking/mask.jpg)</figure>
 
-With CSS masks it is an HTML element that gets this type of treatment. And instead of using an alpha channel you assign an image resource to a CSS property named `-webkit-mask-image`, e.g. `-webkit-mask-image: url(mouse.png);`. Transparency is then read from that mask image and applied to the HTML element, like in the picture on the right.
+With CSS masks it is an HTML element that gets this type of treatment. And instead of using an alpha channel you assign an image resource to a CSS property named `-webkit-mask-image`, e.g. `-webkit-mask-image: url(mouse.png);`. Transparency is then read from that mask image and applied to the HTML element, like the picture on the right shows.
 
 <figure class="image-leftish-small">[![Comments](/content/home/css-masking/comments.jpg)](/content/home/css-masking/comments.jpg)<figcaption>Masking used for user avatars to style them in a certain shape.</figcaption></figure>
 Neat! So what could that be good for? Well, masking could be used for images to style them in shapes. Or you could have long scrollable text smoothly fade out by using an mask image with a gradient from opaque to transparent.
 
 <figure class="image-rightish">[![Scroll fade](/content/home/css-masking/scrollfade.jpg)](/content/home/css-masking/scrollfade.jpg)</figure>
-
-### What keeps us from using?
 
 As with the background-image property you can also use a CSS gradient instead of an actual bitmap image, as in this code example:
 
@@ -52,13 +50,13 @@ As with the background-image property you can also use a CSS gradient instead of
 
 __Note:__ Beware that this is the "old" syntax that will soon be replaced by `linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))`.
 
-But what keeps us from rolling with CSS masks? Well, they aren't supported in any other browser :( Reason being that Apple again "forgot" to hand the W3C over a spec that describes the precise functioning of those masks. Which means that if other vendors would have wanted to implement masks they would have had to reverse engineer and find out about all the implementation details first. Dirty work nobody wanted to do. So it was not until a few days ago, on the 15th of November, that there appeared a first public working draft by the W3C called [CSS Masking](http://www.w3.org/TR/2012/WD-css-masking-20121115/). But that one will be rather different to Apple's version.
+While Apple brought CSS masks to WebKit, they failed to specify their implementation details and file a proposal with the W3C that describes the precise functioning of those masks. Which means that if other vendors would have wanted to implement masks they would have had to reverse engineer and find out about all the implementation details first. Dirty work nobody wanted to do. So it was not until a few days ago, on the 15th of November, that there appeared a first public working draft by the W3C called [CSS Masking](http://www.w3.org/TR/2012/WD-css-masking-20121115/). But that one will be rather different to Apple's version.
 
 The good news: Turns out the other browser do have different capabilities which we can use as hooks to emulate WebKit's proprietary CSS masks. Woot!
 
 <figure class="image-rightish-small">[![](/content/home/css-masking/mouse-masked-element.jpg)](/content/home/css-masking/mouse-masked-element.jpg)</figure>
 
-## Emulating `-webkit-mask` cross browser
+## Emulating a simple `-webkit-mask` cross browser
 
 So let's say we want to mask an HTML element to the shape of Micky Mouse's head as seen in the picture on the right.
 
@@ -237,13 +235,13 @@ Internet Explorers <= 8 do not understand any of the SVG markup above. They will
 	</body>
 	</html>
 
-This cool, since this degrades gracefully.
+This is cool, since this automatically degrades gracefully.
 
 Where we have a problem is with IE9 and IE10. Both of them know SVG but they do not know the `<foreignObject>`-element. They render the SVG but consider the part that is enclosed into `<foreignObject>` was invalid SVG markup. So they discard this part of the SVG altogether. Meaning: our content is lost to our readers. Not good.
 
 We could think about hiding the SVG parts for IEs using conditional comments but Microsoft decided for IE10 that they would remove CCs altogether. And that sucks!
 
-The only solution we have is a) to test the client for the support of SVG extensibility / `<foreignObject>` and b) have JavaScript render the SVG snippets when SVG extensibility is supported. This is the JavaScript we need:
+The only solution we have is a) to test the client for the support of SVG extensibility / `<foreignObject>` and b) have JavaScript render the SVG snippets when SVG extensibility is supported. This is the JavaScript we need, and that we put at the head of our page:
 
 <span class="language-javascript"></span>
 
@@ -288,7 +286,13 @@ And in our HTML markup we need to replace the SVG parts with calls to those Java
 
 Now content will remain intact in all Internet Explorers that do not support `<foreignObject>`. Should IE11 support it, it will get to see it.
 
+__Note 1:__ The backslashes you see at the end of lines inside our strings allow for [multiline strings](http://davidwalsh.name/multiline-javascript-strings). They are supported by every browser and got [officially standardized with ECMAScript 5](http://www.nczonline.net/blog/2012/08/01/a-critical-review-of-ecmascript-6-quasi-literals/).
+
+__Note 2:__ You might think: Isn't `document.write` the Antichrist of JavaScript best practices? He's nuts! Why is he using it? Well, nothing is just black and white - it all depends on the context. `document.write` is indeed very very bad if you make use of it in external JavaScript files. `document.write` forces you to embed external scripts at predefined places of your HTML and prevents almost any attempts of making them load asynchronous. And that means that if these external scripts fails to load, they'll bring your page to a grinding halt. But we are not dealing with an external file here - and you should leave it that way. So there is no blocking. Plus, thanks to having JavaScript outputting the extra markup to the screen while the HTML parser is still running you don't get to witness any flash of unstyled content (FOUC) as it would be the case if you fired a script on DOM ready. Now back to topic...
+
 We could stop here and all be happy. But how about getting CSS masks working in the IEs, too? Wouldn't that take the cake? Okay then, let's go…
+
+### Internet Explorers
 
 Internet Explorers 4 - 9 have a proprietary filter named "Chroma". What the Chroma filter does is comparable to the filmmaker's [bluebox / greenscreen technique](http://www.youtube.com/watch?v=eP-svi0XQks): it lets pixels of an element in a defined color vanish from the screen. The color is therefore used as a "color mask".
 
@@ -398,9 +402,7 @@ In order to serve this to the IEs we need to extend our JavaScript a bit:
 		}
 		else{
 			document.write('\
-				<!--[if lte IE 9]>\
-				<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Chroma(color=\'#00FFFF\');zoom:1;">\
-				<![endif]-->\
+				<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Chroma(color=\'#00FFFF\'); zoom:1;">\
 			');
 		}
 	}
@@ -415,10 +417,10 @@ In order to serve this to the IEs we need to extend our JavaScript a bit:
 		}
 		else{
 			document.write('\
-				<!--[if lte IE 9]>\
+					<!--[if lte IE 9]>\
 					<img src="mouse-ie.png" style="display: block; margin-top: -300px;">\
+					<![endif]-->\
 				</div>\
-				<![endif]-->\
 			');
 		}
 	}
@@ -432,9 +434,21 @@ Note that this works best when you use masks that use hard clipping along their 
 
 In any case, don't forget to check if the outcome without mask applied degrades nicely. Because there is IE10. And because JavaScript might be disabled, too.
 
+Have I really said "all browsers browsers except one"? Oups, I lied. This is true for Desktop. On mobile there is the old Android 2.x browser that still trails behind, as well as other legacy WebKit browsers. We want to support them, too, right? Do we? Okay, that's a quicky! Here we are talking about very outdated WebKit browser so they don't know a lot about SVG. But most of them came out after Apple patched `-webkit-mask` into WebKit. So that is out strategy for those. We update the HTML in the `else` branch of our `head` function with another `style` assigment:
+
+<span class="language-javascript"></span>
+
+	else{
+		document.write('\
+			<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Chroma(color=\'#00FFFF\'); zoom:1; -webkit-mask-image: url(mouse.png);">\
+		');
+	}
+	
+Done!
+
 ## Linear Gradient Masks ##
 
-Remember the beginning where I told you that you could also use a gradient as mask? This is also possible in all of the above browsers, with just some subtle changes to our setup. First we need to replace the `<mask>`'s content either with an image of a gradient or take the pure SVG route and define a SVG rectangle that is filled with an SVG gradient, like so:
+Remember the beginning where I told you that you could also use a gradient as mask? This is also possible in all of the above browsers, with some changes to our setup. First we need to replace the SVG's `<mask>`'s content either with an image of a gradient or we take the pure SVG route and define a SVG rectangle that is filled with an SVG gradient, like so:
 
 <span class="language-markup"></span>
 
@@ -448,13 +462,25 @@ Remember the beginning where I told you that you could also use a gradient as ma
 
 This represents a gradient that goes from top to bottom (from X1,Y1:0,0 to X2,Y2:0,1), who's first color stop is a fully opaque white and who's second stop is a fully transparent white. This is then the result of this mask:
 
-For IE we don't needa cyan colored image any more since we will not use the chroma filter this time. Instead we will use the "Alpha" filter. We used to use the alpha filter to polyfill the missing `opacity` property in older IEs. But it is capable of [much much more](http://msdn.microsoft.com/en-us/library/ms532967.aspx). You can switch it into a gradient mode where you can define start and end points as well as start and end opacities. It's a simple as this:
+For IE we don't need a cyan colored image any more since we will not use the chroma filter this time. Instead we will use the "Alpha" filter. We used to use the alpha filter to polyfill the missing `opacity` property in older IEs. But it is capable of [much much more](http://msdn.microsoft.com/en-us/library/ms532967.aspx). You can switch it into a gradient mode where you can define start and end points as well as start and end opacities. It's a simple as this:
 
 <span class="language-css"></span>
 
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=1,StartX=0,FinishX=0,StartY=0,FinishY=300);
 
 This gradient style alpha filter starts at pixels 0,0 andextends to pixels 0,300. Start opacity is 100%, end opacity is 0%.
+
+On Android 2.x we should be fine with a
+
+<span class="language-css"></span>
+
+	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+
+but it turns out that Android 2.x does not support gradients as mask image. We have no choice but to point to a PNG of a gradient, that starts opaque at the top and fades out into transparency to the bottom. Since `-webkit-mask` behaves like `background` it repeats images smaller than the area to cover. Therefore it is sufficient to use [an image with a 1px width and 300px height](/content/home/css-masking/gradient-android.png). Finally to save on HTTP requests we embed the image as data URI with the help of [duri.me](http://duri.me/). The result:
+
+<span class="language-css"></span>
+
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEsCAYAAAACUNnVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpi+A8ETAxAACJowqJYgnQuxWL4JYiQJVYJxTqGPfFvKBj6bzSi6JL4ycySVCweyORSIkEuCyDAAFZNAWO2uvJRAAAAAElFTkSuQmCC);
 
 So the following are the changes to our JavaScript:
 
@@ -479,11 +505,9 @@ So the following are the changes to our JavaScript:
 		}
 		else{
 			document.write('\
-				<!--[if lte IE 9]>\
-				<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=1,StartX=0,FinishX=0,StartY=0,FinishY=300);zoom:1;">\
-				<![endif]-->\
+				<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=1,StartX=0,FinishX=0,StartY=0,FinishY=300); zoom:1; -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEsCAYAAAACUNnVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpi+A8ETAxAACJowqJYgnQuxWL4JYiQJVYJxTqGPfFvKBj6bzSi6JL4ycySVCweyORSIkEuCyDAAFZNAWO2uvJRAAAAAElFTkSuQmCC);">\
 			');
-		}
+			}
 	}
 
 <figure class="image-rightish-small">[![Gradient masked element](/content/home/css-masking/gradient-masked-element.jpg)](/content/home/css-masking/gradient-masked-element.jpg)<figcaption>[Look at the result](/content/home/css-masking/gradient.html).</figcaption></figure>
@@ -500,9 +524,7 @@ So the following are the changes to our JavaScript:
 		}
 		else{
 			document.write('\
-				<!--[if lte IE 9]>\
 				</div>\
-				<![endif]-->\
 			');
 		}
 	}
@@ -527,6 +549,8 @@ and switch the alpha filter to `style=2`, meaning radial:
 
 	progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=2);
 
+For old Android & friends we again create a bitmap of a radial gradient. To safe on bytesize it is sufficient to use [an image with the dimensions 50px x 50px](/content/home/css-masking/radial-gradient-android.png). To have that mask stretch over our 400px x 400px object we need to also set `-webkit-mask-size: cover`.
+
 Translated to our script, this is how it would look like:
 
 <span class="language-javascript"></span>
@@ -549,11 +573,9 @@ Translated to our script, this is how it would look like:
 			');
 		}
 		else{
-			document.write('\
-				<!--[if lte IE 9]>\
-				<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=2);zoom:1;">\
-				<![endif]-->\
-			');
+		document.write('\
+			<div style="width: 400px; height: 400px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=2); zoom:1; -webkit-mask-size: cover; -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAAN...[shortened a bit]....BybnTlITTtiAAAAAElFTkSuQmCC);">\
+		');
 		}
 	}
 
@@ -571,9 +593,7 @@ Translated to our script, this is how it would look like:
 		}
 		else{
 			document.write('\
-				<!--[if lte IE 9]>\
 				</div>\
-				<![endif]-->\
 			');
 		}
 	}
@@ -582,3 +602,5 @@ Translated to our script, this is how it would look like:
 ## Final Words
 
 I admit it wasn't the shortest of all articles but I hope I got you interested in playing around with masks on the web. So if you happen to create some decent stuff with the aforementioned techniques please leave a link under this post or drop us a note on Twitter. Also if you have any further questions regarding masks, don't hesitate to giving us a shout.
+
+
