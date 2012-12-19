@@ -434,7 +434,7 @@ Note that this works best when you use masks that use hard clipping along their 
 
 In any case, don't forget to check if the outcome without mask applied degrades nicely. Because there is IE10. And because JavaScript might be disabled, too.
 
-Have I really said "all browsers browsers except one"? Oups, I lied. This is true for Desktop. On mobile there is the old Android 2.x browser that still trails behind, as well as other legacy WebKit browsers. We want to support them, too, right? Do we? Okay, that's a quicky! Here we are talking about very outdated WebKit browser so they don't know a lot about SVG. But most of them came out after Apple patched `-webkit-mask` into WebKit. So that is out strategy for those. We update the HTML in the `else` branch of our `head` function with another `style` assigment:
+Have I really said "all browsers browsers except one"? Ooops, I lied. This is true for Desktop. On mobile there is the old Android 2.x browser that still trails behind, as well as other legacy WebKit browsers. We want to support them, too, right? Do we? Okay, that's a quicky! Here we are talking about very outdated WebKit browser so they don't know a lot about SVG. But most of them came out after Apple patched `-webkit-mask` into WebKit. So that is out strategy for those. We update the HTML in the `else` branch of our `head` function with another `style` assigment:
 
 <span class="language-javascript"></span>
 
