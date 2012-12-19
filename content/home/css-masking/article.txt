@@ -434,17 +434,20 @@ Note that this works best when you use masks that use hard clipping along their 
 
 In any case, don't forget to check if the outcome without mask applied degrades nicely. Because there is IE10. And because JavaScript might be disabled, too.
 
-Have I really said "all browsers browsers except one"? Ooops, I lied. This is true for Desktop. On mobile there is the old Android 2.x browser that still trails behind, as well as other legacy WebKit browsers. We want to support them, too, right? Do we? Okay, that's a quicky! Here we are talking about very outdated WebKit browser so they don't know a lot about SVG. But most of them came out after Apple patched `-webkit-mask` into WebKit. So that is out strategy for those. We update the HTML in the `else` branch of our `head` function with another `style` assigment:
+Have I really said "all browsers browsers except one"? Ooops, I lied. This is true for Desktop. Most mobile WebKit browsers still trail behind technology-wise. Not only Android but even Safari on iOS 5 can't handle SVG masks. But even the oldest of them came out after Apple patched `-webkit-mask` into WebKit. So for them we will double our SVG mask with `-webkit-mask`. We can safely assign that in our stylesheet:
 
-<span class="language-javascript"></span>
+<span class="language-css"></span>
 
-	else{
-		document.write('\
-			<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Chroma(color=\'#00FFFF\'); zoom:1; -webkit-mask-image: url(mouse.png);">\
-		');
+	.element {
+		width: 400px;
+		height: 300px;
+		overflow: hidden;
+		background: #36F url(background.png);
+		color: #FFF;
+		-webkit-mask-image: url(mouse.png);
 	}
 	
-Done!
+Finally done!
 
 ## Linear Gradient Masks ##
 
@@ -470,19 +473,19 @@ For IE we don't need a cyan colored image any more since we will not use the chr
 
 This gradient style alpha filter starts at pixels 0,0 andextends to pixels 0,300. Start opacity is 100%, end opacity is 0%.
 
-On Android 2.x we should be fine with a
+On mobile WebKit we should normally be fine with a
 
 <span class="language-css"></span>
 
 	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
 
-but it turns out that Android 2.x does not support gradients as mask image. We have no choice but to point to a PNG of a gradient, that starts opaque at the top and fades out into transparency to the bottom. Since `-webkit-mask` behaves like `background` it repeats images smaller than the area to cover. Therefore it is sufficient to use [an image with a 1px width and 300px height](/content/home/css-masking/gradient-android.png). Finally to save on HTTP requests we embed the image as data URI with the help of [duri.me](http://duri.me/). The result:
+but it turns out that Android 2.x does not support gradients as mask image. We have no choice but to point to a PNG of a gradient, that starts opaque at the top and fades out into transparency to the bottom. Since `-webkit-mask` behaves like `background` it repeats images smaller than the area to cover. Therefore it is sufficient to use [an image with a 1px width and 300px height](/content/home/css-masking/gradient-android.png). Finally to save on HTTP requests we embed the image as data URI with the help of [duri.me](http://duri.me/). So this is the assigment we do in out stylesheet:
 
 <span class="language-css"></span>
 
-	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEsCAYAAAACUNnVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpi+A8ETAxAACJowqJYgnQuxWL4JYiQJVYJxTqGPfFvKBj6bzSi6JL4ycySVCweyORSIkEuCyDAAFZNAWO2uvJRAAAAAElFTkSuQmCC);
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAAN...[shortedned a bit]....O2uvJRAAAAAElFTkSuQmCC);
 
-So the following are the changes to our JavaScript:
+And the following are the changes to our JavaScript:
 
 <span class="language-javascript"></span>
 
@@ -505,7 +508,7 @@ So the following are the changes to our JavaScript:
 		}
 		else{
 			document.write('\
-				<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=1,StartX=0,FinishX=0,StartY=0,FinishY=300); zoom:1; -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEsCAYAAAACUNnVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpi+A8ETAxAACJowqJYgnQuxWL4JYiQJVYJxTqGPfFvKBj6bzSi6JL4ycySVCweyORSIkEuCyDAAFZNAWO2uvJRAAAAAElFTkSuQmCC);">\
+				<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=1,StartX=0,FinishX=0,StartY=0,FinishY=300); zoom:1;">\
 			');
 			}
 	}
@@ -531,7 +534,17 @@ So the following are the changes to our JavaScript:
 
 ## Radial Gradient Masks
 
-Radial gradients are possible as well. We need to change our SVG mask to this:
+Radial gradients are possible as well. Let's say we wanted to mask an image of 400px x 400px:
+
+<span class="language-markup"></span>
+
+	<body>
+		<script>head()</script>
+		<img src="photo.jpg" width="400" height="400" alt="Dude">
+		<script>foot()</script>
+	</body>
+
+Then we would need to change our SVG mask to this:
 
 <span class="language-markup"></span>
 
@@ -540,7 +553,7 @@ Radial gradients are possible as well. We need to change our SVG mask to this:
 			<stop stop-color="white" stop-opacity="1" offset="0"/>
 			<stop stop-color="white" stop-opacity="0" offset="1"/>
 		</linearGradient>
-		<rect width="400px" height="300px" fill="url(#g)"/>
+		<rect width="400px" height="400px" fill="url(#g)"/>
 	</mask>
 
 and switch the alpha filter to `style=2`, meaning radial:
@@ -548,8 +561,6 @@ and switch the alpha filter to `style=2`, meaning radial:
 <span class="language-css"></span>
 
 	progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=2);
-
-For old Android & friends we again create a bitmap of a radial gradient. To safe on bytesize it is sufficient to use [an image with the dimensions 50px x 50px](/content/home/css-masking/radial-gradient-android.png). To have that mask stretch over our 400px x 400px object we need to also set `-webkit-mask-size: cover`.
 
 Translated to our script, this is how it would look like:
 
@@ -559,14 +570,14 @@ Translated to our script, this is how it would look like:
 		if(document.implementation
 		&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1')){
 			document.write('\
-				<svg width="400px" height="300px">\
+				<svg width="400px" height="400px">\
 					<defs>\
 						<mask id="mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">\
 							<radialGradient id="g" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">\
 								<stop stop-color="white" stop-opacity="1" offset="0"/>\
 								<stop stop-color="white" stop-opacity="0" offset="1"/>\
 							</radialGradient>\
-							<rect width="400px" height="300px" fill="url(#g)"/>\
+							<rect width="400px" height="400px" fill="url(#g)"/>\
 						</mask>\
 					</defs>\
 					<foreignObject width="100%" height="100%" style="mask: url(#mask);">\
@@ -574,7 +585,7 @@ Translated to our script, this is how it would look like:
 		}
 		else{
 		document.write('\
-			<div style="width: 400px; height: 400px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=2); zoom:1; -webkit-mask-size: cover; -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAAN...[shortened a bit]....BybnTlITTtiAAAAAElFTkSuQmCC);">\
+			<div style="width: 400px; height: 400px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=2); zoom: 1;">\
 		');
 		}
 	}
@@ -598,7 +609,15 @@ Translated to our script, this is how it would look like:
 		}
 	}
 
+For mobile WebKits we again create a bitmap of a radial gradient. To save a little on bytesize it is sufficient to use [an image with the dimensions 50px x 50px](/content/home/css-masking/radial-gradient-android.png). To have that mask stretch over our 400px x 400px object we need to also set `-webkit-mask-size: cover`.
 
+<span class="language-css"></span>
+	
+	img {
+		-webkit-mask-size: cover; 
+		-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAAN...[shortened a bit]....BybnTlITTtiAAAAAElFTkSuQmCC);
+	}
+	
 ## Final Words
 
 I admit it wasn't the shortest of all articles but I hope I got you interested in playing around with masks on the web. So if you happen to create some decent stuff with the aforementioned techniques please leave a link under this post or drop us a note on Twitter. Also if you have any further questions regarding masks, don't hesitate to giving us a shout.

@@ -20,6 +20,7 @@ body {
 	height: 300px;
 	overflow: hidden;
 	color: #333;
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEsCAYAAAACUNnVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpi+A8ETAxAACJowqJYgnQuxWL4JYiQJVYJxTqGPfFvKBj6bzSi6JL4ycySVCweyORSIkEuCyDAAFZNAWO2uvJRAAAAAElFTkSuQmCC);
 }
 </style>
 <script>
@@ -42,7 +43,7 @@ function head(){
 	}
 	else{
 		document.write('\
-			<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=1,StartX=0,FinishX=0,StartY=0,FinishY=300);zoom:1; -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEsCAYAAAACUNnVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpi+A8ETAxAACJowqJYgnQuxWL4JYiQJVYJxTqGPfFvKBj6bzSi6JL4ycySVCweyORSIkEuCyDAAFZNAWO2uvJRAAAAAElFTkSuQmCC);">\
+			<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=1,StartX=0,FinishX=0,StartY=0,FinishY=300); zoom:1;">\
 		');
 	}
 }
