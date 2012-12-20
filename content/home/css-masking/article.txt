@@ -4,7 +4,7 @@ Date: 2012-12-20
 ----
 Author: Christian Schaefer
 ----
-AuthorUrl:
+AuthorUrl: https://twitter.com/drublic
 ----
 AuthorTwitter: derSchepp
 ----
@@ -14,9 +14,9 @@ AuthorInfo: Christian "Schepp" Schaefer is a freelance web developer living in D
 ----
 Categories: CSS
 ----
-Description:
+Description: Christian "Schepp" Schaefer writes about CSS masks, which offer the ability to control the opacity/transparency of elements on a per-pixel basis.
 ----
-Tags:
+Tags: CSS, Masks, Masking, Filter, CSS Level 3, CSS3, mask-image, SVG, JavaScript
 ----
 Text:
 
@@ -34,20 +34,21 @@ These images consist of the usual R(ed) G(reen) and B(lue) channels that define 
 
 <figure class="image-rightish-small">[![Mask](/content/home/css-masking/mask.jpg)](/content/home/css-masking/mask.jpg)</figure>
 
-With CSS masks it is an HTML element that gets this type of treatment. And instead of using an alpha channel you assign an image resource to a CSS property named `-webkit-mask-image`, e.g. `-webkit-mask-image: url(mouse.png);`. Transparency is then read from that mask image and applied to the HTML element, like the picture on the right shows.
+With CSS masks it is an HTML element that gets this type of treatment. And instead of using an alpha channel you assign an image resource to a CSS property named `-webkit-mask-image`, e.g. <span class="nobr">`-webkit-mask-image: url(mouse.png);`</span>. Transparency is then read from that mask image and applied to the HTML element, like the picture on the right shows.
 
 <figure class="image-leftish-small">[![Comments](/content/home/css-masking/comments.jpg)](/content/home/css-masking/comments.jpg)<figcaption>Masking used for user avatars to style them in a certain shape.</figcaption></figure>
 Neat! So what could that be good for? Well, masking could be used for images to style them in shapes. Or you could have long scrollable text smoothly fade out by using an mask image with a gradient from opaque to transparent.
 
 <figure class="image-rightish">[![Scroll fade](/content/home/css-masking/scrollfade.jpg)](/content/home/css-masking/scrollfade.jpg)</figure>
 
-As with the background-image property you can also use a CSS gradient instead of an actual bitmap image, as in this code example:
+<span class="nobr">As with the background-image</span> property you can also use a CSS gradient instead of an actual bitmap image, as in this code example:
+
+__Note:__ Beware that this is the "old" syntax that will soon be replaced by `linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))`.
 
 <span class="language-css"></span>
 
 	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0));
 
-__Note:__ Beware that this is the "old" syntax that will soon be replaced by `linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))`.
 
 While Apple brought CSS masks to WebKit, they failed to specify their implementation details and file a proposal with the W3C. Which means that if other vendors would have wanted to implement masks they would have had to reverse engineer and find out about all the implementation details first. Dirty work nobody wanted to do. So it was not until a few days ago, on the 15th of November, that there appeared a first public working draft by the W3C called [CSS Masking](http://www.w3.org/TR/2012/WD-css-masking-20121115/). But that one will be rather different to Apple's version.
 
@@ -84,7 +85,7 @@ And define the following CSS:
 
 ### The modern browsers ###
 
-Let's start with the **modern browsers**.  
+Let's start with the **modern browsers**.
 Current HTML5-ready browsers [are able to parse SVG embedded inline](http://caniuse.com/svg-html5) into HTML, like so:
 
 <span class="language-markup"></span>
@@ -528,7 +529,7 @@ And the following are the changes to our JavaScript:
 
 ## Radial Gradient Masks
 
-Radial gradients are possible as well. Let's say we wanted to mask an image of 400px x 400px:
+Radial gradients are possible as well. Let's say we wanted to mask an image of 400px &times; 400px:
 
 <span class="language-markup"></span>
 
@@ -601,7 +602,7 @@ Translated to our script, this is how it would look like:
 		}
 	}
 
-For mobile WebKits we again create a bitmap of a radial gradient. To save a little on bytesize it is sufficient to use [an image with the dimensions 50px x 50px](/content/home/css-masking/radial-gradient-android.png). To have that mask stretch over our 400px x 400px object we need to also set `-webkit-mask-size: cover`.
+For mobile WebKits we again create a bitmap of a radial gradient. To save a little on bytesize it is sufficient to use [an image with the dimensions 50px x 50px](/content/home/css-masking/radial-gradient-android.png). To have that mask stretch over our 400px &times; 400px object we need to also set `-webkit-mask-size: cover`.
 
 <span class="language-css"></span>
 
