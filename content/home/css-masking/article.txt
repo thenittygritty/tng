@@ -2,7 +2,7 @@ Title: CSS Masks – How To Use Masking In CSS Now
 ----
 Date: 2012-12-19
 ----
-Author: Christian Schäfer
+Author: Christian Schaefer
 ----
 AuthorUrl:
 ----
@@ -10,7 +10,7 @@ AuthorTwitter: derSchepp
 ----
 AuthorMail: schaepp@gmx.de
 ----
-AuthorInfo: Christian "Schepp" Schaefer is a freelance web developer living in Düsseldorf, Germany. He is the author of the [CSS-JS-Booster](https://github.com/Schepp/CSS-JS-Booster) and the [CSS Filters Polyfill](https://github.com/Schepp/CSS-Filters-Polyfill) as well as co-host of the [Working Draft Podcast](http://workingdraft.de/).
+AuthorInfo: Christian "Schepp" Schaefer is a freelance web developer living in Düsseldorf, Germany. He is the author of the [CSS-JS-Booster](https://github.com/Schepp/CSS-JS-Booster), the [Box Sizing Polyfill](https://github.com/Schepp/box-sizing-polyfill) and the [CSS Filters Polyfill](https://github.com/Schepp/CSS-Filters-Polyfill) as well as co-host of the [Working Draft Podcast](http://workingdraft.de/).
 ----
 Categories: CSS
 ----
@@ -31,7 +31,6 @@ CSS masks were added to the WebKit engine by Apple quite a while ago, namely bac
 <figure class="image-leftish-small">[![RGBA](/content/home/css-masking/rgba.jpg)](/content/home/css-masking/rgba.jpg)</figure>
 
 These images consist of the usual R(ed) G(reen) and B(lue) channels that define the colors of each pixel. But on top there is a fourth channel, the alpha channel, that defines every pixel's opacity through luminance: White meaning opaque, black meaning transparent, and countless grey values defining the semi-transparent inbetweens. As you can see in the picture to the left.
-
 
 <figure class="image-rightish-small">[![Mask](/content/home/css-masking/mask.jpg)](/content/home/css-masking/mask.jpg)</figure>
 
@@ -116,7 +115,7 @@ On top of that WebKit as well as Firefox and Opera are also capable of doing the
 	</svg>
 
 
-Internet Explorer 9 and 10 are, how could it not be, the only modern browsers that lack support for `<foreignObject>`. We will turn to the IEs later.
+Internet Explorer 9 and 10 are, how could they not be, the only modern browsers that lack support for `<foreignObject>`. We will turn to the IEs later.
 
 What inline-SVG and `<foreignObject>` enable us to do is to enclose certain parts of our page's HTML in SVG wrappers, in this case the HTML blocks we want to mask:
 
@@ -286,7 +285,7 @@ And in our HTML markup we need to replace the SVG parts with calls to those Java
 
 Now content will remain intact in all Internet Explorers that do not support `<foreignObject>`. Should IE11 support it, it will get to see it.
 
-__Note 1:__ The backslashes you see at the end of lines inside our strings allow for [multiline strings](http://davidwalsh.name/multiline-javascript-strings). They are supported by every browser and got [officially standardized with ECMAScript 5](http://www.nczonline.net/blog/2012/08/01/a-critical-review-of-ecmascript-6-quasi-literals/).
+__Note 1:__ The backslashes you see at the end of lines inside our strings allow for [multiline strings](http://davidwalsh.name/multiline-javascript-strings). They are supported by every browser and were [officially standardized with ECMAScript 5](http://www.nczonline.net/blog/2012/08/01/a-critical-review-of-ecmascript-6-quasi-literals/).
 
 __Note 2:__ You might think: Isn't `document.write` the Antichrist of JavaScript best practices? He's nuts! Why is he using it? Well, nothing is just black and white - it all depends on the context. `document.write` is indeed very very bad if you make use of it in external JavaScript files. `document.write` forces you to embed external scripts at predefined places of your HTML and prevents almost any attempts of making them load asynchronous. And that means that if these external scripts fails to load, they'll bring your page to a grinding halt. But we are not dealing with an external file here - and you should leave it that way. So there is no blocking. Plus, thanks to having JavaScript outputting the extra markup to the screen while the HTML parser is still running you don't get to witness any flash of unstyled content (FOUC) as it would be the case if you fired a script on DOM ready. Now back to topic...
 
@@ -446,7 +445,7 @@ Have I really said "all browsers browsers except one"? Ooops, I lied. This is tr
 		color: #FFF;
 		-webkit-mask-image: url(mouse.png);
 	}
-	
+
 Finally done!
 
 ## Linear Gradient Masks ##
@@ -612,14 +611,14 @@ Translated to our script, this is how it would look like:
 For mobile WebKits we again create a bitmap of a radial gradient. To save a little on bytesize it is sufficient to use [an image with the dimensions 50px x 50px](/content/home/css-masking/radial-gradient-android.png). To have that mask stretch over our 400px x 400px object we need to also set `-webkit-mask-size: cover`.
 
 <span class="language-css"></span>
-	
+
 	img {
-		-webkit-mask-size: cover; 
+		-webkit-mask-size: cover;
 		-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAAN...[shortened a bit]....BybnTlITTtiAAAAAElFTkSuQmCC);
 	}
-	
+
 ## Final Words
 
-I admit it wasn't the shortest of all articles but I hope I got you interested in playing around with masks on the web. So if you happen to create some decent stuff with the aforementioned techniques please leave a link under this post or drop us a note on Twitter. Also if you have any further questions regarding masks, don't hesitate to giving us a shout.
+I admit it wasn't the shortest of all articles but I hope I got you interested in playing around with masks on the web. So if you happen to create some decent stuff with the aforementioned techniques please leave a link under this post or drop us a note on Twitter. Also if you have any further questions regarding masks, don't hesitate to give us a shout.
 
 
