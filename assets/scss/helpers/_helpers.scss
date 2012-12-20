@@ -80,7 +80,7 @@
  *    `:before` to contain the top-margins of child elements.
  */
 
-%clearfix{
+%clearfix {
 	&:before,
 	&:after {
 		content: " "; /* 1 */
@@ -90,5 +90,11 @@
 	&:after {
 		clear: both;
 	}
+}
+
+
+// Don't break
+.nobr {
+	white-space: nowrap;
 }
 

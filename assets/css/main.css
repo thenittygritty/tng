@@ -117,7 +117,7 @@ abbr[title] {
  */
 b,
 strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /*
@@ -438,6 +438,10 @@ table {
 }
 .header-logo a:after {
   clear: both;
+}
+
+.nobr {
+  white-space: nowrap;
 }
 
 input[type="text"],
