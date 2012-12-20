@@ -56,7 +56,7 @@ The good news: Turns out the other browsers do have different capabilities which
 
 <figure class="image-rightish-small">[![](/content/home/003-css-masking/mouse-masked-element.jpg)](/content/home/003-css-masking/mouse-masked-element.jpg)</figure>
 
-## Emulating a simple `-webkit-mask` cross browser
+## Emulating a simple `-webkit-mask-image` cross browser
 
 So let's say we want to mask an HTML element to the shape of a mouse's head as seen in the picture on the right.
 
@@ -289,8 +289,6 @@ __Note 2:__ Isn't `document.write` the Antichrist of JavaScript best practices? 
 
 We could stop here and all be happy. But how about getting CSS masks working in the IEs, too? Wouldn't that take the cake? Well then, let's go…
 
-### Internet Explorers
-
 Internet Explorers 4 - 9 have a proprietary filter named "Chroma". What the Chroma filter does is comparable to the filmmaker's [bluebox / greenscreen technique](http://www.youtube.com/watch?v=eP-svi0XQks): it lets pixels of an element in a defined color vanish from the screen. The color is therefore used as a "color mask".
 
 The following CSS code would let disappear all cyan colored parts of an element:
@@ -425,7 +423,7 @@ Note that this works best when you use masks that use hard clipping along their 
 
 In any case, don't forget to check if the outcome without mask applied degrades nicely. Because there is IE10. And because JavaScript might be disabled, too.
 
-Have I really said "all browsers browsers except one"? Ooops, I lied. This is true for desktop. Most mobile WebKit browsers still trail behind technology-wise. Not only Android but also Safari on iOS can't handle our SVG magic well. So for them we will double our SVG mask with `-webkit-mask`. We can assign that in our stylesheet:
+Have I really said "all browsers browsers except one"? Ooops, I lied. This is true for desktop. Most mobile WebKit browsers still trail behind technology-wise. Not only Android but also Safari on iOS can't handle our SVG magic well. So for them we will double our SVG mask with `-webkit-mask-image`. We can assign that in our stylesheet:
 
 <span class="language-css"></span>
 
