@@ -452,7 +452,7 @@ Remember the beginning where I told you that you could also use a gradient as ma
 		<rect width="400px" height="300px" fill="url(#g)"/>
 	</mask>
 
-This represents a gradient that goes from top to bottom (from X1,Y1:0,0 to X2,Y2:0,1), who's first color stop is a fully opaque white and who's second stop is a fully transparent white. This is the result of the mask:
+This represents a gradient that goes from top to bottom (from X1,Y1:0,0 to X2,Y2:0,1), who's first color stop is a fully opaque white and who's second stop is a fully transparent white.
 
 For IE we don't need a cyan colored image any more since we will not use the chroma filter this time. Instead we will use the "Alpha" filter. We used to use the alpha filter to polyfill the missing `opacity` property in older IEs. But it is capable of [much much more](http://msdn.microsoft.com/en-us/library/ms532967.aspx). You can switch it into a gradient mode where you can define start and end points as well as start and end opacities. It's a simple as this:
 
