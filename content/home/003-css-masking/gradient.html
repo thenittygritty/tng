@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=400">
+<title>HTML element masked</title>
+<style>
+html {
+	background: #CCC url(seamless1.png);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-shadow: 1px 1px 1px #FFF;
+}
+body {
+	width: 400px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+.element {
+	width: 400px;
+	height: 300px;
+	overflow: hidden;
+	color: #333;
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEsCAYAAAACUNnVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpi+A8ETAxAACJowqJYgnQuxWL4JYiQJVYJxTqGPfFvKBj6bzSi6JL4ycySVCweyORSIkEuCyDAAFZNAWO2uvJRAAAAAElFTkSuQmCC);
+}
+</style>
+<script>
+function head(){
+	if(window.SVGForeignObjectElement){
+		document.write('\
+			<svg width="400px" height="300px">\
+				<defs>\
+					<mask id="mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">\
+						<linearGradient id="g" gradientUnits="objectBoundingBox" x2="0" y2="1">\
+							<stop stop-color="white" stop-opacity="1" offset="0"/>\
+							<stop stop-color="white" stop-opacity="0" offset="1"/>\
+						</linearGradient>\
+						<rect width="400px" height="300px" fill="url(#g)"/>\
+					</mask>\
+				</defs>\
+				<foreignObject width="100%" height="100%" style="mask: url(#mask);">\
+		');
+	}
+	else{
+		document.write('\
+			<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=1,StartX=0,FinishX=0,StartY=0,FinishY=300); zoom:1;">\
+		');
+	}
+}
+function foot(){
+	if(window.SVGForeignObjectElement){
+		document.write('\
+				</foreignObject>\
+			</svg>\
+		');
+	}
+	else{
+		document.write('\
+			</div>\
+		');
+	}
+}
+</script>
+</head>
+<body>
+	<script>head()</script>
+	<div class="element">
+		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+		<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+		<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+		<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. </p>
+	</div>
+	<script>foot()</script>
+</body>
+</html>
