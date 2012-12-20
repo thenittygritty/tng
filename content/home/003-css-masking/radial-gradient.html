@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=400">
+<title>HTML element masked</title>
+<style>
+html {
+	background: #CCC url(seamless1.png);
+	background: #36F url(background.png);
+	font-family: Arial, Helvetica, sans-serif;
+}
+img {
+	-webkit-mask-size: cover; 
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABRtJREFUeNrcmutypDgMhcEY6CSz7/+imzSGBu/0lpU6OXNkoNPZH0uVik646UOydTFtzrn5ga0FwS2DPHWLT1S8KxJAEAYh1t+ylf36DLDvgnTlHj387hwQg0GAu9yKLOVY/i9B7soOBWAo90HpACSAcllALLC/y/yIlc6ChKL4XUYAMai+3DMADG4bWAQtMRe5/07w9/oTILEof5cL/B5g34NF0CroVhtBGEgqcr/HVK5P5fjTQIaivMkLwFzIQjhm1GC/gUVmkFQAJnLRqRzP3wUZi+JKEA5dzAZ+C+6Vya0WcCWDQKvyWEs1mHgC4vW3vJX9KwGNjnsFANnItdilrmRVds2mwJ4GGUDRXwXC5AX26GY46L0xsgqQCdwzwoShYlE6AxJhLCDAL4BCy6B79aSMB2Kz1AQvYRCB1bYV7rEcAQk0qE1hg/gLwOwYzmJHQCx2JLquJ0vgJIFT98ZTswLpYTbCsbEHcjng4xgM53J+omtauI4BFrDotQbSwRviQf4GbmVQDMKutTdrzc7k0IqcbIH4gxmBBBko6CmYNxr8rzTYhwMWMUVqbriKqXopz7G9BOkg5VAwL6T8G81cPOvULGKutTeWVhH9MYhGg4nkZgONkYsTCFUswejupSgZ3jJmyw24UxaxBqdpnBh6BmnBzAPIhSxzEanKixPZVdJoIJiPKddbKPJPoMcEk4RZc4tUV0QgHcnNBrIUJ4wjxIEoci2L7uFEsMTnjyLLtud8AenIZD1ZRymuUnke6ApkrUCMMDWPpEMvYO7PWiIEwY6AogPm/a+jwauy31CUVhB7z1HJpOn7ObN0AiYeED6/I9cJovHAf8cTol7YvxLhrQWCwTfLykcBoCBaalBkmu5t8HckQUCEWoMjUuuGM84gpBPnBrqP1w5qoIZ/9BlKxzZQHwofpi5qxfFW9LLaE72vxnkBofKC/9A5NP+TLVQGIlZ13CHMla5hPmgN7344m2WK9o245jMtyUI2KGQylakr/c3nBNg3AtK7riarOBdfdo5C+ZVucFRskG7C4hgQ8869b6KlqnT78kKiKF5Wyvtrgglgh2m1cLvWedOr00K9iRoEn4tgOYrK7ea0MpXMNP9jxO5gmm1EZqu6jbVn1WD+AGEIbqAlUZ5GJ13PToNuFcnhQu3SBF3GmVqqC8FsmMavoo3JN1X1QBSW2Cpp/OaAJHreDF3HRILwBvMJkkUhYzfDGmAsRT9aggfyShWi1/vleuNaZIK9BzOTVb5UiKppdoHm2V49bkp6XRRV6jLIR5GrkAkgcOw0CgQtYW+f10HCTlG0B4IWMcWuBPIugNBCM1hFdlEWgumddQ+2hJm5ZrVayxRB/i4g7wJoItfPHsgNbs5pexA1Bis2EsiRvtYErvXuyAdZJVHMkp3GJGqNI32nmRpuew067o6gW70Xy6B1zCpJLTEokA1WjLoDg9YgHmliz85gR5APOGbnrke78bdygSpX95YGHl1WMNfx3MssMp9dH0lOtPb8fG+hpwaSAOSDhN3qoRWrVLEGusZFtITCARBeeptoBuPp9+GltwwDS40LjP4DtZG8dQ5vMRRnJI7w6RmLoQbD6xQLNNImCprdgRTFy+smstJypOo8s86+CCXSyQ8Gssi0MVXhrvvt8McwD3wd1MInHKoXG50GXeMUcAsBGcApxdpvfObUVrqPR74O8mqghxRqn/S9VnAC6NGaffuuAu0PfHjGTbxG1PFP//jsHwEGABybnTlITTtiAAAAAElFTkSuQmCC);
+}
+</style>
+<script>
+function head(){
+	if(window.SVGForeignObjectElement){
+		document.write('\
+			<svg width="400px" height="400px">\
+				<defs>\
+					<mask id="mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">\
+						<radialGradient id="g" gradientUnits="objectBoundingBox" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">\
+							<stop stop-color="white" stop-opacity="1" offset="0"/>\
+							<stop stop-color="white" stop-opacity="0" offset="1"/>\
+						</radialGradient>\
+						<rect width="400px" height="400px" fill="url(#g)"/>\
+					</mask>\
+				</defs>\
+				<foreignObject width="100%" height="100%" style="mask: url(#mask);">\
+		');
+	}
+	else{
+		document.write('\
+			<div style="width: 400px; height: 400px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100,FinishOpacity=0,Style=2); zoom:1;">\
+		');
+	}
+}
+function foot(){
+	if(window.SVGForeignObjectElement){
+		document.write('\
+				</foreignObject>\
+			</svg>\
+		');
+	}
+	else{
+		document.write('\
+			</div>\
+		');
+	}
+}
+</script>
+</head>
+<body>
+	<script>head()</script>
+	<img src="photo.jpg" width="400" height="400" alt="Schepp">
+	<script>foot()</script>
+</body>
+</html>
