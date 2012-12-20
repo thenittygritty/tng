@@ -1,6 +1,6 @@
 Title: CSS Masks – How To Use Masking In CSS Now
 ----
-Date: 2012-12-19
+Date: 2012-12-20
 ----
 Author: Christian Schaefer
 ----
@@ -22,7 +22,7 @@ Text:
 
 Almost one year ago I wrote an article that dealt with an emerging WebKit CSS technique, the CSS filter effects, and the question if we could not have/emulate them in other browsers, too. Turned out we could.
 
-Today I want to talk about another WebKit-only feature and show you how you might be able to use it across all of the browsers: This is about...
+Today I want to talk about another WebKit-only feature and show you how you might be able to use it across all of the browsers: This is about…
 
 # CSS Masks
 
@@ -49,7 +49,7 @@ As with the background-image property you can also use a CSS gradient instead of
 
 __Note:__ Beware that this is the "old" syntax that will soon be replaced by `linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))`.
 
-While Apple brought CSS masks to WebKit, they failed to specify their implementation details and file a proposal with the W3C that describes the precise functioning of those masks. Which means that if other vendors would have wanted to implement masks they would have had to reverse engineer and find out about all the implementation details first. Dirty work nobody wanted to do. So it was not until a few days ago, on the 15th of November, that there appeared a first public working draft by the W3C called [CSS Masking](http://www.w3.org/TR/2012/WD-css-masking-20121115/). But that one will be rather different to Apple's version.
+While Apple brought CSS masks to WebKit, they failed to specify their implementation details and file a proposal with the W3C. Which means that if other vendors would have wanted to implement masks they would have had to reverse engineer and find out about all the implementation details first. Dirty work nobody wanted to do. So it was not until a few days ago, on the 15th of November, that there appeared a first public working draft by the W3C called [CSS Masking](http://www.w3.org/TR/2012/WD-css-masking-20121115/). But that one will be rather different to Apple's version.
 
 The good news: Turns out the other browser do have different capabilities which we can use as hooks to emulate WebKit's proprietary CSS masks. Woot!
 
@@ -57,14 +57,14 @@ The good news: Turns out the other browser do have different capabilities which 
 
 ## Emulating a simple `-webkit-mask` cross browser
 
-So let's say we want to mask an HTML element to the shape of Micky Mouse's head as seen in the picture on the right.
+So let's say we want to mask an HTML element to the shape of a mouse's head as seen in the picture on the right.
 
 With WebKit's proprietary CSS masks we would have this HTML:
 
 <span class="language-markup"></span>
 
 	<div class="element">
-		<p>Lorem ipsum dolor sit ... amet.</p>
+		<p>Lorem ipsum dolor sit … amet.</p>
 	</div>
 
 <figure class="image-rightish-small">[![Mouse shape in black](/content/home/css-masking/mouse-black.png)](/content/home/css-masking/mouse-black.png)<figcaption>The mask image *mouse.png* could look like this.</figcaption></figure>
@@ -84,7 +84,8 @@ And define the following CSS:
 
 ### The modern browsers ###
 
-Let's start with the **modern browsers**. Current HTML5-ready browsers [are able to parse SVG embedded inline](http://caniuse.com/svg-html5) into HTML, like so:
+Let's start with the **modern browsers**.  
+Current HTML5-ready browsers [are able to parse SVG embedded inline](http://caniuse.com/svg-html5) into HTML, like so:
 
 <span class="language-markup"></span>
 
@@ -107,7 +108,7 @@ On top of that WebKit as well as Firefox and Opera are also capable of doing the
 
 			<!-- HTML begin -->
 			<div class="element">
-				<p>Lorem ipsum dolor sit ... amet.</p>
+				<p>Lorem ipsum dolor sit … amet.</p>
 			</div>
 			<!-- HTML end -->
 
@@ -146,7 +147,7 @@ Inception!!!</figcaption></figure>
 
 				<!-- inner HTML begins -->
 				<div class="element">
-					<p>Lorem ipsum dolor sit ... amet.</p>
+					<p>Lorem ipsum dolor sit … amet.</p>
 				</div>
 				<!-- inner HTML ends -->
 
@@ -181,7 +182,7 @@ Next step is to define an SVG-mask inside our inlined SVG that we can feed a mas
 
 				<!-- HTML begins -->
 				<div class="element">
-					<p>Lorem ipsum dolor sit ... amet.</p>
+					<p>Lorem ipsum dolor sit … amet.</p>
 				</div>
 				<!-- HTML ends -->
 
@@ -226,7 +227,7 @@ Internet Explorers <= 8 do not understand any of the SVG markup above. They will
 		<foreignObject width="400px" height="300px" style="mask: url(#mask);"></foreignObject>
 
 		<div class="element">
-			<p>Lorem ipsum dolor sit ... amet.</p>
+			<p>Lorem ipsum dolor sit … amet.</p>
 		</div>
 
 		</foreignObject><//foreignObject>
@@ -245,8 +246,7 @@ The only solution we have is a) to test the client for the support of SVG extens
 <span class="language-javascript"></span>
 
 	function head(){
-		if(document.implementation
-		&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1'))
+		if(window.SVGForeignObjectElement)
 		{
 			document.write('\
 				<svg width="400px" height="300px">\
@@ -260,8 +260,7 @@ The only solution we have is a) to test the client for the support of SVG extens
 		}
 	}
 	function foot(){
-		if(document.implementation
-		&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1'))
+		if(window.SVGForeignObjectElement)
 		{
 			document.write('\
 					</foreignObject>\
@@ -278,7 +277,7 @@ And in our HTML markup we need to replace the SVG parts with calls to those Java
 	<body>
 		<script>head()</script>
 		<div class="element">
-			<p>Lorem ipsum dolor sit ... amet.</p>
+			<p>Lorem ipsum dolor sit … amet.</p>
 		</div>
 		<script>foot()</script>
 	</body>
@@ -287,9 +286,9 @@ Now content will remain intact in all Internet Explorers that do not support `<f
 
 __Note 1:__ The backslashes you see at the end of lines inside our strings allow for [multiline strings](http://davidwalsh.name/multiline-javascript-strings). They are supported by every browser and were [officially standardized with ECMAScript 5](http://www.nczonline.net/blog/2012/08/01/a-critical-review-of-ecmascript-6-quasi-literals/).
 
-__Note 2:__ You might think: Isn't `document.write` the Antichrist of JavaScript best practices? He's nuts! Why is he using it? Well, nothing is just black and white - it all depends on the context. `document.write` is indeed very very bad if you make use of it in external JavaScript files. `document.write` forces you to embed external scripts at predefined places of your HTML and prevents almost any attempts of making them load asynchronous. And that means that if these external scripts fails to load, they'll bring your page to a grinding halt. But we are not dealing with an external file here - and you should leave it that way. So there is no blocking. Plus, thanks to having JavaScript outputting the extra markup to the screen while the HTML parser is still running you don't get to witness any flash of unstyled content (FOUC) as it would be the case if you fired a script on DOM ready. Now back to topic...
+__Note 2:__ Isn't `document.write` the Antichrist of JavaScript best practices? He's nuts! Why is he using it? Well, nothing is just black and white - it all depends on the context. `document.write` is indeed very very bad if you make use of it in external JavaScript files. `document.write` forces you to embed external scripts at predefined places of your HTML and prevents almost any attempts of making them load asynchronous. And that means that if these external scripts fail to load, they'll bring your page to a grinding halt. But we are not dealing with an external file here - and you should leave it that way. So there is no blocking. Plus, thanks to having JavaScript outputting the extra markup to the screen while the HTML parser is still running you don't get to witness any flash of unstyled content (FOUC) as it would be the case if you fired a script on DOMContentLoaded. Now back to topic…
 
-We could stop here and all be happy. But how about getting CSS masks working in the IEs, too? Wouldn't that take the cake? Okay then, let's go…
+We could stop here and all be happy. But how about getting CSS masks working in the IEs, too? Wouldn't that take the cake? Well then, let's go…
 
 ### Internet Explorers
 
@@ -362,7 +361,7 @@ A difficulty we face with that is that we need to accomplish this **without** us
 <span class="language-markup"></span>
 
 	<div class="element">
-		<p>Lorem ipsum dolor sit ... amet.</p>
+		<p>Lorem ipsum dolor sit … amet.</p>
 	</div>
 	<img src="mouse-ie.png" style="display: block; margin-top: -300px;">
 
@@ -374,7 +373,7 @@ And now you would filter the whole thing:
 
 	<div style="width: 400px; height: 300px; filter: progid:DXImageTransform.Microsoft.Chroma(color='#00FFFF');zoom:1;">
 		<div class="element">
-			<p>Lorem ipsum dolor sit ... amet.</p>
+			<p>Lorem ipsum dolor sit … amet.</p>
 		</div>
 		<img src="mouse-ie.png" style="display: block; margin-top: -300px;">
 	</div>
@@ -386,8 +385,7 @@ In order to serve this to the IEs we need to extend our JavaScript a bit:
 <span class="language-javascript"></span>
 
 	function head(){
-		if(document.implementation
-		&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1'))
+		if(window.SVGForeignObjectElement)
 		{
 			document.write('\
 				<svg width="400px" height="300px">\
@@ -406,8 +404,7 @@ In order to serve this to the IEs we need to extend our JavaScript a bit:
 		}
 	}
 	function foot(){
-		if(document.implementation
-		&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1'))
+		if(window.SVGForeignObjectElement)
 		{
 			document.write('\
 					</foreignObject>\
@@ -425,7 +422,7 @@ In order to serve this to the IEs we need to extend our JavaScript a bit:
 	}
 
 
-So if `<foreignObject>` is supported we wrap our element into SVG, if not we wrap it into markup that gets interpreted only by filter-enabled IE (= IE <= 9). In the end this gives us a CSS mask in all browsers except one: IE10. Still pretty awesome, isn't it? Here is the final result:
+So if `<foreignObject>` is supported we wrap our element into SVG, if not we wrap it into markup that triggers IE's filters (IE <= 9). In the end this gives us a CSS mask in all browsers except one: IE10. Still pretty awesome, isn't it? Here is the final result:
 
 [Mouse shaped mask](http://www.der-schepp.de/css-masking/mouse.html)
 
@@ -433,7 +430,7 @@ Note that this works best when you use masks that use hard clipping along their 
 
 In any case, don't forget to check if the outcome without mask applied degrades nicely. Because there is IE10. And because JavaScript might be disabled, too.
 
-Have I really said "all browsers browsers except one"? Ooops, I lied. This is true for Desktop. Most mobile WebKit browsers still trail behind technology-wise. Not only Android but even Safari on iOS 5 can't handle SVG masks. But even the oldest of them came out after Apple patched `-webkit-mask` into WebKit. So for them we will double our SVG mask with `-webkit-mask`. We can safely assign that in our stylesheet:
+Have I really said "all browsers browsers except one"? Ooops, I lied. This is true for desktop. Most mobile WebKit browsers still trail behind technology-wise. Not only Android but also Safari on iOS can't handle our SVG magic well. So for them we will double our SVG mask with `-webkit-mask`. We can assign that in our stylesheet:
 
 <span class="language-css"></span>
 
@@ -446,7 +443,7 @@ Have I really said "all browsers browsers except one"? Ooops, I lied. This is tr
 		-webkit-mask-image: url(mouse.png);
 	}
 
-Finally done!
+Finally, we are done!
 
 ## Linear Gradient Masks ##
 
@@ -476,21 +473,20 @@ On mobile WebKit we should normally be fine with a
 
 <span class="language-css"></span>
 
-	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0));
 
-but it turns out that Android 2.x does not support gradients as mask image. We have no choice but to point to a PNG of a gradient, that starts opaque at the top and fades out into transparency to the bottom. Since `-webkit-mask` behaves like `background` it repeats images smaller than the area to cover. Therefore it is sufficient to use [an image with a 1px width and 300px height](/content/home/css-masking/gradient-android.png). Finally to save on HTTP requests we embed the image as data URI with the help of [duri.me](http://duri.me/). So this is the assigment we do in out stylesheet:
+but it turns out that Android 2.x does not support gradients as mask image. We have no choice but to point to a PNG of a gradient, that starts opaque at the top and fades out into transparency to the bottom. Since `-webkit-mask` behaves like `background` it repeats images that are smaller than the area to cover. Therefore it is sufficient to use [an image with a 1px width and 300px height](/content/home/css-masking/gradient-android.png). Finally to save on HTTP requests we embed the image as data URI with the help of [duri.me](http://duri.me/). So this is the assigment we make in out stylesheet:
 
 <span class="language-css"></span>
 
-	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAAN...[shortedned a bit]....O2uvJRAAAAAElFTkSuQmCC);
+	-webkit-mask-image: url(data:image/png;base64,iVBORw…[shortedned a bit]…FTkSuQmCC);
 
 And the following are the changes to our JavaScript:
 
 <span class="language-javascript"></span>
 
 	function head(){
-		if(document.implementation
-		&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1')){
+		if(window.SVGForeignObjectElement){
 			document.write('\
 				<svg width="400px" height="300px">\
 					<defs>\
@@ -517,8 +513,7 @@ And the following are the changes to our JavaScript:
 <span class="language-javascript"></span>
 
 	function foot(){
-		if(document.implementation
-		&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1')){
+		if(window.SVGForeignObjectElement){
 			document.write('\
 					</foreignObject>\
 				</svg>\
@@ -555,7 +550,7 @@ Then we would need to change our SVG mask to this:
 		<rect width="400px" height="400px" fill="url(#g)"/>
 	</mask>
 
-and switch the alpha filter to `style=2`, meaning radial:
+and switch the alpha filter to `style=2`, the "2" standing for radial shape:
 
 <span class="language-css"></span>
 
@@ -566,8 +561,7 @@ Translated to our script, this is how it would look like:
 <span class="language-javascript"></span>
 
 	function head(){
-		if(document.implementation
-		&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1')){
+		if(window.SVGForeignObjectElement){
 			document.write('\
 				<svg width="400px" height="400px">\
 					<defs>\
@@ -594,8 +588,7 @@ Translated to our script, this is how it would look like:
 <span class="language-javascript"></span>
 
 	function foot(){
-		if(document.implementation
-		&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1')){
+		if(window.SVGForeignObjectElement){
 			document.write('\
 					</foreignObject>\
 				</svg>\
@@ -614,7 +607,7 @@ For mobile WebKits we again create a bitmap of a radial gradient. To save a litt
 
 	img {
 		-webkit-mask-size: cover;
-		-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAAN...[shortened a bit]....BybnTlITTtiAAAAAElFTkSuQmCC);
+		-webkit-mask-image: url(data:image/png;base64,iVBORw0…[shortened a bit]…lFTkSuQmCC);
 	}
 
 ## Final Words

@@ -20,8 +20,7 @@ html {
 </style>
 <script>
 function head(){
-	if(document.implementation 
-	&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1')){
+	if(window.SVGForeignObjectElement){
 		document.write('\
 			<svg width="400px" height="300px">\
 				<defs>\
@@ -39,8 +38,7 @@ function head(){
 	}
 }
 function foot(){
-	if(document.implementation 
-	&& document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Extensibility','1.1')){
+	if(window.SVGForeignObjectElement){
 		document.write('\
 				</foreignObject>\
 			</svg>\
