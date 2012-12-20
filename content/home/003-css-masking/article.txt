@@ -28,18 +28,18 @@ Today I want to talk about another WebKit-only feature and show you how you migh
 
 CSS masks were added to the WebKit engine by Apple quite a while ago, namely back in [April 2008](https://www.webkit.org/blog/181/css-masks/). Masks offer the ability to control the opacity/transparency of elements on a per-pixel basis, similar to how the alpha/transparency-channel of "24-bit"-PNGs or 32-bit-TIFFs work.
 
-<figure class="image-leftish-small">[![RGBA](/content/home/css-masking/rgba.jpg)](/content/home/css-masking/rgba.jpg)</figure>
+<figure class="image-leftish-small">[![RGBA](/content/home/003-css-masking/rgba.jpg)](/content/home/003-css-masking/rgba.jpg)</figure>
 
 These images consist of the usual R(ed) G(reen) and B(lue) channels that define the colors of each pixel. But on top there is a fourth channel, the alpha channel, that defines every pixel's opacity through luminance: White meaning opaque, black meaning transparent, and countless grey values defining the semi-transparent inbetweens. As you can see in the picture to the left.
 
-<figure class="image-rightish-small">[![Mask](/content/home/css-masking/mask.jpg)](/content/home/css-masking/mask.jpg)</figure>
+<figure class="image-rightish-small">[![Mask](/content/home/003-css-masking/mask.jpg)](/content/home/003-css-masking/mask.jpg)</figure>
 
 With CSS masks it is an HTML element that gets this type of treatment. And instead of using an alpha channel you assign an image resource to a CSS property named `-webkit-mask-image`, e.g. <span class="nobr">`-webkit-mask-image: url(mouse.png);`</span>. Transparency is then read from that mask image and applied to the HTML element, like the picture on the right shows.
 
-<figure class="image-leftish-small">[![Comments](/content/home/css-masking/comments.jpg)](/content/home/css-masking/comments.jpg)<figcaption>Masking used for user avatars to style them in a certain shape.</figcaption></figure>
+<figure class="image-leftish-small">[![Comments](/content/home/003-css-masking/comments.jpg)](/content/home/003-css-masking/comments.jpg)<figcaption>Masking used for user avatars to style them in a certain shape.</figcaption></figure>
 Neat! So what could that be good for? Well, masking could be used for images to style them in shapes. Or you could have long scrollable text smoothly fade out by using a mask image with a gradient from opaque to transparent.
 
-<figure class="image-rightish">[![Scroll fade](/content/home/css-masking/scrollfade.jpg)](/content/home/css-masking/scrollfade.jpg)</figure>
+<figure class="image-rightish">[![Scroll fade](/content/home/003-css-masking/scrollfade.jpg)](/content/home/003-css-masking/scrollfade.jpg)</figure>
 
 <span class="nobr">As with the background-image</span> property you can also use a CSS gradient instead of an actual bitmap image, as in this code example:
 
@@ -54,7 +54,7 @@ While Apple brought CSS masks to WebKit, they failed to specify their implementa
 
 The good news: Turns out the other browsers do have different capabilities which we can use as hooks to emulate WebKit's proprietary CSS masks. Woot!
 
-<figure class="image-rightish-small">[![](/content/home/css-masking/mouse-masked-element.jpg)](/content/home/css-masking/mouse-masked-element.jpg)</figure>
+<figure class="image-rightish-small">[![](/content/home/003-css-masking/mouse-masked-element.jpg)](/content/home/003-css-masking/mouse-masked-element.jpg)</figure>
 
 ## Emulating a simple `-webkit-mask` cross browser
 
@@ -68,7 +68,7 @@ With WebKit's proprietary CSS masks we would have this HTML:
 		<p>Lorem ipsum dolor sit … amet.</p>
 	</div>
 
-<figure class="image-rightish-small">[![Mouse shape in black](/content/home/css-masking/mouse-black.png)](/content/home/css-masking/mouse-black.png)<figcaption>The mask image *mouse.png* could look like this.</figcaption></figure>
+<figure class="image-rightish-small">[![Mouse shape in black](/content/home/003-css-masking/mouse-black.png)](/content/home/003-css-masking/mouse-black.png)<figcaption>The mask image *mouse.png* could look like this.</figcaption></figure>
 
 And define the following CSS:
 
@@ -121,7 +121,7 @@ Internet Explorer 9 and 10 are, the only modern browsers that lack support for `
 
 What inline-SVG and `<foreignObject>` enable us to do is to enclose certain parts of our page's HTML in SVG wrappers, in this case the HTML blocks we want to mask:
 
-<figure class="image-rightish-small">[![Inception](/content/home/css-masking/inception.png)](/content/home/css-masking/inception.png)<figcaption>
+<figure class="image-rightish-small">[![Inception](/content/home/003-css-masking/inception.png)](/content/home/003-css-masking/inception.png)<figcaption>
 Inception!!!</figcaption></figure>
 
 <span class="language-markup"></span>
@@ -195,7 +195,7 @@ Next step is to define an SVG-mask inside our inlined SVG that we can feed a mas
 	</html>
 
 
-<figure class="image-rightish-small">[![White Mouse](/content/home/css-masking/mouse-white.png)](/content/home/css-masking/mouse-white.png)</figure>
+<figure class="image-rightish-small">[![White Mouse](/content/home/003-css-masking/mouse-white.png)](/content/home/003-css-masking/mouse-white.png)</figure>
 
 And finally we need to have a proper mask image. We cannot simply use the image from WebKit's proprietary CSS mask, since SVG masks do not look at transparency values but at luminance values. So what we need to do is turn all opaque image pixels into shades of white.
 
@@ -329,11 +329,11 @@ to this markup:
 	</div>
 
 
-<figure class="image-leftish-small">[![Window](/content/home/css-masking/chroma_window.png)](/content/home/css-masking/chroma_window.png)</figure>
+<figure class="image-leftish-small">[![Window](/content/home/003-css-masking/chroma_window.png)](/content/home/003-css-masking/chroma_window.png)</figure>
 
 Then the cyan area of the element `.child` would be punched out of the filtered element `.parent` and we could look through it.
 
-<figure class="image-rightish-small">[![Window](/content/home/css-masking/mouse-cyan.png)](/content/home/css-masking/mouse-cyan.png)</figure>
+<figure class="image-rightish-small">[![Window](/content/home/003-css-masking/mouse-cyan.png)](/content/home/003-css-masking/mouse-cyan.png)</figure>
 
 So coming back to our mouse shaped example, what we need to do is create a version of the mouse shape image, where the outer parts are cyan and the inner shape is transparent as seen on <span class="nobr">the right</nobr>.
 
@@ -351,7 +351,7 @@ In Photoshop do the following:
 
 Saving with just 2 colors removes the anti-aliasing from the shape's borders. The reason we need to do that is because the chroma filter can only punch out one single color.
 
-<figure class="image-rightish-small">[![Cyan mouse mask](/content/home/css-masking/mouse-masked-element-cyan.jpg)](/content/home/css-masking/mouse-masked-element-cyan.jpg)</figure>
+<figure class="image-rightish-small">[![Cyan mouse mask](/content/home/003-css-masking/mouse-masked-element-cyan.jpg)](/content/home/003-css-masking/mouse-masked-element-cyan.jpg)</figure>
 
 Now we need to layer that image over the element we want to mask, like in the picture on the right.
 
@@ -366,7 +366,7 @@ A difficulty we face with that is that we need to accomplish this **without** us
 
 And now you would filter the whole thing:
 
-<figure class="image-rightish-small">[![Mouse shape in IE](/content/home/css-masking/mouse-masked-element-ie.jpg)](/content/home/css-masking/mouse-masked-element-ie.jpg)<figcaption>The result.</figcaption></figure>
+<figure class="image-rightish-small">[![Mouse shape in IE](/content/home/003-css-masking/mouse-masked-element-ie.jpg)](/content/home/003-css-masking/mouse-masked-element-ie.jpg)<figcaption>The result.</figcaption></figure>
 
 <span class="language-markup"></span>
 
@@ -470,7 +470,7 @@ On mobile WebKit we should normally be fine with a
 
 	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0));
 
-but it turns out that Android 2.x does not support gradients as mask image. We have no choice but to point to a PNG of a gradient, that starts opaque at the top and fades out into transparency to the bottom. Since `-webkit-mask` behaves like `background` it repeats images that are smaller than the area to cover. Therefore it is sufficient to use [an image with a 1px width and 300px height](/content/home/css-masking/gradient-android.png). Finally to save on HTTP requests we embed the image as data URI with the help of [duri.me](http://duri.me/). So this is the assigment we make in out stylesheet:
+but it turns out that Android 2.x does not support gradients as mask image. We have no choice but to point to a PNG of a gradient, that starts opaque at the top and fades out into transparency to the bottom. Since `-webkit-mask` behaves like `background` it repeats images that are smaller than the area to cover. Therefore it is sufficient to use [an image with a 1px width and 300px height](/content/home/003-css-masking/gradient-android.png). Finally to save on HTTP requests we embed the image as data URI with the help of [duri.me](http://duri.me/). So this is the assigment we make in out stylesheet:
 
 <span class="language-css"></span>
 
@@ -502,7 +502,7 @@ And the following are the changes to our JavaScript:
 		}
 	}
 
-<figure class="image-rightish-small">[![Gradient masked element](/content/home/css-masking/gradient-masked-element.jpg)](/content/home/css-masking/gradient-masked-element.jpg)<figcaption>[Look at the result](/content/home/css-masking/gradient.html).</figcaption></figure>
+<figure class="image-rightish-small">[![Gradient masked element](/content/home/003-css-masking/gradient-masked-element.jpg)](/content/home/003-css-masking/gradient-masked-element.jpg)<figcaption>[Look at the result](/content/home/003-css-masking/gradient.html).</figcaption></figure>
 
 <span class="language-javascript"></span>
 
@@ -575,7 +575,7 @@ Translated to our script, this is how it would look like:
 		}
 	}
 
-<figure class="image-rightish-small">[![Radial gradient masked element](/content/home/css-masking/radial-gradient-masked-element.jpg)](/content/home/css-masking/mouse-masked-element-ie.jpg)<figcaption>And here is the final result ([Code](/content/home/css-masking/radial-gradient.html)). Radial gradients are great to let images softly fade into the background!</figcaption></figure>
+<figure class="image-rightish-small">[![Radial gradient masked element](/content/home/003-css-masking/radial-gradient-masked-element.jpg)](/content/home/003-css-masking/mouse-masked-element-ie.jpg)<figcaption>And here is the final result ([Code](/content/home/003-css-masking/radial-gradient.html)). Radial gradients are great to let images softly fade into the background!</figcaption></figure>
 
 <span class="language-javascript"></span>
 
@@ -592,7 +592,7 @@ Translated to our script, this is how it would look like:
 		}
 	}
 
-For mobile WebKits we again create a bitmap of a radial gradient. To save a little on bytesize it is sufficient to use [an image with the dimensions 50px x 50px](/content/home/css-masking/radial-gradient-android.png). To have that mask stretch over our 400px &times; 400px object we need to also set `-webkit-mask-size: cover`.
+For mobile WebKits we again create a bitmap of a radial gradient. To save a little on bytesize it is sufficient to use [an image with the dimensions 50px x 50px](/content/home/003-css-masking/radial-gradient-android.png). To have that mask stretch over our 400px &times; 400px object we need to also set `-webkit-mask-size: cover`.
 
 <span class="language-css"></span>
 
