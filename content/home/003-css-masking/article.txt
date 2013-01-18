@@ -4,7 +4,7 @@ Date: 2012-12-20
 ----
 Author: Christian Schaefer
 ----
-AuthorUrl: https://twitter.com/drublic
+AuthorUrl: https://twitter.com/derSchepp
 ----
 AuthorTwitter: derSchepp
 ----
