@@ -1,0 +1,156 @@
+Title: The future of the web — a draft
+----
+Date: 2013-01-28
+----
+Author: Bastian Allgeier
+----
+AuthorUrl: http://bastianallgeier.com/
+----
+AuthorTwitter: bastianallgeier
+----
+AuthorMail: bastian.allgeier@googlemail.com
+----
+AuthorInfo: Bastian is a full stack developer and entrepreneur living in ..., Germany. He is the man behind [Zoo Tool](http://zootool.com/) and a [Kirby CMS](http://getkirby.com/).
+----
+Categories: Decentralized Systems, The Future
+----
+Description: Sass 3.2 has a wonderful method to define reusable modules called placeholders which enable us to decouple CSS from HTML while using unambiguous, semantic class names.
+----
+Tags: Decentralized Systems, The Future
+----
+
+
+Text:
+
+Lately I find myself questioning the digital world I live in  more and more.
+
+We share our entire life on Facebook and Twitter, send our emails with Gmail. We share our current location on Foursquare and take pictures with Instagram. Our business data is on Dropbox, Evernote or Gdrive. We build our own services on Amazon web services, keep it organized with Trello or Basecamp and host the code for it on Github. Saas, Paas, the cloud – we all have become slaves of a few web monopolies. We are slaves of a new centralized web.
+
+Sounds polemic, right? Is it? I don't think so!
+
+It's even worse. We as web developers, engineers and designers follow the hype to create more of those monopolies, because it has become so popular. A new startup is worth nothing until it reaches a couple million users. It's all about "the next dent in the universe". It's all about growth — VC-funded, cancer-like growth.
+
+Thinking about alternatives always leads to a simple problem.
+There are decentralized alternatives to any of the services and platforms above. Self-hosted, open-source solutions. But hardly anybody uses them. They will forever rot in the forgotten world of nerd tools on Sourceforge, Bitbucket or Github. A few idealists may try to give them a chance and probably will give up sooner or later, realizing that it's all about global adoption.
+
+But does this really mean that a more open, decentralized approach to a social web and all those tools we use will always be doomed to fail? I don't think so. It's up to us. We got the chance to take major influence in the future of the web.
+
+Let's just imagine for a second that "decentralized" would have been the next black in the era of all those VC funded hipster start-ups instead of building walled gardens.
+
+All technical trends on the web have followed the quest for the next Facebook. The rise of NoSQL databases; Big data; unlimited, high available storage solutions; new languages and frameworks. The buzz word is "scaling" to handle those millions of users on a single platform.
+
+Owning your own server or even just a shared hosting plan is still too geeky for the vast majority of internet users. That's why a web start-up got only one chance to build something with the option to grow significantly: to offer a hosted service where people can easily sign up without any technical knowledge.
+
+On the other hand "the personal cloud" is trending like crazy. Even the most untechnical people nowadays use something like Dropbox, iCloud or Gdrive.
+
+It's all about the interface.
+
+Anybody with basic computer knowledge can save images on Dropbox and share them with their friends or family. But compared to that it's almost rocket science to run your own server and do the same thing via FTP.
+
+Despite that I dream of a future where everybody has their own server. Not the definition of server we think of today. It could be your computer at home, a little box next to your TV, maybe a gaming console or a small server somewhere in a data center. That's not important. It would be like having a mobile phone – it might even be your mobile phone. Your own server would be so easy to use and integrate with your existing devices that even your granny would have one.
+
+**We spend so much time on the internet that we should all have our own digital home online.** So far we are only guests in a couple gigantic hotels with barb wire all around them.
+
+In such a future there would be no need for sites like Facebook, Twitter or Instagram. Our servers would be connected and talk to each other instead. The social web would be peer to peer. We would be in control of our own data and identity. We would be in control of how we setup our server, how much we invest in it and where we host it. The "cloud" would be truly personal and the web would be fully decentralized again. Basically it would be the web how it was always supposed to be.
+
+Let's get into a time machine and travel into the future.
+
+`<future type="hypothetic">`
+
+## December 2013:
+
+A group of designers and developers has just released their 	brand new open-source project, called Fire-octo-something (FOS).
+
+FOS is nothing more than a well designed hosting control panel for Linux servers. Pretty much like Plesk – except it doesn't suck.
+
+FOS can be accessed with any modern web browser and there are apps to connect to your FOS for all major mobile and desktop OSes.
+
+On the inside, FOS has a clever package manager, which can create sandboxed environments for self-hosted applications with a single click.
+
+To install such an application, the server will take care of downloading the source, all dependencies and setting up needed servers, languages, frameworks, databases, cache systems, etc. All that is controlled with a simple JSON file*, which developers create for their apps.
+
+{
+    "name": "Birdy",
+    "description": "A decentralized alternative to Twitter",
+    "version": "1.0",
+    "author": "MacGyver",
+    "url": "http://getbirdyapp.com",
+    "source" : "http://getbirdyapp.com/source.zip",
+		"icon" : "assets/images/birdy-icon.svg",
+		"screenshots" : "assets/screenshots",
+		"price" : "$4.99",
+		"paymentServices" : {
+			"Stripe", "Amazon Checkout", "Google Checkout", "Not Paypal"
+		},
+		"environment" : {
+				"server" : "nginx",
+				"language" : "PHP 6",
+				"framework" : "fire-octo-php-framework-of-awesomeness",
+        "database" : "mongodb 3.0",
+				"cache" : "redis 4.0"
+		}
+}
+
+(*simplified version of the FOS package file – because it's from the future)
+
+On the outside, the user has an interface, much like the iOS home screen. New apps can be installed from the FOS app directory, where developers share and sell their self-hosted applications.
+
+Installation is seamless and the setup process in the background is not visible to users. Once installed, FOS will take care of application updates and keeping the environment up to date.
+
+The source for all available applications is open and can be hosted on Github, the developer's server or anywhere else.
+
+The quality of apps and the trustworthiness of developers is monitored by the FOS community with ratings and a flagging system. The developer community is invite-only, which raises quite a few discussions in the beginning, but results in a high range of quality applications.
+
+FOS integrates with a multitude of payment services to handle app sales. The user's credit card details can be stored securely on the server, so purchasing apps is really just a single click. Paid apps can be installed for free for two days to give them a try. FOS will automatically uninstall them afterwards.
+
+The entire payment process is so streamlined and easy to integrate in self-hosted apps, that it's a whole new world for developers to distribute their apps on the web.
+
+Besides setting up email accounts and connecting domains with your FOS, the system also takes care of simple backup and recovery solutions. You are free to use a service like Amazon S3 or Rackspace CloudFiles for encrypted backups as well as any other server or a backup on your local machine whenever you are connected to the internet. All that is available from a simple settings panel.
+
+The FOS philosophy: keep it simple on the outside but powerful on the inside. Sys admins still get a chance to dive deep into FOS' internals while non-tech people get a cosy untechnical interface.
+
+For developers, the system offers a wide variety of additional helpers and extensions to build great applications. There's an API to send and receive emails, a built-in way for your app to connect to different storage solutions like Dropbox or Amazon S3, a worker infrastructure, a simple way to start and stop app-specific cronjobs and much more.
+
+The FOS developers have worked together with the guys from Tent.io to use their standard for cross-server communication and syncing. Extensions for Rails, Python, node.js and PHP are installed out of the box.
+
+## January 2014
+
+FOS gets raving reviews from designers for its amazing interface design, from developers for how easy it is to develop applications for it and from sys admins for its clean architecture.
+
+Multiple tutorials are available how to install and run it on various virtual and dedicated servers form all kinds of hosting providers.
+
+Motivated by how simple it is to distribute and sell apps for FOS, more and more apps appear in the directory. There's already a great calendar application, the guys from .dotmail announced an amazing self-hosted email client and of course dozens of todo list apps made their way into the directory – you can't help it.
+
+Gruber loves the idea and writes about how he installed FOS on the DaringFireball server to play with it. Dozens of articles on other tech blogs follow.
+
+## February 2014
+
+Media Temple offers FOS on their virtual servers and their grid hosting. Soon afterwards the competition is coming up with their own FOS hosting plans.
+
+FOS packages for Wordpress, Drupal and many other content management systems pop up.
+
+Fantastic apps appear from well known indie developers and Birdy – the distributed Twitter alternative is a must-have for early adopters. Nodoby's talking about App.net anymore and even Tapbot switched their Netbot client to Birdbot. Birdirific is supposed to be released next.
+
+## March 2014
+
+Firegram and Loctocation are being released. Both turn out to be way more than just a port of Instagram and Foursquare. The new distributed aspect with a growing number of users with FOS servers is opening up an entire new world of features. Especially the simple communication between apps on the same server bring a whole new level of possibilities.
+
+## April 2014
+
+Just four months after launch, the ecosystem of self-hosted apps for FOS is growing like crazy. Many start-ups are forming around it. There are even the first open-source and proprietary alternatives for FOS coming up.
+
+All major hosting companies now have FOS hosting available. More and more mobile and desktop applications offer sync with your FOS.
+
+On Kickstarter you can find a project to run your own little FOS box at home. It's a cute little device with plenty of storage for files, a decent amount of RAM and a pre-installed Linux distro with FOS on it. You just need to connect it to your wifi and your done. It can even be accessed from your TV. You can either run a single FOS instance on it or use it for your entire family. The developers worked together with DynDNS to offer affordable dynamic DNS hosting for those without a static IP – of course this can be configured right within FOS' settings.
+
+All the big tech blogs, magazines and even the first non-tech publications report about the new trend of distributed personal servers, while Facebook, Twitter and others slowly start to realize that something is changing.
+
+There are rumors that Apple and Google are working on something FOSsy as well…
+
+</future>
+
+This is just a rough first draft of how such a future could look like. So many ideas pop up once you start thinking about a more distributed social web.
+
+It's far fetched and yet so close. The technology is there. We just need to focus on the right things.
+
+It might be just my dream and an illusion. But I really believe that it's up to us developers, engineers and designers to decide what's up next. We are in control. We just need to realize it and seize that chance. We are not doomed to be slaves of a centralized web forever just because it's popular right now.
