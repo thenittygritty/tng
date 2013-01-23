@@ -55,7 +55,9 @@ In such a future there would be no need for sites like Facebook, Twitter or Inst
 
 Let's get into a time machine and travel into the future.
 
-`<future type="hypothetic">`
+<span class="language-html"></span>
+
+    <future type="hypothetic">
 
 ## December 2013:
 
@@ -69,27 +71,30 @@ On the inside, FOS has a clever package manager, which can create sandboxed envi
 
 To install such an application, the server will take care of downloading the source, all dependencies and setting up needed servers, languages, frameworks, databases, cache systems, etc. All that is controlled with a simple JSON file*, which developers create for their apps.
 
-{
-    "name": "Birdy",
-    "description": "A decentralized alternative to Twitter",
-    "version": "1.0",
-    "author": "MacGyver",
-    "url": "http://getbirdyapp.com",
-    "source" : "http://getbirdyapp.com/source.zip",
-		"icon" : "assets/images/birdy-icon.svg",
-		"screenshots" : "assets/screenshots",
-		"price" : "$4.99",
-		"paymentServices" : {
-			"Stripe", "Amazon Checkout", "Google Checkout", "Not Paypal"
-		},
-		"environment" : {
-				"server" : "nginx",
-				"language" : "PHP 6",
-				"framework" : "fire-octo-php-framework-of-awesomeness",
-        "database" : "mongodb 3.0",
-				"cache" : "redis 4.0"
-		}
-}
+
+<span class="language-javascript"></span>
+
+	{
+	    "name": "Birdy",
+	    "description": "A decentralized alternative to Twitter",
+	    "version": "1.0",
+	    "author": "MacGyver",
+	    "url": "http://getbirdyapp.com",
+	    "source" : "http://getbirdyapp.com/source.zip",
+			"icon" : "assets/images/birdy-icon.svg",
+			"screenshots" : "assets/screenshots",
+			"price" : "$4.99",
+			"paymentServices" : {
+				"Stripe", "Amazon Checkout", "Google Checkout", "Not Paypal"
+			},
+			"environment" : {
+					"server" : "nginx",
+					"language" : "PHP 6",
+					"framework" : "fire-octo-php-framework-of-awesomeness",
+	        "database" : "mongodb 3.0",
+					"cache" : "redis 4.0"
+			}
+	}
 
 (*simplified version of the FOS package file – because it's from the future)
 
