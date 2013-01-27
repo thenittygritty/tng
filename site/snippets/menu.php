@@ -11,6 +11,7 @@
 				</a>
 			</li>
 		<?php endforeach; ?>
+		<li><a href="<?php echo $site->url(); ?>/feed" title="The RSS feed">Feed</a></li>
 	</ul>
 
 	<a class="navigation-toggle navigation-toggle-show show-mobile" href="#navigation">&#x2630;</a>
