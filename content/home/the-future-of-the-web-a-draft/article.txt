@@ -8,7 +8,7 @@ AuthorUrl: http://bastianallgeier.com/
 ----
 AuthorTwitter: bastianallgeier
 ----
-AuthorMail: bastian.allgeier@googlemail.com
+AuthorMail: mail@bastian-allgeier.de
 ----
 AuthorInfo: Bastian is a full stack developer and entrepreneur living in Mannheim, Germany. He is the man behind [Zootool](http://zootool.com/) and [Kirby CMS](http://getkirby.com/).
 ----
@@ -25,6 +25,8 @@ Text:
 Lately I find myself questioning the digital world I live in more and more.
 
 We share our entire life on Facebook and Twitter, send our emails with Gmail. We share our current location on Foursquare and take pictures with Instagram. Our business data is on Dropbox, Evernote or Google Drive. We build our own services on Amazon Web Services, keep it organized with Trello or Basecamp and host the code for it on GitHub. Saas, Paas, the cloud – we all have become slaves of a few web monopolies. We are slaves of a new centralized web.
+
+<figure class="image-full">[![](/content/home/the-future-of-the-web-a-draft/fossystart@2x.png)](/content/home/the-future-of-the-web-a-draft/fossystart@2x.png)</figure>
 
 Sounds polemic, right? Is it? I don't think so!
 
@@ -62,6 +64,8 @@ Let's get into a time machine and travel into the future.
 
 ## December 2013
 
+<figure class="image-rightish-small">[![Launchpad](/content/home/the-future-of-the-web-a-draft/fossypad@2x.jpg)](/content/home/the-future-of-the-web-a-draft/fossypad@2x.jpg)<figcaption>The launchpad of the FOS.</figcaption></figure>
+
 A group of designers and developers has just released their brand new open-source project, called Fire-Octo-Something (FOS).
 
 FOS is nothing more than a well designed hosting control panel for Linux servers. Pretty much like Plesk – except it doesn't suck.
@@ -72,6 +76,7 @@ On the inside, FOS has a clever package manager, which can create sandboxed envi
 
 To install such an application, the server will take care of downloading the source, all dependencies and setting up needed servers, languages, frameworks, databases, cache systems, etc. All that is controlled with a simple JSON file*, which developers create for their apps.
 
+<small>* simplified version of the FOS package file – because it's from the future</small>
 
 <span class="language-javascript"></span>
 
@@ -97,7 +102,7 @@ To install such an application, the server will take care of downloading the sou
 	    }
 	}
 
-(*simplified version of the FOS package file – because it's from the future)
+<figure class="image-rightish-small">[![FOS' Settings](/content/home/the-future-of-the-web-a-draft/fossysettings@2x.png)](/content/home/the-future-of-the-web-a-draft/fossysettings@2x.png)<figcaption>Setting up a FOS-box is pretty simple. Here are the settings.</figcaption></figure>
 
 On the outside, the user has an interface, much like the iOS home screen. New apps can be installed from the FOS app directory, where developers share and sell their self-hosted applications.
 
@@ -108,6 +113,8 @@ The source for all available applications is open and can be hosted on GitHub, t
 The quality of apps and the trustworthiness of developers is monitored by the FOS community with ratings and a flagging system. The developer community is invite-only, which raises quite a few discussions in the beginning, but results in a high range of quality applications.
 
 FOS integrates with a multitude of payment services to handle app sales. The user's credit card details can be stored securely on the server, so purchasing apps is really just a single click. Paid apps can be installed for free for two days to give them a try. FOS will automatically uninstall them afterwards.
+
+<figure class="image-leftish">[![FOS' Structur](/content/home/the-future-of-the-web-a-draft/fossystem@2x.png)](/content/home/the-future-of-the-web-a-draft/fossystem@2x.png)<figcaption>The structure of FOS: Connect your devices to your machine, your machine connects to the world.</figcaption></figure>
 
 The entire payment process is so streamlined and easy to integrate in self-hosted apps, that it's a whole new world for developers to distribute their apps on the web.
 
@@ -140,6 +147,8 @@ Fantastic apps appear from well known indie developers and Birdy – the distrib
 ## March 2014
 
 Firegram and Loctocation are being released. Both turn out to be way more than just a port of Instagram and Foursquare. The new distributed aspect with a growing number of users with FOS servers is opening up an entire new world of features. Especially the simple communication between apps on the same server bring a whole new level of possibilities.
+
+<figure class="image-leftish">[![FOS' Filesystem](/content/home/the-future-of-the-web-a-draft/fossyfiles.png)](/content/home/the-future-of-the-web-a-draft/fossyfiles.png)<figcaption>FOS' filesystem. You are in charge of everthing.</figcaption></figure>
 
 ## April 2014
 
