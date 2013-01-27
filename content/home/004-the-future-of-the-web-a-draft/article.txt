@@ -162,7 +162,9 @@ All the big tech blogs, magazines and even the first non-tech publications repor
 
 There are rumors that Apple and Google are working on something FOSsy as well…
 
-## &lt;/future&gt;
+<span class="language-markup"></span>
+
+    </future>
 
 This is just a rough first draft of how such a future could look like. So many ideas pop up once you start thinking about a more distributed social web.
 
