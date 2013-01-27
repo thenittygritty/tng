@@ -22,9 +22,9 @@ Tags: Decentralized Systems, The Future, Social Media
 
 Text:
 
-Lately I find myself questioning the digital world I live in more and more.
+**Lately I find myself questioning the digital world I live in more and more.**
 
-We share our entire life on Facebook and Twitter, send our emails with Gmail. We share our current location on Foursquare and take pictures with Instagram. Our business data is on Dropbox, Evernote or Google Drive. We build our own services on Amazon Web Services, keep it organized with Trello or Basecamp and host the code for it on GitHub. Saas, Paas, the cloud – we all have become slaves of a few web monopolies. We are slaves of a new centralized web.
+**We share our entire life on Facebook and Twitter, send our emails with Gmail. We share our current location on Foursquare and take pictures with Instagram. Our business data is on Dropbox, Evernote or Google Drive. We build our own services on Amazon Web Services, keep it organized with Trello or Basecamp and host the code for it on GitHub. Saas, Paas, the cloud – we all have become slaves of a few web monopolies. We are slaves of a new centralized web.**
 
 <figure class="image-full">[![](/content/home/004-the-future-of-the-web-a-draft/fossystart@2x.png)](/content/home/004-the-future-of-the-web-a-draft/fossystart@2x.png)</figure>
 
