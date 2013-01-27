@@ -12,11 +12,11 @@ AuthorMail: bastian.allgeier@googlemail.com
 ----
 AuthorInfo: Bastian is a full stack developer and entrepreneur living in Mannheim, Germany. He is the man behind [Zootool](http://zootool.com/) and [Kirby CMS](http://getkirby.com/).
 ----
-Categories:
+Categories: The Future
 ----
-Description:
+Description: Bastian Allgeier describes his idea of decentralized sytems that build the web in the future focusing on self-distributed servers.
 ----
-Tags: Decentralized Systems, The Future
+Tags: Decentralized Systems, The Future, Social Media
 ----
 
 
