@@ -2,9 +2,9 @@ Title: TNG - The Nitty Gritty
 ----
 Author: Kahlil Lechelt, Hans Christian Reinl
 ----
-Description: The Nitty Gritty description
+Description: The Nitty Gritty is a tech blog covering a the latest changes in web develoment technologies such as HTML, CSS and JavaScript. TNG – The low down on web technology.
 ----
-Keywords: The Nitty Gritty, HTML, CSS, JavaScript, HTML5, CSS3, JS
+Keywords: The Nitty Gritty, TNG, HTML, CSS, JavaScript, HTML5, CSS3, JS, web technology, webplatform
 ----
 FooterNote: Made with [Kirby](http://getkirby.com) and &#x2665;.
 ----
