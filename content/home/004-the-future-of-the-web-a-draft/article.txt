@@ -26,7 +26,7 @@ Lately I find myself questioning the digital world I live in more and more.
 
 We share our entire life on Facebook and Twitter, send our emails with Gmail. We share our current location on Foursquare and take pictures with Instagram. Our business data is on Dropbox, Evernote or Google Drive. We build our own services on Amazon Web Services, keep it organized with Trello or Basecamp and host the code for it on GitHub. Saas, Paas, the cloud – we all have become slaves of a few web monopolies. We are slaves of a new centralized web.
 
-<figure class="image-full">[![](/content/home/the-future-of-the-web-a-draft/fossystart@2x.png)](/content/home/the-future-of-the-web-a-draft/fossystart@2x.png)</figure>
+<figure class="image-full">[![](/content/home/004-the-future-of-the-web-a-draft/fossystart@2x.png)](/content/home/004-the-future-of-the-web-a-draft/fossystart@2x.png)</figure>
 
 Sounds polemic, right? Is it? I don't think so!
 
@@ -64,7 +64,7 @@ Let's get into a time machine and travel into the future.
 
 ## December 2013
 
-<figure class="image-rightish-small">[![Launchpad](/content/home/the-future-of-the-web-a-draft/fossypad@2x.jpg)](/content/home/the-future-of-the-web-a-draft/fossypad@2x.jpg)<figcaption>The launchpad of the FOS.</figcaption></figure>
+<figure class="image-rightish-small">[![Launchpad](/content/home/004-the-future-of-the-web-a-draft/fossypad@2x.jpg)](/content/home/004-the-future-of-the-web-a-draft/fossypad@2x.jpg)<figcaption>The launchpad of the FOS.</figcaption></figure>
 
 A group of designers and developers has just released their brand new open-source project, called Fire-Octo-Something (FOS).
 
@@ -102,7 +102,7 @@ To install such an application, the server will take care of downloading the sou
 	    }
 	}
 
-<figure class="image-rightish-small">[![FOS' Settings](/content/home/the-future-of-the-web-a-draft/fossysettings@2x.png)](/content/home/the-future-of-the-web-a-draft/fossysettings@2x.png)<figcaption>Setting up a FOS-box is pretty simple. Here are the settings.</figcaption></figure>
+<figure class="image-rightish-small">[![FOS' Settings](/content/home/004-the-future-of-the-web-a-draft/fossysettings@2x.png)](/content/home/004-the-future-of-the-web-a-draft/fossysettings@2x.png)<figcaption>Setting up a FOS-box is pretty simple. Here are the settings.</figcaption></figure>
 
 On the outside, the user has an interface, much like the iOS home screen. New apps can be installed from the FOS app directory, where developers share and sell their self-hosted applications.
 
@@ -114,7 +114,7 @@ The quality of apps and the trustworthiness of developers is monitored by the FO
 
 FOS integrates with a multitude of payment services to handle app sales. The user's credit card details can be stored securely on the server, so purchasing apps is really just a single click. Paid apps can be installed for free for two days to give them a try. FOS will automatically uninstall them afterwards.
 
-<figure class="image-leftish">[![FOS' Structur](/content/home/the-future-of-the-web-a-draft/fossystem@2x.png)](/content/home/the-future-of-the-web-a-draft/fossystem@2x.png)<figcaption>The structure of FOS: Connect your devices to your machine, your machine connects to the world.</figcaption></figure>
+<figure class="image-leftish">[![FOS' Structur](/content/home/004-the-future-of-the-web-a-draft/fossystem@2x.png)](/content/home/004-the-future-of-the-web-a-draft/fossystem@2x.png)<figcaption>The structure of FOS: Connect your devices to your machine, your machine connects to the world.</figcaption></figure>
 
 The entire payment process is so streamlined and easy to integrate in self-hosted apps, that it's a whole new world for developers to distribute their apps on the web.
 
@@ -148,7 +148,7 @@ Fantastic apps appear from well known indie developers and Birdy – the distrib
 
 Firegram and Loctocation are being released. Both turn out to be way more than just a port of Instagram and Foursquare. The new distributed aspect with a growing number of users with FOS servers is opening up an entire new world of features. Especially the simple communication between apps on the same server bring a whole new level of possibilities.
 
-<figure class="image-leftish">[![FOS' Filesystem](/content/home/the-future-of-the-web-a-draft/fossyfiles.png)](/content/home/the-future-of-the-web-a-draft/fossyfiles.png)<figcaption>FOS' filesystem. You are in charge of everthing.</figcaption></figure>
+<figure class="image-leftish">[![FOS' Filesystem](/content/home/004-the-future-of-the-web-a-draft/fossyfiles.png)](/content/home/004-the-future-of-the-web-a-draft/fossyfiles.png)<figcaption>FOS' filesystem. You are in charge of everthing.</figcaption></figure>
 
 ## April 2014
 
