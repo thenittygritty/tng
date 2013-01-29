@@ -38,11 +38,11 @@ There are decentralized alternatives to any of the services and platforms above.
 
 But does this really mean that a more open, decentralized approach to a social web and all these tools we use will always be doomed to fail? I don't think so. It's up to us. We have the chance to make a big impact on the future of the web.
 
-Let's just imagine for a second that "decentralized" would have been the next black in the era of all those VC funded hipster start-ups instead of building walled gardens.
+Let's just imagine for a second that "decentralized" would have been the new black in the era of all those VC funded hipster startups instead of building walled gardens.
 
-All technical trends on the web have followed the quest for the next Facebook. The rise of NoSQL databases; big data; unlimited, high available storage solutions; new languages and frameworks. The buzz word is "scaling" to handle those millions of users on a single platform.
+All technical trends on the web have followed the quest for the next Facebook. The rise of NoSQL databases; big data; unlimited, high-availability storage solutions; new languages and frameworks. The buzzword is "scaling" to handle all those millions of users on a single platform.
 
-Owning your own server or even just a shared hosting plan is still too geeky for the vast majority of internet users. That's why a web start-up got only one chance to build something with the option to grow significantly: to offer a hosted service where people can easily sign up without any technical knowledge.
+Owning your own server or even just a shared hosting plan is still too geeky for the vast majority of internet users. That's why a web startup only has one chance to build something with the option to grow significantly: offer a hosted service where people can easily sign up without any technical knowledge.
 
 On the other hand "the personal cloud" is trending like crazy. Even the most untechnical people nowadays use something like Dropbox, iCloud or Google Drive.
 
@@ -50,13 +50,13 @@ It's all about the interface.
 
 Anybody with basic computer knowledge can save images on Dropbox and share them with their friends or family. But compared to that it's almost rocket science to run your own server and do the same thing via FTP.
 
-Despite that I dream of a future where everybody has their own server. Not the definition of server we think of today. It could be your computer at home, a little box next to your TV, maybe a gaming console or a small server somewhere in a data center. That's not important. It would be like having a mobile phone – it might even be your mobile phone. Your own server would be so easy to use and integrate with your existing devices that even your granny would have one.
+Despite that I dream of a future in which everybody has their own server. Not the definition of a server as we think of it today. It could be your computer at home, a little box next to your TV, maybe a gaming console or a small server somewhere in a data center. That's not important. It would be like having a mobile phone – it might even be your mobile phone. Your own server would be so easy to use and easily integrated with your existing devices that even your granny would have one.
 
-**We spend so much time on the internet that we should all have our own digital home online.** So far we are only guests in a couple gigantic hotels with barb wire all around them.
+**We spend so much time on the internet that we should all have our own digital home online.** So far we are only guests in a couple of gigantic hotels with barb wire around them.
 
-In such a future there would be no need for sites like Facebook, Twitter or Instagram. Our servers would be connected and talk to each other instead. The social web would be peer to peer. We would be in control of our own data and identity. We would be in control of how we setup our server, how much we invest in it and where we host it. The "cloud" would be truly personal and the web would be fully decentralized again. Basically it would be the web how it was always supposed to be.
+In such a future there would be no need for sites like Facebook, Twitter or Instagram. Our servers would be connected and talk to each other instead. The social web would be peer to peer. We would be in control of our own data and identity. We would be in control of how we setup our server, how much we invest in it and where we host it. The "cloud" would be truly personal and the web would be fully decentralized again. It basically would be the web how it always was supposed to be.
 
-Let's get into a time machine and travel into the future.
+Let's step into a time machine and travel into the future.
 
 <span class="language-markup"></span>
 
