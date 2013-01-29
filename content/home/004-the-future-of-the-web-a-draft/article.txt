@@ -30,7 +30,7 @@ Text:
 
 Sounds polemic, right? Is it? I don't think so!
 
-It's even worse. We as web developers, engineers and designers follow the hype to create more of those monopolies, because it has become so popular. A new startup is worth nothing until it reaches a couple million users. It's all about "the next dent in the universe". It's all about growth — VC-funded, cancer-like growth.
+It's even worse. We as web developers, engineers and designers follow the hype to create more of these monopolies, because it has become so popular. A new startup is worth nothing until it reaches a couple million users. It's all about "the next dent in the universe". It's all about growth — VC-funded, cancer-like growth.
 
 Thinking about alternatives always leads to a simple problem.
 
