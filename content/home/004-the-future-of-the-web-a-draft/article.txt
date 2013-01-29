@@ -50,7 +50,7 @@ It's all about the interface.
 
 Anybody with basic computer knowledge can save images on Dropbox and share them with their friends or family. But compared to that it's almost rocket science to run your own server and do the same thing via FTP.
 
-Despite that I dream of a future in which everybody has their own server. Not the definition of a server as we think of it today. It could be your computer at home, a little box next to your TV, maybe a gaming console or a small server somewhere in a data center. That's not important. It would be like having a mobile phone – it might even be your mobile phone. Your own server would be so easy to use and easily integrated with your existing devices that even your granny would have one.
+Despite all that I dream of a future where everybody has their own server – just not the one you'd think of. It could be your computer at home, a little box next to your TV, maybe a gaming console or a small server somewhere in a data center. That's not important. It would be like having a mobile phone – it might even be your mobile phone. Your own server would be so easy to use and easily integrated with your existing devices that even your granny would have one.
 
 **We spend so much time on the internet that we should all have our own digital home online.** So far we are only guests in a couple of gigantic hotels with barb wire around them.
 
