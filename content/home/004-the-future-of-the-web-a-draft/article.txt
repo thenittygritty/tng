@@ -36,7 +36,7 @@ Thinking about alternatives always leads to a simple problem.
 
 There are decentralized alternatives to any of the services and platforms above. Self-hosted, open-source solutions. But hardly anybody uses them. They will forever rot in the forgotten world of nerd tools on SourceForge, BitBucket or GitHub. A few idealists may try to give them a chance and probably will give up sooner or later, realizing that it's all about global adoption.
 
-But does this really mean that a more open, decentralized approach to a social web and all those tools we use will always be doomed to fail? I don't think so. It's up to us. We got the chance to take major influence in the future of the web.
+But does this really mean that a more open, decentralized approach to a social web and all these tools we use will always be doomed to fail? I don't think so. It's up to us. We have the chance to make a big impact on the future of the web.
 
 Let's just imagine for a second that "decentralized" would have been the next black in the era of all those VC funded hipster start-ups instead of building walled gardens.
 
