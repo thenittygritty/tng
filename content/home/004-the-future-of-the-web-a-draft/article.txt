@@ -10,7 +10,7 @@ AuthorTwitter: bastianallgeier
 ----
 AuthorMail: mail@bastian-allgeier.de
 ----
-AuthorInfo: Bastian is a full stack developer and entrepreneur living in Mannheim, Germany. He is the man behind [Zootool](http://zootool.com/) and [Kirby CMS](http://getkirby.com/).
+AuthorInfo: Bastian is a full stack designer and developer living in Mannheim, Germany. He is the man behind [Zootool](http://zootool.com/) and [Kirby CMS](http://getkirby.com/).
 ----
 Categories: The Future
 ----
