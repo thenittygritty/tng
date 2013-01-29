@@ -34,7 +34,7 @@ It's even worse. We as web developers, engineers and designers follow the hype t
 
 Thinking about alternatives always leads to a simple problem.
 
-There are decentralized alternatives to any of the services and platforms above. Self-hosted, open-source solutions. But hardly anybody uses them. They will forever rot in the forgotten world of nerd tools on SourceForge, BitBucket or GitHub. A few idealists may try to give them a chance and probably will give up sooner or later, realizing that it's all about global adoption.
+There are decentralized alternatives to any of the services and platforms above. Self-hosted, open source solutions. But hardly anybody uses them. They will forever rot in the forgotten world of nerd tools on SourceForge, BitBucket or GitHub. A few idealists may try to give them a chance and probably will give up sooner or later, realizing that it's all about global adoption.
 
 But does this really mean that a more open, decentralized approach to a social web and all these tools we use will always be doomed to fail? I don't think so. It's up to us. We have the chance to make a big impact on the future of the web.
 
@@ -66,9 +66,9 @@ Let's step into a time machine and travel into the future.
 
 <figure class="image-rightish-small">[![Launchpad](/content/home/004-the-future-of-the-web-a-draft/fossypad@2x.jpg)](/content/home/004-the-future-of-the-web-a-draft/fossypad@2x.jpg)<figcaption>The launchpad of the FOS.</figcaption></figure>
 
-A group of designers and developers has just released their brand new open-source project, called Fire-Octo-Something (FOS).
+A group of designers and developers just released their brand new open source project, called Fire-Octo-Something (FOS).
 
-FOS is nothing more than a well designed hosting control panel for Linux servers. Pretty much like Plesk – except it doesn't suck.
+FOS is nothing more than a well designed hosting control panel for Linux servers. Pretty much like Plesk – except it doesn't suck!
 
 FOS can be accessed with any modern web browser and there are apps to connect to your FOS for all major mobile and desktop OSes.
 
@@ -120,7 +120,7 @@ The entire payment process is so streamlined and easy to integrate in self-hoste
 
 Besides setting up email accounts and connecting domains with your FOS, the system also takes care of simple backup and recovery solutions. You are free to use a service like Amazon S3 or Rackspace CloudFiles for encrypted backups as well as any other server or a backup on your local machine whenever you are connected to the internet. All that is available from a simple settings panel.
 
-The FOS philosophy: Keep it simple on the outside but powerful on the inside. Sys-admins still get a chance to dive deep into FOS' internals while non-tech people get a cosy untechnical interface.
+The FOS philosophy: Keep it simple on the outside but powerful on the inside. Sysadmins still get a chance to dive deep into FOS' internals while non-tech people get a cosy untechnical interface.
 
 For developers, the system offers a wide variety of additional helpers and extensions to build great applications. There's an API to send and receive emails, a built-in way for your app to connect to different storage solutions like Dropbox or Amazon S3, a worker infrastructure, a simple way to start and stop app-specific cronjobs and much more.
 
@@ -128,7 +128,7 @@ The FOS developers have worked together with the guys from Tent.io to use their 
 
 ## January 2014
 
-FOS gets raving reviews from designers for its amazing interface design, from developers for how easy it is to develop applications for it and from sys admins for its clean architecture.
+FOS gets raving reviews from designers for its amazing interface design, from developers for how easy it is to develop applications for it and from sysadmins for its clean architecture.
 
 Multiple tutorials are available how to install and run it on various virtual and dedicated servers form all kinds of hosting providers.
 
@@ -142,7 +142,7 @@ Media Temple offers FOS on their virtual servers and their grid hosting. Soon af
 
 FOS packages for WordPress, Drupal and many other content management systems pop up.
 
-Fantastic apps appear from well known indie developers and Birdy – the distributed Twitter alternative is a must-have for early adopters. Nodoby's talking about App.net anymore and even Tapbot switched their Netbot client to Birdbot. Birdirific is supposed to be released next.
+Fantastic apps appear from well known indie developers and Birdy – the distributed Twitter alternative is a must-have for early adopters. Nodoby is talking about App.net anymore and even Tapbot switched their Netbot client to Birdbot. Birdirific is supposed to be released next.
 
 ## March 2014
 
@@ -152,7 +152,7 @@ Firegram and Loctocation are being released. Both turn out to be way more than j
 
 ## April 2014
 
-Just four months after launch, the ecosystem of self-hosted apps for FOS is growing like crazy. Many start-ups are forming around it. There are even the first open-source and proprietary alternatives for FOS coming up.
+Just four months after launch, the ecosystem of self-hosted apps for FOS is growing like crazy. Many startups are forming around it. There are even the first open source and proprietary alternatives for FOS coming up.
 
 All major hosting companies now have FOS hosting available. More and more mobile and desktop applications offer sync with your FOS.
 
@@ -170,4 +170,4 @@ This is just a rough first draft of how such a future could look like. So many i
 
 It's far fetched and yet so close. The technology is there. We just need to focus on the right things.
 
-It might be just my dream and an illusion. But I really believe that it's up to us developers, engineers and designers to decide what's up next. We are in control. We just need to realize it and seize that chance. We are not doomed to be slaves of a centralized web forever just because it's popular right now.
+It might be just my dream and an illusion. But I really believe that it's up to us developers, engineers and designers to decide what's up next. We are in control. We just need to implement it and seize that chance. We are not doomed to be slaves of a centralized web forever just because it's popular right now.
