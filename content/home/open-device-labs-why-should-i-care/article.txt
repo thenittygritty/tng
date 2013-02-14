@@ -1,0 +1,92 @@
+Title: Open Device Labs - Why Should I Care?
+----
+Date: 2013-02-16
+----
+Author: Anselm Hannemann
+----
+AuthorUrl: http://anselm-hannemann.com/
+----
+AuthorTwitter: helloanselm
+----
+AuthorMail: mail@bastian-allgeier.de
+----
+AuthorInfo: Anselm Hannemann is freelance frontend webdevelope( and digital magazine creator. He helps implementing [Responsive Images](http://responsiveimages.org/) as a W3C standard, helped building [opendevicelab.com](http://opendevicelab.com/) and organizes a [publishing conference](http://pubkon.eu/).
+----
+Categories:
+----
+Description:
+----
+Tags:
+----
+Text:
+
+**With all those different smartphones, tablets and other devices sporting various operating systems and versions thereof, a web developer's job hasn't become any simpler: testing on multiple devices and virtual device testing to resolve errors. This article covers how we can manage that without pouring a truck-load of money into actually buying all those different devices.**
+
+## Are you testing on real devices?
+
+Whether you are a web-developer or an app-developer you will face several problems while ensuring your project is displayed correctly on as many devices as possible. Emulators for iOS, Android, Opera et al. can help with that, but they actually  differ from the software that is running on the real devices. One of the things you just can't simulate properly is touch interaction. Without testing gestures, there is no way to find out if your users will understand how to use your interface. As this is unlikely to change any time soon, there is no way around testing on real devices.
+
+While most developers might have a smartphone and a tablet at home, these two only cover a small part of all the different devices and operating systems available – and which you should test your project on. There are dozens of different screen sizes, browsers and display types that can make a huge difference when you try to solve bugs on responsive design. Of the fact you are writing valid and proper CSS and JavaScript, malfunctions on some mobile devices will occur.
+
+There are some errors which you would probably never notice because they only appear on devices that are very uncommon in your country but may be popular in others. Thus, buying a lot of devices so you can test on them seems to be the obvious solution. This leads to two major problems: It is very expensive to buy all these devices and you will very probably not use them regularly. Second, it is not that simple to do remote debugging on a large scale of devices. Fortunately, the latter has become much easier with all the tools that are available today, but you still have to deal with it.
+
+## Crowd-sourcing makes life easier
+
+That is where crowd-sourcing comes in. No one will need all of these devices every day. In fact, most developers will need them just every few weeks to test their current projects.
+
+Instead of buying all these devices you barely know it can be helpful to search for a space where people share their devices with each other for testing purpose. If everybody only purchases one single device this might already be enough to set up a device-lab and, by the way, will save you a lot of money. The bigger the community of people of people contributing to this place grows, the more different devices will actually appear there. And what's even better: Such communities can ask device manufacturers to provide testing devices for their labs, which will save you even more money. So device-labs not only help you but also all people there benefit from a better testing space and mobile testing is made accessible for everyone.
+
+The [Open Device Lab initiative](http://opendevicelab.com/) aims to do just that. Currently there are over 35 locations around the world where a developer can go to and test his project on many devices (some have more than 100 in stock). Most of them are completely free to use, a few charge a small fee to cover the actual costs running the space. As Open Device Labs are meant to be non-profit, that is a fair deal and still much cheaper than buying the devices on your own.
+
+Most of the device labs, though, are meant for web developers and make it easy to test your website on all their devices. I recommend for app-developers to ask if it is possible to install their app on the devices. Usually this shouldn't be a problem if you clean systems afterwards.
+In general, there are no restrictions to using labs, but as they work independently and each set up their own rules, be sure to	 ask if you want to do something that requires system access to the devices.
+
+Most sites try to offer a very wide-ranging list of mobile manufacturers. If an Open Device Lab offers only few devices, it is very likely that iOS devices and the most common Android smartphones can be found there. Some offer more devices including less known manufacturers such as Viewsonic, Sumvision or even Palm. To check which devices are available at a certain device lab, I recommend searching for the device lab on [opendevicelab.com](http://opendevicelab.com/#find) and check their list of manufacturers. As a general rule, it is safe to say: The more users an Open Device Lab has, the more devices are available.
+
+Often device labs also provide technical helpers for developers e.g. [remote inspection](https://gist.github.com/3816624) set up on their devices so you can easily test your websites and debug them from your computer. With tools like [Weinre](http://people.apache.org/~pmuellr/weinre/docs/latest/), [Adobe Edge Inspect](http://html.adobe.com/edge/inspect/), [jsconsole.com](http://jsconsole.com/) or [Remote Preview](https://github.com/viljamis/Remote-Preview) it is very easy to test a project  synchronously on all devices and debug individually. If you have n't used such techniques yet be sure to do so.
+
+These labs also care about potential [WiFi issues](http://klick-ass.com/news/affordable-wifi-access-point-capable-to-support-50-100-clients-wanted/) which occur with normal routers if you have more than about 40 devices connected to the network. Problems that would usually drive you crazy are often already solved and people are happy to share their solution with you. While you can benefit from the shared devices and knowledge of others, you might also be able to help others by sharing your knowledge at the same time.
+
+Often Open Device Labs are built in existing co-working spaces which makes it easy to maintain the lab and to access it. These labs are especially great as you can work in the co-working space for some days when you know you will extensively need device testing.
+
+## Help yourself and help the community
+
+As a user, you can benefit a lot from such spaces: When you're dealing with a problem you cannot solve on your own, it is very likely that there are people who are able to assist you.
+But make sure to help other people, too, when they're asking for help. Developing websites together is much more fun and – from my personal experience – results in better work. And when you deliver great work, other people will notice and eventually might even hire you for their next job.
+
+## Support ODLs
+
+Because Open Device Labs are built by the community for the community it is very important that users not only use the service but also give a little bit back in return. This is a rather simple thing to do: Most people have old devices stored at home. If you do so and don't need them anymore, consider donating them to an ODL. Second, offer a little bit of your spare time to maintain an ODL or, at least, just spread the word to your colleagues and help them having an easier life on device testing. All these little things are helping the Open Device	 Lab movement to grow and thus help developers like you all around the world.
+
+To support individual Open Device Labs and developers around the world, the movement has built a [website](http://opendevicelab.com/) showing a map of all existing labs. You can see how many devices from which manufacturer are available and read or give feedback on the labs. This way you can easily find an Open Device Lab that fits your needs.
+
+Nonetheless, there is still a huge lack of device labs around the world. If you take a look at the world map you will clearly see that there are labs missing in Asia, Africa and many more countries. I do think that there already is a demand for such labs but exists already but often people don't know that such a movement exists and how easy it actually is to start a device lab on your own. Device labs live from their supporters and the more supporters there are in a region the better they get. In your own interest, try to help building such institutions and tell others about the movement.
+
+There is also an easy [API](http://api.opendevicelab.com/) to access the whole information about the different sites. If you want to open up your own Open Device Lab, the organization will support you by providing all the relevant information. You can easily build a website for your place and keep everything up to date by using the API. It is CORS and JSONP enabled so that you can access it right from your own domain. The [documentation](http://opendevicelab.com/api-documentation.php) of the API describes what kind of data you can access and how to implement it on your site.
+
+## Create an Open Device Lab
+
+It may happen that you don't find a lab near you. ODL is a very new and rising movement but it is easy to fill that gap: Search for colleagues in your region, connect, build your own Open Device Lab and help moving the web forward!
+Especially if your company owns a lot of devices it is easy to create an ODL. Being a freelancer it is not really much harder to build an ODL. The [LabUp organization](http://lab-up.org/) is happy to help you [establishing an Open Device Lab](http://mobile.smashingmagazine.com/2012/069/24/establishing-an-open-device-lab/) by giving you useful hints on technical setups or by providing contacts to device manufacturers.
+
+In order to help the community, I encourage you to build your own Open Device Lab or support an existing one. As a device lab owner,provide as many useful things as possible. I've made a list of the most important tasks you should care about:
+
+- make it an open and free accessible space
+- give your ODL a nice interior so people are happy to be in your space and come back again
+- provide some devices for kick-off and ask for device-contribution or device-sponsoring
+- provide a fast and reliable internet connection
+- build a rock-solid WiFi
+- build a device stand
+- secure your devices so they don't get stolen
+- get people that maintain the lab during opening hours (and consider long opening hours)
+- try to reduce costs for you and your users
+
+With that small list in mind, you'll have a good start in building up an ODL. Additionally you can check out the article [how to build a device lab](http://www.dmolsen.com/mobile-in-higher-ed/2012/06/26/how-to-build-a-device-lab-part-1/) on Smashing Magazine. Concluding, my encouragement to you is: Create, maintain or help an Open Device Lab.
+
+<hr>
+
+More resources on Open Device Labs:
+
+- [LabUp organization](http://lab-up.org/)
+- [Establishing an Open Device Lab](http://mobile.smashingmagazine.com/2012/09/24/establishing-an-open-device-lab/)
+- [Andre Jay Meissner's Blog articles on ODLs](http://klick-ass.com/tag/open-device-lab/)
