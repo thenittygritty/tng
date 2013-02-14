@@ -1,0 +1,108 @@
+Title: The Conditional Uncomment Technique
+----
+Date: 2013-02-25
+----
+Author: Moritz Gießmann
+----
+AuthorUrl: http://moritz-giessmann.de/
+----
+AuthorTwitter: MoritzGiessmann
+----
+AuthorMail: post@moritz-giessmann.de
+----
+AuthorInfo:
+----
+Categories:
+----
+Description:
+----
+Tags:
+----
+Text:
+
+In a world where everything goes mobile, website loading performance is more important than ever.
+Luke Wroblewski wrote about the "[Mobile first](http://www.lukew.com/ff/entry.asp?933)" approach back in 2009 where he recommends to start a webdesign project with the mobile version to avoid clutter and focus on the content. In 2011 Jeremy Keith [teached us](http://24ways.org/2011/conditional-loading-for-responsive-designs/) to load the content for the desktop versions dynamically via Ajax depending on how much horizontal viewport space is available. This approach is fine but it takes the content either to a JavaScript file (bad bad bad) or some other place outside the HTML document it belongs to.
+
+When I startet planning my first responsive webdesign project I wanted to create a solution where *all* of the content is in the HTML document. Even the content which should only be shown on desktop resolutions, but without affecting the loading time of the site.
+
+*My solution: use HTML comments to hide the less important content from mobile browsers and make it visible if the size allows them to display properly.*
+
+The example shows a slideshow with commented images. The images will only be uncommented of the viewport has a width of > 900px. This technique is based on jQuery](http://jquery.com/). Because of its size not the best idea for mobile browsers, but it works for demonstration.
+But enough talking. Let’s jump to the code!
+
+The HTML ist pretty straight forward:
+
+	<div class="slideshow">
+		<!--<img class="slide" src="http://dummyimage.com/900x400/ffed00/000.jpg&text=Slide+1">-->
+		<!--<img class="slide" src="http://dummyimage.com/900x400/dc0050/fff.jpg&text=Slide+2">-->
+		<!--<img class="slide" src="http://dummyimage.com/900x400/009ee0/fff.jpg&text=Slide+3">-->
+	</div>
+
+Now we need this little neat [jQuery uncomment plugin](ttp://chivil.com/uncomment/) by [Romuald Brunet](http://twitter.com/_romuald). It moves recursively through the given selectors and uncomments all comment nodes ([nodetype=8](https://developer.mozilla.org/en-US/docs/DOM/Node.nodeType)) inside.
+
+
+	(function($) {
+		$.fn.uncomment = function (recurse) {
+
+			$(this).contents().each(function () {
+
+				if (recurse && this.hasChildNodes()) {
+					$(this).uncomment(recurse);
+
+				} else if ( this.nodeType === 8 ) {
+
+					// Need to "evaluate" the HTML content,
+					// otherwise simple text won't replace
+					var e = $('<span>' + this.nodeValue + '</span>');
+					$(this).replaceWith(e.contents());
+				}
+
+			});
+
+		};
+	}(jQuery));
+
+
+After including the plugin we need to set the condition that fires the plugin. In our case we fire it if the viewport size is bigger or equal 900px. The function which checks the viewport size gets called once and on every resize.
+
+	var uncommentIfBigEnough = function () {
+		if (document.documentElement.clientWidth > 900) {
+
+			// uncomments everything inside of the given element
+			$('.slideshow').uncomment(true);
+		}
+	};
+
+	// Initial function call
+	uncommentIfBigEnough();
+
+	// Call if window gets resized
+	$(window).resize(function () {
+		uncommentIfBigEnough();
+	});
+
+});
+
+
+Basically thats it. If you want to have a working slideshow, you could use this little jQuery snippet to make it fade.
+
+	$('.slideshow :first-child').appendTo('.slideshow');
+	setInterval(function () {
+		$('.slideshow :first-child')
+				.hide()
+				.appendTo(".slideshow")
+				.fadeIn(2000);
+	}, 4000);
+
+
+Here is a [working demo](http://codepen.io/MoritzGiessmann/pen/LcfdH) at Codepen.
+
+## Drawbacks
+
+There are two things to consider before using this technique.
+* Don’t use it for SEO relevant content. The search engines ignore commented HTML.
+* Right now this technique is irreversible, which means it is not possible to comment the content again.
+
+## Conclusion
+
+Feel free to share your thoughts and ideas about this approach. I’d be glad to hear your opinion or suggestion.
