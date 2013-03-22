@@ -1,4 +1,0 @@
-Title: //TNG - The Nitty Gritty Feed
-----
-Description: The low down on web technology feed
-----
