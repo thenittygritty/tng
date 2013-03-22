@@ -1,0 +1,3 @@
+[submodule "content/home"]
+	path = content/home
+	url = git@github.com:thenittygritty/thenittygritty.co.git
