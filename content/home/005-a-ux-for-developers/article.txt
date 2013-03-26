@@ -37,7 +37,7 @@ Let's look at how we can provide a good user experience for the dabbling develop
 
 ## Interface with me
 
-(image: api.png)
+<figure class="image-leftish">(image: api.png alt:API)</figure>
 
 The obvious example of delivering a developer-friendly experience is providing a public API. Facebook, Twitter and Google owe their continued growth &mdash; in part &mdash; to the APIs they provide for developers to do clever things with their data. These allow the platforms to grow far beyond anything any their designers imagined, both widening the services' user bases and enriching the web as a whole. Seriously.
 
@@ -47,7 +47,7 @@ But the interfaces you expose aren't just the public ones you choose to document
 
 ## Peek, poke, prod
 
-![](devtools.png)
+<figure class="image-rightish">(image: devtools.png alt:DevTools)</figure>
 
 When a developer is learning &mdash; which is pretty much his/her entire career &mdash; he/she likes to inspect pages to see how you've done things, grab snippets and try to imitate. It's one of the best ways to learn.
 
@@ -57,7 +57,7 @@ There are some things we do in good faith which obstruct developers too. CSS and
 
 ## In the community
 
-![](github.png)
+<figure class="image-leftish-small">(image: github.jpg alt: GitHub)</figure>
 
 You may even want to go a step further and actually release your code somewhere public like [GitHub](https://github.com). If you do this, *you're awesome*. This makes it super easy for others to get at your code, to read and learn. It's way better than making sure source maps etc are available &mdash; although it's not always practical.
 
@@ -88,7 +88,7 @@ Ultimately, documentation and transparency matter a lot more for community proje
 
 ## Locking it down
 
-![](cc.png)
+<figure class="image-rightish">(image: cc.png alt: Creative Commons)</figure>
 
 Many clients won't like the sound of some of the things I've mentioned so far: allowing media to be freely downloaded, ensuring source code is easy to copy, making content freely available. Ultimately, they just have to ***deal with it***.
 
@@ -100,7 +100,7 @@ Many clients won't like the sound of some of the things I've mentioned so far: a
 
 ## Less is more
 
-*"So I have to do all this as well as everything else involved in building an app? My client will never pay for that!"*
+> "So I have to do all this as well as everything else involved in building an app? My client will never pay for that!"
 
 I'd argue that there isn't actually anything new I'm suggesting you do here. Writing semantic, well-commented, well-tested code, defining straight-forward APIs, using debugging tools and relying on server-side security should all be par for the course for a frontend developer. It's more about what you *shouldn't* do:
 
