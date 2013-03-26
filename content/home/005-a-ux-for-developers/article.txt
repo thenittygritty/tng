@@ -1,0 +1,111 @@
+Title: A UX For Developers
+----
+Date: 2013-03-26
+----
+Author: Stu Cox
+----
+AuthorUrl: http://stucox.com/
+----
+AuthorTwitter: stucoxmedia
+----
+AuthorMail: stuart.cox@gmail.com
+----
+AuthorInfo: Stu is a senior developer at @[PotatoBristol](http://twitter.com/potatobristol) & a contributor to @[Modernizr](http://twitter.com/modernizr), prodding open source projects and pondering web tech.
+----
+Categories: UX
+----
+Description: Stu Cox describes his idea of a good UX for developers.
+----
+Tags: UX, user experience, developers, APIs, open source
+----
+
+Text:
+
+**Great UX designers are experts at putting themselves in the shoes of the different kinds of user who will be using a site or app. They create simple, predictable, intuitive interfaces which cater for internet rookies just as well as they do for power users.**
+
+But there's a class people who interact with an app who usually fall outside the UX designer's range of concern &mdash; and it's growing: **other developers**. By this I don't just mean that some of your users may also be developers and hence a little more web savvy. Most developers use the internet in quite a different way to other users... they regularly poke, play and hack around with web pages, out of curiosity and discovery. They deserve a great experience too.
+
+## Give and take
+
+For me, a big part of the "open-ness" of the web is *inclusion*. We're a big sharing family &mdash; from the millions of open-source projects on GitHub, to the free documentation provided by MDN, to the vast catalogue of blog posts and public forum discussions about all things webdev. All of the resources you could need to get started in web design and development are available to everyone.
+
+So as an extension of this, I think it's vital to the future of the web for us to ensure we don't restrict this flow of information. We should make a conscious effort to build sites which are *easy* for developers to tinker with, in the same way that we build sites which are easy for 'normal' users to use. We have a role to play in nurturing the world's hacking skills.
+
+Of course here I mean "hacking" in the broad sense: working with your site on an technical level (rather than circumventing security measures). I'll talk more about security implications shortly.
+
+Let's look at how we can provide a good user experience for the dabbling developer.
+
+## Interface with me
+
+(image: api.png)
+
+The obvious example of delivering a developer-friendly experience is providing a public API. Facebook, Twitter and Google owe their continued growth &mdash; in part &mdash; to the APIs they provide for developers to do clever things with their data. These allow the platforms to grow far beyond anything any their designers imagined, both widening the services' user bases and enriching the web as a whole. Seriously.
+
+For maximum developer uptake, these APIs should be well documented, powerful and easy to use. I'm not going to go into what makes a good API; there are loads of articles which cover this (like [this one](http://webstandardssherpa.com/reviews/secrets-of-awesome-javascript-api-design/) by Brandon Satrom), but getting it right can seriously empower developers to be creative with your data.
+
+But the interfaces you expose aren't just the public ones you choose to document. Developers have come up with some very creative uses for [data scraping](http://en.wikipedia.org/wiki/Data_scraping) (from [monitoring prices](http://rawdust.com/amazon/amazon-kindle-price-alerts.htm), to [aggregating reviews](http://rawdust.com/rotten/rotten-tomatoes-audience-scores.htm), to [presenting train times](http://digitalfantastico.blogspot.co.uk/2013/01/a-big-bite-of-raspberry-pi-having.html)). Ensuring your markup is easy to scrape can be the next-best-thing to providing an official API: use relevant semantic tags and meaningful class names, ensure content is available without JavaScript (either in the initial page load, or via a public API), etc.
+
+## Peek, poke, prod
+
+![](devtools.png)
+
+When a developer is learning &mdash; which is pretty much his/her entire career &mdash; he/she likes to inspect pages to see how you've done things, grab snippets and try to imitate. It's one of the best ways to learn.
+
+Things like disabling right click or adding a layer over the top of an image are easy to work around and just annoy developers. It may even make them more likely to want to hack your site (in the security breach sense, this time), rather than report any bugs or security holes they may have found.
+
+There are some things we do in good faith which obstruct developers too. CSS and JavaScript minification, for instance, is essential for providing fast page loads and snappy user experiences. But it makes your code completely unreadable. There's a new tool which comes to the rescue here: [source maps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/). Designed for in-production debugging, they let developers inspect the original source code, while serving minified copies to "normal" users. Some developers have advocated putting the source map files behind a login to ensure code is obfuscated; I'd urge you not to, so that inquisitive developers can have a wander round too.
+
+## In the community
+
+![](github.png)
+
+You may even want to go a step further and actually release your code somewhere public like [GitHub](https://github.com). If you do this, *you're awesome*. This makes it super easy for others to get at your code, to read and learn. It's way better than making sure source maps etc are available &mdash; although it's not always practical.
+
+But if you *can* open source your code, there are things you can do to make it particularly worthwhile. A solid **README**, for instance, with an overview of the project, details of dependencies, how to get it up and running, how to run tests, etc &mdash; [here's an example](https://github.com/h5bp/html5-boilerplate/blob/master/README.md). As it grows, you might want to consider breaking your README out into a multiple files, maybe one in each major module as well as the one in the project root.
+
+A lot of projects are also now including a **[CONTRIBUTING](https://github.com/h5bp/html5-boilerplate/blob/master/CONTRIBUTING.md)** file, with notes on how a new developer can help the project out, guidelines for patch submissions, testing criteria and so on.
+
+A few (slightly opinionated) dos and don'ts:
+
+* **DO** be consistent with your code; if you don't like the standard conventions, at least be consistent within your project
+* **DO** comment your code thoroughly and consistently &mdash; this makes automatic documentation generation (e.g. with [Docco](http://jashkenas.github.com/docco/) or [jsdoc](https://code.google.com/p/jsdoc-toolkit/)) easier and everything nicer for devs to read and contribute to
+* **DO** use proper grammar, spelling and punctuation in comments &mdash; it can make a massive readability difference
+* **DO** comment on *why* you've done something the way you have
+* **DO** put things which relate to the *current state of the code* in the README; then the code and documentation of that code are versioned together
+* **DO** consider a wiki or web page for looser documentation, like tutorials and user-facing aspects
+* **DO** consider generated and/or hosted documentation &mdash; [Read The Docs](https://readthedocs.org/) is a personal favourite... they get extra geek kudos for choosing [RTFD.org](http://rtfd.org) for short URLs
+* **DO** use [Semantic Versioning](http://semver.org/)
+* **DO** use pull requests to submit *your own* updates &mdash; that makes a project super transparent and visible to all
+* **DO** have a decent, easy-to-run test suite &mdash; it improves the quality of code submissions and gives contributors confidence that they haven't broken anything
+* **DON'T** fill your source files with comments saying *how* you've done something when it's obvious from the code
+* **DON'T** let source files grow past ~1000 lines, or they'll become unmanageable and lose [greppability](http://en.wiktionary.org/wiki/greppable)
+* **DON'T** obfuscate code or write things in awkward ways because "it might run faster" or "it might minify/gzip smaller" unless you absolutely have to &mdash; modern build tools are cleverer than you think
+* **DON'T** use preprocessors like CoffeeScript, Haml, SASS/LESS, etc &mdash; it'll scare some developers away from contributing
+* **DON'T** accept pull requests for new features without tests &mdash; for the sake of future contributors, as much as project's code quality
+* **DON'T** take it personally if someone criticises your code or suggests improvements!
+
+Ultimately, documentation and transparency matter a lot more for community projects than private projects, simply because it's not as easy to nudge the guy next to you to ask him why he did something a certain way.
+
+## Locking it down
+
+![](cc.png)
+
+Many clients won't like the sound of some of the things I've mentioned so far: allowing media to be freely downloaded, ensuring source code is easy to copy, making content freely available. Ultimately, they just have to ***deal with it***.
+
+***There's no such thing as client-side security.*** Once the data is in a user's browser in one form or another, there's a way to extract it, and people will. [This article](http://www.guardian.co.uk/technology/blog/2013/mar/12/tim-berners-lee-drm-cory-doctorow) explains how [DRM](http://en.wikipedia.org/wiki/Digital_rights_management) ultimately fails to protect content, but succeeds in stifling creativity &mdash; and the concept can easily be extended to any other attempt to limit the distribution of content.
+
+*"Does this mean all security on the web is useless?"*" No, of course not. Your server is the gateway to your data, so just ensure you only send sensitive data to users you trust, over channels you trust.
+
+*"But our frontend code is our intellectual property!"* Sorry, that's just not how the web works. A business model based solely on the uniqueness of some (frontend) code just won't cut it in today's world. Well, that's my view. I'd at least urge you to consider defining a licence for the code you serve which allows use of materials for non-commercial purposes, such as [CC BY-NC](http://creativecommons.org/licenses/by-nc/3.0/).
+
+## Less is more
+
+*"So I have to do all this as well as everything else involved in building an app? My client will never pay for that!"*
+
+I'd argue that there isn't actually anything new I'm suggesting you do here. Writing semantic, well-commented, well-tested code, defining straight-forward APIs, using debugging tools and relying on server-side security should all be par for the course for a frontend developer. It's more about what you *shouldn't* do:
+
+* Don't try to hide or protect content on the page (unless for presentation reasons)
+* Don't try to hide code &mdash; be it with odd semantics or deliberate obfuscation
+* Don't restrict resources which might be useful to developers, which you realistically can't protect anyway
+
+Just think about curious developers once in a while, and how they might interact with your site. You were one once. You probably still are.
