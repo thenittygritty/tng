@@ -23,6 +23,8 @@ Text:
 
 **Great UX designers are experts at putting themselves in the shoes of the different kinds of user who will be using a site or app. They create simple, predictable, intuitive interfaces which cater for internet rookies just as well as they do for power users.**
 
+<figure class="image-full">(image: programmer.jpg alt: Programmer)<figcaption>A developing developer, developing. Image by (link: http://www.flickr.com/photos/claire69/ text: CEThompson)</ficaption></figure>
+
 But there's a class people who interact with an app who usually fall outside the UX designer's range of concern &mdash; and it's growing: **other developers**. By this I don't just mean that some of your users may also be developers and hence a little more web savvy. Most developers use the internet in quite a different way to other users... they regularly poke, play and hack around with web pages, out of curiosity and discovery. They deserve a great experience too.
 
 ## Give and take
