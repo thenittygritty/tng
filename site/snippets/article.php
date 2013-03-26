@@ -24,7 +24,7 @@
 		</div>
 	</header>
 
-	<?php echo markdown($article->text()); ?>
+	<?php echo kirbytext($article->text()); ?>
 
 	<footer class="article-footer">
 		<div class="article-footer-author" id="author">
