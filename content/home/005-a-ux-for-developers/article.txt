@@ -10,7 +10,7 @@ AuthorTwitter: stucoxmedia
 ----
 AuthorMail: stuart.cox@gmail.com
 ----
-AuthorInfo: Stu is a senior developer at @[PotatoBristol](http://twitter.com/potatobristol) & a contributor to @[Modernizr](http://twitter.com/modernizr), prodding open source projects and pondering web tech.
+AuthorInfo: Stu is a senior developer at [Potato](http://p.ota.to/) and a core contributor to [Modernizr](http://modernizr.com), based in Bristol, UK. He talks on usability, design methodology and open technology.
 ----
 Categories: UX
 ----
@@ -82,7 +82,7 @@ A few (slightly opinionated) dos and don'ts:
 * **DON'T** fill your source files with comments saying *how* you've done something when it's obvious from the code
 * **DON'T** let source files grow past ~1000 lines, or they'll become unmanageable and lose [greppability](http://en.wiktionary.org/wiki/greppable)
 * **DON'T** obfuscate code or write things in awkward ways because "it might run faster" or "it might minify/gzip smaller" unless you absolutely have to &mdash; modern build tools are cleverer than you think
-* **DON'T** use preprocessors like CoffeeScript, Haml, SASS/LESS, etc &mdash; it'll scare some developers away from contributing
+* **DON'T** use preprocessors like CoffeeScript, Haml etc if you want broad participation &mdash; it keeps some developers from even considering to use or contribute to your project
 * **DON'T** accept pull requests for new features without tests &mdash; for the sake of future contributors, as much as project's code quality
 * **DON'T** take it personally if someone criticises your code or suggests improvements!
 
@@ -96,9 +96,13 @@ Many clients won't like the sound of some of the things I've mentioned so far: a
 
 ***There's no such thing as client-side security.*** Once the data is in a user's browser in one form or another, there's a way to extract it, and people will. [This article](http://www.guardian.co.uk/technology/blog/2013/mar/12/tim-berners-lee-drm-cory-doctorow) explains how [DRM](http://en.wikipedia.org/wiki/Digital_rights_management) ultimately fails to protect content, but succeeds in stifling creativity &mdash; and the concept can easily be extended to any other attempt to limit the distribution of content.
 
-*"Does this mean all security on the web is useless?"*" No, of course not. Your server is the gateway to your data, so just ensure you only send sensitive data to users you trust, over channels you trust.
+> "Does this mean all security on the web is useless?"
 
-*"But our frontend code is our intellectual property!"* Sorry, that's just not how the web works. A business model based solely on the uniqueness of some (frontend) code just won't cut it in today's world. Well, that's my view. I'd at least urge you to consider defining a licence for the code you serve which allows use of materials for non-commercial purposes, such as [CC BY-NC](http://creativecommons.org/licenses/by-nc/3.0/).
+ No, of course not. Your server is the gateway to your data, so just ensure you only send sensitive data to users you trust, over channels you trust.
+
+> "But our frontend code is our intellectual property!"
+
+ Sorry, that's just not how the web works. A business model based solely on the uniqueness of some (frontend) code just won't cut it in today's world. Well, that's my view. I'd at least urge you to consider defining a licence for the code you serve which allows use of materials for non-commercial purposes, such as [CC BY-NC](http://creativecommons.org/licenses/by-nc/3.0/).
 
 ## Less is more
 
