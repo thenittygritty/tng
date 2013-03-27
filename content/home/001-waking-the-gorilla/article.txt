@@ -8,7 +8,7 @@ AuthorUrl: http://kahlil.co/
 ----
 AuthorTwitter: hellokahlil
 ----
-AuthorMail: kahlil.lechelt@gmail.com
+AuthorMail: hello@kahlil.co
 ----
 AuthorInfo: Kahlil is a JavaScript Developer residing in Stuttgart. He also is a co-host on the German podcast [Working Draft](http://workingdraft.de) and has a [website](http://distilledhype.com/) that distills the hype.
 ----
