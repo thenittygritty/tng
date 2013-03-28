@@ -25,29 +25,29 @@ Text:
 
 <figure class="image-full">(image: programmer.jpg alt: Programmer)<figcaption>A developing developer, developing. Image by (link: http://www.flickr.com/photos/claire69/5578893436/sizes/l/in/photostream/ text: CEThompson).</ficaption></figure>
 
-But there's a class people who interact with an app who usually fall outside the UX designer's range of concern &mdash; and it's growing: **other developers**. By this I don't just mean that some of your users may also be developers and hence a little more web savvy. Most developers use the internet in quite a different way to other users... they regularly poke, play and hack around with web pages, out of curiosity and discovery. They deserve a great experience too.
+But there's a class people who interact with an app who usually fall outside the UX designer's range of concern &mdash; and it's growing: **other developers**. By this I don't just mean that some of your users may also be developers and hence a little more web savvy. Most developers use the internet in quite a different way to other users… they regularly poke, play and hack around with web pages, out of curiosity and discovery. They deserve a great experience too.
 
-## Give and take
+## Give And Take
 
-For me, a big part of the "open-ness" of the web is *inclusion*. We're a big sharing family &mdash; from the millions of open-source projects on GitHub, to the free documentation provided by MDN, to the vast catalogue of blog posts and public forum discussions about all things webdev. All of the resources you could need to get started in web design and development are available to everyone.
+For me, a big part of the “open-ness” of the web is *inclusion*. We're a big sharing family &mdash; from the millions of open-source projects on GitHub, to the free documentation provided by MDN, to the vast catalogue of blog posts and public forum discussions about all things webdev. All of the resources you could need to get started in web design and development are available to everyone.
 
 So as an extension of this, I think it's vital to the future of the web for us to ensure we don't restrict this flow of information. We should make a conscious effort to build sites which are *easy* for developers to tinker with, in the same way that we build sites which are easy for 'normal' users to use. We have a role to play in nurturing the world's hacking skills.
 
-Of course here I mean "hacking" in the broad sense: working with your site on an technical level (rather than circumventing security measures). I'll talk more about security implications shortly.
+Of course here I mean “hacking” in the broad sense: working with your site on an technical level (rather than circumventing security measures). I'll talk more about security implications shortly.
 
 Let's look at how we can provide a good user experience for the dabbling developer.
 
-## Interface with me
+## Interface With Me
 
 <figure class="image-leftish">(image: api.png alt:API)</figure>
 
-The obvious example of delivering a developer-friendly experience is providing a public API. Facebook, Twitter and Google owe their continued growth &mdash; in part &mdash; to the APIs they provide for developers to do clever things with their data. These allow the platforms to grow far beyond anything any their designers imagined, both widening the services' user bases and enriching the web as a whole. Seriously.
+The obvious example of delivering a developer-friendly experience is providing a public API. Facebook, Twitter and Google owe their continued growth &mdash; in part &mdash; to the APIs they provide for developers to do clever things with their data. These allow the platforms to grow far beyond anything any of their designers imagined, both widening the services' user bases and enriching the web as a whole. Seriously.
 
 For maximum developer uptake, these APIs should be well documented, powerful and easy to use. I'm not going to go into what makes a good API; there are loads of articles which cover this (like [this one](http://webstandardssherpa.com/reviews/secrets-of-awesome-javascript-api-design/) by Brandon Satrom), but getting it right can seriously empower developers to be creative with your data.
 
 But the interfaces you expose aren't just the public ones you choose to document. Developers have come up with some very creative uses for [data scraping](http://en.wikipedia.org/wiki/Data_scraping) (from [monitoring prices](http://rawdust.com/amazon/amazon-kindle-price-alerts.htm), to [aggregating reviews](http://rawdust.com/rotten/rotten-tomatoes-audience-scores.htm), to [presenting train times](http://digitalfantastico.blogspot.co.uk/2013/01/a-big-bite-of-raspberry-pi-having.html)). Ensuring your markup is easy to scrape can be the next-best-thing to providing an official API: use relevant semantic tags and meaningful class names, ensure content is available without JavaScript (either in the initial page load, or via a public API), etc.
 
-## Peek, poke, prod
+## Peek, Poke, Prod
 
 <figure class="image-rightish">(image: devtools.png alt:DevTools)</figure>
 
@@ -57,7 +57,7 @@ Things like disabling right click or adding a layer over the top of an image are
 
 There are some things we do in good faith which obstruct developers too. CSS and JavaScript minification, for instance, is essential for providing fast page loads and snappy user experiences. But it makes your code completely unreadable. There's a new tool which comes to the rescue here: [source maps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/). Designed for in-production debugging, they let developers inspect the original source code, while serving minified copies to "normal" users. Some developers have advocated putting the source map files behind a login to ensure code is obfuscated; I'd urge you not to, so that inquisitive developers can have a wander round too.
 
-## In the community
+## In The Community
 
 <figure class="image-leftish-small">(image: github.jpg alt: GitHub)</figure>
 
@@ -67,7 +67,7 @@ But if you *can* open source your code, there are things you can do to make it p
 
 A lot of projects are also now including a **[CONTRIBUTING](https://github.com/h5bp/html5-boilerplate/blob/master/CONTRIBUTING.md)** file, with notes on how a new developer can help the project out, guidelines for patch submissions, testing criteria and so on.
 
-A few (slightly opinionated) dos and don'ts:
+A few (slightly opinionated) Dos and Don'ts:
 
 * **DO** be consistent with your code; if you don't like the standard conventions, at least be consistent within your project
 * **DO** comment your code thoroughly and consistently &mdash; this makes automatic documentation generation (e.g. with [Docco](http://jashkenas.github.com/docco/) or [jsdoc](https://code.google.com/p/jsdoc-toolkit/)) easier and everything nicer for devs to read and contribute to
@@ -82,13 +82,13 @@ A few (slightly opinionated) dos and don'ts:
 * **DON'T** fill your source files with comments saying *how* you've done something when it's obvious from the code
 * **DON'T** let source files grow past ~1000 lines, or they'll become unmanageable and lose [greppability](http://en.wiktionary.org/wiki/greppable)
 * **DON'T** obfuscate code or write things in awkward ways because "it might run faster" or "it might minify/gzip smaller" unless you absolutely have to &mdash; modern build tools are cleverer than you think
-* **DON'T** use preprocessors like CoffeeScript, Haml etc if you want broad participation &mdash; it keeps some developers from even considering to use or contribute to your project
+* **DON'T** use preprocessors like CoffeeScript, Haml etc. if you want broad participation &mdash; it keeps some developers from even considering to use or contribute to your project
 * **DON'T** accept pull requests for new features without tests &mdash; for the sake of future contributors, as much as project's code quality
-* **DON'T** take it personally if someone criticises your code or suggests improvements!
+* **DON'T** take it personally if someone criticises your code or suggests improvements
 
 Ultimately, documentation and transparency matter a lot more for community projects than private projects, simply because it's not as easy to nudge the guy next to you to ask him why he did something a certain way.
 
-## Locking it down
+## Locking It Down
 
 <figure class="image-rightish">(image: cc.png alt: Creative Commons)</figure>
 
@@ -98,13 +98,13 @@ Many clients won't like the sound of some of the things I've mentioned so far: a
 
 > "Does this mean all security on the web is useless?"
 
- No, of course not. Your server is the gateway to your data, so just ensure you only send sensitive data to users you trust, over channels you trust.
+No, of course not. Your server is the gateway to your data, so just ensure you only send sensitive data to users you trust, over channels you trust.
 
 > "But our frontend code is our intellectual property!"
 
- Sorry, that's just not how the web works. A business model based solely on the uniqueness of some (frontend) code just won't cut it in today's world. Well, that's my view. I'd at least urge you to consider defining a licence for the code you serve which allows use of materials for non-commercial purposes, such as [CC BY-NC](http://creativecommons.org/licenses/by-nc/3.0/).
+Sorry, that's just not how the web works. A business model based solely on the uniqueness of some (frontend) code just won't cut it in today's world. Well, that's my view. I'd at least urge you to consider defining a licence for the code you serve which allows use of materials for non-commercial purposes, such as [CC BY-NC](http://creativecommons.org/licenses/by-nc/3.0/).
 
-## Less is more
+## Less Is More
 
 > "So I have to do all this as well as everything else involved in building an app? My client will never pay for that!"
 
