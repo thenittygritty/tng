@@ -9,11 +9,14 @@
 ?>
 
 <?php if ($results) { ?>
-	<ul>
+	<div class="search-results">
 		<?php foreach($results as $result): ?>
-			<li><a href="<?php echo $result->url() ?>"><?php echo $result->title() ?></a></li>
+			<article>
+				<h3><a href="<?php echo $result->url() ?>"><?php echo $result->title() ?></a></h3>
+				<?php echo excerpt($result->text(), 300); ?>
+			</article>
 		<?php endforeach ?>
-	</ul>
+	</div>
 <?php } else { ?>
 	<article class="article">
 		<p>Sorry, we couldn't find anything for your search.</p>
