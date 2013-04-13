@@ -222,7 +222,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -689,7 +689,7 @@ input.search-submit {
 
 .article-header h1 {
   line-height: 1.1;
-  margin: 0 0 .5em;
+  margin: 0 0 0.5em;
 }
 
 .article-header-date {
@@ -870,7 +870,7 @@ code[class*="language-"] {
   tab-size: 4;
   color: black;
   text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -887,7 +887,7 @@ pre[class*="language-"] {
   tab-size: 4;
   color: black;
   text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -897,7 +897,7 @@ pre[class*="language-"] {
   -ms-hyphens: none;
   hyphens: none;
   padding: 1em;
-  margin: .5em 0;
+  margin: 0.5em 0;
   overflow: auto;
 }
 
@@ -1018,6 +1018,10 @@ pre code {
   word-break: inherit;
 }
 
+.site-content li {
+  padding: 0.2em 0;
+}
+
 /*
  * HTML5 Boilerplate
  *
@@ -1039,7 +1043,7 @@ textarea {
 
 body {
   font-size: 1em;
-  line-height: 1.4;
+  line-height: 1.5;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -1309,7 +1313,7 @@ html {
      ========================================================================== */
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: black !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -1339,7 +1343,7 @@ html {
 
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
