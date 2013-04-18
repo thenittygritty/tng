@@ -1,0 +1,311 @@
+Title: AngularJS: 5 Common Pitfalls Using Scopes
+----
+Date: 2013-04-18
+----
+Author: Jan Philipp
+----
+AuthorUrl:
+----
+AuthorTwitter:
+----
+AuthorMail: jan@philipp-online.de
+----
+AuthorInfo:
+----
+Categories:
+----
+Description:
+----
+Tags:
+----
+Text:
+
+This is an article on best practices using the AngularJS framework. Having said that, I will not give an introduction to AngularJS. If you are not familiar with AngularJS, please have a look at (link: http://angularjs.org text: angularjs.org).
+
+I will list five main pitfalls. Five points which are actually easy if you understand the underlying concepts.
+
+## A Little Excursion #1: Two-way-databinding
+A big word and kind of a big deal. Regular binding is well-known for the most of us. Even if you haven't heard of this, most of you have used it already.
+
+Normal binding is generally used for outputting data, actually a general concept of templating engines.
+
+<span class="language-markup"></span>
+
+	Hello {{username}}!
+
+Given the value of the variable `username` is set to `John Doe`, the previous example would render:
+
+<span class="language-markup"></span>
+
+	Hello John Doe!
+
+That is direction #1. See also (link: http://docs.angularjs.org/api/ng.directive:ngBind text: ng-bind).
+
+In templates that is sufficient because output is the only thing they do. However, in an UI like HTML you also have to handle input.
+
+<span class="language-markup"></span>
+
+	<input ng-model="username" />
+	<p>Hello {{username}}!</p>
+
+Only if the framework supports the opposite binding direction, this example could work live and without any additional magic (forget any `onkeyup` or `onchange` events). That is direction #2. See also (link: http://docs.angularjs.org/api/ng.directive:ngModel text: ng-model).
+
+Put both directions together and we have *two-way-databinding* which allows a framework like AngularJS to sync data *on the fly* from your model (reading) and to your model (writing).
+
+The context where the binding comes from or where the data goes to is called: (link: http://docs.angularjs.org/guide/scope text: scope).
+
+Opposed to other frameworks' data-binding, *AngularJS does not wrap data with accessors*. Because of this, you do not have to define a model with specific getters and setters. Aside from some internal utility functions (like `$apply`, `$digest` and `$watch`) and references (like `parentScope`), the scope is more or less a simple object with properties and values. You can put and get data just like with a normal object. That means also any change on the scope will not be recognized by the scope itself (it's not ES6). Any amount of changes must be applied by calling `$apply` to invoke the digest cycle, however, you don't have to if it's not required.
+
+Sometimes it might not be suited to apply the digest cycle after every single change since it could massively decrease performance. Think about a chat client for instance, that adds several unique messages to the scope every second. In order to keep your application snappy you'd have to throttle the amount of digest cycles performed .
+
+In short: Invoking the digest cycle of AngularJS implicitly by using `$scope.$apply()` will perform all expressions in templates and watchers.
+
+## A Little Excursion #2: Declarative UI
+
+Follow the rules:
+
+*Create own reusable components ((link: http://docs.angularjs.org/guide/directive text: directive)) extending HTML.*
+
+Why?
+
+*It keeps the code DRY and avoids separation where it is not required.*
+
+Since there is a high probability that you are a jQuery developer, you are most likely very familiar with the "jQuery-way" on how to add CSS classes (`addClass()`) and how to hide elements (`hide()`) for example. That approach is called **imperative**:
+
+You *explicitly tell* the machine what you want under *specific circumstances* (wrapped into an `if`-statement for example).
+
+AngularJS is **declarative**:
+
+You *declare* how to display a *specific circumstance* in the view.
+
+Let's imagine, you have a navigation list which contains several items. If, and only if, one item is *selected*, that item should be highlighted with a CSS class named `active`.
+
+In the following example, the first item is marked as active.
+
+<span class="language-markup"></span>
+
+	<ul class="navigation">
+		<li class="item item1 active">Item 1</li>
+		<li class="item item2">Item 2</li>
+		<li class="item item3">Item 3</li>
+	<ul>
+
+The "jQuery-way" is to remove all classes named `active` and then add the class to only one of them. But which one? You have to provide an **additional binding** in JavaScript to determine what an item is actually representing. Either an additional class (like the example) or something like `data-item`.
+
+Now, an example with AngularJS.
+
+<span class="language-markup"></span>
+
+	<ul class="navigation">
+		<li ng-repeat="item in items"
+			class="item"
+			ng-class="{'active': item.id == activeItem}">{{item.title}}</li>
+	</ul>
+
+In order for this to work, there must be a (parent) scope like the following one:
+
+<span class="language-javascript"></span>
+
+	$scope.activeItem = 'item1';
+	$scope.items = [{
+		id: 'item1', title: 'Item 1'
+	}, {
+		id: 'item2', title: 'Item 2'
+	}, {
+		id: 'item3', title: 'Item 3'
+	}];
+
+First of all, this example uses AngularJS' `ng-repeat` directive. This directive iterates through all `items` and creates HTML elements of the same sort of which it is baked into. In this case three `li` elements. You can find a working demo in this (link: http://jsfiddle.net/knalli/b7PPe/ text: fiddle).
+
+On top of that, the `ng-class` directive describes declaratively **when** the class `active` should be applied. The class will only be added if the expression `item.id == activeItem` evaluates to `true`. Because of the *two-way-databinding* this happens live. That means if you change the value of `$scope.activeItem` to `item2`, the markup will automatically change. You do not have to write any code in your business logic. **The behaviour of the HTML is described where it actually stays.**
+
+The example above in a variation using directives: (link: http://jsfiddle.net/knalli/ED9GW/ text: jsfiddle).
+
+Do you need more ideas? You can use this declarative style to easily create a tabpanel, slider-button, autoscroll area, (draggable) dialog window or a context menu.
+
+## Pitfalls
+### Pitfall #1: Scope digester and expressions
+
+When using expressions in views or watchers, you should always remember that an expression is called every time AngularJS thinks it is needed. You will not get the optimal performance using functions. You could even miss some change events.
+
+That means:
+
+1. An expression within a `ng-repeat` will be called for each item separately. Additionally, this is used by the `repeat` directive to determine data changes.
+2. An expression can be evaluated multiple times in one _digest_. This can happen when you're using multiple directives or additional scope watchers.
+3. An expression can be evaluated even if the direct scope seems to be unchanged.
+4. An expression containing a function will not be evaluated if the  *return value* of the function changes but only if the *function definition* has changed.
+
+For example: We have an expression `state == getCurrentUserState()`.
+
+There are following options:
+
+* The function only returns `scope.currentUserState`: Get rid of that function and use the data directly. Eventually, the expression can be optimized by the framework in the future (it is clear that only two properties of the current scope are relevant). Et voilá: You have just saved one function call respective n-calls within a `ng-repeat` directive.
+* The function performs some logic: That logic will run every time the expression will be evaluated. Better: Compute and write the current user state into the scope **when the logic result has changed**. This decouples the logic from the user state and the view. The common data is the scope and the scope is the data.
+* The function gets it's data from somewhere outside of the scope. That is bad, very bad. The scope/AngularJS is not being notified about a change. Remember: Only if AngularJS *thinks* that the scope has changed, it will invoke a digesting of all expressions effected.
+
+Sometimes, bullet points 2 and 3 come together.
+
+If you have to apply external data (or data changes) &mdash; i.e. an external jQuery plugin which changes its state &mdash; you have to provide this data to the scope. Given a directive, you probably have a callback with access to the current `scope`. You will notice that any changes to this scope will not update the UI. Simply because AngularJS is not being notified about the scope change.
+
+However, what you can do is to simply call the angular-function `scope.$apply()` on the relevant scope. It will invoke all the digesting, watching and the evaluation of the data.
+
+Nevertheless, you should avoid using `$apply()` or its buddy `$digest` if possible. Outside real external events (jQuery callback, browser event callbacks, etc.) you probably are implementing the wrong architecture.
+
+You will get errors like "Digest already in progress" if you call a digest/apply in a running digest. Another reason why you should avoid functions (and "hidden" code) in expressions.
+
+An additional common mistake using functions could be the following one:
+
+<span class="language-markup"></span>
+
+	<ul>
+		<li ng-repeat="item in loadItems()">{{item.title}}</li>
+	</ul>
+
+Here, the real problem for an effective `ng-repeat` expression is the function call `loadItems`. This one can not evaluated correctly: The directive itself adds some meta data to the model to determine which item in a list was added, removed or only moved. It would therefore be advisable to reference only arrays in `ng-repeat`. Just repeat to yourself: calling function `loadItems` is *imperative*, repeat over given data is *declarative*.
+
+Best practices:
+
+* DO NOT use functions in expressions.
+* DO NOT use other data besides the scope in an expression.
+* DO use `$scope.$apply()` when applying external data changes.
+
+Why?:
+
+* Efficient code.
+* Missing events.
+
+### Pitfall #2: References to DOM elements
+
+Using DOM elements in directives is correct. Cache them in a variable i.e. for plugin usage or just as a quick reference for code optimization.
+
+But do never store them in the scope. The DOM element is part of the big DOM tree. And the nature of a tree is that it knows the parent, the children and even siblings. So if you store only one DOM element in the scope, the scope digester will find it and the parent and the parent of the parent.. in short: It will evaluate the complete(!), current DOM tree to check if it has changed. And if you don't already think that's insane, don't worry, there is more: Because each element has additional references to elements, the digester will have to walk over the whole DOM not once but for every referenced element as well.
+You don't want that, cause that's crazy!
+
+Best practice:
+
+* DO NOT store DOM elements in the scope.
+
+Why:
+
+* You can create huge memory leaks.
+
+### Pitfall #3: Using DOM outside the directive
+
+Don't use DOM elements outside the directive. Most services should be easy to make DOM-free because they are are mostly single, global and stateless instances, like an interface to a REST api.
+
+A DOM reference in a controller is a points to a missing directive or some missing behavior.
+
+Granted, sometimes it can be very expensive to extract a simple DOM reference from a controller to a directive. If you understand that and it's implications and you want to make an exception, go with it. But you will have to deal with the fact that the controller might be bound to a specific template and that the changes to the DOM made by the controller are not reachable by the AngularJS scope and view.
+
+Best practices:
+
+* DO NOT access the DOM outside of a directive.
+
+Why:
+
+* It decouples the controller and the services from the DOM. Therfore it has a much higher flexibility, is easier to test and can be reused.
+
+### Pitfall #3: Not using built-ins
+
+I mentioned the usage of `$apply` and `$digest` and it's implications. I can get pretty messy if many external events need additional `$apply` calls.
+
+So I would recommend you delve deep into the API documentation and learn about the built-in utility functions. For instance, instead of using `window.setTimout`, use `$timeout` which implicitly invokes `rootScope.$apply`.
+
+Instead of using any other XHRs wrappers, use `$http` which returns the `$q` promises. Any executed callback of `$q` will invoke `$rootScope.$apply`.
+
+Some modules return (link: http://docs.angularjs.org/api/ng.$q text: promises wrapped with `$q`) which will invoke a `rootScope.$apply` implicitly. The `q` is not random, it is a modified/reduced implementation of the Promise/Deferred API by (link: https://github.com/kriskowal/q text: Kris Kowal's Q).
+
+Best practices:
+
+* Use the built-in functions and replacements if available.
+
+Why:
+
+* It allows you to write simple and developer-friendly code.
+
+### Pitfall #4: The Misleading "current scope"
+
+The hierarchical structure of scopes and its child scopes is brilliant, but also painful if you forget it. In your root scope you can define some global data which can be used in any expression on any child scope (except explicitly isolated scopes) &mdash; prototyped inheritances will "find" them. Same for shared data of a common controller you defined at an upper level in the DOM.
+
+But there is one show stopper: It works only in one direction. And that's fine. You do not want to expose local scope data to all other scopes.
+
+Consider this example of a simple form (link: http://jsfiddle.net/knalli/Th86Q/ text: jsfiddle)
+
+<span class="language-markup"></span>
+
+	<span>Outside Controller: Your name is: {{username}}</span>
+	<div ng-controller="SignupController">
+		<span>Inside Controller: Your name is: {{username}}</span>
+		<fieldset legend="User details">
+			<input ng-model="username" />
+		</fieldset>
+	</div>
+
+Try to change the value of the input field. It will work but only for the _inner output binding_. The one above the controller will not change its value. Why is that? Well, the answer of this is the question "What is actually my current scope?".
+
+Given this example, we have two scopes: The overall `rootScope` of the app and a implicitly created scope made by a controller (here `SignupController`).
+If you type any value into the input field, the **current scope** will be assigned a new property `username` with the new value. Because in perspective of the input field the controller's scope is the current one, the property will be assigned to this one. Just like prototypes in JavaScript, this means that this property is not available in the parent scope. Since we know this, it is clear and understandable. Hopefully. ;)
+
+You might think:
+
+	> Then I define a start value!
+
+No. Well, you can try it. But it will not solve the problem because scalar data like a string will stay present in the current scope only. This means with something like `$rootScope.username = ""` you will end up with two properties `username`. One in rootScope and one in the controller's scope which overwrites the first one.
+
+To achieve a proper solution, you should always work with a wrapper model/object. Or, in other words: (link: https://github.com/angular/angular.js/wiki/The-Nuances-of-Scope-Prototypal-Inheritance text: Always have a '.' in your ng-models).
+
+After changing the above example a bit: instead of `username` it defines a model and binds `user.name` (link: http://jsfiddle.net/knalli/v2wWv/ text: jsfiddle).
+
+<span class="language-markup"></span>
+
+	<span>Outside Controller: Your name is: {{user.name}}</span>
+	<div ng-controller="SignupController">
+		<span>Inside Controller: Your name is: {{user.name}}</span>
+		<fieldset legend="User details">
+			<input ng-model="user.name" />
+		</fieldset>
+	</div>
+
+Now the data-binding will assign the `name` into the `user`. Because `user` is implicitly read, it will find the `rootScope.user`. Problem solved.
+
+And aside from that, this can help you to structure your models. It turns out to be a win-win situation.
+
+But even if you look out for this, there is still a high probability that you will fail. Simply because there are some neat built-in directives by AngularJS &mdash; and perhaps some of your own &mdash; **that will have created their own child scopes**. That is the case with the following directives for example:
+
+1. ng-controller: a controller has its own scope (because it assigns behavior to the scope)
+2. ng-repeat: each item has its own child scope (because "item" is loop body content)
+3. ng-form: will use a special form controller, therefor a new scope
+4. ng-switch: simply because it modifies the DOM it has its own scope to manage that
+5. ng-view: more or less irrelevant because you will probably have a controller under a ng-view
+
+Best practices:
+
+* DO NOT bind inbound data without a wrapper object (i.e. ng-model).
+
+Why:
+
+* Avoid unstructured content and wrong scope contexts.
+* Avoid problems with implicit new scopes in directives like `ng-repeat` and `ng-switch`.
+
+
+### Pitfall #5: Not using jQuery the right way
+
+AngularJS implements a subset of jQuery called *jQLite* ((link: http://docs.angularjs.org/misc/faq text: Angular FAQ)). Basic operations are similar to full jQuery, however, it is not complete. If you really need the full jQuery implementation, you have to require jQuery *before* AngularJS is loaded. Only then will AngularJS skip its own jQLite implementation and use jQuery instead. Otherwise both of them will be loaded: jQLite for  AngularJS and jQuery for the rest.
+
+Best practice:
+
+* Require jQuery before Angular.
+
+## Conclusion
+
+This article provides a set of 5 common pitfalls which will be encountered by beginning AngularJS developers.
+
+You should always be remember the way of thinking and writing an application declarative is precisely not *jQuery*. If you try to mimic the old jQuery fashion, you will probably fail.
+
+Try to understand the *scope* as the common ground, the common data for (link: http://en.wikipedia.org/wiki/The_answer_to_life_the_universe_and_everything text: life, the universe, and everything). If you try to use other data than the scope, you will probably hurt.
+
+Use the best practices mentioned above and make sure you explore the API documentation when you write AngularJS apps -- just like any other piece of software. Use the functionally that comes with it correctly.
+
+Make sure you decouple your apps properly. Use directives, controllers, services and templates in the way how they were intended in AngularJS. Obviously, you do not need to separate code into theses numerous component types. It is up to you to use the tools the framework gives you.
+
+If you do this you will enjoy working with AngularJS a great deal.
