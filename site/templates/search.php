@@ -9,6 +9,7 @@
 ?>
 
 <?php if ($results) { ?>
+	<h1>Results for <i><?php print $_GET['search']; ?></i></h1>
 	<div class="search-results">
 		<?php foreach($results as $result): ?>
 			<article>
