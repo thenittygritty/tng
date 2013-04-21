@@ -4,13 +4,13 @@ Date: 2013-04-18
 ----
 Author: Jan Philipp
 ----
-AuthorUrl:
+AuthorUrl: http://www.knallisworld.de
 ----
 AuthorTwitter: knalli
 ----
 AuthorMail: jan@philipp-online.de
 ----
-AuthorInfo:
+AuthorInfo: Jan is a full stack developer for applications mostly running for web purposes. Apart from using modern web worker tools, he is also familar with Java backend layers, i.e. databases, messaging or web services. He is living in Cologne.
 ----
 Categories: JavaScript
 ----
