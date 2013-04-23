@@ -10,7 +10,7 @@ AuthorTwitter: knalli
 ----
 AuthorMail: jan@philipp-online.de
 ----
-AuthorInfo: Jan is a full stack developer for applications mostly running for web purposes. Apart from using modern web worker tools, he is also familar with Java backend layers, i.e. databases, messaging or web services. He is living in Cologne.
+AuthorInfo: Jan is a full stack developer for applications mostly running on the web. Apart from using modern web worker tools, he is also familar with Java backend layers, i.e. databases, messaging or web services. He lives in Cologne.
 ----
 Categories: JavaScript
 ----
@@ -24,7 +24,7 @@ Text:
 
 <figure class="image-full">(image: angularjs.jpg alt: AngularJS)<figcaption>Image by <a href="http://www.flickr.com/photos/stevensnodgrass/8549544197/">Steve Snodgrass</a>. AngularJS logo from <a href="http://pascalprecht.github.io/slides/angularjs-insights/#/">Pascal Precht's slides</a>.</ficaption></figure>
 
-In the following I will describe some best practices when using AngularJS. If you are not familiar with AngularJS yet, please have a look at [angularjs.org](http://angularjs.org) to get an overview and check out Kahlil Lechelt's list of [AngularJS Resources](https://github.com/kahlil/angular-resources).
+In the following I will describe some best practices when using AngularJS. If you are not familiar with AngularJS yet, please have a look at [angularjs.org](http://angularjs.org) to get an overview and check out Kahlil's list of [AngularJS Resources](https://github.com/kahlil/angular-resources).
 
 Here are six main pitfalls when it comes to working with scopes in AngularJS. Six points which are actually easy if you understand the underlying concepts behind Angular.
 
@@ -59,9 +59,9 @@ That is the second direction. The documentation can be found for the keyword [ng
 If you put both directions together, you get two-way-databinding which allows a framework like AngularJS to synchronize data *on the fly* from (reading) and to the model (writing).
 
 
-<figure class="image-full">(image: two-way.jpg alt: Two Way Databinding)<figcaption>Image by <a href="http://www.flickr.com/photos/amslerpix/6242266697/">amslerPIX</a>.</figure>
+<figure class="image-full">(image: two-way.jpg alt: Two-Way-Databinding)<figcaption>Image by <a href="http://www.flickr.com/photos/amslerpix/6242266697/">amslerPIX</a>.</figure>
 
-The context where the binding comes from or where the data goes to is called [scope](http://docs.angularjs.org/guide/scope).
+The context where the binding comes from or where the data goes to, is called [scope](http://docs.angularjs.org/guide/scope).
 
 Opposed to other frameworks' data-binding, AngularJS does not wrap data with accessors. Because of this, you do not have to define a model with specific getters and setters. Aside from some internal utility functions (like `$broadcast`, `$apply`, `$digest`, `$emit` and `$watch`) and references (like `$parentScope`), the scope is more or less a simple object with properties and values. You can put and get data just like with a normal object which means that any change on the scope will not be recognized by the scope itself (this is something that is in ECMAScript 6). Any amount of changes must be applied by calling `$apply` to invoke the digest cycle. However, you don't have to if it's not required.
 
@@ -69,7 +69,7 @@ Sometimes it might not be suited to apply the digest cycle after every single ch
 
 ## A Little Excursion #2: Declarative UI
 
-Follow the rule "Create own reusable [component directives](http://docs.angularjs.org/guide/directive) extending HTML." Simply because it keeps the code DRY and avoids separation where it is not required.
+Follow the rule "Create reusable [component directives](http://docs.angularjs.org/guide/directive) extending your HTML." Simply because it keeps the code DRY and avoids separation where it is not required.
 
 Since there is a high probability that you are a jQuery developer, you are most likely very familiar with the "jQuery-way" on how to add CSS classes (jQuery's `addClass()` function) and how to hide elements (`hide()`) for example. That approach is called **imperative**:
 
@@ -273,12 +273,12 @@ Best practice:
 
 ## Conclusion
 
-This article provides you with a set of six common pitfalls which will be encountered by beginning AngularJS developers. You should always remember that the way of thinking and writing an application declarative is precisely not as you are used to from jQuery. If you try to mimic the old jQuery fashion, you will probably fail.
+This article provides you with a set of six common pitfalls which will be encountered by beginning AngularJS developers. You should always remember that the way of thinking and writing an application in a declarative way is precisely not what you are used to from jQuery. If you try to mimic the old jQuery fashion, you will probably fail.
 
-Try to understand the scope as the common ground the common data for [life, the universe, and everything else](http://en.wikipedia.org/wiki/The_answer_to_life_the_universe_and_everything). If you try to use other data than the scope you will probably hurt yourself.
+Try to understand the scope as the common ground, the common data for [life, the universe, and everything else](http://en.wikipedia.org/wiki/The_answer_to_life_the_universe_and_everything). If you try to use other data than the scope you will probably hurt yourself.
 
-Use the best practices mentioned above and make sure you explore the API documentation when you write AngularJS apps &mdash; just like any other piece of software. Use the functionally that comes with it correctly.
+Use the best practices mentioned above and make sure you explore the API documentation as well when you write AngularJS apps &mdash; just like any other piece of software. Use the functionally that comes with it correctly.
 
 Make sure you decouple your apps properly: Use directives, controllers, services and templates in the way they were intended in AngularJS. Obviously you do not need to separate code into numerous component types. It is up to you to use the tools the framework provides.
 
-If you apply these rules you will enjoy working with AngularJS.
+If you apply these rules, I think you will enjoy working with AngularJS.
