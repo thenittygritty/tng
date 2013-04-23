@@ -20,7 +20,9 @@ Tags: AngularJS, JavaScript
 ----
 Text:
 
-Within the last month Google's "Superheroic JavaScript MVW Framework" AngularJS has gotten a lot of attention. What makes this framework so successful compared to other JavaScript frameworks as for example [EmberJS](http://emberjs.com/), is the value it adds to your HTML templates using (declarative) Data Binding.
+**Within the last month Google's "Superheroic JavaScript MVW Framework" AngularJS has gotten a lot of attention. What makes this framework so successful compared to other JavaScript frameworks as for example [EmberJS](http://emberjs.com/), is the value it adds to your HTML templates using (declarative) Data Binding.**
+
+<figure class="image-full">(image: angularjs.jpg alt: AngularJS)<figcaption>Image by <a href="http://www.flickr.com/photos/stevensnodgrass/8549544197/">Steve Snodgrass</a>. AngularJS logo from <a href="http://pascalprecht.github.io/slides/angularjs-insights/#/">Pascal Precht's slides</a>.</ficaption></figure>
 
 In the following I will describe some best practices when using AngularJS. If you are not familiar with AngularJS yet, please have a look at [angularjs.org](http://angularjs.org) to get an overview and check out Kahlil Lechelt's list of [AngularJS Resources](https://github.com/kahlil/angular-resources).
 
@@ -55,6 +57,9 @@ Only if the framework supports the opposite binding direction, this example coul
 That is the second direction. The documentation can be found for the keyword [ng-model](http://docs.angularjs.org/api/ng.directive:ngModel).
 
 If you put both directions together, you get two-way-databinding which allows a framework like AngularJS to synchronize data *on the fly* from (reading) and to the model (writing).
+
+
+<figure class="image-full">(image: two-way.jpg alt: Two Way Databinding)<figcaption>Image by <a href="http://www.flickr.com/photos/amslerpix/6242266697/">amslerPIX</a>.</figure>
 
 The context where the binding comes from or where the data goes to is called [scope](http://docs.angularjs.org/guide/scope).
 
