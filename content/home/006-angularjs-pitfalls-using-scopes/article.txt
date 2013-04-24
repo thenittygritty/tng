@@ -277,7 +277,7 @@ This article provides you with a set of six common pitfalls which will be encoun
 
 Try to understand the scope as the common ground, the common data for [life, the universe, and everything else](http://en.wikipedia.org/wiki/The_answer_to_life_the_universe_and_everything). If you try to use other data than the scope you will probably hurt yourself.
 
-Use the best practices mentioned above and make sure you explore the API documentation as well when you write AngularJS apps &mdash; just like any other piece of software. Use the functionally that comes with it correctly.
+Use the best practices mentioned above and make sure you explore the API documentation as well when you write AngularJS apps &mdash; just like any other piece of software. Use the functionality that comes with it correctly.
 
 Make sure you decouple your apps properly: Use directives, controllers, services and templates in the way they were intended in AngularJS. Obviously you do not need to separate code into numerous component types. It is up to you to use the tools the framework provides.
 
