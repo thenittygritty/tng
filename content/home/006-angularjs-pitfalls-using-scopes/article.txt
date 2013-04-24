@@ -116,7 +116,7 @@ In order for this to work, there must be a (parent) scope like the following one
 		id: 'item3', title: 'Item 3'
 	}];
 
-First of all, this example uses AngularJS' `ng-repeat` directive. This directive iterates through all `items` and creates HTML elements of the same sort of which it is baked into. In this case three `<li>` elements. You can find a working demo [in this fiddle](link: http://jsfiddle.net/knalli/b7PPe/).
+First of all, this example uses AngularJS' `ng-repeat` directive. This directive iterates through all `items` and creates HTML elements of the same sort of which it is baked into. In this case three `<li>` elements. You can find a working demo (link: http://jsfiddle.net/knalli/b7PPe/ text:in this fiddle).
 
 On top of that, the `ng-class` directive describes declaratively **when** the class `active` should be applied. The class will only be added if the expression `item.id == activeItem` evaluates to `true`. Because of the two-way-databinding this happens live which means that if you change the value of `$scope.activeItem` to `item2`, the markup will automatically change too. You do not have to write any code for this changein your business logic. The behaviour of applying the class is described where it actually stays: in the HTML template.
 
