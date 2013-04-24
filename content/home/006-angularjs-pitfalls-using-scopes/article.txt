@@ -20,7 +20,7 @@ Tags: AngularJS, JavaScript
 ----
 Text:
 
-**Within the last month Google's "Superheroic JavaScript MVW Framework" AngularJS has gotten a lot of attention. What makes this framework so successful compared to other JavaScript frameworks as for example [EmberJS](http://emberjs.com/), is the value it adds to your HTML templates using (declarative) Data Binding.**
+**Within the last month Google's "Superheroic JavaScript (link:https://plus.google.com/+AngularJS/posts/aZNVhj355G2 text:MVW) Framework" AngularJS has gotten a lot of attention. What makes this framework so successful compared to other JavaScript frameworks as for example [EmberJS](http://emberjs.com/), is the value it adds to your HTML templates using (declarative) Data Binding.**
 
 <figure class="image-full">(image: angularjs.jpg alt: AngularJS)<figcaption>Image by <a href="http://www.flickr.com/photos/stevensnodgrass/8549544197/">Steve Snodgrass</a>. AngularJS logo from <a href="http://pascalprecht.github.io/slides/angularjs-insights/#/">Pascal Precht's slides</a>.</ficaption></figure>
 
