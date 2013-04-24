@@ -1,6 +1,6 @@
 Title: AngularJS: 6 Common Pitfalls Using Scopes
 ----
-Date: 2013-04-18
+Date: 2013-04-24
 ----
 Author: Jan Philipp
 ----
