@@ -24,7 +24,7 @@ Text:
 
 <figure class="image-full">(image: angularjs.jpg alt: AngularJS)<figcaption>Image by <a href="http://www.flickr.com/photos/stevensnodgrass/8549544197/">Steve Snodgrass</a></ficaption></figure>
 
-In the following I will describe some best practices when using AngularJS. If you are not familiar with AngularJS yet, please have a look at [angularjs.org](http://angularjs.org) to get an overview and check out Kahlil's list of [AngularJS Resources](https://github.com/kahlil/angular-resources).
+In the following I will describe some best practices when using AngularJS. If you are not familiar with AngularJS yet, please have a look at [angularjs.org](http://angularjs.org) to get an overview and check out Kahlil's list of (link:http://kahlil.github.io/angular-resources/ text:AngularJS Resources).
 
 Here are six main pitfalls when it comes to working with scopes in AngularJS. Six points which are actually easy if you understand the underlying concepts behind Angular.
 
