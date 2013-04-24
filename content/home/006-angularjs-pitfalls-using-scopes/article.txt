@@ -59,7 +59,7 @@ That is the second direction. The documentation can be found for the keyword [ng
 If you put both directions together, you get two-way-databinding which allows a framework like AngularJS to synchronize data *on the fly* from (reading) and to the model (writing).
 
 
-<figure class="image-full">(image: two-way.jpg alt: Two-Way-Databinding)<figcaption>Image by <a href="http://www.flickr.com/photos/amslerpix/6242266697/">amslerPIX</a>.</figure>
+<figure class="image-full">(image: two-way.jpg alt: Two-Way-Databinding)<figcaption>Image by <a href="http://www.flickr.com/photos/amslerpix/6242266697/">amslerPIX</a></figure>
 
 The context where the binding comes from or where the data goes to, is called [scope](http://docs.angularjs.org/guide/scope).
 
