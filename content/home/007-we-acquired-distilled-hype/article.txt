@@ -1,0 +1,36 @@
+Title: We Acquired Distilled Hype
+----
+Date: 2013-05-04
+----
+Author: Kahlil Lechelt
+----
+AuthorUrl: http://kahlil.co/
+----
+AuthorTwitter: hellokahlil
+----
+AuthorMail: hello@kahlil.co
+----
+AuthorInfo: Kahlil is a JavaScript Developer residing in Stuttgart. He sometimes is a co-host on the German podcast [Working Draft](http://workingdraft.de) and co-founder of The Nitty Gritty.
+----
+Categories: TNG Internal
+----
+Description: Distilled Hype takes a back seat but we introduce link posts to The Nitty Gritty.
+----
+Tags: The Nitty Gritty, Distilled Hype, link posts
+----
+Text:
+
+**LOL, JK.**
+
+<figure class="image-full">(image: distilledhype.jpg alt: Distilled Hype)<figcaption>Image by <a href="http://www.flickr.com/photos/15216811@N06/8564995905/">Nicola since 1972</a></ficaption></figure>
+
+What is not a joke though, is that the [Distilled Hype](http://distilledhype.com/) link blog is being integrated into The Nitty Gritty.
+
+Since I started Distilled Hype in early 2012 I have received a lot of positive feedback from people I respect throughout the industry. But it turns out that to maintain two websites that are very similar in nature and purpose doesn't make a lot of sense, it creates extra work, splits up the audience unnecessarily and as a consequence of these to brands competing, both suffer in quality.
+
+So [@drublic](http://twitter.com/drublic) and I decided to integrate link postings into The Nitty Gritty. Starting on May 15 2013, TNG will be featuring link posts just like Distilled Hype did.
+
+Since I grew very fond of the Distilled Hype brand, I am not shutting it down but making distilledhype.com my personal website and [@distilledhype](https://twitter.com/distilledhype) my personal Twitter handle.
+
+I hope you will find this addition to TNG useful. Please let us know what you think on Twitter. We would love to discuss your ideas.
+
