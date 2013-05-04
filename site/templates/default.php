@@ -2,8 +2,10 @@
 
 <?php snippet('article', array('article' => $page)) ?>
 
-<section class="comments">
-	<?php snippet('disqus', array('disqus_shortname' => 'thenittygritty')) ?>
-</section>
+<?php if (!isLink($page)) { ?>
+	<section class="comments">
+		<?php snippet('disqus', array('disqus_shortname' => 'thenittygritty')) ?>
+	</section>
+<?php } ?>
 
 <?php snippet('footer') ?>

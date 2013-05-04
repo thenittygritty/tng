@@ -400,3 +400,17 @@ function read_package() {
 
 c::set('package', read_package());
 
+
+/**
+ * Is page Link?
+ */
+function isLink($page) {
+	if ($page->linkurl() && $page->linkurl() !== '') {
+		return true;
+	}
+
+	return false;
+}
+
+
+?>
