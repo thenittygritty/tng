@@ -15,12 +15,10 @@ endif;
 if ($articles && $articles->count()):
 	foreach ($articles as $article):
 		// Check if it is a link post
-		if($article->template() == 'article.link'):
-			// Output the link post
-			snippet('link', array('link' => $article));
-		else:
-			// Output the article
+		if($article->template() == 'article'):
 			snippet('article', array('article' => $article));
+		elseif($article->template() == 'article.link'):
+			snippet('article.link', array('article' => $article));
 		endif;
 	endforeach;
 
