@@ -2,6 +2,7 @@
 
 // Show blog posts in decending order
 $articles = $page->children()->visible()->flip();
+
 // Show posts of categories if requested
 if (param('category')):
 	$articles = $articles->filterBy('categories', urldecode(param('category')), ',')->paginate(5); ?>
@@ -12,9 +13,16 @@ if (param('category')):
 endif;
 
 if ($articles && $articles->count()):
-	foreach ($articles as $article): ?>
-		<?php snippet('article', array('article' => $article)); ?>
-	<?php endforeach;
+	foreach ($articles as $article):
+		// Check if it is a link post
+		if($article->template() == 'article.link'):
+			// Output the link post
+			snippet('link', array('link' => $article));
+		else:
+			// Output the article
+			snippet('article', array('article' => $article));
+		endif;
+	endforeach;
 
 	snippet('paginate', array('articles' => $articles));
 else: ?>
