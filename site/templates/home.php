@@ -12,6 +12,7 @@
 
 	} else {
 
+		// Show blogposts in descending order
 		$articles = $page->children()->visible()->flip()->paginate(5);
 	}
 ?>
