@@ -9,17 +9,15 @@ if (param('category')):
 <?php else:
 	// Show all articles
 	$articles = $articles->paginate(5);
-elseif ?>
+endif;
 
-<?php if ($articles && $articles->count()): ?>
-
-	<?php foreach ($articles as $article): ?>
+if ($articles && $articles->count()):
+	foreach ($articles as $article): ?>
 		<?php snippet('article', array('article' => $article)); ?>
-	<?php endforeach ?>
+	<?php endforeach;
 
-	<?php snippet('paginate', array('articles' => $articles)); ?>
-
-<?php else: ?>
+	snippet('paginate', array('articles' => $articles));
+else: ?>
 	<article class="article">
 		<p>Wooops. We couldn't find any articles. *sadpanda*</h1>
 	</article>
