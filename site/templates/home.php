@@ -12,7 +12,6 @@
 
 	} else {
 
-		// Do blog elsewise
 		$articles = $page->children()->visible()->flip()->paginate(5);
 	}
 ?>
