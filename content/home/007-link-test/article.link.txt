@@ -19,3 +19,5 @@ Tags: Some, fucking, tags
 Text:
 
 This is the text
+
+> Nehmen wir an, ein Vorgang kann nicht sofort erledigt werden. Entweder muss etwas Aufwändiges berechnet werden oder etwas werden Daten vom Server abgerufen. Dennoch möchten wir sofort etwas zurückgeben lassen, um damit arbeiten zu können.

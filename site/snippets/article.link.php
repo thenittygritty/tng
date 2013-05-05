@@ -1,8 +1,8 @@
 <article class="article link">
 	<header class="article-header">
 		<h1>
-			<a href="<?php echo $article->url(); ?>">
-				<?php echo html($article->title()) ?>
+			<a href="<?php echo $article->link(); ?>">
+				<?php echo html($article->title()) ?> &#8674;
 			</a>
 		</h1>
 
