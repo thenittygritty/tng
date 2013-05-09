@@ -4,17 +4,7 @@ Link: http://kahlil.co
 ----
 Date: 2013-04-24
 ----
-Author: Kahlil Lechelt
-----
-AuthorUrl: http://kahlil.co
-----
 AuthorTwitter: hellokahlil
-----
-AuthorMail: hello@kahlil.co
-----
-Categories: JavaScript
-----
-Tags: Some, fucking, tags
 ----
 Text:
 
