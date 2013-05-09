@@ -12,7 +12,7 @@
 
 		<p class="article-header-date">
 			<time datetime="<?php echo $article->date('c') ?>">
-				<?php echo html($article->date('jS \o\f F Y')); ?>
+				<?php echo html($article->date('\t\h\e jS \o\f F Y')); ?>
 			</time>
 		</p>
 
