@@ -4,6 +4,8 @@ Link: http://kahlil.co
 ----
 Date: 2013-04-24
 ----
+Author: Kahlil Lechelt
+----
 AuthorTwitter: hellokahlil
 ----
 Text:

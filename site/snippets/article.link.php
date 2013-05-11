@@ -14,7 +14,7 @@
 
 			Posted by
 			<a href="http://twitter.com/<?php echo html($article->authortwitter()); ?>">
-				@<?php echo html($article->authortwitter()); ?>
+				<?php echo html($article->author()); ?>
 			</a>
 			on the
 			<a href="<?php echo $article->url(); ?>">
