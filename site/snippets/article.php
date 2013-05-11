@@ -1,14 +1,19 @@
 <article class="article">
 	<header class="article-header">
 		<h1>
-			<a href="<?php echo $article->url(); ?>">
+			<a href="<?php if (isLink($article)) { echo $article->linkurl(); } else { echo $article->url(); } ?>">
 				<?php echo html($article->title()) ?>
+				<?php if (isLink($article)) { ?>
+					&#8674;
+				<?php } ?>
 			</a>
 		</h1>
 
-		<div>
-			by <a href="#author"><?php echo html($article->author()); ?></a>
-		</div>
+		<?php if (!isLink($article)) { ?>
+			<div>
+				by <a href="#author"><?php echo html($article->author()); ?></a>
+			</div>
+		<?php } ?>
 
 		<p class="article-header-date">
 			<time datetime="<?php echo $article->date('c') ?>">
@@ -26,20 +31,26 @@
 
 	<?php echo kirbytext($article->text()); ?>
 
-	<footer class="article-footer">
-		<div class="article-footer-author" id="author">
-			<img src="http://www.gravatar.com/avatar/<?php echo md5($article->authormail()); ?>.jpg?s=192">
+	<?php if (isLink($article)) { ?>
+		<p><a href="<?php echo $article->linkurl(); ?>">Read more in the original article &#8674;</a></p>
+	<?php } ?>
 
-			by
-			<a href="<?php echo html($article->authorurl()); ?>" rel="autor">
-				<?php echo html($article->author()); ?>
-			</a>
-			&ndash;
-			<a href="http://twitter.com/<?php echo html($article->authortwitter()); ?>">
-				@<?php echo html($article->authortwitter()); ?>
-			</a>
+	<?php if (!isLink($article)) { ?>
+		<footer class="article-footer">
+			<div class="article-footer-author" id="author">
+				<img src="http://www.gravatar.com/avatar/<?php echo md5($article->authormail()); ?>.jpg?s=192">
 
-			<?php echo markdown($article->authorinfo()); ?>
-		</div>
-	</footer>
+				by
+				<a href="<?php echo html($article->authorurl()); ?>" rel="autor">
+					<?php echo html($article->author()); ?>
+				</a>
+				&ndash;
+				<a href="http://twitter.com/<?php echo html($article->authortwitter()); ?>">
+					@<?php echo html($article->authortwitter()); ?>
+				</a>
+
+				<?php echo markdown($article->authorinfo()); ?>
+			</div>
+		</footer>
+	<?php } ?>
 </article>
