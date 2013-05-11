@@ -13,7 +13,7 @@
 		<div class="article-footer-author" id="author">
 
 			Posted by
-			<a href="http://twitter.com/<?php echo html($article->authortwitter()); ?>">
+			<a href="<?php echo html($article->authorurl()); ?>">
 				<?php echo html($article->author()); ?>
 			</a>
 			on the

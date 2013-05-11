@@ -6,7 +6,7 @@ Date: 2013-04-24
 ----
 Author: Kahlil Lechelt
 ----
-AuthorTwitter: hellokahlil
+AuthorUrl: http://twitter.com/hellokahlil
 ----
 Text:
 
