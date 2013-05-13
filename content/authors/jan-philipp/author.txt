@@ -1,0 +1,9 @@
+Name: Jan Philipp
+----
+Url: http://www.knallisworld.de
+----
+Twitter: knalli
+----
+Mail: jan@philipp-online.de
+----
+Info: Jan is a full stack developer for applications mostly running on the web. Apart from using modern web worker tools, he is also familar with Java backend layers, i.e. databases, messaging or web services. He lives in Cologne.

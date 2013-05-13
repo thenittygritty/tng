@@ -2,15 +2,7 @@ Title: We Acquired Distilled Hype
 ----
 Date: 2013-05-10
 ----
-Author: Kahlil Lechelt
-----
-AuthorUrl: http://kahlil.co/
-----
-AuthorTwitter: hellokahlil
-----
-AuthorMail: hello@kahlil.co
-----
-AuthorInfo: Kahlil is a JavaScript Developer residing in Stuttgart. He sometimes is a co-host on the German podcast [Working Draft](http://workingdraft.de) and co-founder of The Nitty Gritty.
+Author: kahlil-lechelt
 ----
 Categories: TNG Internal
 ----

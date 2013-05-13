@@ -2,15 +2,7 @@ Title: Decouple Your CSS From HTML With Reusable Modules
 ----
 Date: 2012-12-03
 ----
-Author: Hans Christian Reinl
-----
-AuthorUrl: http://drublic.de/
-----
-AuthorTwitter: drublic
-----
-AuthorMail: info@drublic.de
-----
-AuthorInfo: Hans is a Front-end Developer living in Freiburg, Germany. He is part of the team around [HTML5 Boilerplate](http://html5boilerplate.com/) and a co-host of the [Working Draft podcast](http://workingdraft.de/).
+Author: hans-christian-reinl
 ----
 Categories: CSS, Sass
 ----

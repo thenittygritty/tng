@@ -2,15 +2,7 @@ Title: A UX For Developers
 ----
 Date: 2013-03-26
 ----
-Author: Stu Cox
-----
-AuthorUrl: http://stucox.com/
-----
-AuthorTwitter: stucoxmedia
-----
-AuthorMail: stuart.cox@gmail.com
-----
-AuthorInfo: Stu is a senior developer at [Potato](http://p.ota.to/) and a core contributor to [Modernizr](http://modernizr.com), based in Bristol, UK. He talks on usability, design methodology and open technology.
+Author: stu-cox
 ----
 Categories: UX
 ----

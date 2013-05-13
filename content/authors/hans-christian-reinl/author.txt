@@ -1,0 +1,9 @@
+Name: Hans Christian Reinl
+----
+Url: http://drublic.de/
+----
+Twitter: drublic
+----
+Email: info@drublic.de
+----
+Info: Hans is a Front-end Developer living in Freiburg, Germany. He is part of the team around [HTML5 Boilerplate](http://html5boilerplate.com/) and a co-host of the [Working Draft podcast](http://workingdraft.de/).

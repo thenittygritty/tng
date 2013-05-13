@@ -2,15 +2,7 @@ Title: AngularJS: 6 Common Pitfalls Using Scopes
 ----
 Date: 2013-04-24
 ----
-Author: Jan Philipp
-----
-AuthorUrl: http://www.knallisworld.de
-----
-AuthorTwitter: knalli
-----
-AuthorMail: jan@philipp-online.de
-----
-AuthorInfo: Jan is a full stack developer for applications mostly running on the web. Apart from using modern web worker tools, he is also familar with Java backend layers, i.e. databases, messaging or web services. He lives in Cologne.
+Author: jan-philipp
 ----
 Categories: JavaScript
 ----

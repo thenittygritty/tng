@@ -1,3 +1,8 @@
+<?php
+// Get author
+$author = $pages->find('authors/' . (string) $article->author());
+?>
+
 <article class="article">
 	<header class="article-header">
 		<h1>
@@ -7,7 +12,7 @@
 		</h1>
 
 		<div>
-			by <a href="#author"><?php echo html($article->author()); ?></a>
+			by <a href="#author"><?php echo html($author->name()); ?></a>
 		</div>
 
 		<p class="article-header-date">
@@ -28,18 +33,18 @@
 
 	<footer class="article-footer">
 		<div class="article-footer-author" id="author">
-			<img src="http://www.gravatar.com/avatar/<?php echo md5($article->authormail()); ?>.jpg?s=192">
+			<img src="http://www.gravatar.com/avatar/<?php echo md5($author->email()); ?>.jpg?s=192">
 
 			by
-			<a href="<?php echo html($article->authorurl()); ?>" rel="autor">
-				<?php echo html($article->author()); ?>
+			<a href="<?php echo html($author->url()); ?>" rel="autor">
+				<?php echo html($author->name()); ?>
 			</a>
 			&ndash;
-			<a href="http://twitter.com/<?php echo html($article->authortwitter()); ?>">
-				@<?php echo html($article->authortwitter()); ?>
+			<a href="http://twitter.com/<?php echo html($author->twitter()); ?>">
+				@<?php echo html($author->twitter()); ?>
 			</a>
 
-			<?php echo markdown($article->authorinfo()); ?>
+			<?php echo kirbytext($author->info()); ?>
 		</div>
 	</footer>
 </article>

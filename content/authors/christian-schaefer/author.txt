@@ -1,0 +1,9 @@
+Name: Christian Schaefer
+----
+Url: https://twitter.com/derSchepp
+----
+Twitter: derSchepp
+----
+Mail: schaepp@gmx.de
+----
+Info: Christian "Schepp" Schaefer is a freelance web developer living in Düsseldorf, Germany. He is the author of the [CSS-JS-Booster](https://github.com/Schepp/CSS-JS-Booster), the [Box Sizing Polyfill](https://github.com/Schepp/box-sizing-polyfill) and the [CSS Filters Polyfill](https://github.com/Schepp/CSS-Filters-Polyfill) as well as co-host of the [Working Draft Podcast](http://workingdraft.de/).

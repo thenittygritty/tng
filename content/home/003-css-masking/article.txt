@@ -2,15 +2,7 @@ Title: CSS Masks – How To Use Masking In CSS Now
 ----
 Date: 2012-12-20
 ----
-Author: Christian Schaefer
-----
-AuthorUrl: https://twitter.com/derSchepp
-----
-AuthorTwitter: derSchepp
-----
-AuthorMail: schaepp@gmx.de
-----
-AuthorInfo: Christian "Schepp" Schaefer is a freelance web developer living in Düsseldorf, Germany. He is the author of the [CSS-JS-Booster](https://github.com/Schepp/CSS-JS-Booster), the [Box Sizing Polyfill](https://github.com/Schepp/box-sizing-polyfill) and the [CSS Filters Polyfill](https://github.com/Schepp/CSS-Filters-Polyfill) as well as co-host of the [Working Draft Podcast](http://workingdraft.de/).
+Author: christian-schaefer
 ----
 Categories: CSS
 ----

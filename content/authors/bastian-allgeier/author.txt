@@ -1,0 +1,9 @@
+Name: Bastian Allgeier
+----
+Url: http://bastianallgeier.com/
+----
+Twitter: bastianallgeier
+----
+Mail: mail@bastian-allgeier.de
+----
+Info: Bastian is a full stack designer and developer living in Mannheim, Germany. He is the man behind [Kirby CMS](http://getkirby.com/) and [Zootool](http://zootool.com/).

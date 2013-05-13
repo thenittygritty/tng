@@ -1,0 +1,9 @@
+Name: Stu Cox
+----
+Url: http://stucox.com/
+----
+Twitter: stucoxmedia
+----
+Mail: stuart.cox@gmail.com
+----
+Info: Stu is a senior developer at [Potato](http://p.ota.to/) and a core contributor to [Modernizr](http://modernizr.com), based in Bristol, UK. He talks on usability, design methodology and open technology.

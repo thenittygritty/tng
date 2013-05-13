@@ -2,15 +2,7 @@ Title: Waking The Gorilla
 ----
 Date: 2012-12-03
 ----
-Author: Kahlil Lechelt
-----
-AuthorUrl: http://kahlil.co/
-----
-AuthorTwitter: hellokahlil
-----
-AuthorMail: hello@kahlil.co
-----
-AuthorInfo: Kahlil is a JavaScript Developer residing in Stuttgart. He also is a co-host on the German podcast [Working Draft](http://workingdraft.de) and has a [website](http://distilledhype.com/) that distills the hype.
+Author: kahlil-lechelt
 ----
 Categories: TNG Internal
 ----
