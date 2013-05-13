@@ -1,3 +1,8 @@
+<?php
+// Get author
+$author = $pages->find('authors/' . (string) $article->author());
+?>
+
 <article class="article link">
 	<header class="article-header">
 		<h1>
@@ -13,8 +18,8 @@
 		<div class="article-footer-author" id="author">
 
 			Posted by
-			<a href="<?php echo html($article->authorurl()); ?>">
-				<?php echo html($article->author()); ?>
+			<a href="<?php echo html($author->link()); ?>">
+				<?php echo html($author->name()); ?>
 			</a>
 			on the
 			<a href="<?php echo $article->url(); ?>">
@@ -23,7 +28,7 @@
 				</time>
 			</a>
 
-			<?php echo markdown($article->authorinfo()); ?>
+			<?php echo markdown($author->info()); ?>
 		</div>
 	</footer>
 </article>
