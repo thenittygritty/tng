@@ -1,6 +1,6 @@
 Name: Christian Schaefer
 ----
-Url: https://twitter.com/derSchepp
+Link: https://twitter.com/derSchepp
 ----
 Twitter: derSchepp
 ----

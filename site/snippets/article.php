@@ -36,7 +36,7 @@ $author = $pages->find('authors/' . (string) $article->author());
 			<img src="http://www.gravatar.com/avatar/<?php echo md5($author->email()); ?>.jpg?s=192">
 
 			by
-			<a href="<?php echo html($author->url()); ?>" rel="autor">
+			<a href="<?php echo html($author->link()); ?>" rel="autor">
 				<?php echo html($author->name()); ?>
 			</a>
 			&ndash;

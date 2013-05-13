@@ -1,6 +1,6 @@
 Name: Stu Cox
 ----
-Url: http://stucox.com/
+Link: http://stucox.com/
 ----
 Twitter: stucoxmedia
 ----

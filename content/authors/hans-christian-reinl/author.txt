@@ -1,6 +1,6 @@
 Name: Hans Christian Reinl
 ----
-Url: http://drublic.de/
+Link: http://drublic.de/
 ----
 Twitter: drublic
 ----

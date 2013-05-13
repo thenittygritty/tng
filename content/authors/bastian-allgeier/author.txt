@@ -1,6 +1,6 @@
 Name: Bastian Allgeier
 ----
-Url: http://bastianallgeier.com/
+Link: http://bastianallgeier.com/
 ----
 Twitter: bastianallgeier
 ----

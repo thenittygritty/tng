@@ -1,6 +1,6 @@
 Name: Jan Philipp
 ----
-Url: http://www.knallisworld.de
+Link: http://www.knallisworld.de
 ----
 Twitter: knalli
 ----

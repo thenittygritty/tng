@@ -1,6 +1,6 @@
 Name: Kahlil Lechelt
 ----
-Url: http://distilledhype.com
+Link: http://distilledhype.com
 ----
 AboutUrl: http://kahlil.co
 ----
