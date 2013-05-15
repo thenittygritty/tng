@@ -1,0 +1,12 @@
+Title: mothereffinganimatedgif.com
+----
+Link: https://mothereffinganimatedgif.com
+----
+Date: 2013-05-15
+----
+Author: kahlil-lechelt
+----
+Text:
+
+<blockquote class="twitter-tweet"><p><a href="http://t.co/NwLQyvqplL" title="http://mothereffinganimatedgif.com/">mothereffinganimatedgif.com</a> got a massive upgrade from @<a href="https://twitter.com/forresto">forresto</a>. (<a href="https://t.co/lBMuNAhTGN" title="https://github.com/h5bp/mothereffinganimatedgif/pull/52">github.com/h5bp/mothereff…</a>) Transparency, fixed colors, web worker == speed.</p>&mdash; Paul Irish (@paul_irish) <a href="https://twitter.com/paul_irish/status/334080001290940417">May 13, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
