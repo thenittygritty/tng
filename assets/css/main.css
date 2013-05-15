@@ -1062,6 +1062,10 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+iframe {
+  width: 100%;
+}
+
 a {
   color: #426ea1;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
