@@ -1,4 +1,4 @@
-Title: Chrome Dev Tools: SASS, Workspaces & Snippets
+Title: Dev Tools: SASS, Workspaces & Snippets
 ----
 Link: https://plus.google.com/102860501900098846931/posts/DbF2Laeia7k
 ----
