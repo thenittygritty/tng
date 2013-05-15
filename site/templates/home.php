@@ -9,7 +9,7 @@ if (param('category')):
 	<h1>Category: <?php echo urldecode(param('category')); ?></h1>
 <?php else:
 	// Show all articles
-	$articles = $articles->paginate(5);
+	$articles = $articles->paginate(10);
 endif;
 
 if ($articles && $articles->count()):
