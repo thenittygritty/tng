@@ -1,0 +1,13 @@
+Title: Devs Love Bacon
+----
+Link: http://devslovebacon.com
+----
+Date: 2013-05-15
+----
+Author: kahlil-lechelt
+----
+Text:
+
+> BACON is a conference on things developers love. Thirty-one tasty sessions on topics including rocketry, Go, infinity, data visualisation, and continuous deployment.
+
+A beautiful site with high quality videos of all the talks from this years Devs Love Bacon conference. That's how you do it! Great talks too. For instance a (link: http://devslovebacon.com/conferences/bacon-2013/talks/helping-or-hurting text: fantastic talk) by (link: http://twitter.com/codepo8 text:@codepo8).

@@ -1,0 +1,15 @@
+Title: Deploying JavaScript Applications
+----
+Link: http://alexsexton.com/blog/2013/03/deploying-javascript-applications/
+----
+Date: 2013-05-15
+----
+Author: kahlil-lechelt
+----
+Text:
+
+(link:https://twitter.com/slexaxton text:@slexaxton):
+
+> You work on a large app. You might be a third party, or you might not be. You might be on a team, or you might not be. You want maximum performance, with a high cache rate and extremely high availability.
+
+This article is chock full of great tips on how to properly deploy your app for all devices.
