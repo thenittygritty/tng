@@ -1,0 +1,13 @@
+Title: Chrome Dev Tools: SASS, Workspaces & Snippets
+----
+Link: https://plus.google.com/102860501900098846931/posts/DbF2Laeia7k
+----
+Date: 2013-05-15
+----
+Author: kahlil-lechelt
+----
+Text:
+
+> In 18 minutes, you'll learn 3 new DevTools features: support for Sass stylesheets, editing local projects (Workspaces) and Snippets.
+
+Workspaces seems like a big step to me.
