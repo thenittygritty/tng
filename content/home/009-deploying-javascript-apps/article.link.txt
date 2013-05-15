@@ -8,7 +8,7 @@ Author: kahlil-lechelt
 ----
 Text:
 
-(link:https://twitter.com/slexaxton text:@slexaxton):
+(twitter: slexaxton):
 
 > You work on a large app. You might be a third party, or you might not be. You might be on a team, or you might not be. You want maximum performance, with a high cache rate and extremely high availability.
 

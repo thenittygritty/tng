@@ -1,0 +1,15 @@
+Title: CSS Modal
+----
+Link: http://drublic.github.io/css-modal/
+----
+Date: 2013-05-15
+----
+Author: kahlil-lechelt
+----
+Text:
+
+(twitter: drublic):
+
+> CSS Modal is built out of pure CSS. JavaScript is only for sugar. This makes them perfectly accessible.
+
+Very nice.
