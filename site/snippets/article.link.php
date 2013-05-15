@@ -27,8 +27,6 @@ $author = $pages->find('authors/' . (string) $article->author());
 					<?php echo html($article->date('jS \o\f F Y')); ?>
 				</time>
 			</a>
-
-			<?php echo markdown($author->info()); ?>
 		</div>
 	</footer>
 </article>
