@@ -1,0 +1,17 @@
+Title: Dabblet Updates
+----
+Link: http://blog.dabblet.com/post/50166400621/updates-over-the-last-few-months
+----
+Date: 2013-05-16
+----
+Author: kahlil-lechelt
+----
+Text:
+
+(twitter: leaverou):
+
+> There have been a number of improvements, practically everything we promised in the [previous blog post](http://blog.dabblet.com/post/35203393585/lots-of-improvements-in-the-pipeline)
+
+Lea updated Dabblet recently. She also shares [her Bachelor thesis](http://thesis.dabblet.com/), which is about the inner workings of Dabblet, she wrote in HTML and looks gorgeous.
+
+
