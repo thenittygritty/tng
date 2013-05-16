@@ -222,7 +222,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -480,8 +480,8 @@ input[type="button"] {
   margin: 0.5rem;
   border-radius: 8px;
   border-radius: 0.5rem;
-  padding: 8px;
-  padding: 0.5rem;
+  padding: 12px;
+  padding: 0.75rem;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.7);
@@ -685,7 +685,7 @@ input.search-submit {
  */
 .search-results > article {
   padding-bottom: 20px;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
 }
 .search-results > article:first-child h3 {
   margin-top: 0;
@@ -695,6 +695,9 @@ input.search-submit {
   border-bottom: 0;
 }
 
+.article, .search-results {
+  word-wrap: break-word;
+}
 @media screen and (min-width: 59em) {
   .article, .search-results {
     margin-left: 0;
@@ -704,7 +707,7 @@ input.search-submit {
 
 .article-header h1 {
   line-height: 1.1;
-  margin: 0 0 0.5em;
+  margin: 0 0 .5em;
 }
 
 .article-header-date {
@@ -749,6 +752,10 @@ input.search-submit {
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+.link .article-footer-author {
+  line-height: 1.4;
 }
 
 /*
@@ -885,7 +892,7 @@ code[class*="language-"] {
   tab-size: 4;
   color: black;
   text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -902,7 +909,7 @@ pre[class*="language-"] {
   tab-size: 4;
   color: black;
   text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -912,7 +919,7 @@ pre[class*="language-"] {
   -ms-hyphens: none;
   hyphens: none;
   padding: 1em;
-  margin: 0.5em 0;
+  margin: .5em 0;
   overflow: auto;
 }
 
@@ -988,22 +995,6 @@ h2 a,
 h3 a,
 h4 a {
   text-decoration: none;
-}
-@media screen and (min-width: 38em) {
-  h1,
-  h2,
-  h3,
-  h4 {
-    word-break: break-word;
-  }
-}
-@media screen and (min-width: 48em) {
-  h1,
-  h2,
-  h3,
-  h4 {
-    word-break: break-word;
-  }
 }
 
 h1 {
@@ -1348,7 +1339,7 @@ html {
      ========================================================================== */
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -1378,7 +1369,7 @@ html {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 

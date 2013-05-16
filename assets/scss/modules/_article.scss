@@ -2,6 +2,7 @@
 // mostly used to represent articles
 .article {
 	@extend %box;
+	word-wrap: break-word;
 
 	@media #{$mq-smalldesktop} {
 		margin-left: 0;
@@ -75,5 +76,13 @@
 	@media #{$mq-smalldesktop} {
 		margin-left: 0;
 		margin-right: 0;
+	}
+}
+
+
+// Link Posts
+.link {
+	.article-footer-author {
+		line-height: 1.4;
 	}
 }
