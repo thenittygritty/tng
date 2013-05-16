@@ -15,9 +15,12 @@ h3,
 h4 {
 	font-weight: 700;
 	font-family: Merriweather, sans-serif;
-
 	a {
 		text-decoration: none;
+	}
+
+	@media #{$mq-smalltab} {
+		word-break: break-word;
 	}
 }
 

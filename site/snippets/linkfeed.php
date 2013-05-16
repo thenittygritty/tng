@@ -27,8 +27,8 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
 			<?php if ($item->template() == 'article.link'): ?>
 				<item>
 					<title><?php echo xml($item->title()) ?></title>
-					<link><?php echo xml(str_replace( '/home/', '/', $item->link())) ?></link>
-					<guid><?php echo xml(str_replace( '/home/', '/', $item->link())) ?></guid>
+					<link><?php echo xml(str_replace( '/home/', '/', $item->url())) ?></link>
+					<guid><?php echo xml(str_replace( '/home/', '/', $item->url())) ?></guid>
 					<pubDate><?php echo ($item->date()) ? date('r', $item->date()) : date('r', $item->modified()) ?></pubDate>
 
 					<?php if(isset($descriptionField)): ?>
