@@ -12,6 +12,6 @@ Text:
 
 > There have been a number of improvements, practically everything we promised in the [previous blog post](http://blog.dabblet.com/post/35203393585/lots-of-improvements-in-the-pipeline)
 
-Lea updated Dabblet recently. She also shares [her Bachelor thesis](http://thesis.dabblet.com/), which is about the inner workings of Dabblet, she wrote in HTML and looks gorgeous.
+Lea updated Dabblet recently. She also shares [her Bachelor thesis](http://thesis.dabblet.com/), which is about the inner workings of Dabblet, she wrote it in HTML and it looks gorgeous.
 
 
