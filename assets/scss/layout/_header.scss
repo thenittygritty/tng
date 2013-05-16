@@ -63,6 +63,7 @@
 	strong {
 		@extend %box;
 		@include x-rem(font-size, 3.4);
+		@include x-rem(padding, 0.5);
 
 		float: left;
 		margin: 0 10px 0 0;

@@ -1225,6 +1225,8 @@ html {
 .header-logo strong {
   font-size: 54.4px;
   font-size: 3.4rem;
+  padding: 8px;
+  padding: 0.5rem;
   float: left;
   margin: 0 10px 0 0;
   padding-bottom: 0;
