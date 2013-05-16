@@ -18,10 +18,6 @@ h4 {
 	a {
 		text-decoration: none;
 	}
-
-	@media #{$mq-smalltab} {
-		word-break: break-word;
-	}
 }
 
 h1 {

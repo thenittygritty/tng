@@ -997,6 +997,14 @@ h4 a {
     word-break: break-word;
   }
 }
+@media screen and (min-width: 48em) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    word-break: break-word;
+  }
+}
 
 h1 {
   font-size: 32px;
