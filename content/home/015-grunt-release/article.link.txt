@@ -1,0 +1,27 @@
+Title: Automated Releases with grunt-release
+----
+Link: https://github.com/geddski/grunt-release
+----
+Date: 2013-05-17
+----
+Author: hans-christian-reinl
+----
+Text:
+
+The usual workflow when releasing a Node lib or Bower Component looks something like this, [Dave Geddes](https://github.com/geddski) thought:
+
+> * bump the version in your package.json file.
+> * stage the package.json file's change.
+> * commit that change with a message like "release 0.6.22".
+> * create a new git tag for the release.
+> * push the changes out to github.
+> * also push the new tag out to github.
+> * publish the new version to npm.
+
+But what if you only need to run a one-liner in Terminal?
+
+<span class="language-js"></span>
+
+	$ grunt release
+
+That's what grunt-release does for you!
