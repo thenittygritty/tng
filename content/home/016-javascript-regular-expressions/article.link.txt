@@ -1,0 +1,15 @@
+Title: The Low Down On Regular Expressions in JavaScript
+----
+Link: http://tech.pro/tutorial/1214/javascript-regular-expression-enlightenment
+----
+Date: 2013-05-18
+----
+Author: kahlil-lechelt
+----
+Text:
+
+(twitter: codylindley):
+
+> It wasn't until I re-adjusted my thoughts on the nature of regular expressions that my fear of them turned into pleasure. This happened when I started thinking about regular expressions as an actual language itself, instead of a value contained within a language. I know it is not technically a language, but studying it like a programming language might just help a developer get over the steep learning curve.
+
+A very comprehensive tutorial on regular expressions. Love it!
