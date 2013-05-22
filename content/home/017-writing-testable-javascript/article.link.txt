@@ -1,0 +1,23 @@
+Title: Writing Testable JavaScript
+
+----
+
+Link: http://alistapart.com/article/writing-testable-javascript
+
+----
+
+Date: 2013-05-22
+
+----
+
+Author: kahlil-lechelt
+
+----
+
+Text:
+
+(twitter: @rmurphey):
+
+> One, we can’t just point and click our way through testing that things are working as we expect; automated tests are key to having confidence in our code. Two, we’re probably going to have to change how we write our code in order to make it possible to write tests.
+
+Awesome introduction into how you can start writing testable JavaScript by the mighty (link: http://rmurphey.com/ text: Rebecca Murphey).
