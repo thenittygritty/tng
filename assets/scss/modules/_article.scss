@@ -83,6 +83,7 @@
 // Link Posts
 .link {
 	.article-footer-author {
+		@include x-rem(font-size, 0.8);
 		line-height: 1.4;
 	}
 }

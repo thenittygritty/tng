@@ -755,6 +755,8 @@ input.search-submit {
 }
 
 .link .article-footer-author {
+  font-size: 12.8px;
+  font-size: 0.8rem;
   line-height: 1.4;
 }
 
