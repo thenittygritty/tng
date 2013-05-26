@@ -2,6 +2,6 @@ Title: Contribute
 ----
 Text: Any person who wants to write technical articles about web development is invited to contribute to The Nitty Gritty.
 
-Send your pitch to [pitch@thenittygritty.co](mailto:pitch@thenittygritty.co).
+Open an issue on (link: http://github.com/thenittygritty/feedback text: our Github feedback repo) and post an abstract there.
 
 Please be aware that we want to publish high quality content, so once your pitch is accepted and you want your article to be published on TNG you will have to make sure the article is well researched and reviewed by a technical reviewer.
