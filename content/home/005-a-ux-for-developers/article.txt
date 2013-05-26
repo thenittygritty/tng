@@ -10,7 +10,8 @@ Description: Stu Cox describes his idea of a good UX for developers.
 ----
 Tags: UX, user experience, developers, APIs, open source
 ----
-
+Comments: on
+----
 Text:
 
 **Great UX designers are experts at putting themselves in the shoes of the different kinds of user who will be using a site or app. They create simple, predictable, intuitive interfaces which cater for internet rookies just as well as they do for power users.**

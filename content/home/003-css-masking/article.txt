@@ -10,6 +10,8 @@ Description: Christian "Schepp" Schaefer writes about CSS masks, which offer the
 ----
 Tags: CSS, Masks, Masking, Filter, CSS Level 3, CSS3, mask-image, SVG, JavaScript
 ----
+Comments: on
+----
 Text:
 
 Almost one year ago [I wrote an article](http://drublic.de/blog/effects-for-the-web/) that dealt with an emerging WebKit CSS technique, the CSS filter effects, and the question if we could not have/emulate them in other browsers, too. Turned out we could.

@@ -10,6 +10,8 @@ Description:
 ----
 Tags: AngularJS, JavaScript
 ----
+Comments: on
+----
 Text:
 
 **Within the last month Google's "Superheroic JavaScript (link:https://plus.google.com/104744871076396904202/posts/DRUAkZmXjNV text:MVW) Framework" AngularJS has gotten a lot of attention. What makes this framework so successful compared to other JavaScript frameworks as for example [EmberJS](http://emberjs.com/), is the value it adds to your HTML templates using (declarative) Data Binding.**

@@ -10,6 +10,8 @@ Description: Sass 3.2 has a wonderful method to define reusable modules called p
 ----
 Tags: CSS, Sass, Decoupeling, Module, Modules, OOCSS, SMACSS
 ----
+Comments: on
+----
 Text:
 
 __Sass 3.2 has a wonderful method to define reusable modules called placeholders which enable us to decouple CSS from HTML while using unambiguous, semantic class names.__

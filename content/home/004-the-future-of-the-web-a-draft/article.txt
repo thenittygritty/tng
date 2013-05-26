@@ -10,8 +10,8 @@ Description: Bastian Allgeier describes his idea of decentralized sytems that bu
 ----
 Tags: Decentralized Systems, The Future, Social Media
 ----
-
-
+Comments: on
+----
 Text:
 
 **Lately I find myself questioning the digital world I live in more and more.**
