@@ -14,7 +14,7 @@ Comments: on
 ----
 Text:
 
-I was speaking at [Web Rebels](http://webrebels.org/) this week, where the Firefox OS team were kind enough to give me a new Geekphone Peak device, so I dove right into building some apps for it. Obligatory unboxing pics below!
+**I was speaking at [Web Rebels](http://webrebels.org/) this week, where the Firefox OS team were kind enough to give me a new Geekphone Peak device, so I dove right into building some apps for it. Obligatory unboxing pics below!**
 
 <figure class="image-full">(image: Photo 2013-05-26 02.49.19 PM.jpg)<figcaption>Firefox OS unboxing</ficaption></figure>
 
