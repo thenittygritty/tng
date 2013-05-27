@@ -1,0 +1,23 @@
+Title: Staying Up To Date On The Front-End
+
+----
+
+Link: http://uptodate.frontendrescue.org/
+
+----
+
+Date: 2013-05-27
+
+----
+
+Author: kahlil-lechelt
+
+----
+
+Text:
+
+> The web is a rapidly evolving universe. An important part of our job as front-end developers is keeping up to date and staying close to new tools, trends and workflows.
+>
+> Hundreds of blog posts and articles are published every day, but there is no way you can read all of them. We think you should have a strategy to keep up to date, so we have created this recipe.
+
+This is a good start.
