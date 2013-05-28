@@ -33,7 +33,7 @@ $author = $pages->find('authors/' . (string) $article->author());
 
 	<footer class="article-footer">
 		<div class="article-footer-author" id="author">
-			<img src="http://www.gravatar.com/avatar/<?php echo md5($author->email()); ?>.jpg?s=192">
+			<img src="http://www.gravatar.com/avatar/<?php echo md5($author->email()); ?>?s=192">
 
 			by
 			<a href="<?php echo html($author->link()); ?>" rel="autor">
