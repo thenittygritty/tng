@@ -4,6 +4,6 @@ Link: http://addyosmani.com/
 ----
 Twitter: addyosmani
 ----
-Mail: addyosmani@gmail.com
+Email: addyosmani@gmail.com
 ----
 Info: Addy Osmani is a Googler working on Chrome, the Chrome DevTools and (link: http://yeoman.io text:Yeoman). He is an (link:http://addyosmani.github.io/backbone-fundamentals/ text: author) and passionate about pushing the web forward & making web development fun again.
