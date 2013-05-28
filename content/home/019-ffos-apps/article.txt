@@ -14,25 +14,23 @@ Comments: on
 ----
 Text:
 
-**I was speaking at [Web Rebels](http://webrebels.org/) this week, where the Firefox OS team were kind enough to give me a new Geekphone Peak device, so I dove right into building some apps for it. Obligatory unboxing pics below!**
+**I was speaking at (link: http://webrebels.org/ text: Web Rebels) this week, where the Firefox OS team were kind enough to give me a new Geekphone Peak device, so I dove right into building some apps for it. Obligatory unboxing pics below!**
 
-<figure class="image-full">(image: Photo 2013-05-26 02.49.19 PM.jpg)<figcaption>Firefox OS unboxing</ficaption></figure>
+<figure class="image-full">(image: unboxing.jpg alt: FFOS unboxing)<figcaption>Firefox OS unboxing</ficaption></figure>
 
-<figure class="image-full">(image: Photo 2013-05-26 02.48.49 PM.jpg)<figcaption>Firefox OS unboxing</ficaption></figure>
+My first idea for a Firefox OS app was a simple (link: https://github.com/addyosmani/github-client text: AngularJS Github issues viewer) (based on (link: https://github.com/da-ff/ng-github-client text: ng-github-client)) with views for authentication, a dashboard and info editing amongst others. This is a simple enough app, but as it handles authentication and relies on a real data source I figured it might be a more realistic base than a todo app ;)
 
-My first idea for a Firefox OS app was a simple [AngularJS Github issues viewer](https://github.com/addyosmani/github-client) (based on https://github.com/da-ff/ng-github-client) with views for authentication, a dashboard and info editing amongst others. This is a simple enough app, but as it handles auth. and relies on a real data source I figured it might be a more realistic base than a todo app ; ).
+<figure class="image-full">(image: ffox_r1_c1.jpg)<figcaption>Authenticate yourself via Github</ficaption></figure>
 
-<figure class="image-full">(image: ffox_r1_c1.jpg)<figcaption>&hearts;</ficaption></figure>
+<figure class="image-full">(image: ffox_r2_c1.jpg)<figcaption>Repositories overview and repo editing</ficaption></figure>
 
-<figure class="image-full">(image: ffox_r2_c1.jpg)<figcaption>&hearts;</ficaption></figure>
-
-<figure class="image-full">(image: ffox_r3_c1.jpg)<figcaption>&hearts;</ficaption></figure>
+<figure class="image-full">(image: ffox_r3_c1.jpg)<figcaption>Github Issue comments in portrait and landscape view</ficaption></figure>
 
 Firefox OS exposes some additional APIs on devices, so I thought it might be interesting to try adding support for the Vibration API, Web Activities and Web Notifications. These would let me share (activities), alert on error (device vibrate, alarm) and inform me when a connection was no longer available (notifications).
 
-At this point I must say - setting up much of this was massively simplified thanks to the great work Robert Nyman has done on the Firefox OS boilerplate https://github.com/robnyman/Firefox-OS-Boilerplate-App.
+At this point I must say &ndash; setting up much of this was massively simplified thanks to the great work Robert Nyman has done on the (link: https://github.com/robnyman/Firefox-OS-Boilerplate-App text: Firefox OS boilerplate).
 
-<figure class="image-full">(image: Untitled-3_r1_c1.jpg)<figcaption>&hearts;</ficaption></figure>
+<figure class="image-full">(image: Untitled-3_r1_c1.jpg)<figcaption>The Firefox OS boilerplate comes with some great presets to make your life easier</ficaption></figure>
 
 Robert's boilerplate includes complete code snippets for many of the common tasks you might want to use such APIs for and would actually love to see us do something similar for a boilerplate for Chrome apps. It also includes boilerplate manifest.webapp files, and you may find the online validator for these useful if heavily modifying for your own needs https://marketplace.firefox.com/developers/validator.
 
@@ -42,13 +40,15 @@ I kickstarted off my app using Yeoman and the Firefox OS generator (https://gith
 
 To get this setup:
 
+<span class="language-c"></span>
 
-#Install Yeoman:
-npm install -g yo
-# Install this generator:
-npm install -g generator-firefox-os
-#Run:
-yo firefox-os
+    # Install Yeoman:
+	npm install -g yo
+    # Install this generator:
+	npm install -g generator-firefox-os
+    # Run:
+	yo firefox-os
+
 If you don't want to use the boilerplate or Yeoman to create your app, you can get started with a Firefox OS app in just a few steps:
 
 1. Create a new directory called 'myapp'
@@ -61,7 +61,7 @@ If you don't want to use the boilerplate or Yeoman to create your app, you can g
 
 Not everyone agrees with me, but I look at Firefox OS and Chrome OS as enhanced build targets. My personal approach with them is to build a web app so that it can work fine in any browser and then progressively enhance it using feature detection for the enhanced APIs you'd like to take advantage of. This is sometime easier said than done, but does mean that you treat these platforms as build targets and don't have to treat them as entirely different apps. If you're using Grunt for your task/build process, just setup your FFOS app as a second build target and include your manifest files/additional scripts. grunt-env and grunt-preprocess can be useful here: http://stackoverflow.com/a/14970339. QuickOffice (part of the Google Docs team) do something similar for their Chrome app, which also gets deployed as a Phonegap app for other platforms.
 
-<figure class="image-full">(image: overview.png)<figcaption>&hearts;</ficaption></figure>
+<figure class="image-full">(image: overview.jpg)<figcaption>&hearts;</ficaption></figure>
 
 Next, onto debugging. I installed the Firefox OS simulator https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/ which will lets you preview what your app might look like on a device and also detects whether an FFOS device is connected so you can remotely debug using their developer tools. The simulator is extremely straight-forward to use, allowing you to preview apps hosted remotely/your own server or simply those being worked on on the local filesystem. You also have access to a detailed error console, for keeping an eye on general exceptions and errors about unsupported APIs.
 
