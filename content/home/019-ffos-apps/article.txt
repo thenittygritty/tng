@@ -77,7 +77,7 @@ Next, onto debugging. I installed the (link: https://addons.mozilla.org/en-US/fi
 
 The "Push" to device button also made it a breeze to switch between the Geekphone and Simulator at any time.
 
-Note that (link: https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_Simulator text: Mozilla's documentation) is forward about the limitations of the simulator – for APIs that aren't available on desktop (vibration, telephony), you may find yourself having to throw/log your own debug errors. I personally also found that my app appeared visually different in the simulator than it did when I deployed to my Geekphone device. As a developer preview, I found the changes minimal enough to not be distruptive but I plan on investigating further/reporting bugs if it's not simply an issue with the boilerplate.
+Note that (link: https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_Simulator text: Mozilla's documentation) is forward about the limitations of the simulator - for APIs that aren't available on desktop (vibration, telephony), you may find yourself having to throw/log your own debug errors. I personally also found that my app appeared visually different in the simulator than it did when I deployed to my Geekphone device. As a developer preview, I found the changes minimal enough to not be distruptive but I plan on investigating further/reporting bugs if it's not simply an issue with the boilerplate.
 
 Some other minor problems I ran into:
 
@@ -87,7 +87,7 @@ Some other minor problems I ran into:
 Alternatively, you can just use something like PHP to ease the OAuth process for you as was done in the GitHub-client app.
 <figure class="image-rightish-small">(image: Photo 2013-05-26 02.48.22 PM.jpg)<figcaption>Firefox OS debug options</ficaption></figure>
 * __Debugging:__ Part of me hoped that I could right-click &rarr; inspect element within the FFOS simulator to just start debugging my app that way, but going through Device Information &rarr; More Information &rarr; Developer it's possible to just enable remote debugging and "connect" to the debugger that way instead.
-* __Debugging:__Demo apps:__ As the Geekphone for FFOS is still fairly new, the number of GitHub-hosted apps you can use for reference is currently small, but growing. For developers who aren't able to find answers to "how was X done" in Google groups or the Mozilla docs, do check out (link: https://github.com/mozilla-b2g/gaia/tree/master/apps text: this repository) where you can find the source to most of the apps installed by default on FFOS. I found this useful for those cases where I needed something more advanced than what was provided in the boilerplate.
+* __Demo apps__: As the Geekphone for FFOS is still fairly new, the number of GitHub-hosted apps you can use for reference is currently small, but growing. For developers who aren't able to find answers to "how was X done" in Google groups or the Mozilla docs, do check out (link: https://github.com/mozilla-b2g/gaia/tree/master/apps text: this repository) where you can find the source to most of the apps installed by default on FFOS. I found this useful for those cases where I needed something more advanced than what was provided in the boilerplate.
 
 I was impressed that for performance profiling, Firefox OS makes paint flashing and an FPS counter just a few quick touches away, making it simple to debug and check where you might be experiencing issues.
 
@@ -119,9 +119,9 @@ Once this looks good, you can add your Chrome app as a second/third build target
 
 <figure class="image-rightish-small">(image: Photo 2013-05-26 02.47.36 PM.jpg)</figure>
 
-## Conclusion
-
 I'll post the code to GitHub at some point once I get a chance to clean it up, but all in all I enjoyed my experience building both an app that worked on Firefox OS and extending another to work everywhere.
+
+## Conclusion
 
 Right now the biggest thing I think the FFOS ecosystem needs is improved documentation. The getting started experience is fantastic, but beyond that an increase in tutorials walking developers through creating apps of different complexity would be welcome.
 
