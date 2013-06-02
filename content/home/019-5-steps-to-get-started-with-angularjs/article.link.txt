@@ -16,6 +16,8 @@ Author: kahlil-lechelt
 
 Text:
 
+(link: http://blog.revolunet.com/ text: revolunet.com):
+
 > In this post i’ll give some advices for the AngularJS newbies and share with you the best pointers to learn and understand the core concepts quickly.
 
 An awesome little link list to get started with AngularJS. Might I also add my (link: http://kahlil.github.io/angular-resources text: resources list) on Github?
