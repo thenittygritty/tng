@@ -36,7 +36,7 @@ Robert's boilerplate includes complete code snippets for many of the common task
 
 I kickstarted off my app using Yeoman and the (link: https://github.com/zenorocha/generator-firefox-os text: Firefox OS generator) which serves up Robert's boilerplate via the command-line.
 
-<figure class="image-full">(image: ffos-yo.jpg)<figcaption>Firefox OS + Yeoman = &hearts;</ficaption></figure>
+<figure class="image-leftish">(image: ffos-yo.jpg)<figcaption>Firefox OS + Yeoman = &hearts;</ficaption></figure>
 
 To get this setup install Yeoman:
 
