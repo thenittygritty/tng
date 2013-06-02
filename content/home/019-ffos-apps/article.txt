@@ -38,15 +38,22 @@ I kickstarted off my app using Yeoman and the (link: https://github.com/zenoroch
 
 <figure class="image-full">(image: ffos-yo.jpg)<figcaption>Firefox OS + Yeoman = &hearts;</ficaption></figure>
 
-To get this setup:
+To get this setup install Yeoman:
 
 <span class="language-c"></span>
 
-    # Install Yeoman:
 	npm install -g yo
-    # Install this generator:
+
+Install this generator:
+
+<span class="language-c"></span>
+
 	npm install -g generator-firefox-os
-    # Run:
+
+And run:
+
+<span class="language-c"></span>
+
 	yo firefox-os
 
 If you don't want to use the boilerplate or Yeoman to create your app, you can get started with a Firefox OS app in just a few steps:
@@ -76,34 +83,34 @@ Alternatively, you can just use something like PHP to ease the OAuth process for
 
 * Debugging: Part of me hoped that I could right-click &rarr; inspect element within the FFOS simulator to just start debugging my app that way, but going through Device Information &rarr; More Information &rarr; Developer it's possible to just enable remote debugging and "connect" to the debugger that way instead.
 
+<figure class="image-rightish">(image: Photo 2013-05-26 02.48.22 PM.jpg)<figcaption>Firefox OS debug options</ficaption></figure>
+
 * Demo apps: As the Geekphone for FFOS is still fairly new, the number of GitHub-hosted apps you can use for reference is currently small, but growing. For developers who aren't able to find answers to "how was X done" in Google groups or the Mozilla docs, do check out (link: https://github.com/mozilla-b2g/gaia/tree/master/apps text: this repository) where you can find the source to most of the apps installed by default on FFOS. I found this useful for those cases where I needed something more advanced than what was provided in the boilerplate.
 
 I was impressed that for performance profiling, Firefox OS makes paint flashing and an FPS counter just a few quick touches away, making it simple to debug and check where you might be experiencing issues.
-
-<figure class="image-full">(image: Photo 2013-05-26 02.48.22 PM.jpg)<figcaption>Firefox OS debug options</ficaption></figure>
 
 I did find myself having to go back to the Chrome DevTools for more granular profiling needs but flipping between browsers and tools didn't really slow me down that much. For the process of actually deploying an app, (link: http://chrislord.net/index.php/2013/05/04/writing-and-deploying-a-small-firefox-os-application/ text: Chris Lord's writing/deployment guide) was helpful as was (link: https://thelab.o2.com/2013/05/my-experience-with-firefox-os/ text: this blog post).
 
 Great, so building a simple application that works on Firefox OS based on the boilerplate isn't massively difficult and as with any platform just takes a little time to get used to. I actually really enjoyed writing IssueHub. Some screenshots of it can be found below:
 
-
 The next thing I wanted to set out to do was see if I could build an app that worked everywhere, so in any modern browser but *also* as a Chrome app and Firefox OS app.  For this, I used the already well-developed (link: https://github.com/alefteris/timerx3 text: TimerX3 web app), which was built using Yeoman, Grunt and Bower:
 
 <figure class="image-full">(image: timerapp.jpg)<figcaption>The TimerX3 app</ficaption></figure>
+
 TimerX3 let's you install from the web if it's supported (FFOS only), uses Firefox OS-specific APIs but also works fine in other browsers with a slightly degraded experience (no vibration etc). Adjusting the codebase for this app so that I could get some of the same enhanced features available to FFOS users (e.g notifications) involved a few steps:
+
+<figure class="image-rightish">(image: Screen Shot 2013-05-25 at 22.55.11.png)<figcaption>about:extensions</ficaption></figure>
 
 * Create a manifest.json (specifying your app name, description, paths and so on) and general entry point (e.g main.js) specifying the window/launch settings for the application. Make sure to point the app at the same index.html file used for the FFOS app and that your app icon locations are also referenced as necessary. You can then just debug the extension from about:extensions
 
-<figure class="image-full">(image: Screen Shot 2013-05-25 at 22.55.11.png)<figcaption>&hearts;</ficaption></figure>
+<figure class="image-rightish">(image: Screen Shot 2013-05-25 at 23.54.30.png)<figcaption>Usage of an "extra" API</ficaption></figure>
 
 * Check that any 'extra' APIs being used didn't require different syntax in Chrome as they did in Firefox OS. If these APIs weren't present, ensure nothing in your codebase is going to throw errors as a result which will stop your app from working. Remember, these extra APIs are something I consider to be sugar to the web app, not something core to it being able to function
 
-<figure class="image-full">(image: Screen Shot 2013-05-25 at 23.54.30.png)<figcaption>&hearts;</ficaption></figure>
-
-* Installing FFOS apps from any domain rather than just the app store is a great step forward, but this is something the Chrome Web Store also supports in the form of inline installation https://developers.google.com/chrome/web-store/docs/inline_installation. Setup chrome.webstore.install() and your users will be able to inline install the same way you can with FFOS.
+* Installing FFOS apps from any domain rather than just the app store is a great step forward, but this is something the Chrome Web Store also supports in the form of (link: https://developers.google.com/chrome/web-store/docs/inline_installation text: inline installation). Setup `chrome.webstore.install()` and your users will be able to inline install the same way you can with FFOS.
 
 
-<figure class="image-full">(image: Screen Shot 2013-05-25 at 23.30.27.png)<figcaption>&hearts;</ficaption></figure>
+<figure class="image-full">(image: Screen Shot 2013-05-25 at 23.30.27.png)<figcaption>TimerX3 inline-installed in Chrome</ficaption></figure>
 
 Once this looks good, you can add your Chrome app as a second/third build target to your Gruntfile and just specify those additional files (e.g manifest.json etc) you want to build into their own target. This way you end up with three builds - one for your standard webapp, one for your Firefox OS app and another for your Chrome app all of which can be offered up to your users via the web or dedicated app stores. For those interested, I'm including screenshots of the TimerX3 app working across all of the build targets I was hacking away at.
 
