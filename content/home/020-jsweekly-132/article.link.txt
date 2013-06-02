@@ -1,0 +1,22 @@
+Title: JavaScript Weekly Issue 132
+
+----
+
+Link: http://javascriptweekly.com/archive/132.html
+
+----
+
+Date: 2013-06-02
+
+----
+
+Author: kahlil-lechelt
+
+----
+
+Text:
+
+Wow this issue of JavaScript Weekly was packed to the brim with JS goodness once again!
+Some stars among this great assortment of links are (link: http://www.youtube.com/watch?v=bqfoYaKCYUI text: Paul Irish's talk on FluentConf), (link: http://www.youtube.com/watch?v=qrf9ONmtXbM text: Brendan Eich's talk at FluentConf) a talk on (link: http://www.youtube.com/watch?v=m3svKOdZijA text: using Underscore productively by Brian Lonsdorf), an article (link: https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/ text: on how to optimize your JavaScript for Firefox OS) and (link: http://tech.pro/tutorial/1336/phonegap-and-angularjs-the-start text: an article on how to get started with AngularJS and PhoneGap).
+
+
