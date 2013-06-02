@@ -1,12 +1,10 @@
 Name: Kahlil Lechelt
 ----
-Link: http://distilledhype.com
-----
-AboutUrl: http://kahlil.co
+Link: http://kahlil.co
 ----
 Twitter: distilledhype
 ----
 Email: hello@kahlil.co
 ----
 Info:
-Kahlil is a JavaScript Developer residing in Stuttgart. He also is a co-host on the German podcast [Working Draft](http://workingdraft.de) and has a [website](http://distilledhype.com/) that distills the hype.
+Kahlil is a JavaScript Developer residing in Stuttgart. He is the co-founder of The Nitty Gritty, executive producer on the (link: http://agentlexie.com text: Agent Lexie project), a rare co-host on the [Working Draft podcast](http://workingdraft.de) and has a [website](http://distilledhype.com/).
