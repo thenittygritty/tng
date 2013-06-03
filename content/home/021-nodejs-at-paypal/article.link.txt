@@ -1,0 +1,11 @@
+Title: Releasing The Kraken
+----
+Link: http://www.youtube.com/watch?v=tZWGb0HU2QM
+----
+Date: 2013-06-03
+----
+Author: kahlil-lechelt
+----
+Text:
+
+A very interesting 15 min talk on how they started using Node.js, NPM and Bower at Paypal.
