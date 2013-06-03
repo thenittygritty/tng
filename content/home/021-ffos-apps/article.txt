@@ -117,11 +117,7 @@ Once this looks good, you can add your Chrome app as a second/third build target
 
 <figure class="image-full">(image: apps.jpg)<figcaption>TimerX3 working across all of the build targets</ficaption></figure>
 
-<<<<<<< HEAD:content/home/021-ffos-apps/article.txt
 ## Conclusion
-=======
-<figure class="image-rightish-small">(image: Photo 2013-05-26 02.47.36 PM.jpg)</figure>
->>>>>>> 6f9f3f210df02ed88a6ea2928230375150c75592:content/home/019-ffos-apps/article.txt
 
 I'll post the code to GitHub at some point once I get a chance to clean it up, but all in all I enjoyed my experience building both an app that worked on Firefox OS and extending another to work everywhere.
 
