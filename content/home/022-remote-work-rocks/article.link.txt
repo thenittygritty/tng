@@ -8,6 +8,6 @@ Author: kahlil-lechelt
 ----
 Text:
 
-Mike Hostetler, founder of appendto() talks about how to learn to do remote working in a company. &hearts;
+(twitter: mikehostetler text: Mike Hostetler), founder of appendto() talks about how to learn to do remote working in a company. &hearts;
 
 
