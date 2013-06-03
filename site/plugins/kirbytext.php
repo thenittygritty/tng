@@ -26,7 +26,7 @@ class kirbytextExtended extends kirbytext {
     // merge the given parameters with the default values
     $options = array_merge($defaults, $params);
 
-    $tag = '<figure class="' . $options['position'] . '">' . $image . '<figcaption>' . kirbytext($options['caption']) . '</ficaption></figure>';
+    $tag = '<figure class="' . $options['position'] . '">' . $image . '<figcaption>' . $options['caption'] . '</ficaption></figure>';
 
     // build the link tag
     return $tag;
