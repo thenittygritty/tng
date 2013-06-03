@@ -117,11 +117,11 @@ Once this looks good, you can add your Chrome app as a second/third build target
 
 <figure class="image-full">(image: apps.jpg)<figcaption>TimerX3 working across all of the build targets</ficaption></figure>
 
+<figure class="image-rightish-small">(image: Photo 2013-05-26 02.47.36 PM.jpg)</figure>
+
 ## Conclusion
 
 I'll post the code to GitHub at some point once I get a chance to clean it up, but all in all I enjoyed my experience building both an app that worked on Firefox OS and extending another to work everywhere.
-
-## Conclusion
 
 Right now the biggest thing I think the FFOS ecosystem needs is improved documentation. The getting started experience is fantastic, but beyond that an increase in tutorials walking developers through creating apps of different complexity would be welcome.
 
