@@ -15,7 +15,7 @@ class kirbytextExtended extends kirbytext {
 
   function tngimg($params) {
 
-  	$image = $this->image(Array('image' => $params['tngimg']));
+  	$image = $this->image(Array('image' => $params['tngimg'], 'alt' => $params['alt']));
 
     // define default values for attributes
     $defaults = array(
