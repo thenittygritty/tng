@@ -38,7 +38,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
 				<?php endif ?>
 			<?php endif ?>
 
-			<content:encoded><![CDATA[<?php echo markdown($item->text()); ?>]]></content:encoded>
+			<content:encoded><![CDATA[<?php echo kirbytext($item->text()); ?>]]></content:encoded>
 
 		</item>
 		<?php endforeach ?>
