@@ -1,0 +1,17 @@
+Title: DailyJS AngularJS Tutorial
+----
+Link: http://dailyjs.com/2013/04/11/angularjs-1/
+----
+Date: 2013-06-04
+----
+Author: kahlil-lechelt
+----
+Text:
+
+(twitter: alexyoung text: @alexyoung):
+
+> Most of what I’m going to talk about here has been packaged up into Yeoman, which has some Google employees behind it (Paul Irish, Addy Osmani) and includes technology from Twitter (Bower). The rest of this post will break down the emerging next generation Google/Twitter open source stack.
+
+Another great series by Alex Young.
+
+
