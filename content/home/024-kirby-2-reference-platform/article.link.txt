@@ -1,6 +1,6 @@
-Title:
+Title: Kirby 2 Reference Platform
 ----
-Link:
+Link: http://getkirby.com/blog/kirby-reference-platform
 ----
 Date: 2013-06-05
 ----
@@ -10,4 +10,4 @@ Text:
 
 > I wrote a library, which extracts all kinds of documentation from the actual source code of Kirby 2 and builds the content structure and all the text files out of it. This makes it possible to write the documentation only once – in the source – and update the platform for every new release with just a click.
 
-Ah, yeah.
+Ah, very cool.
