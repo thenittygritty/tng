@@ -69,6 +69,25 @@ module.exports = function (grunt) {
 				],
 				tasks: 'jshint'
 			}
+		},
+
+		textfile: {
+			options: {
+				dest: 'content/home',
+				templateDir: 'site/templates/'
+			},
+			linkpost: {
+				options: {
+					template: 'article.link.tpl',
+					urlFormat: 'PREFIX-SLUG/article.link.txt'
+				}
+			},
+			article: {
+				options: {
+					template: 'article.tpl',
+					urlFormat: 'PREFIX-SLUG/article.txt'
+				}
+			}
 		}
 	});
 
@@ -78,6 +97,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-textfile');
 
 
 	// A task for development
