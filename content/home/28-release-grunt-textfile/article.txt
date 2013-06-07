@@ -14,7 +14,7 @@ Comments: on
 ----
 Text:
 
-**If you are using a text file based blogging software like (link: http://jekyllrb.com text: Jekyll), (link: http://getkirby.com text: Kirby) or (link: http://middlemanapp.com text: Middleman) you probably were annoyed at some point in time to manually create your text file with the correctly formatted file and/or folder name including post-specific meta data.**
+**If you are using a text file based blogging software like (link: http://jekyllrb.com text: Jekyll), (link: http://getkirby.com text: Kirby) or (link: http://middlemanapp.com text: Middleman) you probably were annoyed at some point to manually have to create your text file with correctly formatted file and/or folder name including post-specific meta data.**
 
 I surely did, especially in the case of link blogging since you tend to post multiple links in a short amount of time and because these posts are really short you don't want to spend a lot of time on them.
 
@@ -22,7 +22,7 @@ We use Kirby for TNG and in order to create a new link post we have to create a 
 
 ## Enter grunt-textfile!
 
-I am happy to announce the release of grunt-textfile today. If you use Grunt in your project anyway it is very easy to add and configure for your specific text file based blogging needs.
+I am happy to announce the release of (link: http://github.com/kahlil/grunt-textfile text: grunt-textfile) today. If you use (link: http://gruntjs.com text: Grunt) in your project anyway it is very easy to add and configure for your specific text file based content management needs.
 
 After you configured the plugin in the Gruntfile all you have to do is to call the task on the command line with the desired options i.e.:
 
@@ -40,9 +40,9 @@ Man, I &hearts; Grunt to death, yo.
 
 It is amazing how powerful and flexible it is. The documentation is really great now  and the API gives you a lot to work with. I specifically made use of the `grunt.template` and `grunt.option` methods.
 
-`grunt.template` takes care of processing the text file templates and since the grunt object is available within the template you can use the grunt API right there in the template. So you can do things like `grunt.template.today('yyyy-mm-dd')` or `grunt.option('link')` within the template. No extra parser to write.
+`grunt.template` takes care of processing the text file templates and since the grunt object is available within the template you can use the grunt API right there in the template. This means it allows you to insert things like `grunt.template.today('yyyy-mm-dd')` or `grunt.option('link')` into the template. No extra parser to write.
 
-To create the slugs for the URIs I am using (link: http://stringjs.com text: String.js). It is awesomely powerful, you should definitely check it out if you want to do some string manipulation.
+To create the slugs for the file or folder name, I am using (link: http://stringjs.com text: String.js). It is a very capable string manipulation library that's worth checking out.
 
 ## Conclusion
 
