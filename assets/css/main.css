@@ -1283,8 +1283,8 @@ html {
 .header-logo p {
   font-size: 9.6px;
   font-size: 0.6rem;
-  font-weight: 400;
-  font-family: Merriweather, sans-serif;
+  font-weight: 300;
+  font-family: "Merriweather", sans-serif;
 }
 @media screen and (min-width: 38em) {
   .header-logo p {
