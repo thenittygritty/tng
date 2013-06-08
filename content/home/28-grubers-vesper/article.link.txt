@@ -10,6 +10,8 @@ Text:
 
 (twitter: gruber) launched his first iPhone app. John directed it, Dave Wiskus designed it and Brent Simmons implemented it. You can hear them talk about all the behind the scenes in the (link: http://www.imore.com/debug-15-simmons-wiskus-gruber-and-vesper text: Debug podcast).
 
+(tngimg: vesper.jpg caption: Vesper alt:Vesper)
+
 > Vesper is a simple and elegant tool for collecting your thoughts. I’ve been using it all day, every day for months now. I think you’ll like it.
 
-I love the app. The attention to detail is tremendous and the simplicity of the idea is striking. I think this is the first time I am using tags in a sane and useful way. Definitely listen to the podcast episode, the insights into the their thinking and the way they worked are great for anybody who wants to build something.
+I love the app. The design and the attention to detail is tremendous and the simplicity of the idea is striking. I think this is the first time I am using tags in a sane and useful way. Definitely listen to the (link: http://www.imore.com/debug-15-simmons-wiskus-gruber-and-vesper text: podcast episode), the insights into the their thinking and the way they worked are great for anybody who wants to build something.
