@@ -74,7 +74,8 @@ module.exports = function (grunt) {
 		textfile: {
 			options: {
 				dest: 'content/home',
-				templateDir: 'site/templates/'
+				templateDir: 'site/templates/',
+				openFile: 'true'
 			},
 			linkpost: {
 				options: {
