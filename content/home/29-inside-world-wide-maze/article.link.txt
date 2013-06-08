@@ -1,0 +1,13 @@
+Title: Inside World Wide Maze
+----
+Link: http://www.html5rocks.com/en/tutorials/casestudies/world_wide_maze/
+----
+Date: 2013-06-09
+----
+Author: kahlil-lechelt
+----
+Text:
+
+> The game features abundant use of HTML5 features. For example, the DeviceOrientation event retrieves tilt data from the smartphone, which is then sent to the PC via WebSocket, where players find their way through 3D spaces built by WebGL and Web Workers.
+
+Woah.
