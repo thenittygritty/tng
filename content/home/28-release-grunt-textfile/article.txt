@@ -44,7 +44,7 @@ It is amazing how powerful and flexible it is. The documentation is really great
 
 ### Using the Grunt.js API
 
-`grunt.template` takes care of processing the text file templates and since the grunt object is available within the template you can use the grunt API right there in the template. This means it allows you to insert things like `grunt.template.today('yyyy-mm-dd')` or `grunt.option('link')` into the template. No extra parser to write.
+`grunt.template` takes care of processing the text file templates and since the grunt object is available within the template you can use the grunt API right there. This means it allows you to insert things like `grunt.template.today('yyyy-mm-dd')` or `grunt.option('link')`. No extra parser to write.
 
 Once you set up the template like that you can do the following:
 
@@ -94,7 +94,7 @@ To replace the keywords in the file/folder name patterns, I am using (link: http
 
 ### Testing
 
-In order to test the plugin I am generating a test file and compare it with an expected file. I also move helper functions into `lib/textfile.js` and expose them via `exports`.
+In order to test the plugin I am (link: https://github.com/kahlil/grunt-textfile/blob/master/test/textfile_test.js#L57-L69 text: generating a test file and compare it with an expected file). I also move helper functions into `lib/textfile.js` and expose them via `exports`. These functions can then be (link: https://github.com/kahlil/grunt-textfile/blob/master/test/textfile_test.js#L31-L55 text: easily called and tested via nodeunit).
 
 ## Conclusion
 
