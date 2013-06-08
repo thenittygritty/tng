@@ -3,6 +3,17 @@
 // Show blog posts in decending order
 $articles = $page->children()->visible()->flip();
 
+function get_latest_article($articles) {
+	foreach ($articles as $article) {
+		if($article->template() == 'article') {
+			$latest_article = $article;
+			return $latest_article;
+		}
+	}
+}
+
+$latest_article = get_latest_article($articles);
+
 // Show posts of categories if requested
 if (param('category')):
 	$articles = $articles->filterBy('categories', urldecode(param('category')), ',')->paginate(5); ?>
@@ -11,7 +22,13 @@ if (param('category')):
 	// Show all articles
 	$articles = $articles->paginate(15);
 endif;
+?>
 
+<h1><?php echo html($latest_article->title()) ?></h1>
+<p><?php echo excerpt($latest_article->text(), 300) ?></p>
+<a href="<?php echo $latest_article->url() ?>">Read more…</a>
+
+<?php
 if ($articles && $articles->count()):
 	foreach ($articles as $article):
 		// Check if it is a link post
