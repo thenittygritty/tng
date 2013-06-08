@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					unixNewlines: true,
-					style: 'expanded'
+					style: 'expanded',
 				},
 				files: {
 					'assets/css/main.css': 'assets/scss/main.scss'
@@ -74,7 +74,8 @@ module.exports = function (grunt) {
 		textfile: {
 			options: {
 				dest: 'content/home',
-				templateDir: 'site/templates/'
+				templateDir: 'site/templates/',
+				openFile: true
 			},
 			linkpost: {
 				options: {
