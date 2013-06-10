@@ -4,11 +4,11 @@ Date: 2013-06-06
 ----
 Author: kahlil-lechelt
 ----
-Categories:
+Categories: gruntplugin, JavaScript, text file based blogging
 ----
-Description:
+Description: Kahlil releases grunt-textfile a grunt plugin to quickly create text files for text file based blogging purposes.
 ----
-Tags:
+Tags: gruntplugin, grunt-textfile, text file based blogging
 ----
 Comments: on
 ----
@@ -18,7 +18,7 @@ Text:
 
 (tngimg: grunt-textfile.jpg caption:grunt-textfile alt:grunt-textfile)
 
-I surely did, especially in the case of link blogging since you tend to post multiple links in a short amount of time and because these posts are really short you don't want to spend a lot of time on them.
+I surely am, especially in the case of link blogging since you tend to post multiple links in a short amount of time and these posts are really short you don't want to spend a lot of time on them.
 
 We use Kirby for TNG and in order to create a new link post we have to create a new folder which has a specific naming pattern and a text file that also has a specific name and contains some meta data. I love Kirby and managing my content in text files but, boy, that is tedious!
 
@@ -38,9 +38,9 @@ Let me know about any bugs or feedback in (link: http://github.com/kahlil/grunt-
 
 ## Writing grunt-textfile
 
-Man, I &hearts; Grunt to death, yo.
+Man, I &hearts; Grunt.js to death, yo.
 
-It is amazing how powerful and flexible it is. The documentation is really great now  and the API gives you a lot to work with. I specifically made use of the `grunt.template` and `grunt.option` methods.
+It is amazing how powerful and flexible it is. The documentation is really great now and the API gives you a lot to work with. I specifically made use of the `grunt.template` and `grunt.option` methods.
 
 ### Using the Grunt.js API
 
