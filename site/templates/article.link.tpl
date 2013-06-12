@@ -1,6 +1,6 @@
-Title: <%= grunt.option('title') %>
+Title: <%= grunt.option('t') %>
 ----
-Link: <%= grunt.option('link') %>
+Link: <%= grunt.option('l') %>
 ----
 Date: <%= grunt.template.today('yyyy-mm-dd') %>
 ----
