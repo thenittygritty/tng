@@ -1,34 +1,38 @@
-window['w00t!'] = {
-	version: 1.3,
-	init: function() {
-		'use strict';
+javascript:(function(){
 
-		console.log('w00t! This shit is loaded and working!');
-		window['w00t!'].appendDiv();
-		window['w00t!'].getSelectionHtml();
+// Name your space
+var MyNamespace = 'w00t!';
 
-	},
-	appendDiv: function() {
-		'use strict';
+// avoid the bookmarklet activating more than once
+if ( window[ MyNamespace ] ) {
+    // You can access the namespace here
+    // allowing the bookmark to be used multiple times on one page if needed
+    // https://twitter.com/dbushell/status/260375185289535488
+    window[ MyNamespace ].init();
 
-		var div     = document.createElement("div");
-		var content = document.createTextNode("Hi there and greetings!");
+    return;
+}
+window[ MyNamespace ] = {};
 
-		div.style.position        = 'absolute';
-		div.style.top             = 0;
-		div.style.right           = 0;
-		div.style.backgroundColor = 'white';
+var version = 1.3;
+var script  = document.createElement( 'script' );
 
-		div.appendChild(content); // add the text node to the newly created div.
+script.setAttribute( 'type', 'text/javascript' );
+script.setAttribute( 'charset', 'UTF-8' );
+script.setAttribute( 'src', '//tng.local/assets/js/linkpost.js?r=' + Math.random() );
+document.documentElement.appendChild( script );
 
-		// add the newly created element and its content into the DOM
-		document.body.insertBefore(div);
-	},
-	getSelectionHtml: function() {
-		'use strict';
+script.onload = script.onreadystatechange = function() {
+    var rs = script.readyState;
+    if ( !rs || rs === 'loaded' || rs === 'complete' ) {
+        script.onload = script.onreadystatechange = null;
 
-	    var selection = window.getSelection();
-        var txt = selection.toString();
-        alert(txt);
-	}
+        // initialise or warn if older version
+        if ( version !== window[ MyNamespace ].version ) {
+            alert( 'This bookmarklet is out of date!' );
+        } else {
+            window[ MyNamespace ].init();
+        }
+    }
 };
+}());

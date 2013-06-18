@@ -8,28 +8,23 @@ function linkpost() {
   $title  = get('title');
   $author = get('author');
   $text   = get('text');
-
-  $path = 'content/home/';
-
-  $files   = dir::read($path);
-  $dirInfo = dir::inspect($path);
-  $newDir  = $path . count($files) . '-' . str::urlify($title);
-  $create  = dir::make($newDir);
+  $path   = 'content/home/';
+  $files  = dir::read($path);
+  $newDir = $path . count($files) . '-' . str::urlify($title);
+  $create = dir::make($newDir);
 
   if ( $create ) {
-  	  $newFile = $newDir . '/article.link.txt';
+	  $newFile = $newDir . '/article.link.txt';
 
-  	  $template = "Title: $title\n----\nLink: $link\n----\nDate: "
-  	  						. date('Y-m-d') . "\n----\nAuthor: $author\n----\nText: kirbytext($text)";
+	  $template = "Title: $title\n----\nLink: $link\n----\nDate: "
+	  						. date('Y-m-d') . "\n----\nAuthor: $author\n----\nText: kirbytext($text)";
 
-  	  f::write($newFile, $template);
+	  f::write($newFile, $template);
 
-  	  echo 'OK';
-  	  exit;
+	  return 'Ok <3';
   }
   else {
-  	echo 'Error';
-  	exit;
+  	return 'Error!';
   }
 
 }
