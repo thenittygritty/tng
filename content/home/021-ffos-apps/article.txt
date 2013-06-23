@@ -67,6 +67,26 @@ If you don't want to use the boilerplate or Yeoman to create your app, you can g
 6. You should be able to see the app you created
 7. Once your app is finished, just upload it to a server (or GitHub pages) and share the link
 
+Here is a pretty straightforward example `manifest.webapp` file for the app:
+
+<span class="language-javascript"></span>
+
+	{
+		"version": "1.0.0",
+		"name": "GitHub Issues Viewer",
+		"launch_path": "/GitHub-Issues-Viewer/index.html",
+		"description": "A GitHub Issues Viewer for Firefox OS",
+		"icons": {
+			"128": "/GitHub-Issues-Viewer/img/icon-128.png"
+		},
+		"developer": {
+			"name": "Addy Osmani",
+			"url": "http://addyosmani.com/"
+		},
+		"installs_allowed_from": ["*"],
+		"default_locale": "en"
+	}
+
 Not everyone agrees with me, but I look at Firefox OS and Chrome OS as enhanced build targets. My personal approach with them is to build a web app so that it can work fine in any browser and then progressively enhance it using feature detection for the enhanced APIs you'd like to take advantage of. This is sometimes easier said than done, but does mean that you treat these platforms as build targets and don't have to treat them as entirely different apps. If you're using Grunt for your task/build process, just setup your FFOS app as a second build target and include your manifest files/additional scripts. grunt-env and grunt-preprocess (link: http://stackoverflow.com/a/14970339 text: can be useful here). QuickOffice (part of the Google Docs team) do something similar for their Chrome app, which also gets deployed as a PhoneGap app for other platforms.
 
 ## Debugging in Firefox OS
@@ -109,6 +129,18 @@ TimerX3 let's you install from the web if it's supported (FFOS only), uses Firef
 <figure class="image-rightish">(image: Screen Shot 2013-05-25 at 23.54.30.png)<figcaption>Usage of an "extra" API</ficaption></figure>
 * Check that any 'extra' APIs being used didn't require different syntax in Chrome as they did in Firefox OS. If these APIs weren't present, ensure nothing in your codebase is going to throw errors as a result which will stop your app from working. Remember, these extra APIs are something I consider to be sugar to the web app, not something core to it being able to function
 * Installing FFOS apps from any domain rather than just the app store is a great step forward, but this is something the Chrome Web Store also supports in the form of (link: https://developers.google.com/chrome/web-store/docs/inline_installation text: inline installation). Setup `chrome.webstore.install()` and your users will be able to inline install the same way you can with FFOS.
+
+You can easily check if APIs are actually supported by one browser only. For example with the Vibration API it could look something like this:
+
+<span class="language-javascript"></span>
+
+	// Use native API or fallback for unsupported browsers
+	navigator.vibrate = navigator.vibrate || navigator.mozVibrate || function (vibrate) {
+		console.log('vibrate not supported', vibrate);
+	};
+
+	// Call the Vigration API
+	navigator.vibrate([200, 100, 200, 100]);
 
 
 <figure class="image-full">(image: Screen Shot 2013-05-25 at 23.30.27.png)<figcaption>TimerX3 inline-installed in Chrome</ficaption></figure>
