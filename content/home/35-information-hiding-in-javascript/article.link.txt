@@ -1,0 +1,19 @@
+Title: Information Hiding in JavaScript
+----
+Link: http://weblog.bocoup.com/info-hiding-in-js/
+----
+Date: 2013-06-24
+----
+Author: hans-christian-reinl
+----
+Text:
+
+[Mike Pennisi](http://weblog.bocoup.com/author/mike-pennisi/):
+
+> In terms of programming, “information hiding” refers to the practice of concealing implementation details that are unfit for the consumers of the code.
+
+Mike talks about different ways for information hiding.
+
+> Like with most things JavaScript, web developers have a variety of options when it comes to hiding implementation details. Here, I’d like to talk about five distinct approaches: informal naming, per-instance closures, per-class closures, obscurity, and symbols.
+
+This article offers a great overview of different methods of information hiding in JavaScript looking at best practices that are around and helping to decide which design pattern to use.
