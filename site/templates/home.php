@@ -24,9 +24,21 @@ if (param('category')):
 endif;
 ?>
 
-<h1><?php echo html($latest_article->title()) ?></h1>
-<p><?php echo excerpt($latest_article->text(), 300) ?></p>
-<a href="<?php echo $latest_article->url() ?>">Read more…</a>
+<article class="article-featured">
+	<header class="article-header">
+		<h1>
+			<a href="<?php echo $latest_article->url(); ?>">
+				<?php echo html($latest_article->title()) ?>
+			</a>
+		</h1>
+	</header>
+	<?php echo substr(kirbytext($latest_article->text()), 0, strrpos(substr(kirbytext($latest_article->text()), 0, 800), '</p>')); ?>
+	<p><a href="<?php echo $latest_article->url() ?>">Read more…</a></p>
+</article>
+
+
+
+
 
 <?php
 if ($articles && $articles->count()):
