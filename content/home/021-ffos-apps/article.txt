@@ -1,0 +1,160 @@
+Title: Building Apps For Firefox OS, Web and Chrome OS
+----
+Date: 2013-06-03
+----
+Author: addy-osmani
+----
+Categories: Firefox OS, mobile, apps
+----
+Description: Addy Osmani discribes his first experience building apps for Firefox OS.
+----
+Tags: firefox os, apps, web technology, mobile, phones
+----
+Comments: on
+----
+Text:
+
+**I was speaking at (link: http://webrebels.org/ text: Web Rebels) two weeks ago, where the Firefox OS team were kind enough to give me a new Geekphone Peak device, so I dove right into building some apps for it. Obligatory unboxing pics below!**
+
+<figure class="image-full">(image: unboxing.jpg alt: FFOS unboxing)<figcaption>Firefox OS unboxing</ficaption></figure>
+
+<figure class="image-rightish">(image: ffox_r1_c1.jpg)<figcaption>Authenticate yourself via Github</ficaption></figure>
+
+<figure class="image-rightish">(image: ffox_r2_c1.jpg)<figcaption>Repositories overview and repo editing</ficaption></figure>
+
+<!--<figure class="image-rightish">(image: ffox_r3_c1.jpg)<figcaption>Github Issue comments in portrait and landscape view</ficaption></figure>-->
+
+
+My first idea for a Firefox OS app was a simple (link: https://github.com/addyosmani/github-client text: AngularJS Github issues viewer) (based on (link: https://github.com/da-ff/ng-github-client text: ng-github-client)) with views for authentication, a dashboard and info editing amongst others. This is a simple enough app, but as it handles authentication and relies on a real data source I figured it might be a more realistic base than a todo app ;)
+
+Firefox OS exposes some additional APIs on devices, so I thought it might be interesting to try adding support for the Vibration API, Web Activities and Web Notifications. These would let me share (activities), alert on error (device vibrate, alarm) and inform me when a connection was no longer available (notifications).
+
+At this point I must say &ndash; setting up much of this was massively simplified thanks to the great work Robert Nyman has done on the (link: https://github.com/robnyman/Firefox-OS-Boilerplate-App text: Firefox OS boilerplate).
+
+<figure class="image-rightish">(image: Untitled-3_r1_c1.jpg)<figcaption>The Firefox OS boilerplate comes with some great presets to make your life easier</ficaption></figure>
+
+Robert's boilerplate includes complete code snippets for many of the common tasks you might want to use such APIs for and would actually love to see us do something similar for a boilerplate for Chrome apps. It also includes boilerplate `manifest.webapp` files, and you may find (link: https://marketplace.firefox.com/developers/validator text: the online validator) for these useful if heavily modifying for your own needs.
+
+<figure class="image-rightish">(image: ffos-yo.jpg)<figcaption>Firefox OS + Yeoman = &hearts;</ficaption></figure>
+
+I kickstarted off my app using Yeoman and the (link: https://github.com/zenorocha/generator-firefox-os text: Firefox OS generator) which serves up Robert's boilerplate via the command-line.
+
+To get this setup install Yeoman:
+
+<span class="language-c"></span>
+
+	npm install -g yo
+
+Install this generator:
+
+<span class="language-c"></span>
+
+	npm install -g generator-firefox-os
+
+And run:
+
+<span class="language-c"></span>
+
+	yo firefox-os
+
+If you don't want to use the boilerplate or Yeoman to create your app, you can get started with a Firefox OS app in just a few steps:
+
+1. Create a new directory called `myapp`
+2. Create a new HTML file in this directory (e.g `index.html`)
+3. Tools &rarr; Web Developer &rarr; Responsive Design View in Firefox will let you preview the app using some mobile sizes
+4. Create a (link: https://developer.mozilla.org/en-US/docs/Apps/Manifest text: `manifest.webapp) file with some name, permissions details
+5. Tools &rarr; Web Developer &rarr; Firefox OS simulator (when installed), click "add directory" and then just select your `manifest.webapp`
+6. You should be able to see the app you created
+7. Once your app is finished, just upload it to a server (or GitHub pages) and share the link
+
+Here is a pretty straightforward example `manifest.webapp` file for the app:
+
+<span class="language-javascript"></span>
+
+	{
+		"version": "1.0.0",
+		"name": "GitHub Issues Viewer",
+		"launch_path": "/GitHub-Issues-Viewer/index.html",
+		"description": "A GitHub Issues Viewer for Firefox OS",
+		"icons": {
+			"128": "/GitHub-Issues-Viewer/img/icon-128.png"
+		},
+		"developer": {
+			"name": "Addy Osmani",
+			"url": "http://addyosmani.com/"
+		},
+		"installs_allowed_from": ["*"],
+		"default_locale": "en"
+	}
+
+Not everyone agrees with me, but I look at Firefox OS and Chrome OS as enhanced build targets. My personal approach with them is to build a web app so that it can work fine in any browser and then progressively enhance it using feature detection for the enhanced APIs you'd like to take advantage of. This is sometimes easier said than done, but does mean that you treat these platforms as build targets and don't have to treat them as entirely different apps. If you're using Grunt for your task/build process, just setup your FFOS app as a second build target and include your manifest files/additional scripts. grunt-env and grunt-preprocess (link: http://stackoverflow.com/a/14970339 text: can be useful here). QuickOffice (part of the Google Docs team) do something similar for their Chrome app, which also gets deployed as a PhoneGap app for other platforms.
+
+## Debugging in Firefox OS
+
+<figure class="image-full">(image: overview.jpg)<figcaption>Debugging in Firefox OS</ficaption></figure>
+
+Next, onto debugging. I installed the (link: https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/ text: Firefox OS simulator) which lets you preview what your app might look like on a device and also detects whether an FFOS device is connected so you can remotely debug using their developer tools. The simulator is extremely straight-forward to use, allowing you to preview apps hosted remotely/your own server or simply those being worked on on the local filesystem. You also have access to a detailed error console, for keeping an eye on general exceptions and errors about unsupported APIs.
+
+The "Push" to device button also made it a breeze to switch between the Geekphone and Simulator at any time.
+
+Note that (link: https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_Simulator text: Mozilla's documentation) is forward about the limitations of the simulator - for APIs that aren't available on desktop (vibration, telephony), you may find yourself having to throw/log your own debug errors. I personally also found that my app appeared visually different in the simulator than it did when I deployed to my Geekphone device. As a developer preview, I found the changes minimal enough to not be distruptive but I plan on investigating further/reporting bugs if it's not simply an issue with the boilerplate.
+
+Some other minor problems I ran into:
+
+* __OAuth:__ Pop-ups: eg. OAuth login windows to third-party services won't automatically launch within an FFOS app window, meaning you'll need to work around this if your users need to login using this type of setup.  
+**Workaround 1**: There is apparently a difference between how `window.open(…,'_blank')` and `window.open()` are (link: https://groups.google.com/forum/?fromgroups#!topic/mozilla.dev.b2g/IWFEZNpQuM0 text: handled in FFOS), so use the appropriate option.  
+**Workaround 2**: Web activities so that the link to authenticate is done inside the browser and then redirects you back to the app. I felt a code example demonstrating doing this would have saved me some time and recommend looking at the FFOS communications app source for an example of how to handle this for Facebook login. Please [see these files](https://github.com/mozilla-b2g/gaia/tree/master/apps/communications/contacts/oauth2/js).
+Alternatively, you can just use something like PHP to ease the OAuth process for you as was done in the GitHub-client app.
+<figure class="image-rightish-small">(image: Photo 2013-05-26 02.48.22 PM.jpg)<figcaption>Firefox OS debug options</ficaption></figure>
+* __Debugging:__ Part of me hoped that I could right-click &rarr; inspect element within the FFOS simulator to just start debugging my app that way, but going through Device Information &rarr; More Information &rarr; Developer it's possible to just enable remote debugging and "connect" to the debugger that way instead.
+* __Demo apps__: As the Geekphone for FFOS is still fairly new, the number of GitHub-hosted apps you can use for reference is currently small, but growing. For developers who aren't able to find answers to "how was X done" in Google groups or the Mozilla docs, do check out (link: https://github.com/mozilla-b2g/gaia/tree/master/apps text: this repository) where you can find the source to most of the apps installed by default on FFOS. I found this useful for those cases where I needed something more advanced than what was provided in the boilerplate.
+
+I was impressed that for performance profiling, Firefox OS makes paint flashing and an FPS counter just a few quick touches away, making it simple to debug and check where you might be experiencing issues.
+
+I did find myself having to go back to the Chrome DevTools for more granular profiling needs but flipping between browsers and tools didn't really slow me down that much. For the process of actually deploying an app, (link: http://chrislord.net/index.php/2013/05/04/writing-and-deploying-a-small-firefox-os-application/ text: Chris Lord's writing/deployment guide) was helpful as was (link: https://thelab.o2.com/2013/05/my-experience-with-firefox-os/ text: this blog post).
+
+Great, so building a simple application that works on Firefox OS based on the boilerplate isn't massively difficult and as with any platform just takes a little time to get used to. I actually really enjoyed writing IssueHub. Some more screenshots of it can be found below.
+
+## Building Apps For Multiple Browsers
+
+The next thing I wanted to set out to do was see if I could build an app that worked everywhere, so in any modern browser but *also* as a Chrome app and Firefox OS app. For this, I used the already well-developed (link: https://github.com/alefteris/timerx3 text: TimerX3 web app), which was built using Yeoman, Grunt and Bower:
+
+<figure class="image-full">(image: timerapp.jpg)<figcaption>The TimerX3 app</ficaption></figure>
+
+TimerX3 let's you install from the web if it's supported (FFOS only), uses Firefox OS-specific APIs but also works fine in other browsers with a slightly degraded experience (no vibration etc). Adjusting the codebase for this app so that I could get some of the same enhanced features available to FFOS users (e.g notifications) involved a few steps:
+
+<figure class="image-rightish">(image: Screen Shot 2013-05-25 at 22.55.11.png)<figcaption>about:extensions</ficaption></figure>
+
+* Create a `manifest.json` (specifying your app name, description, paths and so on) and general entry point (e.g `main.js`) specifying the window/launch settings for the application. Make sure to point the app at the same `index.html` file used for the FFOS app and that your app icon locations are also referenced as necessary. You can then just debug the extension from about:extensions
+<figure class="image-rightish">(image: Screen Shot 2013-05-25 at 23.54.30.png)<figcaption>Usage of an "extra" API</ficaption></figure>
+* Check that any 'extra' APIs being used didn't require different syntax in Chrome as they did in Firefox OS. If these APIs weren't present, ensure nothing in your codebase is going to throw errors as a result which will stop your app from working. Remember, these extra APIs are something I consider to be sugar to the web app, not something core to it being able to function
+* Installing FFOS apps from any domain rather than just the app store is a great step forward, but this is something the Chrome Web Store also supports in the form of (link: https://developers.google.com/chrome/web-store/docs/inline_installation text: inline installation). Setup `chrome.webstore.install()` and your users will be able to inline install the same way you can with FFOS.
+
+You can easily check if APIs are actually supported by one browser only. For example with the Vibration API it could look something like this:
+
+<span class="language-javascript"></span>
+
+	// Use native API or fallback for unsupported browsers
+	navigator.vibrate = navigator.vibrate || navigator.mozVibrate || function (vibrate) {
+		console.log('vibrate not supported', vibrate);
+	};
+
+	// Call the Vigration API
+	navigator.vibrate([200, 100, 200, 100]);
+
+
+<figure class="image-full">(image: Screen Shot 2013-05-25 at 23.30.27.png)<figcaption>TimerX3 inline-installed in Chrome</ficaption></figure>
+
+Once this looks good, you can add your Chrome app as a second/third build target to your Gruntfile and just specify those additional files (e.g `manifest.json` etc) you want to build into their own target. This way you end up with three builds – one for your standard webapp, one for your Firefox OS app and another for your Chrome app all of which can be offered up to your users via the web or dedicated app stores. For those interested, I'm including screenshots of the TimerX3 app working across all of the build targets I was hacking away at.
+
+<figure class="image-full">(image: apps.jpg)<figcaption>TimerX3 working across all of the build targets</ficaption></figure>
+
+<figure class="image-rightish-small">(image: Photo 2013-05-26 02.47.36 PM.jpg)</figure>
+
+## Conclusion
+
+I'll post the code to GitHub at some point once I get a chance to clean it up, but all in all I enjoyed my experience building both an app that worked on Firefox OS and extending another to work everywhere.
+
+Right now the biggest thing I think the FFOS ecosystem needs is improved documentation. The getting started experience is fantastic, but beyond that an increase in tutorials walking developers through creating apps of different complexity would be welcome.
+
+I know a few developers have asked me if the Simulator on it's own is "enough" for creating a fully-functional app - my honest answer is that for most enhanced APIs, you can get really far with it. Test out the boilerplate by Robert if you need proof of that.  If you're intending on deploying an app that uses features the simulator can't handle however, I recommend mocking them during development and then trying to get a loaner device from a local device lab if one is available.
