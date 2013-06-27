@@ -1,6 +1,6 @@
-Title: Building Apps For Firefox OS, Web and Chrome OS
+Title: Building Apps For Firefox OS, Chrome OS And The Web
 ----
-Date: 2013-06-03
+Date: 2013-06-26
 ----
 Author: addy-osmani
 ----

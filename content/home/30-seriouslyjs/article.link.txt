@@ -1,0 +1,13 @@
+Title: Seriously.js
+----
+Link: http://seriouslyjs.org/
+----
+Date: 2013-06-09
+----
+Author: kahlil-lechelt
+----
+Text:
+
+> Seriously.js is a real-time, node-based video compositor for the web. Inspired by professional software such as After Effects and Nuke, Seriously.js renders high-quality video effects, but allows them to be dynamic and interactive.
+
+Mozilla showing off some crazy stuff here.

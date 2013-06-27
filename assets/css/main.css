@@ -1021,8 +1021,10 @@ h4 {
 
 q,
 blockquote {
-  font-family: Georgia, serif;
   font-style: italic;
+  margin-left: 0;
+  padding-left: 1.3em;
+  border-left: 4px solid #f1efea;
 }
 
 code,
@@ -1061,13 +1063,13 @@ button,
 input,
 select,
 textarea {
-  color: #4a525c;
+  color: #333940;
   direction: ltr;
 }
 
 body {
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -1281,8 +1283,8 @@ html {
 .header-logo p {
   font-size: 9.6px;
   font-size: 0.6rem;
-  font-weight: 400;
-  font-family: Merriweather, sans-serif;
+  font-weight: 300;
+  font-family: "Merriweather", sans-serif;
 }
 @media screen and (min-width: 38em) {
   .header-logo p {

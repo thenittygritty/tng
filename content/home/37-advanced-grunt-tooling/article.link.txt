@@ -1,0 +1,17 @@
+Title: Advanced Grunt tooling
+----
+Link: http://chrisawren.com/posts/Advanced-Grunt-tooling
+----
+Date: 2013-06-24
+----
+Author: hans-christian-reinl
+----
+Text:
+
+> Grunt has made web development more enjoyable. By automating repetitive tasks, it has allowed web developers to focus on building features rather than copying, compiling, and configuring.
+
+But there is more to it that you might not know yet, says [Chris Wren](http://chrisawren.com/) and gives a lot of examples on how to imporve your workflow.
+
+> […] two bash functions […] will allow you to quickly install grunt plugins
+
+and more like useful Grunt plugins, how to write clean watch tasks and so much more.

@@ -1,0 +1,15 @@
+Title: Discussion On Mobile First Yeoman Generator
+----
+Link: https://github.com/yeoman/yeoman/issues/1077
+----
+Date: 2013-06-09
+----
+Author: kahlil-lechelt
+----
+Text:
+
+(twitter: addyosmani):
+
+> We want to create a mobile-first scaffolding solution for Yeoman that helps web app developers quickly kickstart projects with sane defaults.
+
+Chime in!

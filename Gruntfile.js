@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					unixNewlines: true,
-					style: 'expanded'
+					style: 'expanded',
 				},
 				files: {
 					'assets/css/main.css': 'assets/scss/main.scss'
@@ -69,6 +69,26 @@ module.exports = function (grunt) {
 				],
 				tasks: 'jshint'
 			}
+		},
+
+		textfile: {
+			options: {
+				dest: 'content/home',
+				templateDir: 'site/templates',
+				openFile: true
+			},
+			linkpost: {
+				options: {
+					template: 'article.link.tpl',
+					urlFormat: 'PREFIX-SLUG/article.link.txt'
+				}
+			},
+			article: {
+				options: {
+					template: 'article.tpl',
+					urlFormat: 'PREFIX-SLUG/article.txt'
+				}
+			}
 		}
 	});
 
@@ -78,6 +98,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-textfile');
 
 
 	// A task for development

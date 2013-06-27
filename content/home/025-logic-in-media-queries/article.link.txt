@@ -1,0 +1,15 @@
+Title: Logic in Media Queries
+----
+Link: http://css-tricks.com/logic-in-media-queries/
+----
+Date: 2013-06-05
+----
+Author: hans-christian-reinl
+----
+Text:
+
+(twitter: chriscoyier) on Mobile First:
+
+> Your small screen styles are in your regular screen CSS and then as the screen gets larger you override what you need to. So, min-width media queries in general.
+
+Chris Coyier wrote up a nice collection of logical operators in Media Queries including `and`, `or`, `not` and a lot of other useful tips.

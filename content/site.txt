@@ -8,4 +8,4 @@ Keywords: The Nitty Gritty, TNG, HTML, CSS, JavaScript, HTML5, CSS3, JS, web tec
 ----
 FooterNote: Made with [Kirby](http://getkirby.com) and &#x2665;.
 ----
-Copyright: Copyright 2012, The Nitty Gritty
+Copyright: Copyright 2012 - 2013, The Nitty Gritty

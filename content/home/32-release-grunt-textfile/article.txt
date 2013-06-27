@@ -1,0 +1,102 @@
+Title: Release: grunt-textfile
+----
+Date: 2013-06-06
+----
+Author: kahlil-lechelt
+----
+Categories: gruntplugin, JavaScript, text file based blogging
+----
+Description: Kahlil releases grunt-textfile a grunt plugin to quickly create text files for text file based blogging purposes.
+----
+Tags: gruntplugin, grunt-textfile, text file based blogging
+----
+Comments: on
+----
+Text:
+
+**If you are using a text file based blogging software like (link: http://jekyllrb.com text: Jekyll), (link: http://getkirby.com text: Kirby) or (link: http://middlemanapp.com text: Middleman) you probably were annoyed at some point to manually have to create your text file with correctly formatted file and/or folder name including post-specific meta data.**
+
+(tngimg: grunt-textfile.jpg caption:grunt-textfile alt:grunt-textfile)
+
+I surely am, especially in the case of link blogging since you tend to post multiple links in a short amount of time and these posts are really short you don't want to spend a lot of time on them.
+
+We use Kirby for TNG and in order to create a new link post we have to create a new folder which has a specific naming pattern and a text file that also has a specific name and contains some meta data. I love Kirby and managing my content in text files but, boy, that is tedious!
+
+## Enter grunt-textfile!
+
+I am happy to announce the release of (link: http://github.com/kahlil/grunt-textfile text: grunt-textfile) today. If you use (link: http://gruntjs.com text: Grunt) in your project anyway it is very easy to add and configure for your specific text file based content management needs.
+
+After you configured the plugin in the Gruntfile all you have to do is to call the task on the command line with the desired options i.e.:
+
+<span class="language-bash"></span>
+
+	grunt textfile --title="grunt-textfile Is Where It's At!"
+
+Head over to (link: http://github.com/kahlil/grunt-textfile text: the repo) and check it out.
+
+Let me know about any bugs or feedback in (link: http://github.com/kahlil/grunt-textfile text: the issues). Pull requests are always welcome if you want to add some functionality!
+
+## Writing grunt-textfile
+
+Man, I &hearts; Grunt.js to death, yo.
+
+It is amazing how powerful and flexible it is. The documentation is really great now and the API gives you a lot to work with. I specifically made use of the `grunt.template` and `grunt.option` methods.
+
+### Using the Grunt.js API
+
+`grunt.template` takes care of processing the text file templates and since the grunt object is available within the template you can use the grunt API right there. This means it allows you to insert things like `grunt.template.today('yyyy-mm-dd')` or `grunt.option('link')`. No extra parser to write.
+
+Once you set up the template like that you can do the following:
+
+<span class="language-javascript"></span>
+
+	// Check if the file exists.
+	if (!grunt.file.exists(filePath)) {
+	  // Warn the user if the file doesn't exist.
+	  grunt.log.warn('Template file "' + filePath + '" not found.');
+	  return false;
+	} else {
+	  // Read the file.
+	  template = grunt.file.read(filePath);
+	}
+
+	// Process the template and normalize the line feeds.
+	result = grunt.util.normalizelf(grunt.template.process(template));
+
+After that I just concatenate the path for the resulting file and write it to that location with `grunt.file.write(fullPath, result)`.
+
+### Using String.js
+
+To replace the keywords in the file/folder name patterns, I am using (link: http://stringjs.com text: String.js). It is a very capable string manipulation library that works like jQuery:
+
+<span class="language-javascript"></span>
+
+	// Cache the String.js object.
+	sFilename = S(options.urlFormat);
+	// Check for the keywords with .contains().
+	if(sFilename.contains('PREFIX')) {
+	  // For Kirby blogs: count the directories in target dir and iterate the prefix.
+	  dirs      = grunt.file.expand({filter: 'isDirectory'}, options.dest + '/*');
+	  // Replace the keyword with the correct prefix.
+	  sFilename = sFilename.replaceAll('PREFIX', dirs.length + 1);
+	}
+	if(sFilename.contains('SLUG')) {
+	  // Replace keyword with the slug. Use slugify() method.
+	  sFilename = sFilename.replaceAll('SLUG', S(grunt.option('title')).slugify());
+	}
+	if(sFilename.contains('DATE')) {
+	  // Replace keyword with date generated with grunt.template
+	  sFilename = sFilename.replaceAll('DATE', grunt.template.today(options.urlDateFormat));
+	}
+
+	// Return the actual string by returning the .s property of the String.js object
+	return sFilename.s
+
+### Testing
+
+In order to test the plugin I am (link: https://github.com/kahlil/grunt-textfile/blob/master/test/textfile_test.js#L57-L69 text: generating a test file and compare it with an expected file). I also move helper functions into `lib/textfile.js` and expose them via `exports`. These functions can then be (link: https://github.com/kahlil/grunt-textfile/blob/master/test/textfile_test.js#L31-L55 text: easily called and tested via nodeunit).
+
+## Conclusion
+
+If you manage your blog's content in text files I hope you give grunt-textfile a try. Let me know if you run in to any problems or miss any features.
+
