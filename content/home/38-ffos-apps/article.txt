@@ -102,10 +102,10 @@ Note that (link: https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_Simul
 
 Some other minor problems I ran into:
 
-* Reporting issues about Firefox OS was a process that I felt should be streamlined. It wasn't clear whether this should be done via the GitHub issue tracker or FFOS DevRel. Some work here would be greatly welcomed.
+* **Reporting issues about Firefox OS** was a process that I felt should be streamlined. It wasn't clear whether this should be done via the GitHub issue tracker or FFOS DevRel. Some work here would be greatly welcomed.
 * __OAuth:__ Pop-ups: eg. OAuth login windows to third-party services won't automatically launch within an FFOS app window, meaning you'll need to work around this if your users need to login using this type of setup.  
-**Workaround 1**: There is apparently a difference between how `window.open(…,'_blank')` and `window.open()` are (link: https://groups.google.com/forum/?fromgroups#!topic/mozilla.dev.b2g/IWFEZNpQuM0 text: handled in FFOS), so use the appropriate option.  
-**Workaround 2**: Web activities so that the link to authenticate is done inside the browser and then redirects you back to the app. I felt a code example demonstrating doing this would have saved me some time and recommend looking at the FFOS communications app source for an example of how to handle this for Facebook login. Please [see these files](https://github.com/mozilla-b2g/gaia/tree/master/apps/communications/contacts/oauth2/js).
+_Workaround 1_: There is apparently a difference between how `window.open(…,'_blank')` and `window.open()` are (link: https://groups.google.com/forum/?fromgroups#!topic/mozilla.dev.b2g/IWFEZNpQuM0 text: handled in FFOS), so use the appropriate option.  
+_Workaround 2_: Web activities so that the link to authenticate is done inside the browser and then redirects you back to the app. I felt a code example demonstrating doing this would have saved me some time and recommend looking at the FFOS communications app source for an example of how to handle this for Facebook login. Please [see these files](https://github.com/mozilla-b2g/gaia/tree/master/apps/communications/contacts/oauth2/js).
 Alternatively, you can just use something like PHP to ease the OAuth process for you as was done in the GitHub-client app.
 <figure class="image-rightish-small">(image: Photo 2013-05-26 02.48.22 PM.jpg)<figcaption>Firefox OS debug options</ficaption></figure>
 * __Debugging:__ Part of me hoped that I could right-click &rarr; inspect element within the FFOS simulator to just start debugging my app that way, but going through Device Information &rarr; More Information &rarr; Developer it's possible to just enable remote debugging and "connect" to the debugger that way instead.
