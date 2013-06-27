@@ -151,6 +151,11 @@ Once this looks good, you can add your Chrome app as a second/third build target
 
 <figure class="image-rightish-small">(image: Photo 2013-05-26 02.47.36 PM.jpg)</figure>
 
+## Multiple build targets with Grunt
+
+In order to set up your multiple build targets I would recommend reading (link: http://stackoverflow.com/a/14970339 text: this Stackoverflow answer) and using (link: https://github.com/onehealth/grunt-env text: grunt-env), (link: https://github.com/onehealth/grunt-preprocess text: grunt-preprocess) and optionally (link: http://github.com/outaTiME/grunt-replace text: grunt-replace).
+
+
 ## Conclusion
 
 I'll post the code to GitHub at some point once I get a chance to clean it up, but all in all I enjoyed my experience building both an app that worked on Firefox OS and extending another to work everywhere.
