@@ -30,6 +30,28 @@ My first idea for a Firefox OS app was a simple (link: https://github.com/addyos
 
 Firefox OS exposes some additional APIs on devices, so I thought it might be interesting to try adding support for the Vibration API, Web Activities and Web Notifications. These would let me share (activities), alert on error (device vibrate, alarm) and inform me when a connection was no longer available (notifications).
 
+As you can see below talking to the Vibration API is quite straight forward.
+
+<span class="language-javascript"></span>
+
+	// Vibration
+	var vibrate = document.querySelector("#vibrate");
+	if (vibrate) {
+	    vibrate.onclick = function () {
+	        var vibrating =  navigator.vibrate(2000);
+	        /*
+	            Possible values:
+
+	            On/off pattern:
+	             navigator.vibrate([200, 100, 200, 100]);
+
+	            Turn off vibration
+	             navigator.vibrate(0);
+	        */
+	    };
+	}
+
+
 At this point I must say &ndash; setting up much of this was massively simplified thanks to the great work Robert Nyman has done on the (link: https://github.com/robnyman/Firefox-OS-Boilerplate-App text: Firefox OS boilerplate).
 
 <figure class="image-rightish">(image: Untitled-3_r1_c1.jpg)<figcaption>The Firefox OS boilerplate comes with some great presets to make your life easier</ficaption></figure>
