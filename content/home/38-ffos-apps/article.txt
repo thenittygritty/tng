@@ -24,6 +24,7 @@ Text:
 
 <!--<figure class="image-rightish">(image: ffox_r3_c1.jpg)<figcaption>Github Issue comments in portrait and landscape view</ficaption></figure>-->
 
+I've enjoyed building Chrome apps and (link: http://developer.chrome.com/apps/about_apps.html text: packaged) apps before and am always interested in experimenting with new projects like build upon the web platform. They give us an opportunity to demonstrate that just using the primitives granted by HTML, CSS and JavaScript we have the potential to delivery compelling experiences that can strive to complete against native desktop and mobile apps. In this regard, Firefox OS is quite interesting.
 
 My first idea for a Firefox OS app was a simple (link: https://github.com/addyosmani/github-client text: AngularJS Github issues viewer) (based on (link: https://github.com/da-ff/ng-github-client text: ng-github-client)) with views for authentication, a dashboard and info editing amongst others. This is a simple enough app, but as it handles authentication and relies on a real data source I figured it might be a more realistic base than a todo app ;)
 
@@ -101,6 +102,7 @@ Note that (link: https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_Simul
 
 Some other minor problems I ran into:
 
+* Reporting issues about Firefox OS was a process that I felt should be streamlined. It wasn't clear whether this should be done via the GitHub issue tracker or FFOS DevRel. Some work here would be greatly welcomed.
 * __OAuth:__ Pop-ups: eg. OAuth login windows to third-party services won't automatically launch within an FFOS app window, meaning you'll need to work around this if your users need to login using this type of setup.  
 **Workaround 1**: There is apparently a difference between how `window.open(…,'_blank')` and `window.open()` are (link: https://groups.google.com/forum/?fromgroups#!topic/mozilla.dev.b2g/IWFEZNpQuM0 text: handled in FFOS), so use the appropriate option.  
 **Workaround 2**: Web activities so that the link to authenticate is done inside the browser and then redirects you back to the app. I felt a code example demonstrating doing this would have saved me some time and recommend looking at the FFOS communications app source for an example of how to handle this for Facebook login. Please [see these files](https://github.com/mozilla-b2g/gaia/tree/master/apps/communications/contacts/oauth2/js).
