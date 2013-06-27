@@ -24,7 +24,7 @@ Text:
 
 <!--<figure class="image-rightish">(image: ffox_r3_c1.jpg)<figcaption>Github Issue comments in portrait and landscape view</ficaption></figure>-->
 
-I've enjoyed building Chrome apps and (link: http://developer.chrome.com/apps/about_apps.html text: packaged) apps before and am always interested in experimenting with new projects like build upon the web platform. They give us an opportunity to demonstrate that just using the primitives granted by HTML, CSS and JavaScript we have the potential to delivery compelling experiences that can strive to complete against native desktop and mobile apps. In this regard, Firefox OS is quite interesting.
+I've enjoyed building Chrome apps and (link: http://developer.chrome.com/apps/about_apps.html text: packaged) apps before and am always interested in experimenting with new projects that build upon the web platform. They give us an opportunity to demonstrate that just using the primitives granted by HTML, CSS and JavaScript we have the potential to deliver compelling experiences that can strive to complete against native desktop and mobile apps. In this regard, Firefox OS is quite interesting.
 
 My first idea for a Firefox OS app was a simple (link: https://github.com/addyosmani/github-client text: AngularJS Github issues viewer) (based on (link: https://github.com/da-ff/ng-github-client text: ng-github-client)) with views for authentication, a dashboard and info editing amongst others. This is a simple enough app, but as it handles authentication and relies on a real data source I figured it might be a more realistic base than a todo app ;)
 
