@@ -1,5 +1,5 @@
 window['w00t!'] = {
-	version: 1.3,
+	version: 1.6,
 	init: function() {
 		'use strict';
 
@@ -12,6 +12,7 @@ window['w00t!'] = {
 		'use strict';
 
 		var div     = document.createElement("div");
+		var input   = document.createElement("input");
 		var content = document.createTextNode("Hi there and greetings!");
 
 		div.style.position        = 'absolute';
@@ -20,6 +21,7 @@ window['w00t!'] = {
 		div.style.backgroundColor = 'white';
 
 		div.appendChild(content); // add the text node to the newly created div.
+		div.appendChild(input);
 
 		// add the newly created element and its content into the DOM
 		document.body.insertBefore(div);
