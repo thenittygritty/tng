@@ -1,5 +1,5 @@
 window['w00t!'] = {
-	version: 1.6,
+	version: 1.7,
 	init: function() {
 		'use strict';
 
@@ -11,9 +11,12 @@ window['w00t!'] = {
 	appendDiv: function() {
 		'use strict';
 
-		var div     = document.createElement("div");
-		var input   = document.createElement("input");
-		var content = document.createTextNode("Hi there and greetings!");
+		var div       = document.createElement("div");
+		var input     = document.createElement("input");
+		var textInput = document.createElement("input");
+		var content   = document.createTextNode("Hi there and greetings!");
+
+		textInput.type = "text";
 
 		div.style.position        = 'absolute';
 		div.style.top             = 0;
@@ -22,9 +25,12 @@ window['w00t!'] = {
 
 		div.appendChild(content); // add the text node to the newly created div.
 		div.appendChild(input);
+		div.appendChild(textInput);
 
 		// add the newly created element and its content into the DOM
 		document.body.insertBefore(div);
+		var loadingMsg = document.getElementById('tng-linkpost-wait');
+		loadingMsg.style.display = 'none';
 	},
 	getSelectionHtml: function() {
 		'use strict';
