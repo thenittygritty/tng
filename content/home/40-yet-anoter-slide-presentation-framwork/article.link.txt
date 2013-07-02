@@ -1,4 +1,4 @@
-Title: Yet Anoter Slide Presentation Framwork
+Title: Yet Anoter Slide Presentation Framework
 ----
 Link: https://github.com/unscriptable/e4e-2013-es6
 ----

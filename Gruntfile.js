@@ -102,7 +102,7 @@ module.exports = function (grunt) {
 
 
 	// A task for development
-	grunt.registerTask('dev', 'jshint sass:dev');
+	grunt.registerTask('dev', 'jshint', 'sass:dev');
 
 	// A task for deployment
 	grunt.registerTask('deploy', ['jshint', 'concat', 'sass:deploy', 'uglify']);
