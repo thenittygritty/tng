@@ -9,3 +9,6 @@ Author: kahlil-lechelt
 Text:
 
 > It’s necessary to keep the focus within a dialog while tabbing through it. The function below is the easiest way to implement this behavior in JavaScript.
+
+Our very own (twitter: drublic) letting you in on some deep accessibility shit concerning modals. Boom.
+
