@@ -1,0 +1,10 @@
+Title: Enough With The JavaScript Already
+----
+Link: http://de.slideshare.net/nzakas/enough-withthejavascriptalready
+----
+Date: 2013-07-02
+----
+Author: kahlil-lechelt
+----
+Text:
+A great summary of advanced web developer wisdom.
