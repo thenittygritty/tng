@@ -24,11 +24,33 @@ Text:
 
 <!--<figure class="image-rightish">(image: ffox_r3_c1.jpg)<figcaption>Github Issue comments in portrait and landscape view</ficaption></figure>-->
 
-I've enjoyed building Chrome apps and (link: http://developer.chrome.com/apps/about_apps.html text: packaged) apps before and am always interested in experimenting with new projects like build upon the web platform. They give us an opportunity to demonstrate that just using the primitives granted by HTML, CSS and JavaScript we have the potential to delivery compelling experiences that can strive to complete against native desktop and mobile apps. In this regard, Firefox OS is quite interesting.
+I've enjoyed building Chrome apps and (link: http://developer.chrome.com/apps/about_apps.html text: packaged) apps before and am always interested in experimenting with new projects that build upon the web platform. They give us an opportunity to demonstrate that just using the primitives granted by HTML, CSS and JavaScript we have the potential to deliver compelling experiences that can strive to complete against native desktop and mobile apps. In this regard, Firefox OS is quite interesting.
 
 My first idea for a Firefox OS app was a simple (link: https://github.com/addyosmani/github-client text: AngularJS Github issues viewer) (based on (link: https://github.com/da-ff/ng-github-client text: ng-github-client)) with views for authentication, a dashboard and info editing amongst others. This is a simple enough app, but as it handles authentication and relies on a real data source I figured it might be a more realistic base than a todo app ;)
 
 Firefox OS exposes some additional APIs on devices, so I thought it might be interesting to try adding support for the Vibration API, Web Activities and Web Notifications. These would let me share (activities), alert on error (device vibrate, alarm) and inform me when a connection was no longer available (notifications).
+
+As you can see below, talking to the Vibration API is quite straight forward.
+
+<span class="language-javascript"></span>
+
+	// Vibration
+	var vibrate = document.querySelector("#vibrate");
+	if (vibrate) {
+	    vibrate.onclick = function () {
+	        var vibrating =  navigator.vibrate(2000);
+	        /*
+	            Possible values:
+
+	            On/off pattern:
+	             navigator.vibrate([200, 100, 200, 100]);
+
+	            Turn off vibration
+	             navigator.vibrate(0);
+	        */
+	    };
+	}
+
 
 At this point I must say &ndash; setting up much of this was massively simplified thanks to the great work Robert Nyman has done on the (link: https://github.com/robnyman/Firefox-OS-Boilerplate-App text: Firefox OS boilerplate).
 

@@ -1,0 +1,14 @@
+Title: 'Allo 'Allo
+----
+Link: https://plus.google.com/101063139999404044459/posts/A4F6VQuRDAU
+----
+Date: 2013-07-02
+----
+Author: kahlil-lechelt
+----
+Text:
+
+> 'Allo 'Allo! Today, Yeoman 1.0 Release Candidate 1 has been released!
+
+Lots of great updates in this one!
+

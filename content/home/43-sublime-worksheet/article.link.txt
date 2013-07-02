@@ -1,0 +1,14 @@
+Title: Sublime Worksheet
+----
+Link: https://github.com/jcartledge/sublime-worksheet
+----
+Date: 2013-07-02
+----
+Author: kahlil-lechelt
+----
+Text:
+> This is a Sublime Text 2 plugin for Mac OS X and Linux which passes the contents of a buffer line-by-line to a REPL and displays the results inline.
+
+(image: https://github.com/jcartledge/sublime-worksheet/raw/master/docs/worksheet.gif alt: Worksheet)
+
+Neat!
