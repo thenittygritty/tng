@@ -1,0 +1,13 @@
+Title: HTML & CSS Is A Bicycle
+----
+Link: http://jakearchibald.com/2013/progressive-enhancement-still-important/
+----
+Date: 2013-07-03
+----
+Author: kahlil-lechelt
+----
+Text:
+
+(twitter: jaffathecake) reacts to the reactions to (link: http://www.slideshare.net/nzakas/enough-withthejavascriptalready  text: "Enough with the JavaScript already") with an amazing post on progressive enhancement on his (link: http://jaffathecake.com text: brand new blog).
+
+> One of the best things about the web is it can rival native applications without a hefty initial download, without an install process, and do so across devices old and new. Let's keep it that way.
