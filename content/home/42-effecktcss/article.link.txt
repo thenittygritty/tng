@@ -13,3 +13,5 @@ Text:
 Another push from Paul Irish to make the mobile web more competitive to native. Clean animations across the board would be a huge win since they are essential for modern UIs and are absolutely expected. Especially on mobile. 
 
 If you are knowledgeable on that matter or want to help out I encourage you to chime in.
+
+**Update:** (link: https://github.com/h5bp/Effeckt.css text: A repo) has been created from this lazyweb-request and the CSS library is in active development. Contribute!
