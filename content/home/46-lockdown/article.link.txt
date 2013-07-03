@@ -1,0 +1,21 @@
+Title: Lockdown
+----
+Link: http://www.marco.org/2013/07/03/lockdown
+----
+Date: 2013-07-03
+----
+Author: kahlil-lechelt
+----
+Text:
+
+> Well, fuck them, and fuck that.
+
+A wicked post on the shutdown of Google Reader as well as a great rant about big web companies trying to own the web by (link: http://marco.org text: Marco). 
+
+At the same time it is a call to 
+
+> Keep building and supporting new tools, technologies, and platforms to empower independence, interoperability, and web property ownership.
+
+The inherent nature of the web is distributedness and it is also what keeps it healthy. Recent developments remind us of that and should push the web development community to think harder about distributed systems and how to make them stronger and easier to use. 
+
+I'd also recommend reading Bastian Allgeier's (link: http://thenittygritty.co/the-future-of-the-web-a-draft text: The Future Of The Web — A Draft) as an inspiration.
