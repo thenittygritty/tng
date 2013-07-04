@@ -1,0 +1,28 @@
+Title: Why JavaScript?
+----
+Link: http://infrequently.org/2013/07/why-javascript/
+----
+Date: 2013-07-04
+----
+Author: kahlil-lechelt
+----
+Text:
+
+Mr. (twitter: slightlylate) explains why he and others are working on evolving JavaScript and not something else. 
+
+He makes a very interesting point about the character of the web platform compared to other platforms: 
+
+> The operational semantics of these platforms are incredibly low level. The flagship languages and most of the runtime behavior of programs are built up from these very low-level contracts. Where interop happens at an API level, it’s usually about a large-ish standard library which obeys most of the same calling conventions (even if its implementation is radically different).
+>
+> The web has it the other way around. It achieved broad compatibility by starting the bidding at extremely high level semantics which, initially, had very little in the way of a contract beyond bugwards compatibility with whatever Netscape or MSFT shipped last. The coarse, interpret-it-as-you-go contract of HTML is one of the things that has made it such a hardy survivor. JavaScript was added later, and while it has lower-level operational semantics than HTML or CSS, that history of bolting JS on later has led to the current project of encouraging extensibility and layering; e.g., through Web Components. It’s also why those who cargo-cult their experiences of other platforms onto the web find themselves adrift. There just isn’t a shared lower level on which to interoperate.
+
+He makes it clear why he ended up on TC39:
+
+> You can see how I ended up on TC39. It’s not that I think JS is great (it has well-documented flashes of genius, but so does any competitor worth mentioning) or even the perfect language for the web. But it is the *one language that every vendor is committed to shipping compatibly*. Evolving JS has the leverage to add/change the semantics of the platform in a way that no other strategy credibly can, IMO.
+
+And ends his article with another emphasis of his pragmatic view on this issue:
+
+> You can imagine other ways of doing it, but I don’t think you can get there from here. And the possible is all that matters.
+
+A highly recommended read.
+
