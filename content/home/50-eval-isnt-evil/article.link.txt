@@ -1,0 +1,17 @@
+Title: eval() Isn’t Evil, Just Misunderstood
+----
+Link: http://www.nczonline.net/blog/2013/06/25/eval-isnt-evil-just-misunderstood/
+----
+Date: 2013-07-06
+----
+Credit: slicknet
+----
+Author: kahlil-lechelt
+----
+Text:
+
+(twitter: slicknet):
+
+> Using `eval()` does not automatically open you up to a Cross-Site Scripting (XSS) attack nor does it mean there is some lingering security vulnerability that you’re not aware of. Just like any tool, you need to know how to wield it correctly, but even if you use it incorrectly, the potential for damage is still fairly low and contained.
+
+A very well written, concise article that will make you understand what `eval()` really is and why it isn't evil.
