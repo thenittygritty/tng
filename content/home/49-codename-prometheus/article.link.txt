@@ -10,6 +10,8 @@ Credit: aral
 ----
 Text:
 
+(twitter: aral):
+
 > The only way I see of creating a different world is if we suceed in moving open source beyond the realm of über geeks to create a third alternative to design‐led closed source and features‐lead open source: design‐led open source.
 
 I am so stoked that the vision that (link: http://thenittygritty.co/the-future-of-the-web-a-draft text: Bastian laid out six months ago on TNG) is now being picked up by other great designers with the full intent to build this thing!
