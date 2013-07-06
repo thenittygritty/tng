@@ -26,7 +26,12 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
 		<?php foreach($items as $item): ?>
 			<?php if ($item->template() == 'article.link'): ?>
 				<item>
-					<title><?php echo xml($item->title()) ?></title>
+					<title>
+						<?php echo xml($item->title()); ?>
+						<?php if ($item->credit): ?>
+							<?php echo ' by  @' . $item->credit ?>
+						<?php endif ?>
+					</title>
 					<link><?php echo xml(str_replace( '/home/', '/', $item->url())) ?></link>
 					<guid><?php echo xml(str_replace( '/home/', '/', $item->url())) ?></guid>
 					<pubDate><?php echo ($item->date()) ? date('r', $item->date()) : date('r', $item->modified()) ?></pubDate>

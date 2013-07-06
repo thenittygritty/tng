@@ -1,0 +1,19 @@
+Title: Codename Prometheus
+----
+Link: http://aralbalkan.com/notes/codename-prometheus/
+----
+Date: 2013-07-06
+----
+Author: kahlil-lechelt
+----
+Credit: aral
+----
+Text:
+
+> The only way I see of creating a different world is if we suceed in moving open source beyond the realm of über geeks to create a third alternative to design‐led closed source and features‐lead open source: design‐led open source.
+
+I am so stoked that the vision that (link: http://thenittygritty.co/the-future-of-the-web-a-draft text: Bastian laid out six months ago on TNG) is now being picked up by other great designers with the full intent to build this thing!
+
+Also, I am very happy that (twitter: aral) (link: https://twitter.com/aral/status/352770228133961730 text: mentioned Bastian's article on Twitter) and that they are talking.
+
+To me this is all about making the things we use every day work beautifully in the way the web naturally works. Decentralized. It is what makes a system incredibly resilient and empowering. The fact that great designers are now inspired to build this and the idea of design-led open source is exciting to say the least.
