@@ -1,0 +1,9 @@
+Title: The Title
+----
+Link: http://bla.com
+----
+Date: 2013-07-05
+----
+Author: 
+----
+Text: kirbytext()

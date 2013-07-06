@@ -17,7 +17,7 @@ function linkpost() {
 	  $newFile = $newDir . '/article.link.txt';
 
 	  $template = "Title: $title\n----\nLink: $link\n----\nDate: "
-	  						. date('Y-m-d') . "\n----\nAuthor: $author\n----\nText: kirbytext($text)";
+	  		      . date('Y-m-d') . "\n----\nAuthor: $author\n----\nText: " . kirbytext($text);
 
 	  f::write($newFile, $template);
 
