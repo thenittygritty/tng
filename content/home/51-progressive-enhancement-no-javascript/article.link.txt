@@ -1,0 +1,21 @@
+Title: Progressive Enhancement != "No JavaScript"
+----
+Link: http://www.stucox.com/blog/progressive-enhancement-no-javascript/
+----
+Date: 2013-07-06
+----
+Credit: stucoxmedia 
+----
+Author: kahlil-lechelt
+----
+Text:
+
+(twitter: stucoxmedia)
+
+> If your app can lean on behaviourless HTML as much as possible, that's great – and the benefits have been explained by Nicholas and Jake. But sometimes it just isn't practical.
+> 
+> Ultimately, many web things nowadays are very much programs rather than documents (even if the line is incredibly blurry). When have you ever heard another kind of software being told it must function without executing any lines of code?
+
+Stu chimes in on the recent progressive enhancement discussion with some sensible distinguishments. 
+
+**Note:** If you enjoy Stu's writing you can read his take on (link: http://thenittygritty.co/a-ux-for-developers text: A UX For Developers) right here on TNG :)
