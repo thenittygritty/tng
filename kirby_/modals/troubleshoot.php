@@ -5,23 +5,16 @@ if(!defined('KIRBY')) die('Direct access is not allowed');
 
 // Kirby Troubleshoot File
 
-$modules   = (function_exists('apache_get_modules')) ? apache_get_modules() : array(); 
+$modules   = apache_get_modules(); 
 $rewrite   = in_array('mod_rewrite', $modules);
 $subfolder = ltrim(dirname(server::get('script_name')), '/');
+$url       = c::get('url', 'http://' . server::get('http_host'));
 $root      = c::get('root');
 $templates = c::get('root.templates');
 $cache     = c::get('root.cache');
 
-// auto-detect the url if it is not set
-$url = (c::get('url') === false) ? c::get('scheme') . server::get('http_host') : rtrim(c::get('url'), '/');
-
-// try to detect the subfolder      
-$subfolder = (c::get('subfolder')) ? trim(c::get('subfolder'), '/') : trim(dirname($_SERVER['SCRIPT_NAME']), '/');
-
 if(!empty($subfolder)) {
-  // check if the url already contains the subfolder      
-  // so it's not included twice
-  if(!preg_match('!' . preg_quote($subfolder) . '$!i', $url)) $url .= '/' . $subfolder;
+  $url = $url . '/' . $subfolder;
 }
 
 $compatible = true;
@@ -107,7 +100,7 @@ strong {
   <dt>Subfolder</dt>
   <?php if($subfolder != c::get('subfolder')): ?>
   <dd>
-    <strong>You might want to set the subfolder in your config file</strong><br />
+    <strong>Your subfolder setup seems to be invalid</strong><br />
     Subfolder in site/config/config.php: <strong><?php echo c::get('subfolder') ?></strong><br />
     Detected Subfolder: <strong><?php echo $subfolder ?></strong>
   </dd>
@@ -161,9 +154,7 @@ strong {
   <dd><?php echo (c::get('cache.html')) ? 'yes' : 'no' ?></dd>
 
   <dt>URL-Rewriting</dt>
-  <?php if(empty($modules)): ?>
-  <dd>Can't detect url rewriting. You are probably not running Kirby on Apache. You might need to setup your own rewrite rules depending on your server setup.</dd>  
-  <?php elseif($rewrite && c::get('rewrite')): ?>
+  <?php if($rewrite && c::get('rewrite')): ?>
   <dd>url rewriting is enabled</dd>  
   <?php elseif(c::get('rewrite')): ?>
   <dd><strong>mod_rewrite seems not to be available</strong></dd>  

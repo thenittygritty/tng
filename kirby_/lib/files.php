@@ -260,7 +260,7 @@ class files extends obj {
     foreach($this->images() as $key => $image) {
       
       // check for images with thumbnail naming      
-      if(preg_match('!\.thumb!', $image->name)) {
+      if(preg_match('!.thumb!', $image->name)) {
 
         // get the rawFilename of the original file to which 
         // this thumb belongs to
@@ -535,72 +535,17 @@ class files extends obj {
     return new files($files);        
   }
 
-  function filterBy() {
-
-    $args     = func_get_args();
-    $field    = a::get($args, 0);
-    $operator = '=='; 
-    $value    = a::get($args, 1);
-    $split    = a::get($args, 2);
-    
-    if($value === '!=' || $value === '==' || $value === '*=') {
-      $operator = $value;
-      $value    = a::get($args, 2);
-      $split    = a::get($args, 3);
-    }          
-    
+  function filterBy($field, $value, $split=false) {
     $files = array();
-
-    switch($operator) {
-
-      // ignore matching elements
-      case '!=':
-
-        foreach($this->_ as $key => $file) {
-          if($split) {
-            $values = str::split((string)$file->$field(), $split);
-            if(!in_array($value, $values)) $files[$key] = $file;
-          } else if($file->$field() != $value) {
-            $files[$key] = $file;
-          }
-        }
-        break;    
-      
-      // search
-      case '*=':
-        
-        foreach($this->_ as $key => $file) {
-          if($split) {
-            $values = str::split((string)$file->$field(), $split);
-            foreach($values as $val) {
-              if(str::contains($val, $value)) {
-                $files[$key] = $file;
-                break;
-              }
-            }
-          } else if(str::contains($file->$field(), $value)) {
-            $files[$key] = $file;
-          }
-        }
-                            
-      // take all matching elements          
-      default:
-
-        foreach($this->_ as $key => $file) {
-          if($split) {
-            $values = str::split((string)$file->$field(), $split);
-            if(in_array($value, $values)) $files[$key] = $file;
-          } else if($file->$field() == $value) {
-            $files[$key] = $file;
-          }
-        }
-
-        break;
-
+    foreach($this->_ as $key => $file) {
+      if($split) {
+        $values = str::split((string)$file->$field(), $split);
+        if(in_array($value, $values)) $files[$key] = $file;
+      } else if($file->$field() == $value) {
+        $files[$key] = $file;
+      }
     }
-
     return new files($files);    
-
   }
 
   function images() {

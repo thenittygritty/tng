@@ -131,7 +131,7 @@ class site extends obj {
               foreach(c::get('lang.available') as $lang) {
                 $c = $child->content($lang);   
                 // redirect to the url if a translated url has been found
-                if($c && $c->url_key() == $p && !$child->isErrorPage()) $next = $child;
+                if($c->url_key() == $p && !$child->isErrorPage()) $next = $child;
               }
             }
 
@@ -196,11 +196,11 @@ class site extends obj {
     }
     
     // send a 404 header if this is the error page
-    if($page->isErrorPage() && c::get('404.header')) header("HTTP/1.0 404 Not Found");
+    if($page->isErrorPage()) header("HTTP/1.0 404 Not Found");
             
     if(empty($cacheData)) {
       // load the main template
-      $html = tpl::load($page->template(), array(), true);
+      $html = tpl::load($page->template(), false, true);
       if($this->htmlCacheEnabled) cache::set($cacheID, (string)$html, true);
     } else {
       $html = $cacheData;
@@ -258,14 +258,13 @@ class site extends obj {
   function rootPages() {
   
     // get the first level in the content root
-    $ignore = array_merge(array('.svn', '.git', '.htaccess'), (array)c::get('content.file.ignore', array()));
-    $files  = dir::inspect(c::get('root.content'), $ignore);
-    $pages  = array();
+    $files = dir::inspect(c::get('root.content'));
+    $pages = array();
     
     // build the first set of pages     
     foreach($files['children'] as $file) {
 
-      $child = dir::inspect($files['root'] . '/' . $file, $ignore);
+      $child = dir::inspect($files['root'] . '/' . $file);
       $page  = page::fromDir($child, false);
       
       // add false as parent page object because we are on the first level
@@ -470,7 +469,7 @@ class site extends obj {
     $url = (c::get('url') === false) ? c::get('scheme') . server::get('http_host') : rtrim(c::get('url'), '/');
       
     // try to detect the subfolder      
-    $subfolder = (c::get('subfolder')) ? trim(c::get('subfolder'), '/') : trim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+    $subfolder = (c::get('subfolder')) ? trim(c::get('subfolder'), '/') : trim(dirname($_SERVER['SCRIPT_NAME']), '/');
 
     if($subfolder) {
       c::set('subfolder', $subfolder);

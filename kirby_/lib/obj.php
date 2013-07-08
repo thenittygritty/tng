@@ -54,11 +54,6 @@ class obj implements Iterator {
     return prev($this->_);
   }
 
-  function nth($n) {
-    $array = array_values($this->_);
-    return (isset($array[$n])) ? $array[$n] : false;
-  }
-
   function valid() {
     $key = key($this->_);
     $var = ($key !== NULL && $key !== FALSE);
@@ -88,10 +83,7 @@ class obj implements Iterator {
   }
 
   function indexOf($needle) {
-    foreach(array_values($this->_) as $key => $value) {
-      if($value === $needle) return $key;
-    }
-    return false;
+    return array_search($needle, array_values($this->_));
   }
 
   function shuffle() {

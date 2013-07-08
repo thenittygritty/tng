@@ -49,12 +49,11 @@ class page extends obj {
     // if children have already been fetched return them from "cache"
     if(is_object($this->children)) return $this->children->sortBy($sort, $direction);
   
-    $pages  = array();
-    $ignore = array_merge(array('.svn', '.git', '.hg', '.htaccess'), (array)c::get('content.file.ignore', array()));
-        
+    $pages = array();
+    
     foreach($this->children as $child) {
 
-      $child = dir::inspect($this->root . '/' . $child, $ignore);
+      $child = dir::inspect($this->root . '/' . $child);
       $page  = page::fromDir($child, $this);
 
       $pages[$page->uid] = $page;
@@ -148,10 +147,6 @@ class page extends obj {
         
   }
 
-  function hasTemplate() {
-    return ($this->template() == $this->intendedTemplate()) ? true : false;
-  }
-
   function depth() {
     $parent = $this->parent();
     return ($parent) ? ($parent->depth() + 1) : 1;
@@ -194,7 +189,7 @@ class page extends obj {
   }
 
   function tinyurl() {
-    return u(c::get('tinyurl.folder') . '/' . $this->hash());
+    return u('x/' . $this->hash());
   }
 
   function date($format=false) {
@@ -428,13 +423,7 @@ class page extends obj {
 	}
 
   static function parseDirURI($root) {
-
-    if(c::get('root') == '/') {
-      $base = ltrim($root, '/');
-    } else {
-      $base = ltrim(str_replace(c::get('root'), '', $root), '/');
-    }
-
+    $base = ltrim(str_replace(c::get('root'), '', $root), '/');
     return $base;    
   }
     
@@ -583,70 +572,16 @@ class pages extends obj {
     return $this->findBy('hash', $args);  
   }
   
-  function filterBy() {
-
-    $args     = func_get_args();
-    $field    = a::get($args, 0);
-    $operator = '=='; 
-    $value    = a::get($args, 1);
-    $split    = a::get($args, 2);
-    
-    if($value === '!=' || $value === '==' || $value === '*=') {
-      $operator = $value;
-      $value    = a::get($args, 2);
-      $split    = a::get($args, 3);
-    }          
-    
+  function filterBy($field, $value, $split=false) {
     $pages = array();
-
-    switch($operator) {
-
-      // ignore matching elements
-      case '!=':
-
-        foreach($this->_ as $key => $page) {
-          if($split) {
-            $values = str::split((string)$page->$field(), $split);
-            if(!in_array($value, $values)) $pages[$key] = $page;
-          } else if($page->$field() != $value) {
-            $pages[$key] = $page;
-          }
-        }
-        break;    
-      
-      // search
-      case '*=':
-        
-        foreach($this->_ as $key => $page) {
-          if($split) {
-            $values = str::split((string)$page->$field(), $split);
-            foreach($values as $val) {
-              if(str::contains($val, $value)) {
-                $pages[$key] = $page;
-                break;
-              }
-            }
-          } else if(str::contains($page->$field(), $value)) {
-            $pages[$key] = $page;
-          }
-        }
-                            
-      // take all matching elements          
-      default:
-
-        foreach($this->_ as $key => $page) {
-          if($split) {
-            $values = str::split((string)$page->$field(), $split);
-            if(in_array($value, $values)) $pages[$key] = $page;
-          } else if($page->$field() == $value) {
-            $pages[$key] = $page;
-          }
-        }
-
-        break;
-
+    foreach($this->_ as $key => $page) {
+      if($split) {
+        $values = str::split((string)$page->$field(), $split);
+        if(in_array($value, $values)) $pages[$key] = $page;
+      } else if($page->$field() == $value) {
+        $pages[$key] = $page;
+      }
     }
-
     return new pages($pages);    
   }
     
@@ -695,14 +630,8 @@ class pages extends obj {
   }
   
   function sortBy($field, $direction='asc', $method=SORT_REGULAR) {
-
-    if($field == 'dirname') {
-      $method = 'natural';
-    } 
-        
     $pages = a::sort($this->_, $field, $direction, $method);
     return new pages($pages);
-
   }
 
   function paginate($limit, $options=array()) {
