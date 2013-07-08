@@ -1,0 +1,15 @@
+Title: 12Devs Summer Series
+----
+Link: http://12devs.co.uk/articles/
+----
+Date: 2013-07-08
+----
+Author: kahlil-lechelt
+----
+Credit: 12Devs
+----
+Text:
+
+> We have articles covering all aspects of web development and beyond it's going to be a packed 12 days full of things for you to do from now and for weeks to come!
+
+Very cool web development article series. From this season I especially like (link: http://12devs.co.uk/articles/rapid-prototyping-with-angularjs/ text: the article on AngularJS prototyping).
