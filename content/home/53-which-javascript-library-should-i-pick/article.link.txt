@@ -1,0 +1,13 @@
+Title: Which JavaScript Library Should I Pick?
+----
+Link: http://blog.pamelafox.org/2013/07/which-javascript-library-should-i-pick.html
+----
+Date: 2013-07-08
+----
+Author: kahlil-lechelt
+----
+Credit: pamelafox
+---
+Text:
+
+A good list of parameters which you can use to choose a JS lib.
