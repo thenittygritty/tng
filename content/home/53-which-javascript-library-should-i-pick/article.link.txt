@@ -7,7 +7,9 @@ Date: 2013-07-08
 Author: kahlil-lechelt
 ----
 Credit: pamelafox
----
-Text:
+----
+Text: 
+
+> Since a JS library is often used when developing a user-facing product, I think of the strategy as satisfying two audiences: the developers that must code and maintain the use of the library, and the users that will interact with it.
 
 A good list of parameters which you can use to choose a JS lib.
