@@ -1,0 +1,16 @@
+Title: MVC Stands For Much Very Confused
+----
+Link: http://jeffreybiles.com/blog/much-very-confused.html
+----
+Date: 2013-07-11
+----
+Author: kahlil-lechelt
+----
+Credit: JeffreyBiles
+----
+Text:
+
+> Our preconceived notions of MVC can prevent us from understanding and taking full advantage of a framework such as Ember. I propose a better way to transfer knowledge from one framework to another.
+
+Very funny. Very informative.
+
