@@ -1,0 +1,15 @@
+Title: Aspect Ratios in Pure CSS
+----
+Link: http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+----
+Date: 2013-07-12
+----
+Author: kahlil-lechelt
+----
+Credit: MadeMyDay
+----
+Text:
+
+> I was looking for a solution for flexible elements which remain the aspect ratio when resized. Until now I used some Javascript for resizing the elements. But using the resize event and recalculate the height of an element is some kind of nasty and never felt right. Recently I found a solution in an article from A List Apart and a topic on StackOverflow, which works quite well.
+
+Thanks for sharing!
