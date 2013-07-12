@@ -1,0 +1,15 @@
+Title: Github Flow in the Browser
+----
+Link: https://github.com/blog/1557-github-flow-in-the-browser
+----
+Date: 2013-07-12
+----
+Author: kahlil-lechelt
+----
+Credit: cobyism
+----
+Text:
+
+> Now that you can delete files directly on GitHub we’ve reached a very exciting milestone—the entire GitHub Flow™ is now possible using nothing but a web browser.
+
+This is cool. Especially the feature that lets you move a file by just using a text input. 
