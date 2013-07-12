@@ -1,0 +1,13 @@
+Title: Yeoman Community Generators Listing and Search
+----
+Link: http://yeoman.io/community-generators.html
+----
+Date: 2013-07-12
+----
+Author: kahlil-lechelt
+----
+Credit: ericjduran
+----
+Text:
+
+Very practical search and listing of all community generators.
