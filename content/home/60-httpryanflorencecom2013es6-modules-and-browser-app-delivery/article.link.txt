@@ -1,0 +1,15 @@
+Title: Author in ES6, transpile to UMD, distribute everywhere
+----
+Link: http://ryanflorence.com/2013/es6-modules-and-browser-app-delivery/
+----
+Date: 2013-07-16
+----
+Author: kahlil-lechelt
+----
+Credit: ryanflorence
+----
+Text:
+
+> We’ve got to solve this. When somebody’s got an angular directive, an ember component, a web component, or any old useful javascript library they need a simple way to share it. Node has had great success because of how simple npm is to use.
+
+I &hearts; this.
