@@ -1,4 +1,4 @@
-Title: Author in ES6, transpile to UMD, distribute everywhere
+Title: Author in ES6, Transpile to UMD, Distribute Everywhere
 ----
 Link: http://ryanflorence.com/2013/es6-modules-and-browser-app-delivery/
 ----
