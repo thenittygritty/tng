@@ -1,0 +1,15 @@
+Title: Github Embraces Mobile Web
+----
+Link: https://github.com/blog/1559-github-s-on-your-phone
+----
+Date: 2013-07-17
+----
+Author: kahlil-lechelt
+----
+Credit: bleikamp
+----
+Text:
+
+> By using very little JavaScript and writing CSS and markup specifically for mobile, we were able to reduce page sizes dramatically and make the site feel very fast.
+
+It does feel very fast and looks beautiful. Good job there (twitter: github)!
