@@ -10,4 +10,4 @@ Text:
 
 > classy node.js badges, that's all
 
-They are very classy. Look how it classes up (link: http://github.com/kahlil/grunt-textfile text:my grunt-textfile repo).
+They are very classy. Look how it classes up (link: https://github.com/kahlil/grunt-textfile#cool-badge text:my grunt-textfile repo).
