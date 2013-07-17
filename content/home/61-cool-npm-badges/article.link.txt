@@ -1,0 +1,13 @@
+Title: Cool NPM Badges
+----
+Link: https://nodei.co/
+----
+Date: 2013-07-17
+----
+Author: kahlil-lechelt
+----
+Text:
+
+> classy node.js badges, that's all
+
+They are very classy. Look how it classes up (link: http://github.com/kahlil/grunt-textfile text:my grunt-textfile repo).
