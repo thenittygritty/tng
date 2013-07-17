@@ -1,4 +1,4 @@
-Title: Github Embraces Mobile Web
+Title: Github Embraces the Mobile Web
 ----
 Link: https://github.com/blog/1559-github-s-on-your-phone
 ----
