@@ -1,0 +1,15 @@
+Title: JS Sequence Diagrams
+----
+Link: http://bramp.github.io/js-sequence-diagrams/
+----
+Date: 2013-07-17
+----
+Author: kahlil-lechelt
+----
+Credit: TheBramp
+----
+Text:
+
+> Turns text into UML sequence diagrams
+
+Pretty dope.
