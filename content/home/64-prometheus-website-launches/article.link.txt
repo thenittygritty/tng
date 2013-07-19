@@ -7,3 +7,5 @@ Date: 2013-07-19
 Author: kahlil-lechelt
 ----
 Text:
+
+The website for Codename Prometheus has launched. (twitter: aral) is working full time to make this vision real. I recommend you subsribe to the newsletter for detailed updates on this very important project.
