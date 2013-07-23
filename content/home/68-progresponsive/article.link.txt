@@ -1,0 +1,15 @@
+Title: Progresponsive
+----
+Link: http://adactio.com/journal/6338/
+----
+Date: 2013-07-23
+----
+Author: kahlil-lechelt
+----
+Credit: adactio
+----
+Text:
+
+> Take the (link:http://codepen.io/bradfrost/full/mlyvu text:footer-anchor pattern), for example. I really, really like this pattern. It doesn’t require any JavaScript whatsoever; just a simple hyperlink from the top of the page that links to the fragment identifier of the navigation at the bottom of the page. It works on just about every device.
+
+Hey, I didn't know this pattern. It's awesome and it lends itself so well to progressive enhancement as (twitter: adactio) explains so well in his post.
