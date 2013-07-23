@@ -1,0 +1,15 @@
+Title: All New Bower
+----
+Link: https://twitter.com/satazor/status/359454285265772545
+----
+Date: 2013-07-23
+----
+Author: kahlil-lechelt
+----
+Credit: satazor
+----
+Text:
+
+> Bower 1.0.0 finally released with a new architecture!
+
+Total rewrite to make it more maintainable and extendable. And it is faster now too. <3
