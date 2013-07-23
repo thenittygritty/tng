@@ -1,0 +1,11 @@
+Title: Does Flexbox Have a Performance Problem?
+----
+Link: http://css-tricks.com/does-flexbox-have-a-performance-problem/
+----
+Date: 2013-07-23
+----
+Author: martin-wolf
+----
+Text:
+
+Chris Coyier built a simple random flexbox layout generator to test it's performance. He didn't find anything really alarming, but make sure to read the comments as well, Paul Irish shares some more data on the performance of flexbox. If you have anything to share on this topic, please do to help us all.

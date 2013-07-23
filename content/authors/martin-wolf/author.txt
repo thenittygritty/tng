@@ -1,0 +1,9 @@
+Name: Martin Wolf
+----
+Link: http://visuellegedanken.de
+----
+Twitter: _martinwolf
+----
+Email: martin@visuellegedanken.de
+----
+Info: Martin is a Front-end Developer living in Hamburg, Germany. He is passionate about sass und css architecture.
