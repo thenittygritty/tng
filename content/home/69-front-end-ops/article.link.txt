@@ -1,0 +1,19 @@
+Title: Front-End Ops
+----
+Link: http://www.smashingmagazine.com/2013/06/11/front-end-ops/
+----
+Date: 2013-07-24
+----
+Author: kahlil-lechelt
+----
+Credit: SlexAxton
+----
+Text:
+
+(twitter: SlexAxton):
+
+> It doesn’t matter how many features you have or how sexy your features are if they aren’t delivered to the user quickly, with ease, and then heavily monitored. Front-end operations engineers are the **enablers of long-term progress**.
+
+Word.
+
+I absolutely love this article. Alex compiled a very thorough list of tasks that could fall into the responsibility of a so called front-end operations engineer. If you are going to implement such a role in your company or not and if that makes sense is very dependable on what you are actually working on. But at the end of the day all front-end engineers should be aware of these tasks and prioritize and enforce their execution as needed.
