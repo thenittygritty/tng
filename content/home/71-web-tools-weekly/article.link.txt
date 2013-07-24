@@ -1,0 +1,15 @@
+Title: Web Tools Weekly
+----
+Link: http://webtoolsweekly.com/
+----
+Date: 2013-07-24
+----
+Author: martin-wolf
+----
+Credit: WebToolsWeekly
+----
+Text:
+
+> Web Tools Weekly is a front-end development and web design newsletter with a focus on tools.
+
+Subscribed. Like most developers I like tinkering with new tools.
