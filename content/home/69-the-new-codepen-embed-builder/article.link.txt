@@ -1,0 +1,13 @@
+Title: The New CodePen Embed Builder
+----
+Link: http://blog.codepen.io/2013/07/23/the-new-embed-builder-customize-every-aspect/
+----
+Date: 2013-07-24
+----
+Author: martin-wolf
+----
+Text:
+
+> Embedded Pens take a big leap forward today. Now you have 100% control over the look of the embeds with the new Embed Builder. From the Embed Builder, you can change all of the colors used, decide on a border, control the animation stopping, and change the default tab. And that’s not all!
+
+CodePen keeps getting better and better. Love it.
