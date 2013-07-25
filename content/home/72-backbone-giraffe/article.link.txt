@@ -1,4 +1,4 @@
-Title: Backbone Giraffe
+Title: Backbone.Giraffe
 ----
 Link: http://barc.github.io/backbone.giraffe/
 ----
