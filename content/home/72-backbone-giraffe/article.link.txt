@@ -1,0 +1,17 @@
+Title: Backbone Giraffe
+----
+Link: http://barc.github.io/backbone.giraffe/
+----
+Date: 2013-07-25
+----
+Author: kahlil-lechelt
+----
+Credits: Barc
+----
+Text:
+
+(twitter: Barc):
+
+> Giraffe's goal is to follow the Backbone philosophy of unopinionated simplicity to provide commonly needed features with few assumptions. It differs from other Backbone libraries like Marionette and Chaplin in its reduced scope and size, and it takes a different approach to the problems of route handling, object lifecycles, event aggregation, and view management.
+
+It looks like Barc made some sensible additions to Backbone to make it more powerful while sticking to Backbone's philosophy. 
