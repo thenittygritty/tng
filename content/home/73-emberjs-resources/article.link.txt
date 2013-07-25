@@ -1,0 +1,19 @@
+Title: Ember.js Resources
+----
+Link: http://hub.tutsplus.com/tutorials/resources-to-get-you-up-to-speed-in-emberjs--net-33447
+----
+Date: 2013-07-25
+----
+Author: kahlil-lechelt
+----
+Credit: reybango
+----
+Text:
+
+(twitter: reybango):
+
+> The resources I'll list, at least at the time of this writing, I know are current and useful for getting a good understanding of how Ember works and is structured.
+
+A very helpful list of resources. 
+
+As a side note: I love how design concious the Ember community is. Angular seems to have some problems there ;)
