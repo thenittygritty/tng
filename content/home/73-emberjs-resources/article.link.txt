@@ -16,4 +16,4 @@ Text:
 
 Very helpful. 
 
-As a side note: I love how design concious the Ember community is. Angular seems to have some problems there ;)
+As a side note: I love how design-concious the Ember community is. Angular seems to have some problems there ;)
