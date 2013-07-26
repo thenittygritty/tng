@@ -1,0 +1,15 @@
+Title: Progressive Viewports
+----
+Link: http://dbushell.com/2013/07/25/progressive-viewports/
+----
+Date: 2013-07-26
+----
+Author: martin-wolf
+----
+Credit: dbushell
+----
+Text:
+
+> Implementing off-canvas navigation requires a fair amount of effort in the realms of front-end performance and “viewport management” but the general principles are simple. Once you’ve cracked them you can create some brilliant responsive and interactive interfaces.
+
+The off-canvas navigation pattern explained by [David Bushell](https://twitter.com/dbushell).
