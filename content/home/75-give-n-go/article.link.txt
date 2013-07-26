@@ -1,0 +1,13 @@
+Title: Give ’n’ Go
+----
+Link: http://give-n-go.tumblr.com
+----
+Date: 2013-07-26
+----
+Author: martin-wolf
+----
+Text:
+
+> A curated gallery of Dribbble shots reworked as interactive CodePen pens.
+
+This is just awesome. I always thought that dribbble and CodePen should do some something like that together which is one of the reasons I built '[Give Me Something To Code](http://theamazingweb.net/projects/givemesomethingtocode/)'.
