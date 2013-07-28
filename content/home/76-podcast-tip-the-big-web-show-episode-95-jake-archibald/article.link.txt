@@ -1,0 +1,15 @@
+Title: [Podcast Tip] The Big Web Show Episode 95 — Jake Archibald
+----
+Link: http://5by5.tv/bigwebshow/95
+----
+Date: 2013-07-28
+----
+Author: kahlil-lechelt
+----
+Credit: 5by5
+----
+Text:
+
+> Jeffrey Zeldman interviews Jake Archibald of Google Chrome about upcoming web caching standards, how the network connection is merely a layer of progressive enhancement and why you should build your app offline, communicating with non-developers, accessibility standards at BBC and The Guardian, the forking of Webkit, native versus web part 99, and why the much-linked article "Why Mobile Web Apps are Slow" proves no such thing.
+
+I didn't know there was a jQuery plugin that plugs requestanimationframe into jQuery animations. Great episode! Excited to see whats coming in respect to the new web caching standard. 
