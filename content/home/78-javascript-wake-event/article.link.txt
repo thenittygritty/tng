@@ -1,0 +1,17 @@
+Title: JavaScript 'wake' Event
+----
+Link: http://blog.alexmaccaw.com/javascript-wake-event
+----
+Date: 2013-07-31
+----
+Author: kahlil-lechelt
+----
+Credit: maccaw
+----
+Text:
+
+(twitter: maccaw):
+
+> For (link: http://monocle.io text: monocle.io) I wanted to ensure that the list of posts is always kept up to date. This is especially a problem when the computer wakes up from a sleep, as the top posts are often way out of date!
+
+Alex describes a hack to create a custom 'wake' event in JavaScript that will allow you to refresh your page when your computer wakes up. 
