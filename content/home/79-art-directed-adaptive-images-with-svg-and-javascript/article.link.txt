@@ -1,0 +1,15 @@
+Title: Art-Directed Adaptive Images With SVG and JavaScript
+----
+Link: http://demosthenes.info/blog/722/Art-Directed-Adaptive-Images-With-SVG-and-JavaScript
+----
+Date: 2013-07-31
+----
+Author: martin-wolf
+----
+Credit: dudleystorey
+----
+Text:
+
+> In an ideal world we would have an image format that integrated “dynamic crop marks”, allowing a single source image to adapt to different requirements while preserving its central focus. While we don’t have such a feature yet, we do have SVG’s viewBox attribute, which comes awfully close.
+
+While this solution isn't the best perfomance-wise, it's a pretty clever idea.
