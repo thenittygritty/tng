@@ -1,0 +1,14 @@
+Title: [Podcast Tip] JSJabber 071: JavaScript Strategies at Microsoft with Scott Hanselman
+----
+Link: http://javascriptjabber.com/071-jsj-javascript-strategies-at-microsoft-with-scott-hanselman/
+----
+Date: 2013-08-18
+----
+Author: kahlil-lechelt
+----
+Credit: jsjabber
+----
+Text:
+
+Very interesting insight in how Microsoft deals with JavaScript and with Open Source nowadays. 
+
