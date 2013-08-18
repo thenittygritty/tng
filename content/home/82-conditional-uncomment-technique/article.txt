@@ -14,17 +14,22 @@ Comments: on
 ----
 Text:
 
-In a world where everything goes mobile, website loading performance is more important than ever.
-Luke Wroblewski wrote about the "[Mobile first](http://www.lukew.com/ff/entry.asp?933)" approach back in 2009 where he recommends to start a webdesign project with the mobile version to avoid clutter and focus on the content. In 2011 Jeremy Keith [teached us](http://24ways.org/2011/conditional-loading-for-responsive-designs/) to load the content for the desktop versions dynamically via Ajax depending on how much horizontal viewport space is available. This approach is fine but it takes the content either to a JavaScript file (bad bad bad) or some other place outside the HTML document it belongs to.
+**In a world where everything goes mobile, website loading performance is more important than ever.**
+
+**Luke Wroblewski wrote about the "[Mobile first](http://www.lukew.com/ff/entry.asp?933)" approach back in 2009 where he recommends to start a webdesign project with the mobile version to avoid clutter and focus on the content. In 2011 Jeremy Keith [teached us](http://24ways.org/2011/conditional-loading-for-responsive-designs/) to load the content for the desktop versions dynamically via Ajax depending on how much horizontal viewport space is available. This approach is fine but it takes the content either to a JavaScript file or some other place outside the HTML document it belongs to.**
 
 When I startet planning my first responsive webdesign project I wanted to create a solution where *all* of the content is in the HTML document. Even the content which should only be shown on desktop resolutions, but without affecting the loading time of the site.
 
-*My solution: use HTML comments to hide the less important content from mobile browsers and make it visible if the size allows them to display properly.*
+My solution: use HTML comments to hide the less important content from mobile browsers (small screens) and make it visible if the size allows them to display properly.
 
-The example shows a slideshow with commented images. The images will only be uncommented of the viewport has a width of > 900px. This technique is based on jQuery](http://jquery.com/). Because of its size not the best idea for mobile browsers, but it works for demonstration.
-But enough talking. Let’s jump to the code!
+As an example I took a simple jQuery slideshow. The images of the slideshow are commented by default and will get uncommented if the viewport has a width of > 900px. This technique is based on [jQuery](http://jquery.com/). Because of its size not the best idea for low performance devices, but it works for demonstration.
+
+*But enough talking. Let’s jump right to the code!*
+
 
 The HTML ist pretty straight forward:
+
+<span class="language-markup"></span>
 
 	<div class="slideshow">
 		<!--<img class="slide" src="http://dummyimage.com/900x400/ffed00/000.jpg&text=Slide+1">-->
@@ -32,8 +37,9 @@ The HTML ist pretty straight forward:
 		<!--<img class="slide" src="http://dummyimage.com/900x400/009ee0/fff.jpg&text=Slide+3">-->
 	</div>
 
-Now we need this little neat [jQuery uncomment plugin](ttp://chivil.com/uncomment/) by [Romuald Brunet](http://twitter.com/_romuald). It moves recursively through the given selectors and uncomments all comment nodes ([nodetype=8](https://developer.mozilla.org/en-US/docs/DOM/Node.nodeType)) inside.
+Now we need this little neat [jQuery uncomment plugin](ttp://chivil.com/uncomment/) by [Romuald Brunet](http://twitter.com/_romuald). It moves recursively through the given selectors and uncomments all comment nodes ([`nodetype=8`](https://developer.mozilla.org/en-US/docs/DOM/Node.nodeType)) inside.
 
+<span class="language-javascript"></span>
 
 	(function($) {
 		$.fn.uncomment = function (recurse) {
@@ -48,6 +54,7 @@ Now we need this little neat [jQuery uncomment plugin](ttp://chivil.com/uncommen
 					// Need to "evaluate" the HTML content,
 					// otherwise simple text won't replace
 					var e = $('<span>' + this.nodeValue + '</span>');
+
 					$(this).replaceWith(e.contents());
 				}
 
@@ -57,7 +64,9 @@ Now we need this little neat [jQuery uncomment plugin](ttp://chivil.com/uncommen
 	}(jQuery));
 
 
-After including the plugin we need to set the condition that fires the plugin. In our case we fire it if the viewport size is bigger or equal 900px. The function which checks the viewport size gets called once and on every resize.
+After including the plugin we need to set the condition that fires it. In our case we fire it if the viewport size is bigger or equal 900px. The function checking the viewport size gets called once and on every resize.
+
+<span class="language-javascript"></span>
 
 	var uncommentIfBigEnough = function () {
 		if (document.documentElement.clientWidth > 900) {
@@ -71,16 +80,15 @@ After including the plugin we need to set the condition that fires the plugin. I
 	uncommentIfBigEnough();
 
 	// Call if window gets resized
-	$(window).resize(function () {
-		uncommentIfBigEnough();
-	});
-
-});
+	$(window).on('resize', uncommentIfBigEnough);
 
 
 Basically thats it. If you want to have a working slideshow, you could use this little jQuery snippet to make it fade.
 
+<span class="language-javascript"></span>
+
 	$('.slideshow :first-child').appendTo('.slideshow');
+
 	setInterval(function () {
 		$('.slideshow :first-child')
 				.hide()
@@ -88,15 +96,24 @@ Basically thats it. If you want to have a working slideshow, you could use this 
 				.fadeIn(2000);
 	}, 4000);
 
-
 Here is a [working demo](http://codepen.io/MoritzGiessmann/pen/LcfdH) at Codepen.
+
+### Other use cases
+
+There are some other use cases for this technique uncommenting images. Basically you could use it to initially hide all kinds of HTML and show it on self defined JavaScript events. It doesn’t necessarily make sense if you hide text like this, but you could use it to load all kinds of external resources when you need them (CSS, more JavaScript etc). 
 
 ## Drawbacks
 
-There are two things to consider before using this technique.
+There are some things to consider before using this technique.
 * Don’t use it for SEO relevant content. The search engines ignore commented HTML.
-* Right now this technique is irreversible, which means it is not possible to comment the content again.
+* This technique is irreversible, which means it is not possible to comment the content again.
+* Being on a small screens device doesn’t automatically mean your user uses a low performance device or has a slow internet connection. But saving traffic always saves rendering time.
+* You have no event which lets you know when an external resource has been loaded completely after uncommenting its reference.
 
 ## Conclusion
 
-Feel free to share your thoughts and ideas about this approach. I’d be glad to hear your opinion or suggestion.
+The conditional uncomment technique can be a powerful tool to initially hide (and avoid the download) of content in your HTML. But use it with care and just if you don’t hide essential content of your site. Always think of the non JavaScript case and [enhance progressively](http://jakearchibald.com/2013/progressive-enhancement-still-important/).
+
+Thinking this approach a little further, some additions to it could be defining an event to fire if uncommented resources has been downloaded completely and maybe developing a way of making the uncomment process reversible using classes (if that makes any sense).
+
+I’d be glad to hear your opinions or suggestions to this approach. And of course feel free to fork, share and blog about it.
