@@ -1,0 +1,12 @@
+Title: BackboneConf Videos
+----
+Link: http://backboneconf.com/
+----
+Date: 2013-08-18
+----
+Author: kahlil-lechelt
+----
+Text:
+
+The BackboneConf videos are up. Lots of really great speakers here. After just watching a few videos it is interesting to see the development that Backbone is going through. The emphasis was on large-scale applications and in his keynote, Jeremy is addressing lots of the criticism Backbone has received from the Ember corner. Although not explicitly.
+
