@@ -1,0 +1,13 @@
+Title: Advanced Git
+----
+Link: http://vimeo.com/49444883
+----
+Date: 2013-08-18
+----
+Author: kahlil-lechelt
+----
+Credit: tlberglund
+----
+Text:
+
+This video is fantastic if you want to dive a little deeper into Git. Github has more (link: http://training.github.com/resources/videos/ text: here).
