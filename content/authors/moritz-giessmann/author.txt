@@ -1,0 +1,9 @@
+Name: Moritz Gießmann
+----
+Link: http://moritz-giessmann.de/
+----
+Twitter: MoritzGiessmann
+----
+Email: post@moritz-giessmann.de
+----
+[Moritz Gießmann](http://www.moritz-giessmann.de/) is a frontend developer at 1&1 Mail & Media GmbH (GMX, Web.de) from Karlsruhe, Germany. He likes web standards, clean craft and free software. He also writes articles about webdev, organizes the [Webmonday in Karlsruhe](http://bit.ly/wmka-wiki) and unfollows everybody who produces unaccessible code ;-).

@@ -1,22 +1,16 @@
 Title: The Conditional Uncomment Technique
 ----
-Date: 2013-02-25
+Date: 2013-08-18
 ----
-Author: Moritz Gießmann
+Author: moritz-giessmann
 ----
-AuthorUrl: http://moritz-giessmann.de/
-----
-AuthorTwitter: MoritzGiessmann
-----
-AuthorMail: post@moritz-giessmann.de
-----
-AuthorInfo:
-----
-Categories:
+Categories: JavaScript
 ----
 Description:
 ----
-Tags:
+Tags: JavaScript
+----
+Comments: on
 ----
 Text:
 
