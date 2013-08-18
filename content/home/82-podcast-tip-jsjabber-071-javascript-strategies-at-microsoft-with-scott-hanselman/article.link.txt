@@ -1,4 +1,4 @@
-Title: [Podcast Tip] JSJabber 071: JavaScript Strategies at Microsoft with Scott Hanselman
+Title: JSjabber 071: JavaScript Strategies at Microsoft with Scott Hanselman
 ----
 Link: http://javascriptjabber.com/071-jsj-javascript-strategies-at-microsoft-with-scott-hanselman/
 ----
