@@ -1,0 +1,15 @@
+Title: Build A Better Web
+----
+Link: http://getkirby.com/blog/lets-build-a-better-web
+----
+Date: 2013-08-20
+----
+Author: kahlil-lechelt
+----
+Text:
+
+(twitter: bastianallgeier): 
+
+> We need great self-hosted applications, which we can use to manage our emails, personal pictures, documents, private messages with friends, blog posts, etc.. All that kind of stuff needs to be in our control and on whatever server or device we decide to host it on. We need a truly distributed and encrypted way to communicate, which isn't controllable by any secret service or government and at the same time is as easy to setup as a Gmail account. We need this to be well-designed, open and with a fantastic user experience.
+
+As I have said many times. I give this my full support. I don't know how and if I can help to make this happen but I definitely want to see it happen. The web is already decentralized. Now we just have to make it easy and delightful to use it in that way. It's a big vision but for some reason I am convinced it will happen.
