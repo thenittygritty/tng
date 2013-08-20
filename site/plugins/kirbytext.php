@@ -15,18 +15,28 @@ class kirbytextExtended extends kirbytext {
 
   function tngimg($params) {
 
-  	$image = $this->image(Array('image' => $params['tngimg'], 'alt' => $params['alt']));
-
     // define default values for attributes
     $defaults = array(
       'caption'  => '',
+      'alt'		 => '',
       'position' => 'image-full'
     );
 
-    // merge the given parameters with the default values
+    // Merge the given parameters with the default values.
     $options = array_merge($defaults, $params);
 
-    $tag = '<figure class="' . $options['position'] . '">' . $image . '<figcaption>' . $options['caption'] . '</ficaption></figure>';
+    $image = $this->image(Array('image' => $options['tngimg'], 'alt' => $options['alt']));
+
+    if (isset($options['link'])) {
+		$openLink  = '<a href="' . $options['link'] . '">';
+		$closeLink = '</a>';
+    }
+    else {
+    	$openLink = '';
+    	$closeLink = '';
+    }
+
+    $tag = '<figure class="' . $options['position'] . '">' . $openLink . $image . $closeLink . '<figcaption>'  . $openLink . kirbytext($options['caption']) . $closeLink . '</ficaption></figure>';
 
     // build the link tag
     return $tag;
