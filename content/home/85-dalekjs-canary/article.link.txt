@@ -10,6 +10,6 @@ Credit: dalekjs
 ----
 Text:
 
-I hope you already checked out (text: Dalek.js link: http://dalekjs.com). If not: it's an early-stage UI testing tool written in JavaScript. 
+I hope you already checked out (link: http://dalekjs.com text: Dalek.js). If not: it's an early-stage UI testing tool written in JavaScript. 
 
 And now you can get the latest build of the software everytime it passes all the tests. Report all the bugs and help make it better!
