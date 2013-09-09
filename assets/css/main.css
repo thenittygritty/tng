@@ -772,25 +772,6 @@ input.search-submit {
   -moz-columns: auto;
   columns: auto;
 }
-@media screen and (min-width: 59em) {
-  .article-teasers {
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    columns: 2;
-    height: 507px;
-    margin: 0 -2px;
-  }
-  .article-teasers .article-featured {
-    height: 440px;
-  }
-}
-.article-teasers .article-featured {
-  margin: 8px;
-  margin: 0.5rem;
-  margin-top: 0;
-  margin-left: 1px;
-  margin-right: 1px;
-}
 .article-teasers .article-featured h1 {
   font-size: 1.6rem;
 }
@@ -805,6 +786,21 @@ input.search-submit {
 }
 .article-teasers .authordate time {
   float: right;
+}
+@media screen and (min-width: 59em) {
+  .article-teasers {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    height: 507px;
+    margin: 0 -2px;
+  }
+  .article-teasers .article-featured {
+    height: 440px;
+    margin-top: 0;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
 }
 
 .link .article-header h1 {

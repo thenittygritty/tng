@@ -101,24 +101,8 @@
 	-webkit-columns: auto;
 	   -moz-columns: auto;
 	        columns: auto;
-
-	@media #{$mq-smalldesktop} {
-		-webkit-columns: 2;
-		   -moz-columns: 2;
-		        columns: 2;
-		height: 507px;
-		margin: 0 -2px;
-
-		.article-featured {
-			height: 440px;
-		}
-	}
 	    
-	.article-featured {
-		@include x-rem(margin, 0.5);
-		margin-top: 0;
-		margin-left: 1px;
-		margin-right: 1px;
+	.article-featured {	
 
 		h1 {
 			font-size: 1.6rem;
@@ -127,6 +111,7 @@
 		.image-full {
 			margin: 0;
 		}
+
 	}
 
 	.authordate {
@@ -138,6 +123,21 @@
 		}
 		time {
 			float: right;
+		}
+	}
+
+	@media #{$mq-smalldesktop} {
+		-webkit-columns: 2;
+		   -moz-columns: 2;
+		        columns: 2;
+		height: 507px;
+		margin: 0 -2px;
+
+		.article-featured {
+			height: 440px;
+			margin-top: 0;
+			margin-left: 1px;
+			margin-right: 1px;
 		}
 	}
 }
