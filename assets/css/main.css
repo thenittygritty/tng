@@ -430,13 +430,13 @@ table {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.header-logo a:before, .header-logo a:after {
+.article-teasers .authordate:before, .header-logo a:before, .article-teasers .authordate:after, .header-logo a:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
-.header-logo a:after {
+.article-teasers .authordate:after, .header-logo a:after {
   clear: both;
 }
 
@@ -772,6 +772,7 @@ input.search-submit {
   -moz-columns: 2;
   columns: 2;
   margin: 0 -2px;
+  height: 507px;
 }
 .article-teasers .article-featured {
   margin: 8px;
@@ -786,6 +787,15 @@ input.search-submit {
 }
 .article-teasers .article-featured .image-full, .article-teasers .article-featured .image-leftish, .article-teasers .article-featured .image-leftish-small, .article-teasers .article-featured .image-rightish, .article-teasers .article-featured .image-rightish-small {
   margin: 0;
+}
+.article-teasers .authordate {
+  font-size: 0.8rem;
+}
+.article-teasers .authordate div {
+  float: left;
+}
+.article-teasers .authordate time {
+  float: right;
 }
 
 .link .article-header h1 {

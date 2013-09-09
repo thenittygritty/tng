@@ -36,7 +36,7 @@ class kirbytextExtended extends kirbytext {
     	$closeLink = '';
     }
 
-    $tag = '<figure class="' . $options['position'] . '">' . $openLink . $image . $closeLink . '<figcaption>'  . $openLink . kirbytext($options['caption']) . $closeLink . '</ficaption></figure>';
+    $tag = '<figure class="' . $options['position'] . '">' . $openLink . $image . $closeLink . '<figcaption>'  . $openLink . html($options['caption']) . $closeLink . '</ficaption></figure>';
 
     // build the link tag
     return $tag;

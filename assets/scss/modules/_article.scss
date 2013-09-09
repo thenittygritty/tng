@@ -101,7 +101,8 @@
 	-webkit-columns: 2;
 	   -moz-columns: 2;
 	        columns: 2;
-	margin: 0 -2px; 
+	margin: 0 -2px;
+	height: 507px;
 	    
 	.article-featured {
 		@include x-rem(margin, 0.5);
@@ -116,6 +117,18 @@
 
 		.image-full {
 			margin: 0;
+		}
+	}
+
+	.authordate {
+		@extend %clearfix;
+		font-size: 0.8rem;
+
+		div {
+			float: left;
+		}
+		time {
+			float: right;
 		}
 	}
 }
