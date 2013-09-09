@@ -767,7 +767,7 @@ input.search-submit {
 }
 
 .article-teasers {
-  overflow: visible;
+  overflow: hidden;
   -webkit-columns: auto;
   -moz-columns: auto;
   columns: auto;
