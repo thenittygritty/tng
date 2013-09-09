@@ -3,19 +3,27 @@
 // Show blog posts in decending order
 $articles = $page->children()->visible()->flip();
 
-function get_latest_articles($articles) {
-	$index = 0;
-	$last_three_articles = array();
+function getLatestArticles($articles) {
+	$index               = 0;
+	$featuredUids        = array();
+	$latestThreeArticles = array();
+
 	foreach ($articles as $article) {
 		if($article->template() == 'article' && $index < 3) {
-			$last_three_articles[] = $article;
+			$latestThreeArticles[] = $article;
 			$index++;
 		}
 	}
-	return $last_three_articles;
+
+	return $latestThreeArticles;
 }
 
-$last_three_articles = get_latest_articles($articles);
+$latestThreeArticles = getLatestArticles($articles);
+$articles = $articles
+				->not($latestThreeArticles[0]->uid)
+				->not($latestThreeArticles[1]->uid)
+				->not($latestThreeArticles[2]->uid);
+
 
 // Show posts of categories if requested
 if (param('category')):
@@ -27,49 +35,53 @@ if (param('category')):
 endif;
 ?>
 
+
+<?php if($articles->pagination->isFirstPage()): ?>
 <article class="article-featured">
 	<header class="article-header">
 		<h1>
-			<a href="<?php echo $last_three_articles[0]->url(); ?>">
-				<?php echo html($last_three_articles[0]->title()) ?>
+			<a href="<?php echo $latestThreeArticles[0]->url(); ?>">
+				<?php echo html($latestThreeArticles[0]->title()) ?>
 			</a>
 		</h1>
 	</header>
-	<strong><?php echo kirbytext($last_three_articles[0]->excerptintro()); ?></strong>
-	<?php echo kirbytext($last_three_articles[0]->thumbnail()); ?>
-	<?php echo kirbytext($last_three_articles[0]->excerpt()); ?>
-	<p><a href="<?php echo $last_three_articles[0]->url() ?>">Read more…</a></p>
+	<strong><?php echo kirbytext($latestThreeArticles[0]->excerptintro()); ?></strong>
+	<?php echo kirbytext($latestThreeArticles[0]->thumbnail()); ?>
+	<?php echo kirbytext($latestThreeArticles[0]->excerpt()); ?>
+	<p><a href="<?php echo $latestThreeArticles[0]->url() ?>">Read more…</a></p>
 </article>
 
 <div class="article-teasers">
 	<article class="article-featured">
 		<header class="article-header">
 			<h1>
-				<a href="<?php echo $last_three_articles[1]->url(); ?>">
-					<?php echo html($last_three_articles[1]->title()) ?>
+				<a href="<?php echo $latestThreeArticles[1]->url(); ?>">
+					<?php echo html($latestThreeArticles[1]->title()) ?>
 				</a>
 			</h1>
 		</header>
-		<?php echo kirbytext($last_three_articles[1]->thumbnail()); ?>
-		<?php echo kirbytext($last_three_articles[1]->excerptintro()); ?>
-		<p><a href="<?php echo $last_three_articles[1]->url() ?>">Read more…</a></p>
+		<?php echo kirbytext($latestThreeArticles[1]->thumbnail()); ?>
+		<?php echo kirbytext($latestThreeArticles[1]->excerptintro()); ?>
+		<p><a href="<?php echo $latestThreeArticles[1]->url() ?>">Read more…</a></p>
 	</article>
 
 	<article class="article-featured">
 		<header class="article-header">
 			<h1>
-				<a href="<?php echo $last_three_articles[2]->url(); ?>">
-					<?php echo html($last_three_articles[2]->title()) ?>
+				<a href="<?php echo $latestThreeArticles[2]->url(); ?>">
+					<?php echo html($latestThreeArticles[2]->title()) ?>
 				</a>
 			</h1>
 		</header>
-		<?php echo kirbytext($last_three_articles[2]->thumbnail()); ?>
-		<?php echo kirbytext($last_three_articles[2]->excerptintro()); ?>
-		<p><a href="<?php echo $last_three_articles[2]->url() ?>">Read more…</a></p>
+		<?php echo kirbytext($latestThreeArticles[2]->thumbnail()); ?>
+		<?php echo kirbytext($latestThreeArticles[2]->excerptintro()); ?>
+		<p><a href="<?php echo $latestThreeArticles[2]->url() ?>">Read more…</a></p>
 	</article>
 </div>
 
-<h2 class="heading-other">More Articles &amp; Links</h2>
+<h3 class="heading-other">More Articles &amp; Links</h3>
+
+<?php endif; ?>
 
 <?php
 if ($articles && $articles->count()):

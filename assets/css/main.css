@@ -770,6 +770,8 @@ input.search-submit {
   overflow: visible;
   -webkit-columns: 2;
   -moz-columns: 2;
+  columns: 2;
+  margin: 0 -2px;
 }
 .article-teasers .article-featured {
   margin: 8px;
@@ -777,7 +779,7 @@ input.search-submit {
   margin-top: 0;
   margin-left: 1px;
   margin-right: 1px;
-  height: 450px;
+  height: 440px;
 }
 .article-teasers .article-featured h1 {
   font-size: 1.6rem;
@@ -1082,7 +1084,7 @@ pre code {
 
 .heading-other {
   font-weight: 300;
-  font-family: "Open Sans", sans-serif;
+  color: #ced2d7;
 }
 
 /*
