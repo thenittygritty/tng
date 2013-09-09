@@ -10,6 +10,16 @@ Description: Distilled Hype takes a back seat but we introduce link posts to The
 ----
 Tags: The Nitty Gritty, Distilled Hype, link posts
 ----
+ExcerptIntro: 
+
+LOL, JK.
+
+What is not a joke though, is that the [Distilled Hype](http://distilledhype.com/) link blog is being integrated into The Nitty Gritty.
+
+Since I started Distilled Hype in early 2012 I have received a lot of positive feedback from people I respect throughout the industry. 
+----
+Thumbnail: <figure class="image-full">(image: distilledhype_thumb.jpg alt: Distilled Hype)<figcaption>Image by <a href="http://www.flickr.com/photos/15216811@N06/8564995905/">Nicola since 1972</a></ficaption></figure>
+----
 Text:
 
 **LOL, JK.**

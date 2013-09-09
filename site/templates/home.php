@@ -35,6 +35,8 @@ endif;
 			</a>
 		</h1>
 	</header>
+	<strong><?php echo kirbytext($last_three_articles[0]->excerptintro()); ?></strong>
+	<?php echo kirbytext($last_three_articles[0]->thumbnail()); ?>
 	<?php echo kirbytext($last_three_articles[0]->excerpt()); ?>
 	<p><a href="<?php echo $last_three_articles[0]->url() ?>">Read more…</a></p>
 </article>
@@ -48,7 +50,8 @@ endif;
 				</a>
 			</h1>
 		</header>
-		<?php echo kirbytext($last_three_articles[1]->excerpt()); ?>
+		<?php echo kirbytext($last_three_articles[1]->thumbnail()); ?>
+		<?php echo kirbytext($last_three_articles[1]->excerptintro()); ?>
 		<p><a href="<?php echo $last_three_articles[1]->url() ?>">Read more…</a></p>
 	</article>
 
@@ -60,10 +63,13 @@ endif;
 				</a>
 			</h1>
 		</header>
-		<?php echo kirbytext($last_three_articles[2]->excerpt()); ?>
+		<?php echo kirbytext($last_three_articles[2]->thumbnail()); ?>
+		<?php echo kirbytext($last_three_articles[2]->excerptintro()); ?>
 		<p><a href="<?php echo $last_three_articles[2]->url() ?>">Read more…</a></p>
 	</article>
 </div>
+
+<h2 class="heading-other">More Articles &amp; Links</h2>
 
 <?php
 if ($articles && $articles->count()):

@@ -87,3 +87,33 @@
 		line-height: 1.4;
 	}
 }
+
+// Featured articles
+.article-featured {
+	@extend .article;
+	@include x-box-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+	background-color: #fff;
+}
+
+// Teased articles
+.article-teasers {
+	overflow: visible;
+	-webkit-columns: 2;
+	   -moz-columns: 2;
+	    
+	.article-featured {
+		@include x-rem(margin, 0.5);
+		margin-top: 0;
+		margin-left: 1px;
+		margin-right: 1px;
+		height: 440px;
+
+		h1 {
+			font-size: 1.6rem;
+		}
+
+		.image-full {
+			margin: 0;
+		}
+	}
+}

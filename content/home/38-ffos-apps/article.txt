@@ -12,7 +12,18 @@ Tags: firefox os, apps, web technology, mobile, phones
 ----
 Comments: on
 ----
-Text:
+ExcerptIntro: 
+
+I was speaking at (link: http://webrebels.org/ text: Web Rebels) two weeks ago, where the Firefox OS team were kind enough to give me a new Geekphone Peak device, so I dove right into building some apps for it. Obligatory unboxing pics below!
+----
+Excerpt: 
+
+I've enjoyed building Chrome apps and (link: http://developer.chrome.com/apps/about_apps.html text: packaged) apps before and am always interested in experimenting with new projects that build upon the web platform. They give us an opportunity to demonstrate that just using the primitives granted by HTML, CSS and JavaScript we have the potential to deliver compelling experiences that can strive to complete against native desktop and mobile apps. In this regard, Firefox OS is quite interesting.
+
+----
+Thumbnail: <figure class="image-full">(image: unboxing.jpg alt: FFOS unboxing)<figcaption>Firefox OS unboxing</ficaption></figure>
+----
+Text: 
 
 **I was speaking at (link: http://webrebels.org/ text: Web Rebels) two weeks ago, where the Firefox OS team were kind enough to give me a new Geekphone Peak device, so I dove right into building some apps for it. Obligatory unboxing pics below!**
 

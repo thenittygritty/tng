@@ -12,6 +12,12 @@ Tags: gruntplugin, grunt-textfile, text file based blogging
 ----
 Comments: on
 ----
+ExcerptIntro:
+
+If you are using a text file based blogging software like (link: http://jekyllrb.com text: Jekyll), (link: http://getkirby.com text: Kirby) or (link: http://middlemanapp.com text: Middleman) you probably were annoyed at some point to manually have to create your text file with correctly formatted file and/or folder name including post-specific meta data.
+----
+Thumbnail: (tngimg: grunt-textfile.jpg caption:grunt-textfile alt:grunt-textfile)
+----
 Text:
 
 **If you are using a text file based blogging software like (link: http://jekyllrb.com text: Jekyll), (link: http://getkirby.com text: Kirby) or (link: http://middlemanapp.com text: Middleman) you probably were annoyed at some point to manually have to create your text file with correctly formatted file and/or folder name including post-specific meta data.**

@@ -6,7 +6,7 @@
  * @author Hans Christian Reinl - @drublic
  *
  */
-/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -222,7 +222,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -475,7 +475,7 @@ input[type="button"] {
   background: #426ea1;
 }
 
-.navigation > ul, .article, .search-results, .comments, .header-logo strong, .footer-scrolltop {
+.navigation > ul, .article, .search-results, .article-featured, .comments, .header-logo strong, .footer-scrolltop {
   margin: 8px;
   margin: 0.5rem;
   border-radius: 8px;
@@ -487,7 +487,7 @@ input[type="button"] {
   background-color: rgba(255, 255, 255, 0.7);
 }
 @media screen and (min-width: 38em) {
-  .navigation > ul, .article, .search-results, .comments, .header-logo strong, .footer-scrolltop {
+  .navigation > ul, .article, .search-results, .article-featured, .comments, .header-logo strong, .footer-scrolltop {
     margin: 16px;
     margin: 1rem;
     padding: 16px;
@@ -495,13 +495,13 @@ input[type="button"] {
   }
 }
 @media screen and (min-width: 48em) {
-  .navigation > ul, .article, .search-results, .comments, .header-logo strong, .footer-scrolltop {
+  .navigation > ul, .article, .search-results, .article-featured, .comments, .header-logo strong, .footer-scrolltop {
     padding: 24px;
     padding: 1.5rem;
   }
 }
 @media screen and (min-width: 59em) {
-  .navigation > ul, .article, .search-results, .comments, .header-logo strong, .footer-scrolltop {
+  .navigation > ul, .article, .search-results, .article-featured, .comments, .header-logo strong, .footer-scrolltop {
     padding: 32px;
     padding: 2rem;
   }
@@ -685,7 +685,7 @@ input.search-submit {
  */
 .search-results > article {
   padding-bottom: 20px;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
 }
 .search-results > article:first-child h3 {
   margin-top: 0;
@@ -695,11 +695,11 @@ input.search-submit {
   border-bottom: 0;
 }
 
-.article, .search-results {
+.article, .search-results, .article-featured {
   word-wrap: break-word;
 }
 @media screen and (min-width: 59em) {
-  .article, .search-results {
+  .article, .search-results, .article-featured {
     margin-left: 0;
     margin-right: 0;
   }
@@ -707,7 +707,7 @@ input.search-submit {
 
 .article-header h1 {
   line-height: 1.1;
-  margin: 0 0 0.5em;
+  margin: 0 0 .5em;
 }
 
 .article-header-date {
@@ -758,6 +758,32 @@ input.search-submit {
   font-size: 12.8px;
   font-size: 0.8rem;
   line-height: 1.4;
+}
+
+.article-featured {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+.article-teasers {
+  overflow: visible;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+.article-teasers .article-featured {
+  margin: 8px;
+  margin: 0.5rem;
+  margin-top: 0;
+  margin-left: 1px;
+  margin-right: 1px;
+  height: 450px;
+}
+.article-teasers .article-featured h1 {
+  font-size: 1.6rem;
+}
+.article-teasers .article-featured .image-full, .article-teasers .article-featured .image-leftish, .article-teasers .article-featured .image-leftish-small, .article-teasers .article-featured .image-rightish, .article-teasers .article-featured .image-rightish-small {
+  margin: 0;
 }
 
 .link .article-header h1 {
@@ -900,7 +926,7 @@ code[class*="language-"] {
   tab-size: 4;
   color: black;
   text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -917,7 +943,7 @@ pre[class*="language-"] {
   tab-size: 4;
   color: black;
   text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -927,7 +953,7 @@ pre[class*="language-"] {
   -ms-hyphens: none;
   hyphens: none;
   padding: 1em;
-  margin: 0.5em 0;
+  margin: .5em 0;
   overflow: auto;
 }
 
@@ -1052,6 +1078,11 @@ pre code {
 
 .site-content li {
   padding: 0.2em 0;
+}
+
+.heading-other {
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
 }
 
 /*
@@ -1351,7 +1382,7 @@ html {
      ========================================================================== */
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -1381,7 +1412,7 @@ html {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
