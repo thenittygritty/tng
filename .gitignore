@@ -1,6 +1,5 @@
 .DS_Store
 *.sublime-*
-
 node_modules
-
-/.sass-cache/
+.sass-cache
+site/plugins/linkpost.php
