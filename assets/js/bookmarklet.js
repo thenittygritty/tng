@@ -1,4 +1,6 @@
-javascript:(function(){
+javascript:(function(window){
+
+'use strict';
 
 // Name your space
 var MyNamespace = 'w00t!';
@@ -12,14 +14,41 @@ if ( window[ MyNamespace ] ) {
 
     return;
 }
-window[ MyNamespace ] = {};
+window[ MyNamespace ] = {
+	config: {
+		author: 'kahlil-lechelt',
+		scriptUrl: '//tng.dev/assets/js/linkpost.js'
+	}
+};
 
-var version = 1.6;
+// Set version.
+var version = '1.8.1';
+
+// Loading text and dimmer div.
+var loadingTxt = document.createTextNode( 'Loading' );
+var loadingEl  = document.createElement( 'h1' );
+var dimmerDiv  = document.createElement( 'div' );
+
+loadingEl.appendChild( loadingTxt );
+loadingEl.id = 'loadingtxt';
+loadingEl.style.cssText = 'z-index: 99998; position: fixed; top: 50%; left: 50%;' +
+	'width: 100px; margin-left: -50px; height: 24px; margin-top: -12px;' +
+	'text-align: center; display: block;' +
+	'font: normal 20px/24px "Helvetica Neue", "Helvetica", sans-serif;';
+
+dimmerDiv.style.cssText = 'position: fixed; z-index: 99997; background-color: white;' +
+	'opacity: 0.5; height: 100%; width: 100%; position: fixed;' +
+	'top: 0; left: 0; float: none;';
+dimmerDiv.id = 'dimmerdiv';
+dimmerDiv.appendChild( loadingEl );
+document.body.insertBefore( dimmerDiv );
+
+// Load script.
 var script  = document.createElement( 'script' );
 
 script.setAttribute( 'type', 'text/javascript' );
 script.setAttribute( 'charset', 'UTF-8' );
-script.setAttribute( 'src', '//tng.local:8888/assets/js/linkpost.js?r=' + Math.random() );
+script.setAttribute( 'src', window[ MyNamespace ].config.scriptUrl + '?r=' + Math.random() );
 document.documentElement.appendChild( script );
 
 script.onload = script.onreadystatechange = function() {
@@ -30,14 +59,13 @@ script.onload = script.onreadystatechange = function() {
         // initialise or warn if older version
         console.log(version, window[ MyNamespace ].version);
         if ( version !== window[ MyNamespace ].version ) {
-            alert( 'This bookmarklet is out of date!' );
+            window.alert( 'This bookmarklet is out of date!' );
         } else {
+			dimmerDiv.removeChild( loadingEl );
             window[ MyNamespace ].init();
         }
     }
 };
-}());
+}(window));
 
 
-
-javascript:(function(){var a="w00t!";if(window[a])return window[a].init(),void 0;window[a]={};var b=1.7,c=document.createElement("script"),d=document.createElement("div"),e=document.createTextNode("Yo, traveller! The main script is loading. Please stand by...");d.id="tng-linkpost-wait",d.style.position="absolute",d.style.right="20px",d.style.top="20px",d.style.padding="20px",d.style.background="rgba(0,0,0, 0.5)",d.style.width="200px",d.style.color="#fff",d.style.zIndex="9999999",d.appendChild(e),document.body.appendChild(d),c.setAttribute("type","text/javascript"),c.setAttribute("charset","UTF-8"),c.setAttribute("src","//tng.local:8888/assets/js/linkpost.js?r="+Math.random()),document.documentElement.appendChild(c),c.onload=c.onreadystatechange=function(){var d=c.readyState;d&&"loaded"!==d&&"complete"!==d||(c.onload=c.onreadystatechange=null,console.log(b, window[ a ].version),b!==window[a].version?alert("This bookmarklet is out of date!"):window[a].init())}})();
