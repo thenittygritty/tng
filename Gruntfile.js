@@ -45,7 +45,6 @@ module.exports = function (grunt) {
 				files: {
 					'assets/dist/main-<%= pkg.version %>.min.css': 'assets/scss/main.scss'
 				}
-
 			}
 		},
 
@@ -53,6 +52,14 @@ module.exports = function (grunt) {
 			deploy: {
 				src: 'assets/dist/main-<%= pkg.version %>.min.js',
 				dest: 'assets/dist/main-<%= pkg.version %>.min.js'
+			},
+			bookmarklet: {
+				src: 'assets/js/bookmarklet/bookmarklet.js',
+				dest: 'assets/js/bookmarklet/bookmarklet.min.js',
+			},
+			linkpost: {
+				src: 'assets/js/bookmarklet/linkpost.js',
+				dest: 'assets/js/bookmarklet/linkpost.min.js',
 			}
 		},
 
@@ -105,9 +112,9 @@ module.exports = function (grunt) {
 	grunt.registerTask('dev', 'jshint', 'sass:dev');
 
 	// A task for deployment
-	grunt.registerTask('deploy', ['jshint', 'concat', 'sass:deploy', 'uglify']);
+	grunt.registerTask('deploy', ['jshint', 'concat', 'sass:deploy', 'uglify:deploy']);
 
 	// Default task
-	grunt.registerTask('default', ['jshint', 'concat', 'sass:dev', 'uglify']);
+	grunt.registerTask('default', ['jshint', 'concat', 'sass:dev', 'uglify:deploy']);
 
 };
