@@ -1,0 +1,23 @@
+{
+  "name": "The Nitty Gritty",
+  "version": "1.0.0",
+  "homepage": "http://thenittygritty.co",
+  "authors": [
+    "Kahlil Lechelt <hello@kahlil.co>",
+    "Hans Christian Reinl <info@drublic.de>"
+  ],
+  "description": "The low down on web technology.",
+  "main": "index.php",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "~1.0.0"
+  }
+}
