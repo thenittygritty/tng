@@ -1,0 +1,15 @@
+Title: Evolving Your JavaScript with Backbone.js
+----
+Link: http://wordpress.tv/2013/09/05/k-adam-white-evolving-your-javascript-with-backbone-js/?utm_source=buffer&utm_campaign=Buffer&utm_content=buffer1e107&utm_medium=twitter
+----
+Date: 2013-09-16
+----
+Author: kahlil-lechelt
+----
+Credit: kadamwhite
+----
+Text:
+
+> This presentation looks at several ways to integrate Backbone.js into your WordPress themes and plugins, including a step-by-step demonstration of how Backbone improves the quality of your existing jQuery code. It also walks through other exciting ways to use Backbone alongside WordPress, including how to make a standalone Backbone application that only uses WordPress for its data.
+
+Backbone is the perfect tool to clean up your jQuery plugin code. This talk is very Wordpress specific but the principles can be applied to any site.
