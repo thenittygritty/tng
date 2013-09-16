@@ -5,6 +5,25 @@ javascript:(function(window){
 // Name your space
 var MyNamespace = 'w00t!';
 
+// Loading text and dimmer div.
+var loadingTxt = document.createTextNode( 'Loading' );
+var loadingEl  = document.createElement( 'h1' );
+var dimmerDiv  = document.createElement( 'div' );
+
+loadingEl.appendChild( loadingTxt );
+loadingEl.id = 'loadingtxt';
+loadingEl.style.cssText = 'z-index: 99998; position: fixed; top: 50%; left: 50%;' +
+	'width: 100px; margin-left: -50px; height: 24px; margin-top: -12px;' +
+	'text-align: center; display: block;' +
+	'font: normal 20px/24px "Helvetica Neue", "Helvetica", sans-serif;';
+
+dimmerDiv.style.cssText = 'position: fixed; z-index: 99997; background-color: white;' +
+	'opacity: 0.5; height: 100%; width: 100%; position: fixed;' +
+	'top: 0; left: 0; float: none;';
+dimmerDiv.id = 'dimmerdiv';
+dimmerDiv.appendChild( loadingEl );
+document.body.insertBefore( dimmerDiv );
+
 // avoid the bookmarklet activating more than once
 if ( window[ MyNamespace ] ) {
     // You can access the namespace here
@@ -24,25 +43,6 @@ window[ MyNamespace ] = {
 
 // Set version.
 var version = '1.8.1';
-
-// Loading text and dimmer div.
-var loadingTxt = document.createTextNode( 'Loading' );
-var loadingEl  = document.createElement( 'h1' );
-var dimmerDiv  = document.createElement( 'div' );
-
-loadingEl.appendChild( loadingTxt );
-loadingEl.id = 'loadingtxt';
-loadingEl.style.cssText = 'z-index: 99998; position: fixed; top: 50%; left: 50%;' +
-	'width: 100px; margin-left: -50px; height: 24px; margin-top: -12px;' +
-	'text-align: center; display: block;' +
-	'font: normal 20px/24px "Helvetica Neue", "Helvetica", sans-serif;';
-
-dimmerDiv.style.cssText = 'position: fixed; z-index: 99997; background-color: white;' +
-	'opacity: 0.5; height: 100%; width: 100%; position: fixed;' +
-	'top: 0; left: 0; float: none;';
-dimmerDiv.id = 'dimmerdiv';
-dimmerDiv.appendChild( loadingEl );
-document.body.insertBefore( dimmerDiv );
 
 // Load script.
 var script  = document.createElement( 'script' );
