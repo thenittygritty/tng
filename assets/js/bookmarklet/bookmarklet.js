@@ -12,6 +12,7 @@ var dimmerDiv  = document.createElement( 'div' );
 
 loadingEl.appendChild( loadingTxt );
 loadingEl.id = 'loadingtxt';
+
 loadingEl.style.cssText = 'z-index: 99998; position: fixed; top: 50%; left: 50%;' +
 	'width: 100px; margin-left: -50px; height: 24px; margin-top: -12px;' +
 	'text-align: center; display: block;' +
@@ -20,6 +21,7 @@ loadingEl.style.cssText = 'z-index: 99998; position: fixed; top: 50%; left: 50%;
 dimmerDiv.style.cssText = 'position: fixed; z-index: 99997; background-color: white;' +
 	'opacity: 0.5; height: 100%; width: 100%; position: fixed;' +
 	'top: 0; left: 0; float: none;';
+
 dimmerDiv.id = 'dimmerdiv';
 dimmerDiv.appendChild( loadingEl );
 document.body.insertBefore( dimmerDiv );
@@ -37,7 +39,7 @@ window[ MyNamespace ] = {
 	config: {
 		author: 'kahlil-lechelt',
 		domain: 'tng.dev',
-		scriptUrl: 'http://tng.dev/assets/js/bookmarklet/linkpost.min.js'
+		scriptUrl: 'http://tng.dev/assets/dist/bookmarklet/linkpost.min.js'
 	}
 };
 

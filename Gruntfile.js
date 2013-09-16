@@ -55,11 +55,16 @@ module.exports = function (grunt) {
 			},
 			bookmarklet: {
 				src: 'assets/js/bookmarklet/bookmarklet.js',
-				dest: 'assets/js/bookmarklet/bookmarklet.min.js',
+				dest: 'assets/dist/bookmarklet/bookmarklet.min.js'
 			},
 			linkpost: {
-				src: 'assets/js/bookmarklet/linkpost.js',
-				dest: 'assets/js/bookmarklet/linkpost.min.js',
+				src: [
+					'assets/js/bookmarklet/zepto.min.js',
+					'bower_components/handlebars/handlebars.runtime.js',
+					'assets/js/bookmarklet/templates/form.js',
+					'assets/js/bookmarklet/linkpost.js'
+				],
+				dest: 'assets/dist/bookmarklet/linkpost.min.js'
 			}
 		},
 
@@ -75,6 +80,15 @@ module.exports = function (grunt) {
 					'assets/js/main.js'
 				],
 				tasks: 'jshint'
+			},
+
+			bookmarklet: {
+				files: [
+					'assets/js/bookmarklet/templates/form.hbs',
+					'assets/js/bookmarklet/linkpost.js',
+					'assets/js/bookmarklet/bookmarklet.js'
+				],
+				tasks: ['handlebars', 'uglify:linkpost', 'uglify:bookmarklet']
 			}
 		},
 
@@ -96,6 +110,17 @@ module.exports = function (grunt) {
 					urlFormat: 'PREFIX-SLUG/article.txt'
 				}
 			}
+		},
+
+		handlebars: {
+			compile: {
+				options: {
+					namespace: "JST"
+			    },
+			    files: {
+					"assets/js/bookmarklet/templates/form.js": "assets/js/bookmarklet/templates/form.hbs"
+			    }
+			}
 		}
 	});
 
@@ -105,6 +130,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-handlebars');
 	grunt.loadNpmTasks('grunt-textfile');
 
 
@@ -113,6 +139,9 @@ module.exports = function (grunt) {
 
 	// A task for deployment
 	grunt.registerTask('deploy', ['jshint', 'concat', 'sass:deploy', 'uglify:deploy']);
+
+	// A task to build the bookmarklet
+	grunt.registerTask('bm', ['handlebars', 'uglify:linkpost', 'uglify:bookmarklet']);
 
 	// Default task
 	grunt.registerTask('default', ['jshint', 'concat', 'sass:dev', 'uglify:deploy']);
