@@ -1,6 +1,6 @@
 Title: Evolving Your JavaScript with Backbone.js
 ----
-Link: http://wordpress.tv/2013/09/05/k-adam-white-evolving-your-javascript-with-backbone-js/?utm_source=buffer&utm_campaign=Buffer&utm_content=buffer1e107&utm_medium=twitter
+Link: http://wordpress.tv/2013/09/05/k-adam-white-evolving-your-javascript-with-backbone-js/
 ----
 Date: 2013-09-16
 ----
