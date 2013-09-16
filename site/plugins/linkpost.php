@@ -10,7 +10,7 @@ function linkpost() {
 	$headers = apache_request_headers();
 	$host    = $headers['Host'];
 	$local   = (substr($host, -4) === '.dev' || substr($host, -6) === '.local') ? true : false;
-	
+
 	if ($local) {
 
 	  global $site;
@@ -22,6 +22,7 @@ function linkpost() {
 	  $link   = get('link');
 	  $title  = get('title');
 	  $author = get('author');
+	  $credit = get('credit');
 	  $text   = get('text');
 	  // Read all directory names.
 	  $files  = dir::read($path);
@@ -35,6 +36,9 @@ function linkpost() {
 
 	  	// Construct the path to the file.
 		  $newFile  = $newDir . '/' . $templateName;
+
+		  $creditTmpl = $credit ? "Credit: $credit\n----\n" : '';
+
 		  // Construct the template and fill in the variables.
 		  $template = "Title: $title\n" .
 		  						"----\n" .
@@ -44,13 +48,14 @@ function linkpost() {
 		  						"----\n" .
 		  						"Author: $author\n" .
 		  						"----\n" .
+		  						$creditTmpl .
 		  						"Text:\n" .
 		  						"\n" .
 		  						$text;
 
 		  // Write the file.
 		  f::write($newFile, $template);
-		  
+
 		  return 'Ok <3';
 	  }
 	  else {

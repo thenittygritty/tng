@@ -14,7 +14,6 @@
 		init: function() {
 
 			// Success!
-			console.log('w00t! This shit is loaded and working!');
 
 			BM.appendForm();
 
@@ -24,7 +23,7 @@
 		appendForm: function() {
 			// Set variables for form elements.
 			var div, h1, textarea, form, buttonWrap, button, logoSpan;
-			var inputStyles, inputUrl, inputTitle, inputAuthor;
+			var inputStyles, inputUrl, inputTitle, inputAuthor, inputCredit;
 			var headline   = document.createTextNode("Edit Your Linkpost");
 			var logo       = document.createTextNode("//");
 			var buttonText = document.createTextNode("Create Linkpost");
@@ -37,7 +36,7 @@
 				'box-sizing': 'boder-box',
 				position: 'fixed',
 				'background-color': '#f7f6f3',
-				height: '616px',
+				height: '662px',
 				'z-index': 99999,
 				padding: '15px',
 				'font-weight': '400',
@@ -60,7 +59,8 @@
 				'color': '#5b88bb',
 				'margin': '0 0 15px 0',
 				'text-transform': 'none',
-                float: 'none'
+                float: 'none',
+                padding: 0
 			});
 
 			logoSpan = BM.getStyledElement('span', {
@@ -88,6 +88,7 @@
 			inputUrl    = BM.getStyledElement('input', inputStyles);
 			inputTitle  = BM.getStyledElement('input', inputStyles);
 			inputAuthor = BM.getStyledElement('input', inputStyles);
+			inputCredit = BM.getStyledElement('input', inputStyles);
 
 			textarea = BM.getStyledElement('textarea', {
 				font: '300 14px/18px "Helvetica Neue", "Helvetica", sans-serif',
@@ -148,9 +149,12 @@
 			// Author
 			inputAuthor.name        = 'author';
 			inputAuthor.type        = 'text';
-			console.log('undefined?', window[ MyNamespace ].config);
 			inputAuthor.value       = window[ MyNamespace ].config.author;
 			inputAuthor.placeholder = 'Author';
+			// Credit
+			inputCredit.name        = 'credit';
+			inputCredit.type        = 'text';
+			inputCredit.placeholder = 'Credit (optional)';
 			// Textarea
 			textarea.name           = 'text';
 
@@ -166,6 +170,7 @@
 			form.appendChild(inputTitle);
 			form.appendChild(inputUrl);
             form.appendChild(inputAuthor);
+            form.appendChild(inputCredit);
 			form.appendChild(textarea);
 			buttonWrap.appendChild(button);
 			form.appendChild(buttonWrap);
