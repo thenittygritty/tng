@@ -1,0 +1,132 @@
+<div id="tngbookmarklet">
+	<style>
+		#tngbookmarklet * {
+			box-sizing: border-box;
+			color: #4a525c;
+			position: relative;
+		}
+		#tngbookmarklet {
+			font: 300 14px/18px "Helvetica Neue", "Helvetica", sans-serif;
+			position: fixed;
+			background-color: #f7f6f3;
+			height: 557px;
+			z-index: 99999;
+			padding: 15px;
+			font-weight: 400;
+            width: 100%;
+            max-width: 500px;
+            top: 20px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            float: none;
+		}
+
+		#tngbookmarklet h1 {
+			display: block;
+			font: bold 20px/24px "Helvetica Neue", "Helvetica", sans-serif;
+			color: #5b88bb;
+			margin: 0 0 15px 0;
+			text-transform: none;
+            float: none;
+            padding: 0;
+		}
+
+		#tngbookmarklet h1 span {
+			color: #e02d0d;
+			font: 300 20px/24px "Helvetica Neue", "Helvetica", sans-serif;
+			font-weight: bold;
+			padding-right: 10px;
+            float: none;
+		}
+
+		#tngbookmarklet input {
+			font: 300 14px/18px "Helvetica Neue", "Helvetica", sans-serif;
+			padding: 5px;
+			display: block;
+			width: 500px;
+			border: 1px solid #ccc;
+			margin: 5px 0 15px 0;
+			border-radius: 2px;
+			float: none;
+		}
+
+		#tngbookmarklet textarea {
+			font: 300 14px/18px "Helvetica Neue", "Helvetica", sans-serif;
+			margin: 5px 0 0 0;
+			display: block;
+			width: 100%;
+			height: 180px;
+			border: 1px solid #ccc;
+			border-radius: 2px;
+            float: none;
+		}
+
+		#tngbookmarklet #buttonwrap {
+			display: block;
+			height: 28px;
+			position: relative;
+		}
+
+		#tngbookmarklet #tngbm-button {
+			font: 300 14px/18px "Helvetica Neue", "Helvetica", sans-serif;
+			display: block;
+			margin-top: 15px;
+			background-color: #e02d0d;
+			color: white;
+			border: none;
+			border-radius: 2px;
+			padding: 5px;
+			position: absolute;
+			right: 0;
+            float: none;
+		}
+
+		#tngbookmarklet label {
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+
+		#tngbookmarklet label span {
+			color: #e02d0d;
+		}
+
+		#tngbookmarklet .closelink {
+			position: absolute;
+			top: 7px;
+			right: 15px;
+			text-decoration: none;
+			z-index: 99999;
+			font-size: 12px;
+			color: #AFB7C0;
+		}
+
+		#tngbookmarklet .closelink:hover {
+			color: #AFB7C0;
+			text-decoration: underline;
+		}
+
+	</style>
+
+	<a href="#" class="closelink">close</a>
+	<form action="{{ postUrl }}" method="get" enctype="application/x-www-form-urlencoded" id="linkpostform">
+		<h1><span>//</span> Edit Your Linkpost</h1>
+		<label for="inputtitle">Title <span>*</span></label>
+		<input type="text" name="title" id="inputtitle" placeholder="Title" value="{{ title }}">
+		<label for="inputlink">Link <span>*</span></label>
+		<input type="text" name="link" id="inputlink" placeholder="Link" value="{{ link }}">
+		<label for="inputauthor">Author <span>*</span></label>
+		<input type="text" name="author" placeholder="Author" id="inputauthor" value="{{ author }}">
+		<label for="inputcredit">Credit</label>
+		<input type="text" name="credit" placeholder="Credit (optional)" id="inputcredit">
+		<label for="linkposttext">Text <span>*</span></label>
+		<textarea name="text" id="linkposttext">{{ selection }}</textarea>
+		<div id="buttonwrap">
+			<button id="tngbm-button">Create Linkpost</button>
+		</div>
+	</form>
+</div>
