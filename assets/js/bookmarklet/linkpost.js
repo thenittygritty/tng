@@ -5,7 +5,7 @@
 	var MyNamespace = 'w00t!';
 	var config = window[ MyNamespace ].config;
 
-	config.postUrl = 'http://tng.dev/linkpost/';
+	config.postUrl = 'http://' + config.domain + '/linkpost/';
 
 	// BM for bookmarklet.
 	var BM = window[ MyNamespace ] = {
@@ -23,7 +23,7 @@
 		},
 		appendForm: function() {
 			// Set variables for form elements.
-			var dimmerDiv, div, h1, textarea, form, buttonWrap, button, loadingMsg, logoSpan;
+			var div, h1, textarea, form, buttonWrap, button, logoSpan;
 			var inputStyles, inputUrl, inputTitle, inputAuthor;
 			var headline   = document.createTextNode("Edit Your Linkpost");
 			var logo       = document.createTextNode("//");
@@ -84,7 +84,7 @@
 				'border-radius': '2px',
                 float: 'none'
 			};
-			
+
 			inputUrl    = BM.getStyledElement('input', inputStyles);
 			inputTitle  = BM.getStyledElement('input', inputStyles);
 			inputAuthor = BM.getStyledElement('input', inputStyles);
@@ -279,7 +279,7 @@
 									this.status++;
 									oSegmReq.readAsBinaryString(oFile);
 								}
-							} 
+							}
 							else {
 								/* enctype is application/x-www-form-urlencoded or text/plain or method is GET: files will not be sent! */
 								for (nFile = 0; nFile < oField.files.length; this.segments.push(fFilter(oField.name) + "=" + fFilter(oField.files[nFile++].name)));
@@ -306,7 +306,7 @@
 			})();
 
 			var form    = document.getElementById('linkpostform');
-			
+
 			form.action  = window[ MyNamespace ].config.postUrl;
 			form.method  = 'get';
 			form.enctype = 'application/x-www-form-urlencoded';

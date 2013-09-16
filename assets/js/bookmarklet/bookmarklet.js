@@ -17,7 +17,8 @@ if ( window[ MyNamespace ] ) {
 window[ MyNamespace ] = {
 	config: {
 		author: 'kahlil-lechelt',
-		scriptUrl: '//tng.dev/assets/js/bookmarklet/linkpost.min.js'
+		domain: 'tng.dev',
+		scriptUrl: 'http://tng.dev/assets/js/bookmarklet/linkpost.min.js'
 	}
 };
 
