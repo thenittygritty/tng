@@ -43,7 +43,9 @@
 # code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
 
 <IfModule mod_headers.c>
+# TNG: Only enabled locally. - Start
     Header set Access-Control-Allow-Origin "*"
+# TNG: Only enabled locally. - End
 </IfModule>
 
 
