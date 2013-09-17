@@ -27,7 +27,7 @@ function linkpost() {
 	  // Read all directory names.
 	  $files  = dir::read($path);
 	  // Construct the name of the new directory.
-	  $newDir = $path . count($files) . '-' . str::urlify($title);
+	  $newDir = $path . count($files) . '-' .  str_replace('.', '-', str::urlify($title));
 	  // Create the directory.
 	  $create = dir::make($newDir);
 
