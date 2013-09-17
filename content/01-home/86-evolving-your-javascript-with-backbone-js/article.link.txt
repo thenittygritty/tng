@@ -1,4 +1,4 @@
-Title: Evolving Your JavaScript with Backbone.js
+Title: [Video] Evolving Your JavaScript with Backbone.js
 ----
 Link: http://wordpress.tv/2013/09/05/k-adam-white-evolving-your-javascript-with-backbone-js/
 ----
