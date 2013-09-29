@@ -1,0 +1,21 @@
+Title: Tools for image optimization
+----
+Link: http://addyosmani.com/blog/image-optimization-tools/
+----
+Date: 2013-09-29
+----
+Author: hans-christian-reinl
+----
+Text:
+
+Images are the most bandwidth-consuming parts of our web pages.
+
+Addy Osmani states:
+
+> Images are a non-trivial problem to solve because they occasionally need to be high-res, but at the same time small enough to not kill your users mobile data cap. 
+
+But luckily we have tools to help us optimize images and thus the experience of our users.
+
+> Where possible, it’s best to try automating image optimization so that it’s a first-class citizen in your build chain.
+
+Addy collected a list of tools and helpers to create this automatization process.
