@@ -1,0 +1,225 @@
+Title: Toggle navigation with pure CSS
+----
+Date: 2013-10-13
+----
+Author: stefan-judis
+----
+Categories: CSS
+----
+Description:
+----
+Tags: CSS, Anmations, Progressive Enhancement
+----
+Comments: off
+----
+Text:
+
+I discovered a new hobby for myself. A lot of times I just sit in front of my computer and browse what is going on at [CodePen](http://codepen.io). CodePen is a relatively new platform maintained by [Chris Coyier](https://twitter.com/chriscoyier) and his friends to play around with CSS and JavaScript, that makes it unbelievable easy to prototype stuff and share with other people.
+
+(tngimg: toggleNavigation.gif alt: Toggle navigation with pure CSS position: image-rightish-small)
+
+When I like something I mostly dig into the source to see how it is made. From time to time I discover really nice things, that are implemented with a heavy usage of JavaScript, that could have been done with CSS only. An example for that is the following toggle navigation.
+
+This navigation makes usage of the so called "[Checkbox Hack](http://css-tricks.com/the-checkbox-hack/)". Using this technique there is no need to create two states by toggling a given class of an element via JavaScript. The checkbox input element already has two states implementet and these are easily accessable via CSS.
+
+## The markup
+
+Let’s have a look into the HTML that implements the new CSS only navigation.
+
+<span class="language-markup"></span>
+
+    <div id="frame">
+      <h1>Toogle navigation with pure css</h1>
+
+      <input id="toggleNavigation" type="checkbox">
+      <label for="toggleNavigation">+</label>
+
+      <ul>
+        <li class="item"><a href="#" class="brandico-wordpress">Wordpress</a>
+        <li class="item"><a href="#" class="brandico-github">Github</a>
+        <li class="item"><a href="#" class="brandico-twitter-bird">Twitter</a>
+        <li class="item"><a href="#" class="brandico-lastfm">LastFM</a>
+        <li class="item"><a href="#" class="brandico-googleplus-rect">Google plus</a>
+      </ul>
+    </div>
+
+
+The most import thing here is the checkbox with the id `toggleNavigation`.
+
+## The "checkbox hack"
+
+I started by defining styles for the checkbox and its label. The point here is that it is not really important how the checkbox is styled because it will be hidden or not visible anyway (in this case it lays under the label). The label has got the job to switch the state of the checkbox and should be styled properly.
+
+I like to write my styles with the help of the [Compass](http://compass-style.org) CSS framework, so please don't wonder, if there are some unfamiliar variables or functions included, they will be commented and if they are important they will be explained.
+
+Important styles for the label are the following:
+
+<span class="language-css"></span>
+
+    // red circle with box-shadow
+    input[type=checkbox] + label {
+
+        // lot's of style here
+        @include background-image(radial-gradient(50px 50px, #f42a0b 0%, #cc2701 100%));
+
+        border-radius: 50%;
+        border: 2px solid #fff;
+
+        // helper function for getting box-shadow
+        // with vendor prefixes
+        @include box-shadow(0 2px 4px #333);
+
+        // helper function to include css transition
+        // property with vendor prefixes
+        @include transition(all 0.5s ease-in);
+
+        // z-indexes are all defined on top
+        // to have a better overview
+        z-index: $z-label;
+    }
+
+    // dark grey circle with box-shadow inset
+    input[type=checkbox]:checked + label {
+        background-image: none;
+        background-color: #888;
+
+        // helper function for getting box-shadow
+        // with vendor prefixes
+        @include box-shadow(inset 0 2px 3px #444);
+    }
+
+
+What we see here is the "Checkbox Hack". It makes usage of the adjacent selector (`+`). This selector is really powerful. It selects the next sibling element that maches the selection. That means if the label wouldn't be right after the input field it would not match. This way we can define two styles for the label depending on the state of the checkbox.
+
+The next part is the unordered list that includes our link items.
+
+<span class="language-css"></span>
+
+    input[type=checkbox] ~ ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -20px 0 0 -20px;
+      padding: 0;
+      list-style: none;
+    }
+
+Nothing special in here. The list is placed at the same position as the input and the label. It also got some reset styles to not look like a default unordered list.
+
+## Animation of list items
+
+The exciting part about this are the list items.
+
+<span class="language-css"></span>
+
+    // item with no transition delay
+    $middleIndex: 3;
+
+    // number of items inside
+    // of toggle navigation
+    $numberOfItems: 5;
+
+    .item {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 40px;
+      height: 40px;
+
+      opacity: 0;
+
+      border-radius: 50%;
+
+      background-color: #888;
+
+      // helper function to include background image
+      // with a radial gradient and vendor prefixes
+      @include background-image(radial-gradient(40px 40px, #333 5px, #111 25px));
+
+      // z-indexes are all defined on top
+      // to have a better overview
+      z-index: $z-item;
+
+      // set basic transformation
+      // to avoid jumpy behavior
+      // in the transition
+      @include simple-transform( 1, 0, 0, 0, 0, 0, 20px, 0 );
+
+      &:hover {
+        // helper function to include background image
+        // with a radial gradient and vendor prefixes
+        @include background-image(radial-gradient(40px 40px, #777 5px, #444 25px));
+      }
+
+      // Sass loop to define animation properties
+      @for $i from 1 through $numberOfItems {
+        $delay : $i - $middleIndex;
+
+        @if $i - 3 < 0 {
+          $delay : ($i - 3) * -1;
+        }
+
+        &:nth-child(#{$i}) {
+          // setting of transition property
+          // depending on $delay
+          @include transition(
+            transform 0.5s ease-in 0.1s + 0.1s * $delay,
+            opacity 0.5s ease-in 0.1s + 0.1s * $delay
+          );
+        }
+      }
+    }
+
+The list items have some styling for the nice look, but the most important part here are the `nth-child` pseudo-class selectors. They all have a different transition property. This property is defined for each item via a [Sass loop](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#id11). This loop iterates over the variable `$numberOfItems` and sets a different transition for each item. By using a loop we can change the number of items easily, avoid code duplication and make it easier to maintain in the future.
+
+Basically this loop defines for all elements that have the class `item` that the CSS properties `opacity` and `transform` should be animated. The only difference is they have a specific animation delay which depends on the variable `$delay`. `$delay` depends on the position of the dependent item in the collection. The centered item should not have any delay, while the surrounding items should have a delay dependent on how far away their are from the middle.
+
+By defining CSS transitions the items can slide smoothly and it looks a bit more playful than if they would all come up at the same time.
+
+## Transformation of list items
+
+The last step is to transform the list items depending on the state of the checkbox.
+
+<span class="language-css"></span>
+
+    input[type=checkbox]:checked ~ ul .item {
+      opacity: 1;
+
+      @include box-shadow(0 3px 2px #666);
+
+      @for $i from 1 through $numberOfItems {
+        $angle : ($i - $middleIndex) * 30deg;
+
+        &:nth-child(#{$i}) {
+          @include simple-transform( 1, $angle, 0, 150%, 0, 0, 20px, 0 );
+        }
+      }
+    }
+
+
+This is where the magic happens. Using the "Checkbox Hack" and the sibling combinator `~` it is possible to select the items depending on the state of the checkbox (more information about this selector [here](http://css-tricks.com/child-and-sibling-selectors/)). To achieve that, a Sass loop is used again. It calculates a given angle for each item. Let us have a look how the transformation works.
+
+First of all the items are faded in by setting `opacity` to `1` again to make them visible. Also for each element the CSS transformation is defined. To achieve this I used the [`simple-transform`](http://compass-style.org/reference/compass/css3/transform/#mixin-simple-transform) function that is included in the Compass framework. This function provides easy setting of a bunch of different CSS transformation at once.
+
+According to Compass documentation this function has the following parameters:
+
+<span class="language-css"></span>
+
+    simple-transform($scale, $rotate, $trans-x, $trans-y, $skew-x, $skew-y, $origin-x, $origin-y)
+
+
+To sum up what this function call does, the items are scaled by the factor of 1, rotated by a given number of degrees, translated on the y-axis and have a set origin-x by 20px. The setting of origin-x is really important in this case, because the items should rotate exactly around the middle of checkbox. The checkbox has in its "hidden" state a width of 40px and that is the reason why it has to be 20px (40px / 2 - to get the exact center).
+
+If you want to play around with this technique and see the result, it is also available on [CodePen](http://codepen.io/stefanjudis/full/shuvn).
+
+<p data-height="268" data-theme-id="0" data-slug-hash="shuvn" data-user="stefanjudis" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/stefanjudis/pen/shuvn'>Toggle Navigation In Pure Css</a> by Stefan Judis (<a href='http://codepen.io/stefanjudis'>@stefanjudis</a>) on <a href='http://codepen.io'>CodePen</a></p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
+
+
+## Conclusion
+
+Using CSS transitions, CSS transformations and the "Checkbox Hack" it easily possible to create movable and state dependent content without any toggling of classes via JavaScript. I really like this way of developing navigations and menus, because in my mind JavaScript should not be used, when it is not needed. CSS becomes more and more powerful these days, so let us use it. ;)
+
+I hope you enjoyed the article and you will give the "Checkbox Hack" a try.
