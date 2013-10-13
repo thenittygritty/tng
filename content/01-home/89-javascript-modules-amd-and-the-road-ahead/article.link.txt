@@ -1,0 +1,13 @@
+Title: Javascript Modules, AMD, and the road ahead
+----
+Link: http://yahooeng.tumblr.com/post/62383009835/javascript-modules-amd-and-the-road-ahead
+----
+Date: 2013-10-13
+----
+Author: hans-christian-reinl
+----
+Text:
+
+> The main goal of AMD is to define a javascript module and handle its dependency coordination and resolution. This is the logical next step to what we looked at above because it enables us to break up our code using the Single Responsibility Principle which states that every class should only have one responsibility.
+
+The Yahoo Engineers Team explains a little bit about why AMD is useful and how it will change in the future with ECMAScript 6.
