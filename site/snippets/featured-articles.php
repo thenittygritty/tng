@@ -5,7 +5,7 @@ foreach ($articles as $article):
 	// Get author
 	$author = $pages->find('authors/' . (string) $article->author()); ?>
 
-	<?php 
+	<?php
 	# Open the teaser wrapper
 	if ($index == 1): ?>
 	<div class="article-teasers">
@@ -13,16 +13,22 @@ foreach ($articles as $article):
 		<article class="article-featured">
 			<header class="article-header">
 				<h1>
+					<?php if ($index == 0): ?>
 					<a href="<?php echo $article->url(); ?>">
 						<?php echo html($article->title()) ?>
 					</a>
+					<?php else: ?>
+					<a href="<?php echo $article->url(); ?>">
+						<?php echo html(str::excerpt($article->title(), $chars=28, $removehtml=false, $rep='…')) ?>
+					</a>
+					<?php endif; ?>
 				</h1>
 
 				<?php if ($index != 0): ?>
 				<div class="authordate">
 				<?php endif ?>
 					<div>
-						by <a href="#author"><?php echo html($author->name()); ?></a>
+						by <a href="<?php echo $article->url(); ?>#author"><?php echo html($author->name()); ?></a>
 					</div>
 
 					<p class="article-header-date">
@@ -33,8 +39,8 @@ foreach ($articles as $article):
 				<?php if ($index != 0): ?>
 				</div>
 				<?php endif ?>
-				
-				
+
+
 				<?php if ($index == 0): ?>
 				<div class="article-header-categories">
 					<?php $categories = explode(',', $article->categories()); ?>
@@ -47,10 +53,10 @@ foreach ($articles as $article):
 			<?php if ($index == 0): ?>
 			<strong><?php echo kirbytext($article->excerptintro()); ?></strong>
 			<?php endif;
-			echo kirbytext($article->thumbnail()); 
+			echo kirbytext($article->thumbnail());
 
-			if ($index != 0): 
-				echo kirbytext($article->excerptintro()); 
+			if ($index != 0):
+				echo kirbytext($article->excerptintro());
 			endif;
 
 			if ($index == 0) {
@@ -59,13 +65,13 @@ foreach ($articles as $article):
 			?>
 			<p><a href="<?php echo $article->url() ?>">Read more…</a></p>
 		</article>
-	<?php 
+	<?php
 	# Close the teaser wrapper.
 	if ($index == 2): ?>
 	</div>
-	<?php 
+	<?php
 	endif;
-	$index++; 
+	$index++;
 endforeach; ?>
 
 <h3 class="heading-other">More Articles &amp; Links</h3>
