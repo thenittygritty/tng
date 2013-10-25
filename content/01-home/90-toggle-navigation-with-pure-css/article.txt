@@ -104,7 +104,7 @@ Important styles for the label are the following:
     }
 
 
-What we see here is the "Checkbox Hack". It makes usa of the adjacent selector (`+`). This selector is really powerful. It selects the next sibling element that maches the selection. That means if the label wouldn't be right after the input field it would not match. This way we can define two styles for the label depending on the state of the checkbox.
+What we see here is the "Checkbox Hack". It makes use of the adjacent selector (`+`). This selector is really powerful. It selects the next sibling element that maches the selection. That means if the label wouldn't be right after the input field it would not match. This way we can define two styles for the label depending on the state of the checkbox.
 
 The next part is the unordered list that includes our link items.
 
