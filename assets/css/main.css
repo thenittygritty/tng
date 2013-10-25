@@ -1027,6 +1027,11 @@ pre[class*="language-"] {
   cursor: help;
 }
 
+.embedtweet {
+  width: 550px;
+  margin: 30px auto;
+}
+
 body {
   font-size: 16px;
   font-size: 1rem;

@@ -12,6 +12,12 @@ Tags: CSS, Anmations, Progressive Enhancement
 ----
 Comments: on
 ----
+Embedtweet:
+
+<blockquote class="twitter-tweet"><p>New article: Toggle Navigation With Pure CSS by <a href="https://twitter.com/stefanjudis">@stefanjudis</a> <a href="http://t.co/kcAXDyPFQV">http://t.co/kcAXDyPFQV</a></p>&mdash; The Nitty Gritty (@tngritty) <a href="https://twitter.com/tngritty/statuses/393672326220615680">October 25, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+----
 ExcerptIntro:
 
 I discovered a new hobby for myself. I often just sit in front of my computer and browse what is going on at [CodePen](http://codepen.io). CodePen is a relatively new platform maintained by [Chris Coyier](https://twitter.com/chriscoyier) and his friends to play around with CSS and JavaScript. It makes it unbelievably easy to prototype stuff and to share it with other people.
