@@ -10,7 +10,7 @@ Description:
 ----
 Tags: CSS, Anmations, Progressive Enhancement
 ----
-Comments: off
+Comments: on
 ----
 ExcerptIntro:
 
