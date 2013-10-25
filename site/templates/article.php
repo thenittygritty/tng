@@ -4,7 +4,9 @@
 
 
 <?php if ($page->embedtweet()): ?>
-<section class="embedtweet">
+
+<section class="embedtweet" id="embedtweet">
+	<h3 class="heading-other">Did you like this article? Let us know on Twitter!</h3>
 	<?php echo $page->embedtweet() ?>
 </section>
 <?php endif; ?>

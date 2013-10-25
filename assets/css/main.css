@@ -1029,7 +1029,10 @@ pre[class*="language-"] {
 
 .embedtweet {
   width: 550px;
-  margin: 30px auto;
+  margin: 30px auto 40px auto;
+}
+.embedtweet .heading-other {
+  margin-bottom: 10px;
 }
 
 body {
