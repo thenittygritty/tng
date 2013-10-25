@@ -8,4 +8,4 @@ Email: stefanjudis@gmail.com
 ----
 Info:
 
-Stefan is a sound engineer of 5 years turned web developer and a coffee addict living in Berlin since almost 10 years. He works for [Project A Ventures](http://www.project-a.com/) and is the proud developer and maintainer of [cushion-cli](https://github.com/stefanjudis/cushion-cli) as well as [grunt-photobox](https://github.com/stefanjudis/grunt-photobox).
+Stefan was a sound engineer for 5 years who turned web developer two years ago. He is a coffee addict and lives in Berlin since almost 10 years. He works for [Project A Ventures](http://www.project-a.com/) and is the proud developer and maintainer of [cushion-cli](https://github.com/stefanjudis/cushion-cli) as well as [grunt-photobox](https://github.com/stefanjudis/grunt-photobox).
