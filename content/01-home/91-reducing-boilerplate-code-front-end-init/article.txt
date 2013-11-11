@@ -1,0 +1,188 @@
+Title: Reducing Boilerplate Code in Front-End Projects
+----
+Date: 2013-11-15
+----
+Author: hans-christian-reinl
+----
+Categories: Frameworks, Boilerplate, GruntJS
+----
+Description:
+----
+Tags: Boilerplate Code, Front-End, Template, Framework, GruntJS
+----
+Comments: off
+----
+Embedtweet:
+
+----
+ExcerptIntro:
+
+----
+Excerpt:
+
+----
+Text:
+
+__Starting projects with a lot of front-end related code needs a certain architecture. With projects like [HTML5 Boilerplate](http://html5boilerplate.com/) or [Bootstrap](http://getbootstrap.com/) there are templates and frameworks that help us to achieve a decent structure for our projects.<br>
+But is this enough to get us started with a sophisticated workflow? Let’s have a look at the problems we face and how we can solve them.__
+
+## DRY
+
+In general we start a lot of our projects in kind of the same way. A lot of tasks need to be repeated from one project to another since we tend to set up our development and deployment workflow in similar ways all the time.
+
+When working in teams you have some kind of baseline you build upon with your team mates, because it is necessary to have consitency throughout your team so people can jump on a project easily. The downside of this is that it takes time to set up your workflow or find a consistent way to work. Therefore we tend to use a template or framework that is Open Source, that we can easily adjust the way we want.
+
+The way we work today is something like this:
+
+1. We find a matching framework or boilerplate
+2. Find differences to our workflow/preferences
+3. Apply changes we need
+4. Start coding
+
+Let’s look a bit into frameworks and boileplates that are kind of well known and analyze the described workflow.
+
+### 1. Frameworks and Boilerplates
+
+There are different approaches to building a decent starting point for front-end projects.
+
+[Bootstrap](http://getbootstrap.com/) for example provids a lot of UI components that you can use and customize easily. [Foundation](http://foundation.zurb.com/) takes a similar approach.
+
+On the other hand there are more minimal __boilerplates__ like for example HTML5 Boilerplate which prevents you from repeating yourself from time to time when it comes to the basics of each project: adding jQuery, Modernizr, some basic markup, normalizing elements between browsers and some helper classes in CSS.
+
+Interestingly though, there are hundreds of forks, frameworks and themes for a variety of Content Management Systems which are based on HTML5 Boilerplate that extend and utilize HTML5 Boilerplate. The [Wiki-page](https://github.com/h5bp/html5-boilerplate/wiki/forks) has a list of these.
+
+And then there are more "niche" projects which target a specific JavaScript library or similar as for example [Backbone Boilerplate](https://github.com/backbone-boilerplate/backbone-boilerplate) for [BackboneJS](http://backbonejs.org/). Backbone Boileplate comes with a lot more opinionated workflow than the aforementioned. For example it adds [GruntJS](http://gruntjs.com/) integration, [RequireJS](http://requirejs.org/) and automated testing via [Karma](http://karma-runner.github.io/) including three testing libraries. All of these are tools and libraries you are likely to use when coding with Backbone, so there is a good reason why they were added.
+
+What this selection of different frameworks and boilerplates shows is, that there are a lot of them and that it is hard to choose the right one for your team.
+
+### 2. Differences to your workflow/preferences
+
+When you have decided on one of the projects you need to __analyze the differences__ to your workflow and the decisions that where made in your team before you decided to choose a specific framework (as for example coding guidelines or which preprocessor to use).
+
+For HTML5 Boilerplate this might be:
+
+* Use a build tool
+* Integrate with backend framework
+* Structure is more complex
+* Testing
+
+And a lot more.
+
+For framework projects like Bootstrap or Foundation you might want to remove some stuff rather than adding more things:
+
+* A lot of code you don't use
+* Your structure is less complicated
+* Your team uses other coding guidelines
+
+And again, you need to take the time to analyze the Framework and choose what to remove and add in things that are not there yet. This may suck. On the upsite: You tend to learn from the internals of the framework which makes you a great developer.
+
+### 3. Apply changes you need
+
+After you analyzed these differences you need to adjust the project of your choice. And this means you need to write code, copy and remove a lot before you even start with the project you planned to build.
+
+While doing this you end up having discussions about architectural questions or get stuck at implementing a new build system into this framework.
+
+But after you resolved all these problematic thinks you can finally start to code, which is the main purpose of why we invested all this time.
+
+
+## Boilerplate Code
+
+As we know this is a long way before finally starting with the project itself and our goal should be to reduce the boilerplate we write to get there.
+
+Let's stick to this problem for a couple of thoughts: Does this mean we should find a common denomiator and extend from there?
+
+When we analyze HTML5 Boilerplate we can see that it provides a minimum of good defaults for projects that are based on it which has some advantages among others:
+
+* Faster starting point
+* Not much needs to be removed
+* You can learn a lot
+
+But there are also some disadvantages as we know from our analytics before:
+
+* Missing opinionated features
+* Mostly projects are more complex
+* Extending takes, again, a lot of time
+
+The question this results in is in how far we can reduce this boileplate code for all our projects.
+
+So should we use a framework for this purpose?
+
+
+## Tackel the Problems
+
+One idea that comes into mind is to go back to a more sophisticated framework which solves the tasks that we have on our list of missing features for HTML5 Boilerplate:
+
+* A build tool → GruntJS
+* Preprocessors → Sass/LESS, Coffee Script
+* Structure → BEM/SMACSS for CSS
+* Testing → Jasmine/Mocha, Karma
+
+There are some projects out there that try to help you with exactly these problems, e. g. the aforementioned [Backbone Boilerplate](https://github.com/backbone-boilerplate/backbone-boilerplate) resolves some of these problems.
+
+### UI Frameworks
+
+Something that I have left out of this list so far is the UI framework part that Foundation and Bootstrap both include.
+
+Personally I believe these frameworks are a great starting point when building prototypes and leaving out visual design at a point before you really start the project itself. They provide a lot of easily usable code snippets and components for the website you are building. My argument is that you are better off building componets for your project yourself and establish your own component libraries help you to establish a consistent line throughout your application.
+
+### The Actual Problem
+
+If you reduce the UI part from frameworks like Bootstrap the outlined points above are what is left for our team to build before building the actual project itself.
+
+Here we should rely on code from projects that are established and that have code that has proven to work because we don't want to invest even more time to figure out why certain programs don't run or our build system isn't working correctly.
+
+To find these projects and hammer them together into one solid starting point is – again – time consuming but on the other hand necessary.
+
+Throughout the last couple of years I faced the above mentioned search for _the_ right starting point again and again and wanted to create a project that helps me to get started quicker.
+
+This is why I created [INIT](http://use-init.com/). INIT is one of the projects that has been build upon a long story of redefining a workflow for myself, copying over snippets from different projects and filling in the gabs over and over again.
+
+Let’s take a look at what INIT exactly is and why I think you could use it within your team to solve the search for a framework that gets .
+
+## Reducing the Boilerplate with INIT
+
+The project stated a year ago while I was still working at an agency and did a lot of client projects which had a kind of similar base each time we started a new project.
+
+At some point in my sparetime I decided to find the similarities to projects I build on the side and through together some of this boilerplate code. For everyone who was interested I put it up on GitHub so I get some input from people that face the same problems and cen help me move my project a bit up. From there onwards I (and later on other contributors, especially [Anselm Hannemann](http://helloanselm.com/)) added a lot of features.
+
+INIT is build upon HTML5 Boilerplate but has to offer a whole lot more which tackles exactly the problems that we talked about before.
+
+* Grunt Tasks
+	* JSHint
+	* Tests (w/ Karma + Jasmine)
+	* Build process for HTML, Sass and JavaScript
+* Scaffolding: A decent structure for your project
+* Package management via Bower
+* Documentation
+
+INIT tries to set up a decent workflow for your project by providing everything that you need to start a front-end project.
+
+To get started you need some dependencies on your local machine to be set up:
+
+* NodeJS
+* Sass installed via Ruby
+* a global installation of GruntJS
+
+If you have these installed you can just grab a copy of INIT and start your new project with running a single command:
+
+	$ npm install
+
+This will set up everything you need including installing all Bower modules defined in `bower.json`.
+
+Now you can start with your code upon INIT. Check out [the documentation](https://github.com/drublic/init/blob/master/docs/TOC.md) to get more information about INIT's internals.
+
+So that's it about INIT. Check it out, but be aware: INIT chains you. It's mostly how I like to write code.
+There are tools as for example Yeoman that let you influence building your own project right the way you want it to.
+
+## Conclusion
+
+There are plenty of different frameworks and boilerplates that can help you to start your front-end project without repeating tasks to match your workflow over and over again. But even these projects require you to change them to what you really want.
+
+The question is to go bottom up or top down and it both requires work by you and your team before you can start with your own code. But in the end the most important thing is to focus on the tools and requirements __you__ and your team have.
+
+
+### Additional Information
+
+A special thanks to [Anselm Hannemann](http://helloanselm.com/) for working a lot on INIT and providing valuable input as well as reviewing this article.
+
+This post is somewhat based upon my talk “[Starting Front-End Projects](drublic.github.io/socoded-init)” at SoCoded Conferenece in September 2013.
