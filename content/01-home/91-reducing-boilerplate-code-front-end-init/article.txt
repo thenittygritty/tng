@@ -139,6 +139,8 @@ This is why I created [INIT](http://use-init.com/). INIT is one of the projects 
 
 Let’s take a look at what INIT exactly is and why I think you could use it within your team to solve the search for a framework that gets .
 
+(tngimg: init.svg alt: INIT position: image-rightish-small)
+
 ## Reducing the Boilerplate with INIT
 
 The project stated a year ago while I was still working at an agency and did a lot of client projects which had a kind of similar base each time we started a new project.
