@@ -78,11 +78,11 @@ And again, you need to take the time to analyze the Framework and choose what to
 
 ### 3. Apply changes you need
 
-After you analyzed these differences you need to adjust the project of your choice. And this means you need to write code, copy and remove a lot before you even start with the project you planned to build.
+After you have analyzed these differences you need to adjust the project of your choice. And this means you need to write code, copy and remove a lot before you even start with the project you planned to build.
 
 While doing this you end up having discussions about architectural questions or get stuck at implementing a new build system into this framework.
 
-But after you resolved all these problematic thinks you can finally start to code, which is the main purpose of why we invested all this time.
+But after you resolved all these problems you can finally start to code, which is the main purpose of why we invested all this time.
 
 
 ## Boilerplate Code
