@@ -87,9 +87,9 @@ But after you resolved all these problems you can finally start to code, which i
 
 ## Boilerplate Code
 
-As we know this is a long way before finally starting with the project itself and our goal should be to reduce the boilerplate we write to get there.
+As we know this is a long way before you finally get started with the project itself and our goal should be to reduce the boilerplate we write to get there.
 
-Let's stick to this problem for a couple of thoughts: Does this mean we should find a common denomiator and extend from there?
+Let's stay with this problem for a little: Does this mean we should find a common denomiator and extend from there?
 
 When we analyze HTML5 Boilerplate we can see that it provides a minimum of good defaults for projects that are based on it which has some advantages among others:
 
