@@ -108,7 +108,7 @@ The question this results in is in how far we can reduce this boileplate code fo
 So should we use a framework for this purpose?
 
 
-## Tackel the Problems
+## Tackle the Problems
 
 One idea that comes into mind is to go back to a more sophisticated framework which solves the tasks that we have on our list of missing features for HTML5 Boilerplate:
 
