@@ -123,7 +123,7 @@ There are some projects out there that try to help you with exactly these proble
 
 Something that I have left out of this list so far is the UI framework part that Foundation and Bootstrap both include.
 
-Personally I believe these frameworks are a great starting point when building prototypes and leaving out visual design at a point before you really start the project itself. They provide a lot of easily usable code snippets and components for the website you are building. My argument is that you are better off building componets for your project yourself and establish your own component libraries help you to establish a consistent line throughout your application.
+Personally I believe these frameworks are a great starting point when building prototypes and leaving out visual design at a point before you really start the project itself. They provide a lot of easy-to-use code snippets and components for the website you are building. My argument is that you are better off building componets for your project yourself and establish your own component libraries to help you establish a consistent line throughout your application.
 
 ### The Actual Problem
 
