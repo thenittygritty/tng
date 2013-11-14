@@ -135,9 +135,9 @@ To find these projects and hammer them together into one solid starting point is
 
 Throughout the last couple of years I faced the above mentioned search for _the_ right starting point again and again and wanted to create a project that helps me to get started quicker.
 
-This is why I created [INIT](http://use-init.com/). INIT is one of the projects that has been build upon a long story of redefining a workflow for myself, copying over snippets from different projects and filling in the gabs over and over again.
+This is why I created [INIT](http://use-init.com/). INIT is one of the projects that has been build upon a long story of redefining a workflow for myself, copying over snippets from different projects and filling in the gaps over and over again.
 
-Let’s take a look at what INIT exactly is and why I think you could use it within your team to solve the search for a framework that gets .
+Let’s take a look at what INIT is exactly and why I think you and your team could use it to end your search for the perfect framework.
 
 (tngimg: init.svg alt: INIT position: image-rightish-small)
 
