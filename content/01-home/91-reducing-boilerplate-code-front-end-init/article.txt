@@ -70,11 +70,11 @@ And a lot more.
 
 For framework projects like Bootstrap or Foundation you might want to remove some stuff rather than adding more things:
 
-* A lot of code you don't use
-* Your structure is less complicated
+* You most likely won't use a lot of code
+* Your structure might be less complicated
 * Your team uses other coding guidelines
 
-And again, you need to take the time to analyze the Framework and choose what to remove and add in things that are not there yet. This may suck. On the upsite: You tend to learn from the internals of the framework which makes you a great developer.
+And again, you need to take the time to analyze the Framework and choose what to remove and add in things that are not there yet. This may suck but there is an upside: You tend to learn from the internals of the framework which makes you a better developer.
 
 ### 3. Apply changes you need
 
