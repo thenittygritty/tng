@@ -28,18 +28,18 @@ But is this enough to get us started with a sophisticated workflow? Let’s have
 
 ## DRY
 
-In general we start a lot of our projects in kind of the same way. A lot of tasks need to be repeated from one project to another since we tend to set up our development and deployment workflow in similar ways all the time.
+Generally we start a lot of our projects in kind of the same way. A lot of tasks need to be repeated from one project to another since we tend to set up our development and deployment workflow in similar ways everytime.
 
-When working in teams you have some kind of baseline you build upon with your team mates, because it is necessary to have consitency throughout your team so people can jump on a project easily. The downside of this is that it takes time to set up your workflow or find a consistent way to work. Therefore we tend to use a template or framework that is Open Source, that we can easily adjust the way we want.
+When working in teams you have some sort of baseline you build upon with your team mates, because it is necessary to have consitency throughout your team so people can jump on a project easily. The downside of this is that it takes time to set up your workflow or find a consistent way to work. Therefore we tend to use a template or framework that is Open Source, that we can easily adjust in the way we want.
 
 The way we work today is something like this:
 
-1. We find a matching framework or boilerplate
-2. Find differences to our workflow/preferences
+1. We find a framework or boilerplate we like
+2. Identify differences to our workflow/preferences
 3. Apply changes we need
 4. Start coding
 
-Let’s look a bit into frameworks and boileplates that are kind of well known and analyze the described workflow.
+Let’s look into frameworks and boileplates a bit that are fairly well known and analyze the described workflow.
 
 ### 1. Frameworks and Boilerplates
 
