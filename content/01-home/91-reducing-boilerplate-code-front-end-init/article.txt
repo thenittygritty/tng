@@ -143,11 +143,11 @@ Let’s take a look at what INIT is exactly and why I think you and your team co
 
 ## Reducing the Boilerplate with INIT
 
-The project stated a year ago while I was still working at an agency and did a lot of client projects which had a kind of similar base each time we started a new project.
+The project stated a year ago while I was still working at an agency and did a lot of client projects which had a similar base each time we started a new project.
 
-At some point in my sparetime I decided to find the similarities to projects I build on the side and through together some of this boilerplate code. For everyone who was interested I put it up on GitHub so I get some input from people that face the same problems and cen help me move my project a bit up. From there onwards I (and later on other contributors, especially [Anselm Hannemann](http://helloanselm.com/)) added a lot of features.
+At some point in my sparetime I decided to find the similarities between projects I built on the side and threw together some boilerplate code. For everyone who was interested I put it up on GitHub so I get some input from people that face the same problems and cen help me move my project a bit up. From there onward I (and later on other contributors, especially [Anselm Hannemann](http://helloanselm.com/)) added a lot of features.
 
-INIT is build upon HTML5 Boilerplate but has to offer a whole lot more which tackles exactly the problems that we talked about before.
+INIT is built upon the HTML5 Boilerplate but has to offer a whole lot more which tackles exactly the problems that we talked about before.
 
 * Grunt Tasks
 	* JSHint
@@ -163,7 +163,7 @@ To get started you need some dependencies on your local machine to be set up:
 
 * NodeJS
 * Sass installed via Ruby
-* a global installation of GruntJS
+* a global installation of grunt-cli
 
 If you have these installed you can just grab a copy of INIT and start your new project with running a single command:
 
@@ -173,8 +173,8 @@ This will set up everything you need including installing all Bower modules defi
 
 Now you can start with your code upon INIT. Check out [the documentation](https://github.com/drublic/init/blob/master/docs/TOC.md) to get more information about INIT's internals.
 
-So that's it about INIT. Check it out, but be aware: INIT chains you. It's mostly how I like to write code.
-There are tools as for example Yeoman that let you influence building your own project right the way you want it to.
+So that's it about INIT. Check it out, but be aware: INIT is very opinionated. It's mostly how I like to write code.
+There are tools like Yeoman or grun-init that let you build your own scaffolding project just the way you want it to.
 
 ## Conclusion
 
