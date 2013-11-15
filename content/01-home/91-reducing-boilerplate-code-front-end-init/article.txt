@@ -185,6 +185,6 @@ The question is to go bottom up or top down and it both requires work by you and
 
 ### Additional Information
 
-A special thanks to [Anselm Hannemann](http://helloanselm.com/) for working a lot on INIT and providing valuable input as well as reviewing this article.
+A special thanks to [Anselm Hannemann](http://helloanselm.com/) for his many contributions to INIT and providing valuable input as well as reviewing this article.
 
 This post is somewhat based upon my talk “[Starting Front-End Projects](drublic.github.io/socoded-init)” at SoCoded Conferenece in September 2013.
