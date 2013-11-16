@@ -19,7 +19,7 @@ ExcerptIntro:
 
 [(tngimg: init.png alt: INIT position: image-full)](reducing-boilerplate-code-front-end-init)
 
-Projects with a lot of front-end related code require a well-crafted architecture in order to stay maintainable and easily extendible. With projects like [HTML5 Boilerplate](http://html5boilerplate.com/) or [Bootstrap](http://getbootstrap.com/) there are templates and frameworks that help us to achieve a decent structure for our projects.<br>
+Projects with a lot of front-end related code require a well-crafted architecture in order to stay maintainable and easily extendable. With projects like [HTML5 Boilerplate](http://html5boilerplate.com/) or [Bootstrap](http://getbootstrap.com/) there are templates and frameworks that help us to achieve a decent structure for our projects.<br>
 But is this enough to get us started with a sophisticated workflow? Let’s have a look at the problems we face and how we can solve them.
 
 ----
@@ -28,10 +28,11 @@ Excerpt:
 ----
 Text:
 
-**Projects with a lot of front-end related code require a well-crafted architecture in order to stay maintainable and easily extendible. With projects like [HTML5 Boilerplate](http://html5boilerplate.com/) or [Bootstrap](http://getbootstrap.com/) there are templates and frameworks that help us to achieve a decent structure for our projects.<br>
-But is this enough to get us started with a sophisticated workflow? Let’s have a look at the problems we face and how we can solve them.**
+**Projects with a lot of front-end related code require a well-crafted architecture in order to stay maintainable and easily extendable. With projects like [HTML5 Boilerplate](http://html5boilerplate.com/) or [Bootstrap](http://getbootstrap.com/) there are templates and frameworks that help us to achieve a decent structure for our projects.**
 
 (tngimg: init.png alt: INIT position: image-full)
+
+But is this enough to get us started with a sophisticated workflow? Let’s have a look at the problems we face and how we can solve them.
 
 ## DRY
 
