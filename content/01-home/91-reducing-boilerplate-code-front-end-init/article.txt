@@ -12,10 +12,15 @@ Tags: Boilerplate Code, Front-End, Template, Framework, GruntJS
 ----
 Comments: off
 ----
-Embedtweet:
+Embedtweet: Projects with a lot of front-end related code require a well-crafted architecture to stay maintainable and extendible. INIT tries to solve this problem.
 
 ----
 ExcerptIntro:
+
+[(tngimg: init.png alt: INIT position: image-full)](reducing-boilerplate-code-front-end-init)
+
+Projects with a lot of front-end related code require a well-crafted architecture in order to stay maintainable and easily extendible. With projects like [HTML5 Boilerplate](http://html5boilerplate.com/) or [Bootstrap](http://getbootstrap.com/) there are templates and frameworks that help us to achieve a decent structure for our projects.<br>
+But is this enough to get us started with a sophisticated workflow? Let’s have a look at the problems we face and how we can solve them.
 
 ----
 Excerpt:
@@ -25,6 +30,8 @@ Text:
 
 **Projects with a lot of front-end related code require a well-crafted architecture in order to stay maintainable and easily extendible. With projects like [HTML5 Boilerplate](http://html5boilerplate.com/) or [Bootstrap](http://getbootstrap.com/) there are templates and frameworks that help us to achieve a decent structure for our projects.<br>
 But is this enough to get us started with a sophisticated workflow? Let’s have a look at the problems we face and how we can solve them.**
+
+(tngimg: init.png alt: INIT position: image-full)
 
 ## DRY
 
@@ -45,11 +52,15 @@ Let’s look into frameworks and boileplates a bit that are fairly well known an
 
 There are different approaches to building a decent starting point for front-end projects.
 
+(tngimg: foundation.png alt: Foundation position: image-rightish-small caption: The Foundation website)
+
 [Bootstrap](http://getbootstrap.com/) for example provids a lot of UI components that you can use and customize easily. [Foundation](http://foundation.zurb.com/) takes a similar approach.
 
 On the other hand there are more minimal __boilerplates__ like for example HTML5 Boilerplate which prevents you from repeating yourself from time to time when it comes to the basics of each project: adding jQuery, Modernizr, some basic markup, normalizing elements between browsers and some helper classes in CSS.
 
 Interestingly though, there are hundreds of forks, frameworks and themes for a variety of Content Management Systems which are based on HTML5 Boilerplate that extend and utilize HTML5 Boilerplate. The [Wiki-page](https://github.com/h5bp/html5-boilerplate/wiki/forks) has a list of these.
+
+(tngimg: backbone-boilerplate.png alt: Backbone Boilerplate position: image-rightish-small caption: The Backbone Boilerplate GitHub repository)
 
 And then there are more "niche" projects which target things like specific JavaScript libraries, for example [Backbone Boilerplate](https://github.com/backbone-boilerplate/backbone-boilerplate) for [BackboneJS](http://backbonejs.org/). Backbone Boileplate comes with a much more opinionated workflow than the aforementioned. For example it adds [GruntJS](http://gruntjs.com/) integration, [RequireJS](http://requirejs.org/) and automated testing via [Karma](http://karma-runner.github.io/) including three testing libraries. All of these are tools and libraries you are likely to use when coding with Backbone, so there is a good reason why they were added.
 
