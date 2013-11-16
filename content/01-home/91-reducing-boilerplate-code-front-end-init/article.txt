@@ -8,7 +8,7 @@ Categories: Frameworks, Boilerplate, GruntJS
 ----
 Description:
 ----
-Tags: Boilerplate Code, Front-End, Template, Framework, GruntJS
+Tags: Boilerplate Code, Front-End, Template, Framework, Grunt.js
 ----
 Comments: off
 ----
