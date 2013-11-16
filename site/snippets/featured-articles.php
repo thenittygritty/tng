@@ -19,7 +19,7 @@ foreach ($articles as $article):
 					</a>
 					<?php else: ?>
 					<a href="<?php echo $article->url(); ?>">
-						<?php echo html(str::excerpt($article->title(), $chars=28, $removehtml=false, $rep='…')) ?>
+						<?php echo html(str::excerpt($article->title(), $chars=27, $removehtml=false, $rep='…')) ?>
 					</a>
 					<?php endif; ?>
 				</h1>
