@@ -20,6 +20,9 @@ Embedtweet:
 ----
 ExcerptIntro:
 
+<p data-height="268" data-theme-id="0" data-slug-hash="shuvn" data-user="stefanjudis" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/stefanjudis/pen/shuvn'>Toggle Navigation In Pure Css</a> by Stefan Judis (<a href='http://codepen.io/stefanjudis'>@stefanjudis</a>) on <a href='http://codepen.io'>CodePen</a></p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
+
 I discovered a new hobby for myself. I often just sit in front of my computer and browse what is going on at [CodePen](http://codepen.io). CodePen is a relatively new platform maintained by [Chris Coyier](https://twitter.com/chriscoyier) and his friends to play around with CSS and JavaScript. It makes it unbelievably easy to prototype stuff and to share it with other people.
 
 ----
