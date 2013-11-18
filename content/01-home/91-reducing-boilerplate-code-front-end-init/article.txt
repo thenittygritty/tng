@@ -162,7 +162,7 @@ INIT is built upon the HTML5 Boilerplate but has to offer a whole lot more which
 
 * Grunt Tasks
 	* JSHint
-	* Tests (w/ Karma + Jasmine)
+	* Tests (with Karma + Jasmine)
 	* Build process for HTML, Sass and JavaScript
 * Scaffolding: A decent structure for your project
 * Package management via Bower
