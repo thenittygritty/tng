@@ -883,24 +883,32 @@ input.search-submit {
   }
 }
 
-.image-leftish, .image-leftish-small {
-  float: left;
-  max-width: 60%;
-  margin-right: 20px;
+@media screen and (min-width: 48em) {
+  .image-leftish, .image-leftish-small {
+    float: left;
+    max-width: 60%;
+    margin-right: 20px;
+  }
 }
 
-.image-leftish-small {
-  max-width: 40%;
+@media screen and (min-width: 48em) {
+  .image-leftish-small {
+    max-width: 40%;
+  }
 }
 
-.image-rightish, .image-rightish-small {
-  float: right;
-  max-width: 60%;
-  margin-left: 20px;
+@media screen and (min-width: 48em) {
+  .image-rightish, .image-rightish-small {
+    float: right;
+    max-width: 60%;
+    margin-left: 20px;
+  }
 }
 
-.image-rightish-small {
-  max-width: 40%;
+@media screen and (min-width: 48em) {
+  .image-rightish-small {
+    max-width: 40%;
+  }
 }
 
 /*

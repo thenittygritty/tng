@@ -63,28 +63,37 @@
 .image-leftish {
 	@extend .image-full;
 
-	float: left;
-	max-width: 60%;
-	margin-right: 20px;
+	@media #{$mq-tablet} {
+		float: left;
+		max-width: 60%;
+		margin-right: 20px;
+	}
 }
 
 .image-leftish-small {
 	@extend .image-leftish;
 
-	max-width: 40%;
+	@media #{$mq-tablet} {
+		max-width: 40%;
+	}
+
 }
 
 .image-rightish {
 	@extend .image-full;
 
-	float: right;
-	max-width: 60%;
-	margin-left: 20px;
+	@media #{$mq-tablet} {
+		float: right;
+		max-width: 60%;
+		margin-left: 20px;
+	}
 }
 
 .image-rightish-small {
 	@extend .image-rightish;
 
-	max-width: 40%;
+	@media #{$mq-tablet} {
+		max-width: 40%;
+	}
 }
 
