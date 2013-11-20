@@ -40,7 +40,7 @@ But is this enough to get us started with a sophisticated workflow? Let’s have
 
 Generally we start a lot of our projects in kind of the same way. A lot of tasks need to be repeated from one project to another since we tend to set up our development and deployment workflow in similar ways everytime.
 
-When working in teams you have some sort of baseline you build upon with your team mates, because it is necessary to have consitency throughout your team so people can jump on a project easily. The downside of this is that it takes time to set up your workflow or find a consistent way to work. Therefore we tend to use a template or framework that is Open Source, that we can easily adjust in the way we want.
+When working in teams you have some sort of baseline you build upon with your team mates, because it is necessary to have consistency throughout your team so people can jump on a project easily. The downside of this is that it takes time to set up your workflow or find a consistent way to work. Therefore we tend to use a template or framework that is Open Source, that we can easily adjust in the way we want.
 
 The way we work today is something like this:
 
@@ -57,7 +57,7 @@ There are different approaches to building a decent starting point for front-end
 
 (tngimg: foundation.png alt: Foundation position: image-rightish-small caption: The Foundation website)
 
-[Bootstrap](http://getbootstrap.com/) for example provids a lot of UI components that you can use and customize easily. [Foundation](http://foundation.zurb.com/) takes a similar approach.
+[Bootstrap](http://getbootstrap.com/) for example provides a lot of UI components that you can use and customize easily. [Foundation](http://foundation.zurb.com/) takes a similar approach.
 
 On the other hand there are more minimal __boilerplates__ like for example HTML5 Boilerplate which prevents you from repeating yourself from time to time when it comes to the basics of each project: adding jQuery, Modernizr, some basic markup, normalizing elements between browsers and some helper classes in CSS.
 
@@ -103,7 +103,7 @@ But after you resolved all these problems you can finally start to code, which i
 
 As we know this is a long way before you finally get started with the project itself and our goal should be to reduce the boilerplate we write to get there.
 
-Let's stay with this problem for a little: Does this mean we should find a common denomiator and extend from there?
+Let's stay with this problem for a little: Does this mean we should find a common denominator and extend from there?
 
 When we analyze HTML5 Boilerplate we can see that it provides a minimum of good defaults for projects that are based on it which has some advantages among others:
 
@@ -159,7 +159,7 @@ Let’s take a look at what INIT is exactly and why I think you and your team co
 
 The project stated a year ago while I was still working at an agency and did a lot of client projects which had a similar base each time we started a new project.
 
-At some point in my sparetime I decided to find the similarities between projects I built on the side and threw together some boilerplate code. For everyone who was interested I put it up on GitHub so I get some input from people that face the same problems and cen help me move my project a bit up. From there onward I (and later on other contributors, especially [Anselm Hannemann](http://helloanselm.com/)) added a lot of features.
+At some point in my spare time I decided to find the similarities between projects I built on the side and threw together some boilerplate code. For everyone who was interested I put it up on GitHub so I get some input from people that face the same problems and cen help me move my project a bit up. From there onward I (and later on other contributors, especially [Anselm Hannemann](http://helloanselm.com/)) added a lot of features.
 
 INIT is built upon the HTML5 Boilerplate but has to offer a whole lot more which tackles exactly the problems that we talked about before.
 
