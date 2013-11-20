@@ -6,13 +6,16 @@ Author: hans-christian-reinl
 ----
 Categories: Frameworks, Boilerplate, GruntJS
 ----
-Description:
+Description: Projects with a lot of front-end related code require a well-crafted architecture to stay maintainable and extendible. INIT tries to solve this problem.
 ----
 Tags: Boilerplate Code, Front-End, Template, Framework, Grunt.js
 ----
 Comments: off
 ----
-Embedtweet: Projects with a lot of front-end related code require a well-crafted architecture to stay maintainable and extendible. INIT tries to solve this problem.
+Embedtweet:
+
+<blockquote class="twitter-tweet" lang="en"><p>✪ A new post: Reducing Boilerplate Code in Front-End Projects – <a href="http://t.co/BqVpuqKfL5">http://t.co/BqVpuqKfL5</a> – <a href="https://twitter.com/drublic">@drublic</a> introduces INIT.</p>&mdash; The Nitty Gritty (@tngritty) <a href="https://twitter.com/tngritty/statuses/403144612157874176">November 20, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ----
 ExcerptIntro:
