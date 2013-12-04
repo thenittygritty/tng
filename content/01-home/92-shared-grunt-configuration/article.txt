@@ -1,0 +1,140 @@
+Title: Shared Grunt Configuration
+----
+Date: 2013-12-08
+----
+Author: hans-christian-reinl
+----
+Categories: GruntJS
+----
+Description:
+----
+Tags: Grunt.js, Configuration, Git, Front-End
+----
+Comments: off
+----
+Embedtweet:
+
+<blockquote class="twitter-tweet" lang="en"><p>✪ A new post: Reducing Boilerplate Code in Front-End Projects – <a href="http://t.co/BqVpuqKfL5">http://t.co/BqVpuqKfL5</a> – <a href="https://twitter.com/drublic">@drublic</a> introduces INIT.</p>&mdash; The Nitty Gritty (@tngritty) <a href="https://twitter.com/tngritty/statuses/403144612157874176">November 20, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+----
+ExcerptIntro:
+
+
+----
+Excerpt:
+
+----
+Text:
+
+**Grunt is the build tool of choice for a lot of modern web projects. This might also apply to your workflow.**
+
+**When setting up your projects you might copy over a lot of tasks and configuration from one project to another if these are similar. One thing that repeats itself in my projects a lot is the configuration of my Grunt tasks which leads to a hardly maintainable repetition of code updates across several projects.**
+
+There are frameworks like (my own) [INIT](http://use-init.com/) which provide you with a decent Grunt configuration and a set of Grunt plugins that make your life easier. But this is only for an initial set up.
+The question that remains is: How do you maintain configuration after you implemented it?
+
+A few days ago I [tweeted the following](https://twitter.com/drublic/status/403817463550595072):
+
+<blockquote class="twitter-tweet" lang="en"><p>On another note: Moving all your Grunt configs into a submodule and sharing it between projects works pretty great for me.</p>&mdash; Hans Christian Reinl (@drublic) <a href="https://twitter.com/drublic/statuses/403817463550595072">November 22, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+People [reacted](https://twitter.com/yatil/status/403822293878853632) by asking about how to do this.
+Here is how I put it into action in my projects.
+
+## Setting up Grunt
+
+First off you might want to separate all of your Grunt configuration into different files instead of storing it all in one clustered `Gruntfile.js`. Please read [Thomas Boyt’s article “More maintainable Gruntfiles”](http://www.thomasboyt.com/2013/09/01/maintainable-grunt.html) on how to do this easily.
+
+Here is an example which we use with INIT:
+
+Each configuration for a Grunt module goes into a different files. Currently we [put these into `tasks/options`](https://github.com/drublic/init/tree/master/tasks/options). With a function `loadConfig` we can then easily require all configuration*.
+
+<span class="language-javascript"></span>
+
+	/**
+	 * Load configuration files for Grunt
+	 * @param  {string} path Path to folder with tasks
+	 * @return {object}      All options
+	 */
+	var loadConfig = function (path) {
+	        var glob = require('glob');
+	        var object = {};
+	        var key;
+
+	        glob.sync('*', {cwd: path}).forEach(function (option) {
+	                key = option.replace(/\.js$/,'');
+	                object[key] = require(path + option);
+	        });
+
+	        return object;
+	};
+
+<small>* This function requires the `glob` module from npm, which you can install via `npm i --save-dev glob`.</small>
+
+By calling this function within the original Grunt configuration you rewrite all configuration from the separate files to the main configuration file. Here is how you do it:
+
+<span class="language-javascript"></span>
+
+	var config = {};
+	grunt.util._.extend(config, loadConfig('./tasks/options/'));
+
+We’re extending the `config`object because we might want to set some more configuration for the tasks before running them through Grunt. This might be a `pkg` object or something similar.
+
+An example integration can be [viewed here](https://github.com/drublic/init/blob/master/Gruntfile.js).
+
+### Configuring the Configuration
+
+Grunt tasks might do the same across all your projects but file paths may differ. This is why we decided for INIT to move all paths out of the grunt module configuration it self and store them in a [`config.js`file in the folder `tasks`](https://github.com/drublic/init/blob/master/tasks/config.js).
+
+You might want to add other configuration files like a Karma configuration here too, as they tend to stay the same for each project.
+
+This needs some updates for how you write file paths within the configuration. Please be aware of that and find out by playing around with it a little bit if it isn’t clear to you at the first glance.
+
+## The Git Setup
+
+Git provides a lot of great internal tools. One of them are submodules.
+With submodules you can easily add other Git repositories to your main project. You might consider this as a kind of package management without managing too much for you.
+
+When setting up a separate Grunt configuration which should work within all your projects you should push this configuration to a separate repository. The big advantage is that you can track changes separately and easily switch to a new version of this configuration if you use Git tags to mark the releases.
+In the case of INIT we would consider `tasks`to be this repository. Let’s assume we name this repository `grunt-config`.
+
+Within the main page repository we can then add `grunt-config` as a submodule by running the following command (please update the repository path here):
+
+<span class="language-javascript"></span>
+
+	$ git submodule add git@github.com:user/grunt-config.git
+
+Now we need to initialize the submodule which is now called `grunt-config` internally:
+
+<span class="language-javascript"></span>
+
+	$ git submodule update —init
+
+This creates a new folder called by the internal name of the submodule.
+
+## Solutions to Project Specific Files
+
+This works pretty great until you realize that your `config.js` file needs to be overwritten for each project individually.
+Personally I add a `config.sample.js` to the submodule containing the Grunt tasks and copy this over to my main project. The configuration of the configuration is thus stored within the main project.
+Another take on this would be to copy the sample config file in the same folder but ignoring it in Git which has the disadvantage that there is no version control system for this file.
+
+Be aware that you need to update the config path in the different files to `require(‘../../config’)` if you decided to use INIT’s configuration concept.
+
+You might also realize that the main configuration of the project itself - stored in `package.json` isn’t in sync with what happens in the configuration folder.
+This means that you need to set up the `devDependencies` in another way. I haven’t found a sophisticated solution other than adding these directly to each project which means that you have to copy over the `devDependencies` from a sample file within your configuration repo to your main project’s `package.json`.
+
+Please let me know of any better solution that comes to your mind.
+
+## Final configuration
+We can now copy the configuration file into our main repository and then update the file structure within as needed.
+We also need to add all Grunt modules in `package.json` as outlined above.
+
+By simply running `npm install` we are all set up and ready to go within each new project we create.
+
+This means only three manual steps besides setting up the submodule which is great.
+
+### Conclusion
+
+If you need to maintain a lot of similar projects and need to update your Grunt setup each time you might save some valuable time by sharing the Grunt configuration and tasks between projects.
+With a few simple steps your current setup can be ready for your projects to use across all of them which shortens the time for you to maintain these projects.
