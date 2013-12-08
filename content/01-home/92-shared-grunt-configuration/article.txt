@@ -1,31 +1,36 @@
 Title: Shared Grunt Configuration
 ----
-Date: 2013-12-08
+Date: 2013-12-09
 ----
 Author: hans-christian-reinl
 ----
-Categories: GruntJS
+Categories: Grunt
 ----
-Description:
+Description: It's easy to share your GruntJS configuration within different projects by splitting them up and setting up a Git submodule for them.
 ----
-Tags: Grunt.js, Configuration, Git, Front-End
+Tags: Grunt, Configuration, Git, Front-End
 ----
 Comments: off
 ----
 Embedtweet:
 
-<blockquote class="twitter-tweet" lang="en"><p>✪ A new post: Reducing Boilerplate Code in Front-End Projects – <a href="http://t.co/BqVpuqKfL5">http://t.co/BqVpuqKfL5</a> – <a href="https://twitter.com/drublic">@drublic</a> introduces INIT.</p>&mdash; The Nitty Gritty (@tngritty) <a href="https://twitter.com/tngritty/statuses/403144612157874176">November 20, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ----
 ExcerptIntro:
+Grunt is the build tool of choice for a lot of modern web projects. This might also apply to your workflow.
 
+When setting up your projects you might copy over a lot of tasks and configuration from one project to another if these are similar. One thing that repeats itself in my projects a lot is the configuration of my Grunt tasks which leads to a hardly maintainable repetition of code updates across several projects.
+
+[(tngimg: grunt-git.png alt: Grunt + Git position: image-full)](shared-grunt-configuration)
 
 ----
 Excerpt:
 
 ----
 Text:
+
+(tngimg: grunt-git.png alt: Grunt + Git position: image-full)
 
 **Grunt is the build tool of choice for a lot of modern web projects. This might also apply to your workflow.**
 
@@ -62,7 +67,7 @@ Each configuration for a Grunt module goes into a different files. Currently we 
 	        var object = {};
 	        var key;
 
-	        glob.sync('*', {cwd: path}).forEach(function (option) {
+	        glob.sync('*', { cwd: path }).forEach(function (option) {
 	                key = option.replace(/\.js$/,'');
 	                object[key] = require(path + option);
 	        });
@@ -87,7 +92,7 @@ There has also [been a tweet by GruntJS](https://twitter.com/gruntjs/status/4075
 
 ### Configuring the Configuration
 
-Grunt tasks might do the same across all your projects but file paths may differ. This is why we decided for INIT to move all paths out of the grunt module configuration it self and store them in a [`config.js`file in the folder `tasks`](https://github.com/drublic/init/blob/master/tasks/config.js).
+Grunt tasks might do the same across all your projects but file paths may differ. This is why we decided for INIT to move all paths out of the grunt module configuration it self and store them in a [`config.js` file in the folder `tasks`](https://github.com/drublic/init/blob/master/tasks/config.js).
 
 You might want to add other configuration files like a Karma configuration here too, as they tend to stay the same for each project.
 
