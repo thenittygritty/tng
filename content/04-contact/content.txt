@@ -2,6 +2,6 @@ Title: Contact us
 ----
 Text:
 
-Write us on our [Github feedback repo](https://github.com/thenittygritty/feedback/), at <a href="mailto:hello@thenittygritty.co">hello@thenittygritty.co</a> or hit us up on Twitter at (twitter:_thenittygritty) for any feedback you have.
+Write us on our [Github feedback repo](https://github.com/thenittygritty/feedback/), at <a href="mailto:hello@thenittygritty.co">hello@thenittygritty.co</a> or hit us up on Twitter at (twitter:tngritty) for any feedback you have.
 
 Please check out the (link: /contribute text: contribute) page if you would like to contribute an article!
