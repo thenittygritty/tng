@@ -83,6 +83,8 @@ We’re extending the `config`object because we might want to set some more conf
 
 An example integration can be [viewed here](https://github.com/drublic/init/blob/master/Gruntfile.js).
 
+There has also [been a tweet by GruntJS](https://twitter.com/gruntjs/status/407586166792523776) suggesting another way to split up files into [smaller chunks](https://github.com/cowboy/wesbos/commit/5a2980a7818957cbaeedcd7552af9ce54e05e3fb). Which has a similar approach but leaving a bit more boilerplate code to each configuration file.
+
 ### Configuring the Configuration
 
 Grunt tasks might do the same across all your projects but file paths may differ. This is why we decided for INIT to move all paths out of the grunt module configuration it self and store them in a [`config.js`file in the folder `tasks`](https://github.com/drublic/init/blob/master/tasks/config.js).
