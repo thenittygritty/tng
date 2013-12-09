@@ -14,6 +14,7 @@ Comments: off
 ----
 Embedtweet:
 
+<blockquote class="twitter-tweet" lang="en"><p>✪ Split up your <a href="https://twitter.com/gruntjs">@gruntjs</a> configuration and share it via Git Submodules – <a href="http://t.co/i33bQwoME5">http://t.co/i33bQwoME5</a></p>&mdash; The Nitty Gritty (@tngritty) <a href="https://twitter.com/tngritty/statuses/409978038093623296">December 9, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ----
@@ -53,7 +54,7 @@ First off you might want to separate all of your Grunt configuration into differ
 
 Here is an example which we use with INIT:
 
-Each configuration for a Grunt module goes into a different files. Currently we [put these into `tasks/options`](https://github.com/drublic/init/tree/master/tasks/options). With a function `loadConfig` we can then easily require all configuration*.
+Each configuration for a Grunt module goes into different files. Currently we [put these into `tasks/options`](https://github.com/drublic/init/tree/master/tasks/options). With a function `loadConfig` we can then easily require all configuration*.
 
 <span class="language-javascript"></span>
 
@@ -84,7 +85,7 @@ By calling this function within the original Grunt configuration you rewrite all
 	var config = {};
 	grunt.util._.extend(config, loadConfig('./tasks/options/'));
 
-We’re extending the `config`object because we might want to set some more configuration for the tasks before running them through Grunt. This might be a `pkg` object or something similar.
+We’re extending the `config` object because we might want to set some more configuration for the tasks before running them through Grunt. This might be a `pkg` object or something similar.
 
 An example integration can be [viewed here](https://github.com/drublic/init/blob/master/Gruntfile.js).
 
@@ -104,7 +105,7 @@ Git provides a lot of great internal tools. One of them are submodules.
 With submodules you can easily add other Git repositories to your main project. You might consider this as a kind of package management without managing too much for you.
 
 When setting up a separate Grunt configuration which should work within all your projects you should push this configuration to a separate repository. The big advantage is that you can track changes separately and easily switch to a new version of this configuration if you use Git tags to mark the releases.
-In the case of INIT we would consider `tasks`to be this repository. Let’s assume we name this repository `grunt-config`.
+In the case of INIT we would consider `tasks``to be this repository. Let’s assume we name this repository `grunt-config`.
 
 Within the main page repository we can then add `grunt-config` as a submodule by running the following command (please update the repository path here):
 
