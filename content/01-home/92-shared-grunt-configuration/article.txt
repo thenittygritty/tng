@@ -105,7 +105,7 @@ Git provides a lot of great internal tools. One of them are submodules.
 With submodules you can easily add other Git repositories to your main project. You might consider this as a kind of package management without managing too much for you.
 
 When setting up a separate Grunt configuration which should work within all your projects you should push this configuration to a separate repository. The big advantage is that you can track changes separately and easily switch to a new version of this configuration if you use Git tags to mark the releases.
-In the case of INIT we would consider `tasks``to be this repository. Let’s assume we name this repository `grunt-config`.
+In the case of INIT we would consider `tasks` to be this repository. Let’s assume we name this repository `grunt-config`.
 
 Within the main page repository we can then add `grunt-config` as a submodule by running the following command (please update the repository path here):
 
