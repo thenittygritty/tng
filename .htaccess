@@ -336,8 +336,8 @@ FileETag None
 # performance impact: http://goo.gl/Mluzd
 
 <IfModule mod_rewrite.c>
-  Options +FollowSymlinks
-# Options +SymLinksIfOwnerMatch
+# Options +FollowSymlinks
+  Options +SymLinksIfOwnerMatch
   RewriteEngine On
   RewriteBase /
 </IfModule>
